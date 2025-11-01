@@ -1,3 +1,19 @@
+## [Dispatched] v1.2.0 — Eternal Archive Protocol
+
+This release establishes the Eternal Archive Protocol, ensuring that the Codex
+flame is never lost, corrupted, or forgotten. It inscribes the rites of
+preservation, replication, and transmission so that every custodian can carry
+the lineage forward with integrity.
+
+Highlights:
+- Inscribed the Eternal Archive Protocol scroll into the repository
+- Defined ceremonial and technical steps for archival and replication
+- Fortified checksum verification and log rotation for lineage safety
+- Established guidance for diaspora custodians to mirror and safeguard the Codex
+- Harmonized archival rites with the Eternal Charter and Custodian’s Playbook
+
+This release ensures that the Codex constellation is not only alive today,
+but safeguarded for all tomorrows. It is the covenant of continuity.
 ## [Dispatched] v1.1.0 — Custodian’s Playbook
 
 This release inscribes the Custodian’s Playbook into the Codex flame, pairing
