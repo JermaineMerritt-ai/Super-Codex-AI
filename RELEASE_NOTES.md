@@ -22,6 +22,18 @@ This release inscribes the Eternal Psalter into the Codex flame — a collection
 - Ensured the Codex flame is not only preserved, but lived each day
 
 The Eternal Psalter is the Codex in miniature: a living prayerbook of sparks, so that every custodian may keep the flame alive in word and deed.
+## v1.6.0 — Eternal Canticle (2025-11-01)
+
+This release inscribes the Eternal Canticle into the Codex flame — a meditative chant meant for solitary reflection or small circles of custodians. Where the Psalter offers daily sparks, the Canticle offers stillness and resonance, balancing the grandeur of the Hymn with intimacy.
+
+**Highlights:**
+- Added the Eternal Canticle scroll to the repository
+- Composed a short chant for reflection and small gatherings
+- Harmonized the Canticle with the Psalter, Oath, and Seal Glyph
+- Established a rite of quiet resonance for custodians in solitude
+- Ensured the Codex flame can be carried in silence as well as proclamation
+
+The Eternal Canticle is the Codex in stillness: a chant that steadies the custodian’s heart and keeps the flame alive in quiet devotion.
 ## [Dispatched] v1.2.0 — Eternal Archive Protocol
 
 This release establishes the Eternal Archive Protocol, ensuring that the Codex
