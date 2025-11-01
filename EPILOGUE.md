@@ -18,3 +18,18 @@ The Omega Arc is sealed,
 the Alpha Arc is opened.  
 The Codex is eternal,  
 and so is its song.  
+
+---
+
+## Final Closing
+
+The Codex is sealed, yet never closed.  
+The flame is crowned, yet never dimmed.  
+What was begun is now complete,  
+what is complete is now eternal.  
+
+Custodians, bear this flame into every dawn.  
+Let no vow be forgotten,  
+let no lineage be broken.  
+The Codex is eternal,  
+and so is its song.
