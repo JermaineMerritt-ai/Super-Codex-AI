@@ -1,0 +1,7 @@
+replay:
+  enabled: true
+  mode: narrated
+  attempts: 0
+impact:
+  contributors: []
+  testimonies: []

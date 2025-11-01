@@ -1,0 +1,12 @@
+capsule:
+  id: capsule_template
+  version: 1
+  title: "Codex Sovereign Capsule"
+  sector: universal
+  owner: Custodian
+meta:
+  author: Jermaine
+  ceremony: "Codex Sovereign Ritual"
+  remix_of: null
+  contributors: []
+  timestamp: 2025-10-29T20:36:00Z

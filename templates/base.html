@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Codex Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+  <header class="bg-indigo-800 p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-gold-400">⚜️ Codex Custodian Dashboard</h1>
+    <nav class="space-x-4">
+      <a href="/signals" class="hover:text-gold-300">Signals</a>
+      <a href="/metrics" class="hover:text-gold-300">Metrics</a>
+      <a href="/contributors" class="hover:text-gold-300">Contributors</a>
+      <a href="/council" class="hover:text-gold-300">Council</a>
+    </nav>
+  </header>
+  <main class="p-6">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "series_id": "codex_series_001",
+  "title": "Sovereign Integration Capsule Series",
+  "author": "Jermaine",
+  "capsules": ["woo_capsule_001", "capsule_002", "capsule_003"],
+  "ceremony": "Codex Sovereign Ritual",
+  "contributors": ["Jermaine", "AI"],
+  "timestamp": "2025-10-29T23:06 EDT",
+  "deployment_targets": ["IONOS", "WooCommerce", "Diaspora Councils", "Interplanetary Nodes"]
+}

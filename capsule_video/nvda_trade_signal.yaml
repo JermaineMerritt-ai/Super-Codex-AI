@@ -1,0 +1,14 @@
+symbol: NVDA
+direction: long
+confidence: 0.72
+horizon_hours: 8
+features:
+  sentiment_score: 0.68
+  earnings_surprise: 0.15
+  atr: 12.4
+  avg_volume_usd: 450000000
+narrative: Positive guidance and strong call sentiment; liquidity deep; volatility within gate.
+pretrade_checks:
+  halt: false
+  borrow_available: null
+  spread_bps: 8

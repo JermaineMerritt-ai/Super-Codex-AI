@@ -1,0 +1,90 @@
+- Epoch: '2025-10-31T22:16:52.021267'
+  Logs:
+  - capsule_events.log
+  - capsule_events.log.sha256
+  Threats:
+  - 'Finance Capsule quarantine: malicious payload'
+  Verification:
+    capsule_events.log: PASS
+- Epoch: '2025-10-31T22:22:51.650016'
+  Commit: unknown
+  Custodian: Jermaine Merritt
+  Logs:
+  - capsule_events.log
+  - capsule_events.log.sha256
+  Threats:
+  - 'Finance Capsule quarantine: malicious payload'
+  - '-'
+  - 'name:'
+  - Update
+  - Ledger
+  - of
+  - Seals
+  Verification:
+    capsule_events.log: PASS
+- Epoch: '2025-10-31T22:23:03.460405'
+  Commit: unknown
+  Custodian: ''
+  Logs:
+  - capsule_events.log
+  - capsule_events.log.sha256
+  Threats:
+  - None detected
+  Verification:
+    capsule_events.log: PASS
+- Epoch: '2025-10-31T22:23:18.850137'
+  Commit: unknown
+  Custodian: ''
+  Logs:
+  - capsule_events.log
+  - capsule_events.log.sha256
+  Threats:
+  - 'Finance Capsule quarantine: malicious payload'
+  Verification:
+    capsule_events.log: PASS
+- Epoch: '2025-10-31T22:24:19.398023'
+  Commit: unknown
+  Custodian: ''
+  Logs:
+  - capsule_events.log
+  - capsule_events.log.sha256
+  Threats:
+  - 'Finance Capsule quarantine: malicious payload'
+  - '-'
+  - 'name:'
+  - Update
+  - Ledger
+  - of
+  - Seals
+  Verification:
+    capsule_events.log: PASS
+- Epoch: '2025-10-31T22:24:21.649505'
+  Commit: unknown
+  Custodian: ''
+  Logs:
+  - capsule_events.log
+  - capsule_events.log.sha256
+  Threats:
+  - 'Finance Capsule quarantine: malicious payload'
+  Verification:
+    capsule_events.log: PASS
+- Epoch: '2025-10-31T22:25:38.210317'
+  Commit: unknown
+  Custodian: Jermaine Merritt
+  Logs:
+  - capsule_events.log
+  - capsule_events.log.sha256
+  Threats:
+  - None detected
+  Verification:
+    capsule_events.log: PASS
+- Epoch: '2025-10-31T22:26:09.449540'
+  Commit: unknown
+  Custodian: Jermaine Merritt
+  Logs:
+  - capsule_events.log
+  - capsule_events.log.sha256
+  Threats:
+  - 'Finance Capsule quarantine: malicious payload'
+  Verification:
+    capsule_events.log: PASS

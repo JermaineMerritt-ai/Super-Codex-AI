@@ -1,0 +1,24 @@
+{
+  "series_id": "codex_series_002",
+  "title": "Triune Expansion Cycle",
+  "author": "Jermaine",
+  "capsules": [
+    "diaspora_merch_001",
+    "onboarding_deck_001",
+    "passport_engine_001"
+  ],
+  "ceremony": "Codex Triune Sovereign Ritual",
+  "contributors": ["Jermaine", "AI"],
+  "timestamp": "2025-10-29T23:35 EDT",
+  "deployment_targets": [
+    "WooCommerce",
+    "IONOS",
+    "Diaspora Councils",
+    "Interplanetary Nodes"
+  ],
+  "legacy": {
+    "commerce": "Diaspora Merchandise Capsule Series",
+    "induction": "Interplanetary Onboarding Ritual Deck",
+    "recognition": "Contributor Passport Engine"
+  }
+}

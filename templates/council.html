@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-2xl font-semibold mb-4">Council Quorum</h2>
+<div class="bg-gray-800 p-6 rounded shadow">
+	<p>Soft quorum: {{ quorum.soft*100 }}%</p>
+	<p>Hard quorum: {{ quorum.hard*100 }}%</p>
+	<p>Current: {{ quorum.current*100 }}%</p>
+	<p>Status: <span class="font-bold text-gold-400">{{ quorum.status }}</span></p>
+	<div class="w-full bg-gray-700 rounded mt-4">
+		<div class="bg-indigo-500 text-xs leading-none py-1 text-center text-white rounded"
+				 style="width: {{ quorum.current*100 }}%">
+			{{ quorum.current*100 }}%
+		</div>
+	</div>
+</div>
+{% endblock %}

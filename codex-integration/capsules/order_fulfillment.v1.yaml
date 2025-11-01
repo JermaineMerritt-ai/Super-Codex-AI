@@ -1,0 +1,32 @@
+capsule:
+  id: order_fulfillment
+  version: 1
+  metadata:
+    title: "Order Fulfillment Capsule"
+    sector: commerce
+    owner: "Dominion Custodian"
+triggers:
+  - type: webhook
+    event_type: order.created
+steps:
+  - id: validate
+    type: validate.schema
+    config: {schema_ref: schemas/order_created.json}
+  - id: affiliate
+    type: transform.attribute_affiliate
+    config: {source: "utm.cookie"}
+  - id: payment
+    type: action.initiate_payment
+    config: {provider: "stripe"}
+  - id: ledger
+    type: action.emit_ledger
+    config: {account: "sales"}
+  - id: notify
+    type: action.notify
+    config: {channel: "email"}
+guards:
+  privacy: pii_minimization
+approvals:
+  mode: auto_policy
+archive:
+  eternal: true

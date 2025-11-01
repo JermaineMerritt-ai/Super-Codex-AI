@@ -1,0 +1,23 @@
+name: Codex CI/CD Invocation
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Codex
+        uses: actions/checkout@v3
+
+      - name: Lint & Test
+        run: |
+          pip install -r requirements.txt
+          pytest --maxfail=1 --disable-warnings -q
+
+      - name: Build Docker Images
+        run: docker build -t codex-backend ./backend
+
+      - name: Deploy to IONOS
+        run: ./scripts/deploy.sh

@@ -1,0 +1,16 @@
+server:
+	host: 0.0.0.0
+	port: 8080
+storage:
+	postgres_url: postgres://codex:codex@db:5432/codex
+	redis_url: redis://redis:6379/0
+security:
+	jwt_secret: change_me
+	allowed_origins: ["*"]
+routing:
+	default_topic: "events.canon"
+	dlq_topic: "events.dlq"
+retries:
+	max_attempts: 5
+	backoff_ms: 250
+	backoff_factor: 2.0

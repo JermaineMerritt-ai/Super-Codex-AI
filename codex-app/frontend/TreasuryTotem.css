@@ -1,0 +1,36 @@
+.treasury-totem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #181818;
+  color: #ffd700;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  margin-bottom: 2rem;
+}
+.chalice {
+  width: 120px;
+  height: 200px;
+  border: 6px solid gold;
+  border-radius: 0 0 60px 60px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  background: #fff8dc;
+}
+.liquid {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, gold, #ffd700);
+  transition: height 1s ease-in-out;
+}
+.treasury-totem h3 {
+  margin: 0.5em 0 0.2em 0;
+  color: #ffd700;
+}
+.treasury-totem p {
+  margin: 0.2em 0;
+  font-size: 1.05em;
+}

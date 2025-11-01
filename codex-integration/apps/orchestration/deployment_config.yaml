@@ -1,0 +1,18 @@
+deployment:
+  backend:
+    stack: FastAPI
+    host: IONOS VPS / Cloud Server
+    env: Python 3.11, Uvicorn, Gunicorn
+  frontend:
+    stack: React + Vite
+    host: IONOS Web Hosting or Docker container
+  database:
+    options: [PostgreSQL, MongoDB]
+    mode: IONOS DBaaS or manual install
+  capsule_storage:
+    path: /codex/archive
+    format: versioned JSON
+    includes: contributor_logs
+  replay_engine:
+    triggers: [cron, webhook]
+    function: retry_failed_flows, inscribe_legacy

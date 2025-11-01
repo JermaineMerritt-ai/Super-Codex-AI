@@ -1,0 +1,9 @@
+signal_id: sig_2025_10_30_nvda_001
+size_usd: 20000
+account_ref: custodian_primary
+order_type: marketable_limit
+slippage_bps_cap: 15
+brackets:
+  take_profit_pct: 0.015
+  stop_loss_pct: 0.01
+policy_overrides: null

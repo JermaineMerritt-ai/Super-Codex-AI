@@ -1,0 +1,10 @@
+# SKU → Role mapping scroll
+# Each WooCommerce product SKU corresponds to a Dominion role.
+# Custodians can update this file without touching backend code.
+
+mappings:
+  COUNCIL-SUBSCRIPTION: Council
+  CUSTODIAN-SUBSCRIPTION: Custodian
+  PARTICIPANT-PASS: Participant
+  LEGACY-ARCHIVE: Archivist
+  VIDEO-CAPSULE: CapsuleBearer

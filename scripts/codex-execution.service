@@ -1,0 +1,17 @@
+[Unit]
+Description=Codex Execution Engine Service
+After=network.target codex-signal.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/codex/capsule
+ExecStart=/usr/bin/python3 services/execution_engine.py \
+  --config config/capsule_policy_manifest.yaml
+Environment="BROKER_API_KEY=changeme"
+Environment="BROKER_API_SECRET=changeme"
+Restart=always
+RestartSec=5
+User=codex
+
+[Install]
+WantedBy=multi-user.target

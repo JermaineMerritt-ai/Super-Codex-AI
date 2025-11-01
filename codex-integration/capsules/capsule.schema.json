@@ -1,0 +1,69 @@
+{
+  "$id": "https://codex.dom/capsule.schema.json",
+  "title": "Codex Capsule Workflow",
+  "type": "object",
+  "required": ["capsule", "nodes", "edges"],
+  "properties": {
+    "capsule": {
+      "type": "object",
+      "required": ["id", "version", "title", "sector", "owner"],
+      "properties": {
+        "id": { "type": "string" },
+        "version": { "type": "integer", "minimum": 1 },
+        "title": { "type": "string" },
+        "sector": { "type": "string" },
+        "owner": { "type": "string" },
+        "status": { "type": "string", "enum": ["draft", "sealed"], "default": "draft" }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["trigger", "action", "condition", "replay", "recognition"]
+          },
+          "label": { "type": "string" },
+          "config": { "type": "object" },
+          "ui": {
+            "type": "object",
+            "properties": {
+              "x": { "type": "number" },
+              "y": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to"],
+        "properties": {
+          "from": { "type": "string" },
+          "to": { "type": "string" },
+          "condition": { "type": "string" }
+        }
+      }
+    },
+    "guards": {
+      "type": "object",
+      "properties": {
+        "privacy": { "type": "string", "default": "pii_minimization" },
+        "approvals": { "type": "string", "default": "auto_policy" }
+      }
+    },
+    "replay": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean", "default": true },
+        "mode": { "type": "string", "enum": ["auto", "manual", "narrated"], "default": "narrated" }
+      }
+    }
+  }
+}

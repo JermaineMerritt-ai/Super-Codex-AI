@@ -1,0 +1,22 @@
+{
+  "capsule_id": "capsule_001",
+  "title": "Notify Council on Capsule Publish",
+  "version": 1,
+  "sector": "governance",
+  "owner": "Custodian",
+  "status": "draft",
+  "nodes": [
+    { "id": "1", "type": "trigger", "data": { "label": "Capsule Published", "event": "capsule_published" } },
+    { "id": "2", "type": "action", "data": { "label": "Notify Council", "endpoint": "/notify", "params": { "channel": "email" } } },
+    { "id": "3", "type": "replay", "data": { "label": "Archive Flow", "storage": "Codex Archive" } },
+    { "id": "4", "type": "recognition", "data": { "label": "Recognize Contributor", "role": "council", "message": "Witnessed and archived." } }
+  ],
+  "edges": [
+    { "source": "1", "target": "2" },
+    { "source": "2", "target": "3" },
+    { "source": "3", "target": "4" }
+  ],
+  "guards": { "privacy": "pii_minimization", "approvals": "auto_policy" },
+  "replay": { "enabled": true, "mode": "narrated" },
+  "meta": { "author": "Jermaine", "ceremony": "Codex Sovereign Ritual" }
+}

@@ -1,0 +1,72 @@
+capsule_id: equities_momentum_v1
+version: 1.0.0
+last_updated: 2025-10-30
+
+governance:
+  custodian:
+    emergency_stop: true
+    capital_limit_usd: 1_000_000
+  council_quorum:
+    soft: 0.6        # % required for routine trades
+    hard: 0.8        # % required for high-risk trades
+  diaspora_participation:
+    remix_nodes_weight: 0.15
+    overflow_allocation_pct: 0.05
+
+risk_limits:
+  per_trade_nav_pct: 0.01
+  daily_drawdown_halt_pct: 0.02
+  max_positions: 15
+  sector_exposure_cap_pct: 0.25
+  correlation_gate: 0.75
+  volatility_atr_multiplier: 2.5
+  min_avg_volume_usd: 5_000_000
+  max_spread_bps: 25
+  shorting:
+    require_borrow_available: true
+    max_short_nav_pct: 0.30
+
+execution_policies:
+  order_types:
+    - marketable_limit
+    - bracket_order
+    - vwap
+    - twap
+  slippage_bps_cap: 15
+  bracket_defaults:
+    take_profit_pct: 0.015
+    stop_loss_pct: 0.01
+  routing:
+    prefer_price_improvement: true
+    avoid_dark_pools: true
+
+surveillance:
+  monitors:
+    pnl: true
+    drawdown: true
+    exposure: true
+    slippage: true
+  anomaly_detection:
+    spoofing_patterns: true
+    liquidity_cliffs: true
+    bot_swarms: true
+  incident_testimony:
+    auto_generate: true
+    archive_scrolls: true
+
+compliance:
+  custody: none
+  broker_side_kyc: true
+  aml_checks: true
+  disclosure_required: true
+  audit_hashing:
+    enabled: true
+    batch_interval_minutes: 60
+
+contributor_economics:
+  credit_weights:
+    signal_precision: 0.5
+    validation_effort: 0.3
+    execution_quality: 0.2
+  payout_cadence_days: 30
+  overflow_allocation_pct: 0.05

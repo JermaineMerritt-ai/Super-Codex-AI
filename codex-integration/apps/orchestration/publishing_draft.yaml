@@ -1,0 +1,6 @@
+publishing:
+  status: draft
+  registry: codex_registry
+  remix_lineage:
+    remix_of: capsule_001
+    contributors: ["Jermaine", "AI"]

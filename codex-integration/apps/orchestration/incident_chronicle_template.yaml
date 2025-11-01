@@ -1,0 +1,8 @@
+chronicle_id: <unique_id_here>
+title: "<short_description_of_incident>"
+author: "<custodian_name>"
+timestamp: "<UTC_datetime>"
+arc: "Resilience Arc"
+ritual: "Incident & Recovery Testimony"
+severity: <low|moderate|high|critical>
+status: <resolved|ongoing|mitigated>

@@ -1,0 +1,16 @@
+capsule_id: equities_momentum_v1
+limits:
+  per_trade_nav_pct: 0.01
+  daily_drawdown_halt_pct: 0.02
+  max_positions: 15
+  sector_exposure_cap_pct: 0.25
+gates:
+  volatility_atr_multiplier: 2.5
+  min_avg_volume_usd: 5_000_000
+  max_spread_bps: 25
+shorting:
+  require_borrow_available: true
+  max_short_nav_pct: 0.30
+quorum:
+  soft: 0.6
+  hard: 0.8

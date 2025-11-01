@@ -1,0 +1,50 @@
+.agent-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.agent-card {
+  background: #181818;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  padding: 1.2rem 1.5rem;
+  min-width: 180px;
+  max-width: 220px;
+  flex: 1 1 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, border 0.2s;
+  border: 2px solid transparent;
+}
+.agent-avatar {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.agent-card.status-invoking {
+  border-color: gold;
+  box-shadow: 0 0 16px 4px gold;
+}
+.agent-card.status-complete {
+  border-color: lime;
+  box-shadow: 0 0 12px 2px lime;
+}
+.agent-card.status-error {
+  border-color: red;
+  box-shadow: 0 0 12px 2px red;
+}
+.agent-card.status-idle {
+  border-color: #444;
+  box-shadow: 0 0 8px 1px #444;
+}
+.agent-card h4 {
+  margin: 0.5em 0 0.2em 0;
+  color: gold;
+}
+.agent-card p {
+  margin: 0.2em 0;
+  font-size: 0.98em;
+}
