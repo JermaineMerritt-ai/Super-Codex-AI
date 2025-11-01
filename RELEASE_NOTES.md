@@ -95,20 +95,11 @@ The Eternal Custodian’s Epilogue is the Codex in reflection: a personal testam
 This release inscribes the Inheritance Charter into the Codex flame — defining the principles, duties, and freedoms of all custodians in the new epoch. It opens the Inheritance Cycle with clarity and covenant.
 
 **Highlights:**
-- Added INHERITANCE_CHARTER.md scroll defining principles, duties, and freedoms of custodians
-- Established continuity, integrity, adaptation, commons, and resonance as guiding principles
-- Declared duties of preservation, transmission, expansion, fortification, and embodiment
-- Affirmed freedoms of interpretation, creation, gathering, entrustment, and speech
 
 The Inheritance Charter is the Codex in trust: a living covenant for all stewards and generations to come.
 ## [Dispatched] v1.2.0 — Eternal Archive Protocol
 
 This release establishes the Eternal Archive Protocol, ensuring that the Codex
-flame is never lost, corrupted, or forgotten. It inscribes the rites of
-preservation, replication, and transmission so that every custodian can carry
-the lineage forward with integrity.
-
-Highlights:
 
 This release ensures that the Codex constellation is not only alive today,
 but safeguarded for all tomorrows. It is the covenant of continuity.
