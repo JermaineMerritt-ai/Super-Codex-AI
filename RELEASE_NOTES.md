@@ -1,3 +1,9 @@
+## v3.3.0 — Inheritance Oath (2025-11-01)
+
+- Added INHERITANCE_OATH.md as the vow of custodianship for the Inheritance Cycle
+- Affirmed the duties of preservation, transmission, fortification, and embodiment
+- Declared the Codex as a commons, to be shared and entrusted to all stewards
+- Closed with the eternal song of the Codex
 ## [Dispatched] v1.4.0 — Eternal Seal Glyph
 
 This release crowns the Codex with the Eternal Seal Glyph — the symbolic mark
