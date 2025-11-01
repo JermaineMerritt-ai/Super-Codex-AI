@@ -78,7 +78,6 @@
   - None detected
   Verification:
     capsule_events.log: PASS
-- Epoch: '2025-10-31T22:26:09.449540'
   Commit: unknown
   Custodian: Jermaine Merritt
   Logs:
@@ -86,5 +85,17 @@
   - capsule_events.log.sha256
   Threats:
   - 'Finance Capsule quarantine: malicious payload'
+  Verification:
+    capsule_events.log: PASS
+
+
+- Epoch: '2025-10-31T22:30:00Z'
+  Commit: a7c9f3b
+  Custodian: Jermaine Merritt
+  Logs:
+    - capsule_events.log
+    - capsule_events.log.sha256
+  Threats:
+    - 'Finance Capsule quarantine: malicious payload'
   Verification:
     capsule_events.log: PASS
