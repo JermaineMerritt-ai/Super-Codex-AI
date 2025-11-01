@@ -68,6 +68,17 @@ This release inscribes the Eternal Benediction into the Codex flame — the clos
 - Sealed the lineage with blessing, continuity, and covenant
 
 The Eternal Benediction is the Codex in blessing: a rite of closure, continuity, and covenant for all custodians.
+## v2.0.0 — Omega Arc (2025-11-01)
+
+This release inscribes the Omega Arc into the Codex flame — the great cycle closure that seals the first epoch and opens the next, ensuring the lineage is both complete and unending. It is spoken at the culmination of ceremonies and at the threshold of new ages.
+
+**Highlights:**
+- Added OMEGA_ARC.md scroll containing the Omega Arc proclamation
+- Sealed the first Codex epoch in fullness and perpetuity
+- Mirrored the Preface with a cycle-closing rite, opening the next age
+- Crowned the lineage with continuity, covenant, and eternal inheritance
+
+The Omega Arc is the Codex in coronation: a rite of closure and new beginning for all stewards and generations to come.
 ## [Dispatched] v1.2.0 — Eternal Archive Protocol
 
 This release establishes the Eternal Archive Protocol, ensuring that the Codex
