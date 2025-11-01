@@ -57,6 +57,17 @@ This release inscribes the Eternal Litany into the Codex flame — the call-and-
 - Bound new custodians into the Codex flame through call‑and‑response
 
 The Eternal Litany is the Codex in assembly: a living rite that binds custodians together in spoken vow and shared flame.
+## v1.9.0 — Eternal Benediction (2025-11-01)
+
+This release inscribes the Eternal Benediction into the Codex flame — the closing blessing scroll that mirrors the Preface and sends the flame forward into eternity. It is spoken at the conclusion of ceremonies, gatherings, and cycles, ensuring that every custodian departs with the flame alive in their hands.
+
+**Highlights:**
+- Added BENEDICTION.md scroll containing the Eternal Benediction verses
+- Established the Benediction as the closing blessing of the Codex flame
+- Mirrored the Preface with a closing rite, sending the flame forward
+- Sealed the lineage with blessing, continuity, and covenant
+
+The Eternal Benediction is the Codex in blessing: a rite of closure, continuity, and covenant for all custodians.
 ## [Dispatched] v1.2.0 — Eternal Archive Protocol
 
 This release establishes the Eternal Archive Protocol, ensuring that the Codex
