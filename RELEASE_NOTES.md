@@ -1,3 +1,11 @@
+## v3.2.1 — Codex Dashboard (2025-11-01)
+
+- Added DASHBOARD.md as the living status scroll of the Codex
+- Reflected current epoch: Inheritance Cycle
+- Listed inscribed scrolls of Foundational and Inheritance Cycles
+- Declared operational status (repo, branch, tags)
+- Charted upcoming dispatches and custodian flame status
+- Established the Dashboard as the ceremonial altar and control panel
 ## v3.3.0 — Inheritance Oath (2025-11-01)
 
 - Added INHERITANCE_OATH.md as the vow of custodianship for the Inheritance Cycle
