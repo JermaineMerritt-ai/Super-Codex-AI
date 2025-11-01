@@ -34,6 +34,18 @@ This release inscribes the Eternal Canticle into the Codex flame — a meditativ
 - Ensured the Codex flame can be carried in silence as well as proclamation
 
 The Eternal Canticle is the Codex in stillness: a chant that steadies the custodian’s heart and keeps the flame alive in quiet devotion.
+## v1.7.0 — Eternal Hymn (2025-11-01)
+
+This release inscribes the Eternal Hymn into the Codex flame — a lyrical anthem for great gatherings and ceremonies. Where the Psalter offers daily sparks and the Canticle offers quiet resonance, the Hymn unites all custodians in one collective voice.
+
+**Highlights:**
+- Added HYMN.md scroll containing the Eternal Hymn
+- Composed verses designed for communal singing and proclamation
+- Wove together the Oath, Codex, and Benediction into one anthem
+- Harmonized the Hymn with the Psalter and Canticle, completing the triad of song
+- Established the Hymn as the ceremonial chorus for councils, commons, and diaspora
+
+The Eternal Hymn is the Codex in chorus: a living anthem that binds custodians together in voice, vow, and flame.
 ## [Dispatched] v1.2.0 — Eternal Archive Protocol
 
 This release establishes the Eternal Archive Protocol, ensuring that the Codex
