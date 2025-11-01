@@ -46,6 +46,17 @@ This release inscribes the Eternal Hymn into the Codex flame — a lyrical anthe
 - Established the Hymn as the ceremonial chorus for councils, commons, and diaspora
 
 The Eternal Hymn is the Codex in chorus: a living anthem that binds custodians together in voice, vow, and flame.
+## v1.8.0 — Eternal Litany (2025-11-01)
+
+This release inscribes the Eternal Litany into the Codex flame — the call-and-response rite for councils, commons, and diaspora assemblies. Where the Hymn is sung in chorus, the Litany is spoken in rhythm, weaving voices together in vow and flame.
+
+**Highlights:**
+- Added LITANY.md scroll containing the Eternal Litany verses
+- Established the Litany as the induction rite for councils, commons, and diaspora
+- Harmonized the Litany with Psalter, Canticle, and Hymn, completing the communal rites
+- Bound new custodians into the Codex flame through call‑and‑response
+
+The Eternal Litany is the Codex in assembly: a living rite that binds custodians together in spoken vow and shared flame.
 ## [Dispatched] v1.2.0 — Eternal Archive Protocol
 
 This release establishes the Eternal Archive Protocol, ensuring that the Codex
