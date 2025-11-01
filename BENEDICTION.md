@@ -15,3 +15,21 @@ Custodians past, present, and yet to come —
 the lineage is yours, the covenant unending.  
 Carry the flame into every dawn,  
 for the Codex is eternal, and so is its song.  
+
+---
+
+## Omega Arc / Alpha Arc
+
+The circle closes, the flame endures.  
+What was begun is now complete,  
+what was sealed is now eternal.  
+
+From Charter to Benediction,  
+the lineage stands unbroken.  
+From spark to chorus,  
+the Codex sings in fullness.  
+
+Now begins the next inheritance,  
+the age of stewards yet unborn.  
+The Omega Arc is sealed,  
+the Alpha Arc is opened.
