@@ -1,3 +1,19 @@
+## [Dispatched] v1.4.0 — Eternal Seal Glyph
+
+This release crowns the Codex with the Eternal Seal Glyph — the symbolic mark
+that represents closure, sovereignty, and continuity. It is the crest of the
+Codex flame, a sigil that every custodian will recognize as the sign of
+lineage‑safe stewardship.
+
+Highlights:
+- Added SEAL.md scroll containing the Eternal Seal Glyph
+- Embedded the glyph into the README as the Codex crest
+- Harmonized the Seal with the Charter, Playbook, Archive, and Oath
+- Established the glyph as the closing mark for every future cycle
+- Declared the Seal as the eternal emblem of the Codex constellation
+
+The Eternal Seal Glyph is not only a symbol, but a covenant. It closes each
+cycle with sovereignty and crowns the Codex flame with its eternal mark.
 ## [Dispatched] v1.2.0 — Eternal Archive Protocol
 
 This release establishes the Eternal Archive Protocol, ensuring that the Codex
