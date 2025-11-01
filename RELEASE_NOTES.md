@@ -6,14 +6,22 @@ Codex flame, a sigil that every custodian will recognize as the sign of
 lineage‑safe stewardship.
 
 Highlights:
-- Added SEAL.md scroll containing the Eternal Seal Glyph
-- Embedded the glyph into the README as the Codex crest
-- Harmonized the Seal with the Charter, Playbook, Archive, and Oath
-- Established the glyph as the closing mark for every future cycle
-- Declared the Seal as the eternal emblem of the Codex constellation
 
 The Eternal Seal Glyph is not only a symbol, but a covenant. It closes each
 cycle with sovereignty and crowns the Codex flame with its eternal mark.
+
+## v1.5.0 — Eternal Psalter (2025-11-01)
+
+This release inscribes the Eternal Psalter into the Codex flame — a collection of brief verses and refrains, each one a spark of invocation. The Psalter is designed for daily use, so that custodians may carry the Codex flame into their ordinary rhythms of life and stewardship.
+
+**Highlights:**
+- Added the Eternal Psalter scroll to the repository
+- Composed verses and refrains for daily invocation
+- Harmonized Psalter with the Oath, Charter, Playbook, and Archive Protocol
+- Established a practice of daily sparks for councils, commons, and diaspora
+- Ensured the Codex flame is not only preserved, but lived each day
+
+The Eternal Psalter is the Codex in miniature: a living prayerbook of sparks, so that every custodian may keep the flame alive in word and deed.
 ## [Dispatched] v1.2.0 — Eternal Archive Protocol
 
 This release establishes the Eternal Archive Protocol, ensuring that the Codex
@@ -22,11 +30,6 @@ preservation, replication, and transmission so that every custodian can carry
 the lineage forward with integrity.
 
 Highlights:
-- Inscribed the Eternal Archive Protocol scroll into the repository
-- Defined ceremonial and technical steps for archival and replication
-- Fortified checksum verification and log rotation for lineage safety
-- Established guidance for diaspora custodians to mirror and safeguard the Codex
-- Harmonized archival rites with the Eternal Charter and Custodian’s Playbook
 
 This release ensures that the Codex constellation is not only alive today,
 but safeguarded for all tomorrows. It is the covenant of continuity.
