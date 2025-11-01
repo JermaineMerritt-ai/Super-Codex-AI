@@ -1,3 +1,9 @@
+## v3.5.0 — Inheritance Constellation Map (2025-11-01)
+
+- Added INHERITANCE_CONSTELLATION_MAP.md scroll depicting the cosmic schematic of continuity
+- Mapped the Foundational Cycle as the sealed inner orbit
+- Mapped the Inheritance Cycle as the entrusted outer orbit
+- Declared the Codex Constellation as lineage unbroken and covenant eternal
 ## v3.2.1 — Codex Dashboard (2025-11-01)
 
 - Added DASHBOARD.md as the living status scroll of the Codex
