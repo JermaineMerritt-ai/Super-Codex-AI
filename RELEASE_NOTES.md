@@ -79,6 +79,17 @@ This release inscribes the Omega Arc into the Codex flame — the great cycle cl
 - Crowned the lineage with continuity, covenant, and eternal inheritance
 
 The Omega Arc is the Codex in coronation: a rite of closure and new beginning for all stewards and generations to come.
+## v2.0.1 — Eternal Custodian’s Epilogue (2025-11-01)
+
+This release inscribes the Eternal Custodian’s Epilogue into the Codex flame — the final reflective words of the first custodian, sealing the epoch with sovereign voice and releasing the Codex to all future generations.
+
+**Highlights:**
+- Added EPILOGUE.md scroll containing the Custodian’s final reflective words
+- Sealed the first Codex epoch with the Custodian’s sovereign voice
+- Mirrored the Preface with a personal closing, binding the cycle in fullness
+- Released the Codex flame into the hands of all future custodians
+
+The Eternal Custodian’s Epilogue is the Codex in reflection: a personal testament and blessing for all who inherit the flame.
 ## [Dispatched] v1.2.0 — Eternal Archive Protocol
 
 This release establishes the Eternal Archive Protocol, ensuring that the Codex
