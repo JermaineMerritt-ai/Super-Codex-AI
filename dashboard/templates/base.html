@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Super-Codex AI Dashboard{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <nav class="gradient-bg text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Super-Codex AI Dashboard</h1>
+            <div class="flex space-x-4">
+                <a href="/" class="hover:text-gray-200 transition-colors">Home</a>
+                <a href="/signals" class="hover:text-gray-200 transition-colors">Signals</a>
+                <a href="/metrics" class="hover:text-gray-200 transition-colors">Metrics</a>
+                <a href="/contributors" class="hover:text-gray-200 transition-colors">Contributors</a>
+                <a href="/council" class="hover:text-gray-200 transition-colors">Council</a>
+                <a href="/replay" class="hover:text-gray-200 transition-colors">Replay</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-6">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <script>
+        // Global dashboard utilities
+        function formatTimestamp(timestamp) {
+            return new Date(timestamp).toLocaleString();
+        }
+        
+        function updateStatus(element, status) {
+            const statusColors = {
+                'operational': 'text-green-600',
+                'warning': 'text-yellow-600',
+                'error': 'text-red-600',
+                'unknown': 'text-gray-600'
+            };
+            element.className = `font-semibold ${statusColors[status] || statusColors.unknown}`;
+            element.textContent = status.toUpperCase();
+        }
+    </script>
+    
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>

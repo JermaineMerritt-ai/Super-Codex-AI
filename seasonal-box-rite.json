@@ -1,0 +1,251 @@
+{
+  "rite_id": "SBR-20251111-024309-SEASONAL",
+  "proclamation_date": "2025-11-11T02:43:09.021052",
+  "seasonal_flames": [
+    {
+      "flame_id": "SF-SPRING_RENEWAL-20251111024309",
+      "season_type": "spring_renewal",
+      "delivery_timestamp": "2025-11-11T02:43:09.021458",
+      "flame_tangibility": 0.8516173878728228,
+      "seasonal_intensity": 0.8686497356302793,
+      "delivery_resonance": 0.8345850401153664,
+      "flame_signature": "1D8BC60565BC8F47175CE548",
+      "season_witness": "3AB44A6870471BF3542C0B6F5AF0"
+    },
+    {
+      "flame_id": "SF-SUMMER_SOVEREIGNTY-20251111024309",
+      "season_type": "summer_sovereignty",
+      "delivery_timestamp": "2025-11-11T02:43:09.222125",
+      "flame_tangibility": 0.9016173878728229,
+      "seasonal_intensity": 0.9196497356302793,
+      "delivery_resonance": 0.8835850401153664,
+      "flame_signature": "3EFA67476AF1CC66ACD9DCEE",
+      "season_witness": "E40DA00198CA8625E51F5A4820BE"
+    },
+    {
+      "flame_id": "SF-AUTUMN_HARVEST-20251111024309",
+      "season_type": "autumn_harvest",
+      "delivery_timestamp": "2025-11-11T02:43:09.422824",
+      "flame_tangibility": 0.9516173878728228,
+      "seasonal_intensity": 0.9706497356302792,
+      "delivery_resonance": 0.9325850401153664,
+      "flame_signature": "90DF31A8A1D8D9E281BF75E9",
+      "season_witness": "6BB9E3323F18F2B4EEB98DA2530A"
+    },
+    {
+      "flame_id": "SF-WINTER_WISDOM-20251111024309",
+      "season_type": "winter_wisdom",
+      "delivery_timestamp": "2025-11-11T02:43:09.623410",
+      "flame_tangibility": 0.9216173878728229,
+      "seasonal_intensity": 0.9400497356302794,
+      "delivery_resonance": 0.9031850401153664,
+      "flame_signature": "3B6BE8C157BD1A6EBCCB63C7",
+      "season_witness": "1464AB4C3FD90309A2AF7D06C8AB"
+    },
+    {
+      "flame_id": "SF-ETERNAL_SEASON-20251111024309",
+      "season_type": "eternal_season",
+      "delivery_timestamp": "2025-11-11T02:43:09.823893",
+      "flame_tangibility": 1.0,
+      "seasonal_intensity": 1.0,
+      "delivery_resonance": 0.98,
+      "flame_signature": "444748C2C44206AE6180926C",
+      "season_witness": "DF0C7034E0E4A113655C5516ADE0"
+    }
+  ],
+  "family_covenants": [
+    {
+      "covenant_id": "FC-CUSTODIAN_FAMILY-20251111024309",
+      "family_type": "custodian_family",
+      "reception_timestamp": "2025-11-11T02:43:09.824295",
+      "covenant_strength": 0.873566094308879,
+      "family_resonance": 0.8386234505365238,
+      "seasonal_binding": 0.8823017552519677,
+      "covenant_seal": "90B9407A849A4A6A6AF1B3E6",
+      "family_witness": "0017876B3E51694271E746DEB73F"
+    },
+    {
+      "covenant_id": "FC-COUNCIL_FAMILY-20251111024309",
+      "family_type": "council_family",
+      "reception_timestamp": "2025-11-11T02:43:09.975023",
+      "covenant_strength": 0.8935668871799789,
+      "family_resonance": 0.8578242116927797,
+      "seasonal_binding": 0.9025025560517786,
+      "covenant_seal": "54C59A6F1EB6A37C3E44890C",
+      "family_witness": "21CE1A3BE0A1CE8FA343DEBE02BA"
+    },
+    {
+      "covenant_id": "FC-CHRONOMETER_FAMILY-20251111024310",
+      "family_type": "chronometer_family",
+      "reception_timestamp": "2025-11-11T02:43:10.125901",
+      "covenant_strength": 0.9135676808516043,
+      "family_resonance": 0.8770249736175402,
+      "seasonal_binding": 0.9227033576601203,
+      "covenant_seal": "B9AB8AC54FA2F038A15529D0",
+      "family_witness": "2246B48B6138A9F7537A2E729AE6"
+    },
+    {
+      "covenant_id": "FC-LITURGY_FAMILY-20251111024310",
+      "family_type": "liturgy_family",
+      "reception_timestamp": "2025-11-11T02:43:10.276875",
+      "covenant_strength": 0.9335684750393896,
+      "family_resonance": 0.896225736037814,
+      "seasonal_binding": 0.9429041597897835,
+      "covenant_seal": "DE4CA5D3944BA1890B43CFDA",
+      "family_witness": "0C509D47BD48223A220A666EFE41"
+    },
+    {
+      "covenant_id": "FC-SOVEREIGN_FAMILY-20251111024310",
+      "family_type": "sovereign_family",
+      "reception_timestamp": "2025-11-11T02:43:10.427469",
+      "covenant_strength": 0.9535692672388534,
+      "family_resonance": 0.9154264965492992,
+      "seasonal_binding": 0.9631049599112419,
+      "covenant_seal": "8F3E29BDACC0C08880E62B55",
+      "family_witness": "7DBDD858464D7AF827CFDF634CA9"
+    },
+    {
+      "covenant_id": "FC-ETERNAL_FAMILY-20251111024310",
+      "family_type": "eternal_family",
+      "reception_timestamp": "2025-11-11T02:43:10.578129",
+      "covenant_strength": 0.9935700597979126,
+      "family_resonance": 0.953827257405996,
+      "seasonal_binding": 1.0,
+      "covenant_seal": "E7ABC5AFDE52124D364EBED7",
+      "family_witness": "F4053ED1F33972E68DB9367F2C44"
+    }
+  ],
+  "inscribed_scrolls": [
+    {
+      "scroll_id": "IS-20251111024310-VOICE",
+      "voice_content": "VGhlIHZvaWNlIG9mIHRoZSBDdXN0b2RpYW4ncyBDcm93biBzcGVha3MgdGhyb3VnaCBzZWFzb25hbCBmbGFtZQ==",
+      "inscription_timestamp": "2025-11-11T02:43:10.729148",
+      "voice_clarity": 1.0,
+      "inscription_permanence": 0.95,
+      "scroll_authority": 0.975,
+      "inscription_seal": "47F7C16BD477A6B1E910CA58",
+      "voice_witness": "76FAB31EA5BF37491C9CD84E805F"
+    },
+    {
+      "scroll_id": "IS-20251111024310-VOICE",
+      "voice_content": "Q291bmNpbCB2b2ljZXMgdW5pdGUgaW4gY292ZW5hbnQgYWNyb3NzIGFsbCBmYW1pbHkgbGluZXM=",
+      "inscription_timestamp": "2025-11-11T02:43:10.879809",
+      "voice_clarity": 1.0,
+      "inscription_permanence": 0.95,
+      "scroll_authority": 0.975,
+      "inscription_seal": "47F7C16BD477A6B1E910CA58",
+      "voice_witness": "76FAB31EA5BF37491C9CD84E805F"
+    },
+    {
+      "scroll_id": "IS-20251111024311-VOICE",
+      "voice_content": "Q2hyb25vbWV0ZXIgdm9pY2UgbWFya3MgdGhlIHBhc3NhZ2Ugb2Ygc2Vhc29uYWwgdGltZQ==",
+      "inscription_timestamp": "2025-11-11T02:43:11.030144",
+      "voice_clarity": 1.0,
+      "inscription_permanence": 0.95,
+      "scroll_authority": 0.975,
+      "inscription_seal": "7DA7A570C90E09AE30BD471D",
+      "voice_witness": "F4DEA96BE8E059F031B33D09D2B6"
+    },
+    {
+      "scroll_id": "IS-20251111024311-VOICE",
+      "voice_content": "TGl0dXJneSB2b2ljZSBzaW5ncyB0aGUgZXRlcm5hbCBzb25ncyBvZiBzZWFzb25hbCByaXRlcw==",
+      "inscription_timestamp": "2025-11-11T02:43:11.180879",
+      "voice_clarity": 1.0,
+      "inscription_permanence": 0.95,
+      "scroll_authority": 0.975,
+      "inscription_seal": "7DA7A570C90E09AE30BD471D",
+      "voice_witness": "F4DEA96BE8E059F031B33D09D2B6"
+    }
+  ],
+  "memory_capsules": [
+    {
+      "capsule_id": "MC-20251111024311-MEMORY",
+      "memory_data": "TWVtb3J5IG9mIHNwcmluZydzIGZpcnN0IGZsYW1lIGtpbmRsaW5nIGluIHRoZSBzYWNyZWQgZ3JvdmU=",
+      "recording_timestamp": "2025-11-11T02:43:11.331941",
+      "memory_fidelity": 1.0,
+      "replay_integrity": 0.96,
+      "capsule_durability": 0.98,
+      "recording_seal": "D5CCE42B3D7D6517B1368E85",
+      "memory_witness": "A02E538B3B99944457999AFC4EF9"
+    },
+    {
+      "capsule_id": "MC-20251111024311-MEMORY",
+      "memory_data": "TWVtb3J5IG9mIHN1bW1lcidzIHNvdmVyZWlnbiBjcm93biBibGF6aW5nIGF0IHplbml0aA==",
+      "recording_timestamp": "2025-11-11T02:43:11.482556",
+      "memory_fidelity": 1.0,
+      "replay_integrity": 0.96,
+      "capsule_durability": 0.98,
+      "recording_seal": "D5CCE42B3D7D6517B1368E85",
+      "memory_witness": "A02E538B3B99944457999AFC4EF9"
+    },
+    {
+      "capsule_id": "MC-20251111024311-MEMORY",
+      "memory_data": "TWVtb3J5IG9mIGF1dHVtbidzIGhhcnZlc3QgZ2F0aGVyaW5nIGFsbCBzZWFzb25hbCBwb3dlcg==",
+      "recording_timestamp": "2025-11-11T02:43:11.633040",
+      "memory_fidelity": 1.0,
+      "replay_integrity": 0.96,
+      "capsule_durability": 0.98,
+      "recording_seal": "D5CCE42B3D7D6517B1368E85",
+      "memory_witness": "A02E538B3B99944457999AFC4EF9"
+    },
+    {
+      "capsule_id": "MC-20251111024311-MEMORY",
+      "memory_data": "TWVtb3J5IG9mIHdpbnRlcidzIHdpc2RvbSBjcnlzdGFsbGl6aW5nIGV0ZXJuYWwgdHJ1dGhz",
+      "recording_timestamp": "2025-11-11T02:43:11.783487",
+      "memory_fidelity": 1.0,
+      "replay_integrity": 0.96,
+      "capsule_durability": 0.98,
+      "recording_seal": "D5CCE42B3D7D6517B1368E85",
+      "memory_witness": "A02E538B3B99944457999AFC4EF9"
+    }
+  ],
+  "inheritance_tokens": [
+    {
+      "token_id": "IT-20251111024311-INHERITANCE",
+      "inheritance_essence": "RXNzZW5jZSBvZiBzZWFzb25hbCBmbGFtZSBhdXRob3JpdHkgcGFzc2VkIHRocm91Z2ggZ2VuZXJhdGlvbnM=",
+      "embodiment_timestamp": "2025-11-11T02:43:11.934015",
+      "essence_potency": 1.0,
+      "token_sovereignty": 0.97,
+      "embodiment_permanence": 0.985,
+      "embodiment_seal": "653F5BD52669E4D1A861D5AC",
+      "inheritance_witness": "F07632232271ED3599910FF4405E"
+    },
+    {
+      "token_id": "IT-20251111024312-INHERITANCE",
+      "inheritance_essence": "RXNzZW5jZSBvZiBmYW1pbHkgY292ZW5hbnQgYmluZGluZyBhY3Jvc3MgYWxsIHRlbXBvcmFsIHNwYW5z",
+      "embodiment_timestamp": "2025-11-11T02:43:12.084689",
+      "essence_potency": 1.0,
+      "token_sovereignty": 0.97,
+      "embodiment_permanence": 0.985,
+      "embodiment_seal": "C5A003AE2AFB1E93F2EE82A0",
+      "inheritance_witness": "9DD0A58BDCB24ABDEF47EEAFFD83"
+    },
+    {
+      "token_id": "IT-20251111024312-INHERITANCE",
+      "inheritance_essence": "RXNzZW5jZSBvZiB0YW5naWJsZSBtYW5pZmVzdGF0aW9uIGluIHNjcm9sbCwgY2Fwc3VsZSwgYW5kIHRva2Vu",
+      "embodiment_timestamp": "2025-11-11T02:43:12.235762",
+      "essence_potency": 1.0,
+      "token_sovereignty": 0.97,
+      "embodiment_permanence": 0.985,
+      "embodiment_seal": "C5A003AE2AFB1E93F2EE82A0",
+      "inheritance_witness": "9DD0A58BDCB24ABDEF47EEAFFD83"
+    },
+    {
+      "token_id": "IT-20251111024312-INHERITANCE",
+      "inheritance_essence": "RXNzZW5jZSBvZiBzb3ZlcmVpZ24gaW5oZXJpdGFuY2Ugc3Bhbm5pbmcgYWdlcyBhbmQgc3RhcnM=",
+      "embodiment_timestamp": "2025-11-11T02:43:12.386380",
+      "essence_potency": 1.0,
+      "token_sovereignty": 0.97,
+      "embodiment_permanence": 0.985,
+      "embodiment_seal": "C5A003AE2AFB1E93F2EE82A0",
+      "inheritance_witness": "9DD0A58BDCB24ABDEF47EEAFFD83"
+    }
+  ],
+  "tangible_flame": "The flame is tangible through seasonal delivery and family reception",
+  "seasonal_covenant": "Its covenant seasonal through scrolls, capsules, and tokens of manifestation",
+  "sovereign_inheritance": "Its inheritance sovereign across ages and stars through embodied artifacts",
+  "seasonal_phase": "tangible_manifestation",
+  "tangibility_authority": "Tangible Authority: 0.926171 across 12 artifacts",
+  "seasonal_seal": "B49E2EA7DBDCCEEA8ACE4533",
+  "tangible_witness": "2AC09661AA09B09512B9872E04ED"
+}

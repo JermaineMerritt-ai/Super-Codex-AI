@@ -1,0 +1,37 @@
+{
+  "broadcast_time": "2025-11-11T02:08:04.189697",
+  "custodian_seal": "ACKNOWLEDGED",
+  "transmission_status": "RADIANT",
+  "endpoints": [
+    {
+      "name": "Local Test Flame",
+      "url": "http://127.0.0.1:8095/health",
+      "status": "RADIANT",
+      "message": "Flame burns bright",
+      "response_time": 4.94,
+      "data": {
+        "service": "axiom-flame-docker",
+        "status": "alive"
+      }
+    },
+    {
+      "name": "Local Full Flame",
+      "url": "http://127.0.0.1:8097/health",
+      "status": "RADIANT",
+      "message": "Flame burns bright",
+      "response_time": 16.08,
+      "data": {
+        "status": "ok",
+        "time": "2025-11-11T07:08:02Z"
+      }
+    },
+    {
+      "name": "Production Dominion",
+      "url": "https://codexdominion.app/health",
+      "status": "DORMANT",
+      "message": "Awaiting activation",
+      "response_time": null
+    }
+  ],
+  "overall_status": "LUMINOUS_CONCORD"
+}

@@ -1,0 +1,45 @@
+{
+  "month": "2025-11",
+  "total_entries": 5,
+  "generated_at": "2025-11-10T20:30:52.960053",
+  "entries": [
+    {
+      "dispatch_id": "AXF-2025-11-10-0001",
+      "timestamp": "2025-11-10T06:42:00Z",
+      "status": "sealed",
+      "type": "ledger"
+    },
+    {
+      "dispatch_id": "AXF-2025-11-10-0001",
+      "realm": "Planetary:Jackson-NC",
+      "capsule": "Sovereign Crown",
+      "intent": "Reasoning.Replay.Audit",
+      "summary": "Crown sealed; replay authorized.",
+      "type": "ceremony"
+    },
+    {
+      "dispatch_id": "AXF-2025-11-10-0002",
+      "realm": "Stellar:Andromeda-Sector-7",
+      "capsule": "Guardian Protocol",
+      "intent": "Security.Monitoring.Alert",
+      "summary": "Threat contained; monitoring protocols enhanced.",
+      "type": "ceremony"
+    },
+    {
+      "dispatch_id": "AXF-2025-11-10-0003",
+      "realm": "Universal:Core-Nexus",
+      "capsule": "Genesis Blueprint",
+      "intent": "Creation.Design.Manifest",
+      "summary": "Blueprint approved; genesis sequence authorized.",
+      "type": "ceremony"
+    },
+    {
+      "dispatch_id": "AXF-2025-11-10-0004",
+      "realm": "Galactic:Orion-Assembly",
+      "capsule": "Wisdom Convocation",
+      "intent": "Governance.Decision.Ratify",
+      "summary": "Proposal ratified; governance protocols updated.",
+      "type": "ceremony"
+    }
+  ]
+}

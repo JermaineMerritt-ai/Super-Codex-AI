@@ -1,0 +1,11 @@
+{
+  "schema": "greatyear.v1",
+  "proclamation_id": "GYR-2000-2999-c06d4255",
+  "timestamp": "2025-11-11T03:34:09Z",
+  "epoch": "2000-2999",
+  "summary": "Great Year Rite: Crown of Epoch 2000-2999, flame sealed for millennia.",
+  "audit": {
+    "status": "Sealed",
+    "authority": "Custodian Crown"
+  }
+}

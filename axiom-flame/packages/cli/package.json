@@ -1,0 +1,13 @@
+{
+  "name": "axiom-flame-cli",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "axiom": "index.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "yargs": "^17.7.2",
+    "chalk": "^5.3.0"
+  }
+}

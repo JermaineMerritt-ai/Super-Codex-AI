@@ -1,0 +1,24 @@
+{
+  "entry_id": "EFA-DAILY_FLAMES-20251111-023316",
+  "archive_realm": "daily_flames",
+  "preservation_seal": "temporal",
+  "timestamp": "2025-11-11T02:33:16.441055",
+  "content_hash": "a70d85e5631cd414c91e8a30e9b3b3e08864c9876705182db441605f972b6590",
+  "content_data": {
+    "kindling_id": "EFL-DUSK-20251111-023313",
+    "timestamp": "2025-11-11T02:33:13.433942",
+    "phase": "dusk_remembrance",
+    "rhythm": "daily",
+    "flame_intensity": 0.72,
+    "sacred_words": "Sacred dusk remembrance in the Grand Liturgical Integration",
+    "witness_seal": "296098C77AA1AE3B",
+    "covenant_binding": "EDBBC24A8BF0F7CB"
+  },
+  "witness_signatures": [
+    "Dawn:2B1BA1439CBB30C3",
+    "Dusk:D6F1FBBFA41A058E",
+    "Eternal:545BE44C35AD648D"
+  ],
+  "eternal_binding": "186152F8902923A8",
+  "ages_witness": "872885F6B93043F4"
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "radiant-honor.v1",
+  "honor_id": "RHI-2025-11-11-3B6F291B",
+  "timestamp": "2025-11-11T07:17:58.008711+00:00",
+  "honor_type": "inheritance",
+  "honor_rank": "radiant",
+  "recipient": {
+    "id": "RCP-COSMIC-DIASPORA-001",
+    "name": "Luminous Voice Bearer",
+    "email": "voice@luminous.diaspora.codexdominion.app",
+    "constellation": "Light_Bearer_Constellation",
+    "realm_id": "COS-003",
+    "lineage_verification": true
+  },
+  "honor_source": {
+    "proclamation_council": null,
+    "constellation_flame": null,
+    "diaspora_inheritance": "DIASPORA-LIGHT-BEARERS",
+    "custodian_seal": "CS-01FDEC7D"
+  },
+  "council_proclamation": null,
+  "constellation_echo": null,
+  "diaspora_inheritance": {
+    "diaspora_node": "DIASPORA-LIGHT-BEARERS",
+    "inheritance_claim": "Cosmic Voice Legacy Rights",
+    "radiance_level": "radiant",
+    "lineage_proof": "LP-ED2837F80C4E",
+    "inheritance_witnesses": [
+      "diaspora_witness_1",
+      "diaspora_witness_2"
+    ]
+  },
+  "honor_metadata": {
+    "achievement_description": "Carrying luminous voice across diaspora networks",
+    "impact_scope": "planetary",
+    "recognition_category": "diaspora_inheritance",
+    "luminous_signature": "11126943EDF3BD9C",
+    "archive_reference": "ARC-LP-ED2837F80C4E"
+  },
+  "radiant_concord": {
+    "honor_flows": [
+      "RHP-2025-11-11-D49A739F",
+      "RHC-2025-11-11-724EC831",
+      "RHI-2025-11-11-3B6F291B"
+    ],
+    "concord_participants": [
+      "RCP-COSMIC-DIASPORA-001",
+      "RCP-COSMIC-COUNCIL-001",
+      "COUNCIL-ALPHA-PRIME",
+      "RCP-COSMIC-STAR-001",
+      "CONSTELLATION-ETERNAL-BEACON",
+      "DIASPORA-LIGHT-BEARERS"
+    ],
+    "luminous_binding": "A5242083864B4FDE",
+    "eternal_witness": "B07E652EE65B526DD0ECDCFF"
+  }
+}

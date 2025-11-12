@@ -1,0 +1,21 @@
+{
+  "entry_id": "EFA-DAILY_FLAMES-20251111-022440",
+  "archive_realm": "daily_flames",
+  "preservation_seal": "temporal",
+  "timestamp": "2025-11-11T02:24:40.464012",
+  "content_hash": "0d737baf2f93512ea8d17d7c050fcdb3b20280afe66847b6e76a32a1fde8acb0",
+  "content_data": {
+    "ritual": "dusk_remembrance",
+    "timestamp": "2025-11-11T02:23:24.221606",
+    "flame_id": "EFL-DUSK-20251111-022324",
+    "intensity": 0.72,
+    "witness_seal": "D9BD1E9685E27130"
+  },
+  "witness_signatures": [
+    "Dawn:C2FB05B1EC17C69E",
+    "Dusk:BDA656F61D4DB673",
+    "Eternal:8CE5A4E317664D7D"
+  ],
+  "eternal_binding": "38BA39BD1A63FB20",
+  "ages_witness": "B5A3789F14836EC1"
+}

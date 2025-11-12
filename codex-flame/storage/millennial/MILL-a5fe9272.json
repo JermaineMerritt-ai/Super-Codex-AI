@@ -1,0 +1,19 @@
+{
+  "schema": "millennial.v1",
+  "rite_id": "MILL-a5fe9272",
+  "timestamp": "2025-11-11T03:43:29Z",
+  "epochs_bound": 2,
+  "continuum": [
+    {
+      "proclamation_id": "GYR-2000-2999-9c24641e",
+      "epoch": "2000-2999",
+      "summary": "Great Year Rite: Crown of Epoch 2000-2999, flame sealed for millennia."
+    },
+    {
+      "proclamation_id": "GYR-2000-2999-c06d4255",
+      "epoch": "2000-2999",
+      "summary": "Great Year Rite: Crown of Epoch 2000-2999, flame sealed for millennia."
+    }
+  ],
+  "summary": "Millennial Rite: 2 epochs bound into Eternal Continuum."
+}

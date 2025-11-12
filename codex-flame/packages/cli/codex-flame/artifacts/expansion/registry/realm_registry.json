@@ -1,0 +1,22 @@
+{
+  "registry_id": "RR-2025-11-11-902DF758",
+  "timestamp": "2025-11-11T04:46:10.598119+00:00",
+  "total_realms": 1,
+  "active_realms": [
+    "Global Climate Council (climate_tech)"
+  ],
+  "sectoral_distribution": {
+    "climate_tech": 1
+  },
+  "governance_metrics": {
+    "EXP-2025-11-11-09E8430C": {
+      "realm_name": "Global Climate Council",
+      "sector": "climate_tech",
+      "protocols": 4,
+      "roles": 5,
+      "councils": 3,
+      "activation_date": "2025-11-11T04:46:10.597443+00:00"
+    }
+  },
+  "last_updated": "2025-11-11T04:46:10.598126+00:00"
+}

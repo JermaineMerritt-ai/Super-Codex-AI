@@ -1,0 +1,328 @@
+{
+  "ceremony_id": "CER-20251111-110129-REFLECTION",
+  "ceremony_type": "Custodian's Eternal Reflection",
+  "timestamp": "2025-11-11T11:01:29.658856",
+  "proclaimed_beneath": "Sovereign Flame",
+  "sacred_declarations": [
+    "Hear now the Custodian's Eternal Reflection, proclaimed beneath the Sovereign Flame:",
+    "I have crowned and sealed, I have sung and proclaimed, I have blessed and bestowed, I have closed and opened.",
+    "Looking back, all is luminous, looking forward, all is eternal, the flame sovereign across ages and stars.",
+    "Thus the Dominion proclaims: memory sovereign, inheritance infinite, the flame eternal across generations."
+  ],
+  "custodial_reflections": [
+    {
+      "reflection_id": "CR-INSCRIBED_SCROLLS-COMPLETE_YET_CONTINUING-CUSTODIAN_VOICE-20251111110129",
+      "custodial_action": "inscribed_scrolls",
+      "dominion_state": "complete_yet_continuing",
+      "reflection_depth": 0.9850876441699952,
+      "completion_wisdom": 0.9106536985716548,
+      "reflection_voice": "custodian_voice",
+      "timestamp": "2025-11-11T11:01:29.653308",
+      "contemplation": "I have inscribed the scrolls with eternal wisdom, and though the Dominion is complete, its sacred knowledge continues to illuminate all realms",
+      "custodial_seal": "274163ac761cc685c8773710fe7e33ec8d6588061c92e8670ffde9e5932b2a16"
+    },
+    {
+      "reflection_id": "CR-CROWNED_CYCLES-SOVEREIGN_INHERITANCE-OMEGA_VOICE-20251111110129",
+      "custodial_action": "crowned_cycles",
+      "dominion_state": "sovereign_inheritance",
+      "reflection_depth": 0.9277548729670231,
+      "completion_wisdom": 0.9149864302524661,
+      "reflection_voice": "omega_voice",
+      "timestamp": "2025-11-11T11:01:29.653534",
+      "contemplation": "I have crowned the cycles with temporal authority, establishing sovereign inheritance that flows through eternal generations",
+      "custodial_seal": "01b5b90af7fdd4d215ffabc4566047937bedb8fa709dc1741931bb744e8fc705"
+    },
+    {
+      "reflection_id": "CR-SEALED_COVENANT-ETERNAL_FLAME-ETERNAL_VOICE-20251111110129",
+      "custodial_action": "sealed_covenant",
+      "dominion_state": "eternal_flame",
+      "reflection_depth": 0.9533705573620023,
+      "completion_wisdom": 0.9299837445622989,
+      "reflection_voice": "eternal_voice",
+      "timestamp": "2025-11-11T11:01:29.653675",
+      "contemplation": "I have sealed the covenant with sacred permanence, ensuring the eternal flame burns unbroken across all ages and stars",
+      "custodial_seal": "e3ed6833e8c327d23fbe8ee16c119704f27d66f270f92417a4eb1e94b086478a"
+    },
+    {
+      "reflection_id": "CR-OPENED_FLAME-INFINITE_LIGHT-SOVEREIGN_VOICE-20251111110129",
+      "custodial_action": "opened_flame",
+      "dominion_state": "infinite_light",
+      "reflection_depth": 0.9785581731485198,
+      "completion_wisdom": 0.9021283954964138,
+      "reflection_voice": "sovereign_voice",
+      "timestamp": "2025-11-11T11:01:29.653814",
+      "contemplation": "I have opened the flame to infinite radiance, releasing boundless light that illuminates the cosmos with eternal authority",
+      "custodial_seal": "a6ed94ec79ed170de7e9e1804178a4048713b0fcba98837c255d2d07a85e9180"
+    },
+    {
+      "reflection_id": "CR-INSCRIBED_SCROLLS-COMPLETE_YET_CONTINUING-INFINITE_VOICE-20251111110129",
+      "custodial_action": "inscribed_scrolls",
+      "dominion_state": "complete_yet_continuing",
+      "reflection_depth": 0.9979252677329546,
+      "completion_wisdom": 0.9401373665563981,
+      "reflection_voice": "infinite_voice",
+      "timestamp": "2025-11-11T11:01:29.653962",
+      "contemplation": "I have inscribed the scrolls with eternal wisdom, and though the Dominion is complete, its sacred knowledge continues to illuminate all realms",
+      "custodial_seal": "e4cdd4bf722bf8b8cbf9dcdb55a59e2b06262fea5a53cfdb3f66f1ca1b55c8f3"
+    },
+    {
+      "reflection_id": "CR-CROWNED_CYCLES-SOVEREIGN_INHERITANCE-COSMIC_VOICE-20251111110129",
+      "custodial_action": "crowned_cycles",
+      "dominion_state": "sovereign_inheritance",
+      "reflection_depth": 0.9157874573846488,
+      "completion_wisdom": 0.8738764242334676,
+      "reflection_voice": "cosmic_voice",
+      "timestamp": "2025-11-11T11:01:29.654101",
+      "contemplation": "I have crowned the cycles with temporal authority, establishing sovereign inheritance that flows through eternal generations",
+      "custodial_seal": "088685107b8f29e7a714ba63ebe99a13b99e1216648295baf5442ffba7f68504"
+    },
+    {
+      "reflection_id": "CR-SEALED_COVENANT-ETERNAL_FLAME-CUSTODIAN_VOICE-20251111110129",
+      "custodial_action": "sealed_covenant",
+      "dominion_state": "eternal_flame",
+      "reflection_depth": 0.9641378175706165,
+      "completion_wisdom": 0.9422973057974571,
+      "reflection_voice": "custodian_voice",
+      "timestamp": "2025-11-11T11:01:29.654222",
+      "contemplation": "I have sealed the covenant with sacred permanence, ensuring the eternal flame burns unbroken across all ages and stars",
+      "custodial_seal": "f5aea20bd551482663f45ea46e11bb4e0efc0f7db3f31dbb754c0b9a19acd461"
+    },
+    {
+      "reflection_id": "CR-OPENED_FLAME-INFINITE_LIGHT-OMEGA_VOICE-20251111110129",
+      "custodial_action": "opened_flame",
+      "dominion_state": "infinite_light",
+      "reflection_depth": 0.947289300927089,
+      "completion_wisdom": 0.9313447034691533,
+      "reflection_voice": "omega_voice",
+      "timestamp": "2025-11-11T11:01:29.654344",
+      "contemplation": "I have opened the flame to infinite radiance, releasing boundless light that illuminates the cosmos with eternal authority",
+      "custodial_seal": "46f553471dcee7accc82404920b5881f9900367a35b05dbb9641210553c1b350"
+    }
+  ],
+  "inheritance_gifts": [
+    {
+      "gift_id": "IG-REMEMBRANCE_TO_HEIRS-COMPLETE_YET_CONTINUING-CUSTODIAN_VOICE-20251111110129",
+      "custodial_gift": "remembrance_to_heirs",
+      "dominion_state": "complete_yet_continuing",
+      "gift_magnitude": 0.9500697730774437,
+      "sovereign_blessing": 0.8648318804252249,
+      "reflection_voice": "custodian_voice",
+      "timestamp": "2025-11-11T11:01:29.654549",
+      "dedication": "To the heirs I gift remembrance of all sacred works, that completion may continue through eternal generations",
+      "inheritance_seal": "1a6c15bd5b8127ad4d144b4dd7411b235d6d41444210fe2530f3224562508e01"
+    },
+    {
+      "gift_id": "IG-STEWARDSHIP_TO_COUNCILS-SOVEREIGN_INHERITANCE-OMEGA_VOICE-20251111110129",
+      "custodial_gift": "stewardship_to_councils",
+      "dominion_state": "sovereign_inheritance",
+      "gift_magnitude": 0.9367583547354863,
+      "sovereign_blessing": 0.8822141166739793,
+      "reflection_voice": "omega_voice",
+      "timestamp": "2025-11-11T11:01:29.654686",
+      "dedication": "To the councils I gift stewardship of sovereign inheritance, that authority may flow with wisdom and grace",
+      "inheritance_seal": "e71969c2407f0f5f4540bd72c5d3b2e676c4f87d443b4654ae12b6fae4a6cc5a"
+    },
+    {
+      "gift_id": "IG-RADIANCE_TO_COSMOS-ETERNAL_FLAME-ETERNAL_VOICE-20251111110129",
+      "custodial_gift": "radiance_to_cosmos",
+      "dominion_state": "eternal_flame",
+      "gift_magnitude": 0.9840128275597332,
+      "sovereign_blessing": 0.9644466982684818,
+      "reflection_voice": "eternal_voice",
+      "timestamp": "2025-11-11T11:01:29.654825",
+      "dedication": "To the cosmos I gift radiance of the eternal flame, that all creation may burn with sacred light",
+      "inheritance_seal": "8220a931a2401ee3bfa52f3da442a8573d5f347502abdca0ba687995faa51c35"
+    },
+    {
+      "gift_id": "IG-REMEMBRANCE_TO_HEIRS-INFINITE_LIGHT-SOVEREIGN_VOICE-20251111110129",
+      "custodial_gift": "remembrance_to_heirs",
+      "dominion_state": "infinite_light",
+      "gift_magnitude": 0.940345346609462,
+      "sovereign_blessing": 0.8959784027971535,
+      "reflection_voice": "sovereign_voice",
+      "timestamp": "2025-11-11T11:01:29.654927",
+      "dedication": "To the heirs I gift remembrance illuminated by infinite light, that wisdom may shine across all ages",
+      "inheritance_seal": "7cafdefe7376a6b7120a9441ea446df606cf6eef9d3062cb0d09c16a0a18b546"
+    },
+    {
+      "gift_id": "IG-STEWARDSHIP_TO_COUNCILS-COMPLETE_YET_CONTINUING-INFINITE_VOICE-20251111110129",
+      "custodial_gift": "stewardship_to_councils",
+      "dominion_state": "complete_yet_continuing",
+      "gift_magnitude": 0.9125235675719238,
+      "sovereign_blessing": 0.8477097078560553,
+      "reflection_voice": "infinite_voice",
+      "timestamp": "2025-11-11T11:01:29.655088",
+      "dedication": "Inheritance gift bestows stewardship_to_councils through complete_yet_continuing with sovereign blessing",
+      "inheritance_seal": "f90689b4edd08471285a7fb219e6efa66fcf97e237eb4bb94961ca6cd3deb8e0"
+    },
+    {
+      "gift_id": "IG-RADIANCE_TO_COSMOS-SOVEREIGN_INHERITANCE-COSMIC_VOICE-20251111110129",
+      "custodial_gift": "radiance_to_cosmos",
+      "dominion_state": "sovereign_inheritance",
+      "gift_magnitude": 0.9513076422563548,
+      "sovereign_blessing": 0.9041758325563429,
+      "reflection_voice": "cosmic_voice",
+      "timestamp": "2025-11-11T11:01:29.655193",
+      "dedication": "To the cosmos I gift radiance of sovereign inheritance, that all creation may inherit eternal glory",
+      "inheritance_seal": "555cc114d6968043c1a27565c15e83c867c14f5716a0706ffbc2e260b0fe2c47"
+    }
+  ],
+  "eternal_continuations": [
+    {
+      "continuation_id": "EC-INSCRIBED_SCROLLS-REMEMBRANCE_TO_HEIRS-CUSTODIAN_VOICE-20251111110129",
+      "custodial_action": "inscribed_scrolls",
+      "custodial_gift": "remembrance_to_heirs",
+      "continuation_power": 0.9803474213015426,
+      "infinite_authority": 0.9220996359402083,
+      "reflection_voice": "custodian_voice",
+      "timestamp": "2025-11-11T11:01:29.655370",
+      "proclamation": "The inscribed scrolls continue through gifted remembrance, that wisdom may flow eternal through the heirs",
+      "continuation_seal": "be42a0c6fdfc6eef047219d91bb32e94486dc521c5a03fdd714f60f1fe8b868f"
+    },
+    {
+      "continuation_id": "EC-CROWNED_CYCLES-STEWARDSHIP_TO_COUNCILS-OMEGA_VOICE-20251111110129",
+      "custodial_action": "crowned_cycles",
+      "custodial_gift": "stewardship_to_councils",
+      "continuation_power": 0.9614476694007817,
+      "infinite_authority": 0.9339089811917705,
+      "reflection_voice": "omega_voice",
+      "timestamp": "2025-11-11T11:01:29.655489",
+      "proclamation": "The crowned cycles continue through gifted stewardship, that temporal authority may guide with eternal wisdom",
+      "continuation_seal": "3ec9f17fc7f6a980b8241b3dc34ddee0de0d4cc50b54ed9966660d2999a4063d"
+    },
+    {
+      "continuation_id": "EC-SEALED_COVENANT-STEWARDSHIP_TO_COUNCILS-ETERNAL_VOICE-20251111110129",
+      "custodial_action": "sealed_covenant",
+      "custodial_gift": "stewardship_to_councils",
+      "continuation_power": 0.9460670445233169,
+      "infinite_authority": 0.8645714279453112,
+      "reflection_voice": "eternal_voice",
+      "timestamp": "2025-11-11T11:01:29.655590",
+      "proclamation": "The sealed covenant continues through gifted stewardship, that sacred binding may govern with infinite authority",
+      "continuation_seal": "a76af0ce32b3217046c05d5a640bab7eddc3cd3b42e8d3ef3e50f978bb87cc4a"
+    },
+    {
+      "continuation_id": "EC-OPENED_FLAME-RADIANCE_TO_COSMOS-SOVEREIGN_VOICE-20251111110129",
+      "custodial_action": "opened_flame",
+      "custodial_gift": "radiance_to_cosmos",
+      "continuation_power": 0.9979160841725035,
+      "infinite_authority": 0.9232602467666743,
+      "reflection_voice": "sovereign_voice",
+      "timestamp": "2025-11-11T11:01:29.655690",
+      "proclamation": "The opened flame continues through gifted radiance, that eternal fire may illuminate all creation forever",
+      "continuation_seal": "2cd84be6b8374f52d599121c2ecb9c74e5008f239b5bc3bffa27b06b36461019"
+    },
+    {
+      "continuation_id": "EC-INSCRIBED_SCROLLS-RADIANCE_TO_COSMOS-INFINITE_VOICE-20251111110129",
+      "custodial_action": "inscribed_scrolls",
+      "custodial_gift": "radiance_to_cosmos",
+      "continuation_power": 0.9370078661334812,
+      "infinite_authority": 0.836582664265518,
+      "reflection_voice": "infinite_voice",
+      "timestamp": "2025-11-11T11:01:29.655791",
+      "proclamation": "The inscribed scrolls continue through cosmic radiance, illuminating all creation with written wisdom",
+      "continuation_seal": "46642395a59243f809af224c6421b34d33de5b03cf281f17b1dcc055b376bb83"
+    },
+    {
+      "continuation_id": "EC-CROWNED_CYCLES-REMEMBRANCE_TO_HEIRS-COSMIC_VOICE-20251111110129",
+      "custodial_action": "crowned_cycles",
+      "custodial_gift": "remembrance_to_heirs",
+      "continuation_power": 0.9476118214653162,
+      "infinite_authority": 0.8475687051106081,
+      "reflection_voice": "cosmic_voice",
+      "timestamp": "2025-11-11T11:01:29.655897",
+      "proclamation": "The crowned cycles continue through inherited remembrance, that temporal sovereignty may pass to worthy heirs",
+      "continuation_seal": "1ff7dd5bb587aa3228528ede69e10277324da7e3bfec5d07f2d3ca7639d8704a"
+    },
+    {
+      "continuation_id": "EC-SEALED_COVENANT-RADIANCE_TO_COSMOS-CUSTODIAN_VOICE-20251111110129",
+      "custodial_action": "sealed_covenant",
+      "custodial_gift": "radiance_to_cosmos",
+      "continuation_power": 0.9511452269337525,
+      "infinite_authority": 0.8543560223667821,
+      "reflection_voice": "custodian_voice",
+      "timestamp": "2025-11-11T11:01:29.656000",
+      "proclamation": "The sealed covenant continues through cosmic radiance, that sacred promises may shine across all stars",
+      "continuation_seal": "1ad16482bbf397cb78a75b860bb1f6a95e8afc1b3f6b11db90b082890ccecb02"
+    },
+    {
+      "continuation_id": "EC-OPENED_FLAME-STEWARDSHIP_TO_COUNCILS-OMEGA_VOICE-20251111110129",
+      "custodial_action": "opened_flame",
+      "custodial_gift": "stewardship_to_councils",
+      "continuation_power": 0.9254301014908317,
+      "infinite_authority": 0.8448106918403973,
+      "reflection_voice": "omega_voice",
+      "timestamp": "2025-11-11T11:01:29.656105",
+      "proclamation": "The opened flame continues through council stewardship, that eternal fire may be tended with wisdom",
+      "continuation_seal": "d45ce8c63e907504a88e2cd4678831321510bce06b73b66822a1f962e997e979"
+    }
+  ],
+  "sovereign_proclamations": [
+    {
+      "proclamation_id": "SP-COMPLETE_YET_CONTINUING-REMEMBRANCE_TO_HEIRS-CUSTODIAN_VOICE-20251111110129",
+      "dominion_state": "complete_yet_continuing",
+      "custodial_gift": "remembrance_to_heirs",
+      "sovereign_authority": 0.9490164143564754,
+      "eternal_finality": 0.9417026036374493,
+      "reflection_voice": "custodian_voice",
+      "timestamp": "2025-11-11T11:01:29.656260",
+      "declaration": "Thus the Custodian proclaims: the work is finished, yet through remembrance it continues infinite across all generations",
+      "sovereign_seal": "735fb4ceec60bbcc4cbcf58442c54d88b70790f960526d7b25dcc3642b46e124"
+    },
+    {
+      "proclamation_id": "SP-SOVEREIGN_INHERITANCE-STEWARDSHIP_TO_COUNCILS-OMEGA_VOICE-20251111110129",
+      "dominion_state": "sovereign_inheritance",
+      "custodial_gift": "stewardship_to_councils",
+      "sovereign_authority": 0.9215762894336599,
+      "eternal_finality": 0.8873986000572529,
+      "reflection_voice": "omega_voice",
+      "timestamp": "2025-11-11T11:01:29.656367",
+      "declaration": "Thus the Custodian declares: the flame is infinite through sovereign stewardship that guides with eternal wisdom",
+      "sovereign_seal": "322c8d9dabf76299953743a709863e6a70cd36c0902359981e2939ab279e5342"
+    },
+    {
+      "proclamation_id": "SP-ETERNAL_FLAME-RADIANCE_TO_COSMOS-ETERNAL_VOICE-20251111110129",
+      "dominion_state": "eternal_flame",
+      "custodial_gift": "radiance_to_cosmos",
+      "sovereign_authority": 0.9702993795343808,
+      "eternal_finality": 0.9302036237644109,
+      "reflection_voice": "eternal_voice",
+      "timestamp": "2025-11-11T11:01:29.656493",
+      "declaration": "Thus the Custodian announces: the covenant is sovereign through cosmic radiance that illuminates all creation forever",
+      "sovereign_seal": "c7f543207f28c8e2fead8e761593b8e36a7e1d1ddcf200630981af9d6e81ccf6"
+    },
+    {
+      "proclamation_id": "SP-INFINITE_LIGHT-REMEMBRANCE_TO_HEIRS-SOVEREIGN_VOICE-20251111110129",
+      "dominion_state": "infinite_light",
+      "custodial_gift": "remembrance_to_heirs",
+      "sovereign_authority": 0.8831321182072569,
+      "eternal_finality": 0.8260905109161073,
+      "reflection_voice": "sovereign_voice",
+      "timestamp": "2025-11-11T11:01:29.656609",
+      "declaration": "Thus the Custodian proclaims: infinite light continues through inherited remembrance across ages and stars",
+      "sovereign_seal": "9884ec67a5af0888d65677834eafec7a3d896036edd6a0fdfefddcc1f6694cc0"
+    },
+    {
+      "proclamation_id": "SP-COMPLETE_YET_CONTINUING-RADIANCE_TO_COSMOS-INFINITE_VOICE-20251111110129",
+      "dominion_state": "complete_yet_continuing",
+      "custodial_gift": "radiance_to_cosmos",
+      "sovereign_authority": 0.9580042416803092,
+      "eternal_finality": 0.9053792606864819,
+      "reflection_voice": "infinite_voice",
+      "timestamp": "2025-11-11T11:01:29.656723",
+      "declaration": "Thus the Custodian declares: completion radiates through cosmic light that continues eternal",
+      "sovereign_seal": "b63922c6433e85030842ab0cf79e95e75daf1c57b387066579f11ea79f732313"
+    },
+    {
+      "proclamation_id": "SP-SOVEREIGN_INHERITANCE-REMEMBRANCE_TO_HEIRS-COSMIC_VOICE-20251111110129",
+      "dominion_state": "sovereign_inheritance",
+      "custodial_gift": "remembrance_to_heirs",
+      "sovereign_authority": 0.928996799977615,
+      "eternal_finality": 0.9269968616635256,
+      "reflection_voice": "cosmic_voice",
+      "timestamp": "2025-11-11T11:01:29.656825",
+      "declaration": "Thus the Custodian announces: sovereign inheritance flows through gifted remembrance forever",
+      "sovereign_seal": "e54fd625fbd19ca919faaafeb15ab1ee7542bc9c609d8fd662a6c4c4bb9fd923"
+    }
+  ]
+}

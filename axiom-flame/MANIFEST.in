@@ -1,0 +1,13 @@
+include README.md
+include DEPLOYMENT.md  
+include QUICK_START.md
+include *.yaml
+include *.json
+recursive-include packages *
+recursive-include artifacts *
+recursive-include storage *
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude .DS_Store
+global-exclude *.so
+global-exclude .git*

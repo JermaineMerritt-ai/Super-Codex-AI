@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="bg-white p-6 rounded-lg card-shadow">
+        <h2 class="text-xl font-semibold mb-4 text-gray-800">Performance Metrics</h2>
+        <div class="space-y-3">
+            <div class="flex justify-between">
+                <span class="text-gray-600">ROI</span>
+                <span class="font-semibold text-green-600">{{ metrics.roi }}</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="text-gray-600">Max Drawdown</span>
+                <span class="font-semibold text-red-600">{{ metrics.drawdown }}</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="text-gray-600">Sharpe Ratio</span>
+                <span class="font-semibold text-blue-600">{{ metrics.sharpe_like }}</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="bg-white p-6 rounded-lg card-shadow">
+        <h2 class="text-xl font-semibold mb-4 text-gray-800">Sector Exposure</h2>
+        <div class="space-y-3">
+            {% for sector, weight in metrics.exposure.items() %}
+            <div class="flex justify-between items-center">
+                <span class="text-gray-600 capitalize">{{ sector }}</span>
+                <div class="flex items-center space-x-2">
+                    <div class="w-20 bg-gray-200 rounded-full h-2">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: {{ (weight * 100)|round(1) }}%"></div>
+                    </div>
+                    <span class="text-sm font-semibold">{{ (weight * 100)|round(1) }}%</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

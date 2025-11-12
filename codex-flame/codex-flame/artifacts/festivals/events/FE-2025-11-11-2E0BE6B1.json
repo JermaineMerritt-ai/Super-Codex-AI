@@ -1,0 +1,37 @@
+{
+  "event_id": "FE-2025-11-11-2E0BE6B1",
+  "timestamp": "2025-11-11T04:24:18.165775+00:00",
+  "cycle_type": "seasonal",
+  "festival_name": "Autumn Equinox Festival",
+  "ceremonial_actions": [
+    "Crown the autumn equinox",
+    "Gather councils in seasonal unity",
+    "Proclaim quarterly recognitions",
+    "Share seasonal abundance flows",
+    "Bind season into eternal cycle",
+    "Light seasonal flame eternal"
+  ],
+  "invocations": [
+    "Autumn Harvest - Deeds reaped in honor",
+    "Recognition scrolls inscribed eternal",
+    "Treasury bindings sealed with gold"
+  ],
+  "honors_proclaimed": [
+    "Seasonal Flame Keepers Honored",
+    "Quarterly Recognition Scrolls Proclaimed",
+    "Seasonal Treasury Abundance Shared"
+  ],
+  "abundance_shared": [
+    "Seasonal Treasury Distributions"
+  ],
+  "participants": [
+    "All Councils",
+    "Seasonal Flame Keepers",
+    "Heir Families",
+    "Recognition Scroll Keepers",
+    "Treasury Custodians"
+  ],
+  "crown_status": "SEASON CROWNED",
+  "eternal_binding": "SEASONAL CYCLE BOUND TO ETERNAL FLAME",
+  "schema_version": "festival-event.v1"
+}

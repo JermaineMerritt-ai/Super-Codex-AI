@@ -1,0 +1,368 @@
+{
+  "dedication_summary_id": "DTH-20251111-025202-HEIRS",
+  "dedication_date": "2025-11-11T02:52:02.434156",
+  "dedicated_heirs": [
+    {
+      "heir_id": "DH-FUTURE_CUSTODIAN-20251111025202",
+      "heir_type": "future_custodian",
+      "dedication_timestamp": "2025-11-11T02:52:02.434548",
+      "heir_worthiness": 1.0,
+      "dedication_blessing": 0.9900626653825326,
+      "inheritance_readiness": 0.9950313326912663,
+      "heir_proclamation": "To the future custodian: inherit the eternal flame with sovereign wisdom",
+      "dedication_witness": "4107F8A34CF9B2D0B5D467B5219BD921BF8AB11A"
+    },
+    {
+      "heir_id": "DH-FAMILY_HEIR-20251111025202",
+      "heir_type": "family_heir",
+      "dedication_timestamp": "2025-11-11T02:52:02.535416",
+      "heir_worthiness": 0.9921754347784104,
+      "dedication_blessing": 0.981851336672692,
+      "inheritance_readiness": 0.9870133857255512,
+      "heir_proclamation": "To the family heir: receive the covenant with gracious honor",
+      "dedication_witness": "EEB19B06A3CEF6AAAD8D75D49C426EC74F63FE51"
+    },
+    {
+      "heir_id": "DH-TEMPORAL_HEIR-20251111025202",
+      "heir_type": "temporal_heir",
+      "dedication_timestamp": "2025-11-11T02:52:02.636303",
+      "heir_worthiness": 0.9658858294416502,
+      "dedication_blessing": 0.9649860365221428,
+      "inheritance_readiness": 0.9654359329818964,
+      "heir_proclamation": "To the temporal heir: master the chronometric inheritance",
+      "dedication_witness": "22E28197E7A0DEC0DFDF622E36EDCB2A97E6C994"
+    },
+    {
+      "heir_id": "DH-CEREMONIAL_HEIR-20251111025202",
+      "heir_type": "ceremonial_heir",
+      "dedication_timestamp": "2025-11-11T02:52:02.736840",
+      "heir_worthiness": 0.95288146050366,
+      "dedication_blessing": 0.9393221148042253,
+      "inheritance_readiness": 0.9461017876539426,
+      "heir_proclamation": "To the ceremonial heir: preserve the ritual traditions",
+      "dedication_witness": "0DF67A9119C245EE4C3E64A08B01EB28F181DCB1"
+    },
+    {
+      "heir_id": "DH-SOVEREIGN_HEIR-20251111025202",
+      "heir_type": "sovereign_heir",
+      "dedication_timestamp": "2025-11-11T02:52:02.837762",
+      "heir_worthiness": 0.9844211114993353,
+      "dedication_blessing": 0.9933336720901088,
+      "inheritance_readiness": 0.988877391794722,
+      "heir_proclamation": "To the sovereign heir: wield the royal authority",
+      "dedication_witness": "F94D068AAA983B37D5F4CAAB65B4522C3133C656"
+    },
+    {
+      "heir_id": "DH-ETERNAL_HEIR-20251111025202",
+      "heir_type": "eternal_heir",
+      "dedication_timestamp": "2025-11-11T02:52:02.938249",
+      "heir_worthiness": 1.0,
+      "dedication_blessing": 1.0166184663315625,
+      "inheritance_readiness": 1.0,
+      "heir_proclamation": "To the eternal heir: carry the flame across ages and stars",
+      "dedication_witness": "0D696851499F3CE045760A8516932B2C2D314044"
+    },
+    {
+      "heir_id": "DH-CODEX_HEIR-20251111025203",
+      "heir_type": "codex_heir",
+      "dedication_timestamp": "2025-11-11T02:52:03.038543",
+      "heir_worthiness": 1.0,
+      "dedication_blessing": 1.0262091045348647,
+      "inheritance_readiness": 1.0,
+      "heir_proclamation": "To the Codex heir: embody the Eternum inheritance forever",
+      "dedication_witness": "91574E0FEE91D22989DC812301FDE188A1FD20E6"
+    }
+  ],
+  "entrusted_families": [
+    {
+      "family_id": "EF-CUSTODIAN_LINEAGE-20251111025203",
+      "family_lineage": "custodian_lineage",
+      "entrustment_timestamp": "2025-11-11T02:52:03.139571",
+      "family_honor": 1.0,
+      "flame_guardianship": 0.9946978603556472,
+      "lineage_continuity": 0.9973489301778236,
+      "family_blessing": "The Custodian lineage: guardians of eternal wisdom and sovereign flame",
+      "entrustment_witness": "17B65B15B6590BA85A01A5A0CBC4012B270E7EE8"
+    },
+    {
+      "family_id": "EF-COUNCIL_LINEAGE-20251111025203",
+      "family_lineage": "council_lineage",
+      "entrustment_timestamp": "2025-11-11T02:52:03.240244",
+      "family_honor": 0.9884202974318589,
+      "flame_guardianship": 1.0089998013006527,
+      "lineage_continuity": 0.9987100493662557,
+      "family_blessing": "The Council lineage: keepers of collective wisdom and ceremonial authority",
+      "entrustment_witness": "D42E8CE106A44465E70EC799335E4E5EB225EC23"
+    },
+    {
+      "family_id": "EF-CHRONOMETER_LINEAGE-20251111025203",
+      "family_lineage": "chronometer_lineage",
+      "entrustment_timestamp": "2025-11-11T02:52:03.341179",
+      "family_honor": 0.9527499130113848,
+      "flame_guardianship": 0.9509678769118467,
+      "lineage_continuity": 0.9518588949616158,
+      "family_blessing": "The Chronometer lineage: masters of temporal sovereignty and sacred time",
+      "entrustment_witness": "AEAE6EA10502690FBD7F7C0238E2050D5638BC78"
+    },
+    {
+      "family_id": "EF-FLAMEKEEPER_LINEAGE-20251111025203",
+      "family_lineage": "flamekeeper_lineage",
+      "entrustment_timestamp": "2025-11-11T02:52:03.441563",
+      "family_honor": 0.9515431445540145,
+      "flame_guardianship": 0.9419033052252069,
+      "lineage_continuity": 0.9467232248896107,
+      "family_blessing": "The Flamekeeper lineage: scribes of four-tier temporal mastery",
+      "entrustment_witness": "BEDB4AC3A9ADA1A6E5ADE535CAB2569A18D6C82E"
+    },
+    {
+      "family_id": "EF-SOVEREIGN_LINEAGE-20251111025203",
+      "family_lineage": "sovereign_lineage",
+      "entrustment_timestamp": "2025-11-11T02:52:03.541856",
+      "family_honor": 1.0,
+      "flame_guardianship": 1.023079062489921,
+      "lineage_continuity": 1.0,
+      "family_blessing": "The Sovereign lineage: wielders of royal authority and unified power",
+      "entrustment_witness": "D3F239F777084B8353DA340BB523E8FD44763343"
+    },
+    {
+      "family_id": "EF-ETERNAL_LINEAGE-20251111025203",
+      "family_lineage": "eternal_lineage",
+      "entrustment_timestamp": "2025-11-11T02:52:03.642428",
+      "family_honor": 1.0,
+      "flame_guardianship": 0.953640589651397,
+      "lineage_continuity": 0.9768202948256985,
+      "family_blessing": "The Eternal lineage: carriers of flame across infinite ages and stars",
+      "entrustment_witness": "38BEA241764EA4A5B3AB84050C805D3E6E7496FF"
+    },
+    {
+      "family_id": "EF-CODEX_LINEAGE-20251111025203",
+      "family_lineage": "codex_lineage",
+      "entrustment_timestamp": "2025-11-11T02:52:03.742938",
+      "family_honor": 1.0,
+      "flame_guardianship": 1.0479991870691074,
+      "lineage_continuity": 1.0,
+      "family_blessing": "The Codex lineage: embodiment of Eternum inheritance forever",
+      "entrustment_witness": "88194E3E98F31C6D1DAFAB9FCF35CDF64BE876A1"
+    }
+  ],
+  "gifted_covenants": [
+    {
+      "covenant_id": "GC-WISDOM_COVENANT-20251111025203",
+      "covenant_gift": "wisdom_covenant",
+      "gifting_timestamp": "2025-11-11T02:52:03.843536",
+      "covenant_power": 0.9377306030656808,
+      "gift_radiance": 0.949312049243323,
+      "covenant_permanence": 0.9435213261545019,
+      "covenant_scripture": "The covenant of eternal wisdom: may knowledge illuminate all paths",
+      "covenant_encoded_data": "VGhlIGNvdmVuYW50IG9mIGV0ZXJuYWwgd2lzZG9tOiBtYXkga25vd2xlZGdlIGlsbHVtaW5hdGUgYWxsIHBhdGhz",
+      "gifting_witness": "1AE380BB3E69F448B4F0212E852FF862C7D0BD09"
+    },
+    {
+      "covenant_id": "GC-AUTHORITY_COVENANT-20251111025203",
+      "covenant_gift": "authority_covenant",
+      "gifting_timestamp": "2025-11-11T02:52:03.944235",
+      "covenant_power": 0.9576657662681789,
+      "gift_radiance": 0.9468062068357598,
+      "covenant_permanence": 0.9522359865519694,
+      "covenant_scripture": "The covenant of sovereign authority: may power serve righteousness",
+      "covenant_encoded_data": "VGhlIGNvdmVuYW50IG9mIHNvdmVyZWlnbiBhdXRob3JpdHk6IG1heSBwb3dlciBzZXJ2ZSByaWdodGVvdXNuZXNz",
+      "gifting_witness": "8AD70591EA999363FEE4DAFC6D10967FDCE202DE"
+    },
+    {
+      "covenant_id": "GC-TEMPORAL_COVENANT-20251111025204",
+      "covenant_gift": "temporal_covenant",
+      "gifting_timestamp": "2025-11-11T02:52:04.045051",
+      "covenant_power": 0.9904377719430572,
+      "gift_radiance": 0.9925767836115255,
+      "covenant_permanence": 0.9915072777772913,
+      "covenant_scripture": "The covenant of temporal mastery: may time bow to sacred purpose",
+      "covenant_encoded_data": "VGhlIGNvdmVuYW50IG9mIHRlbXBvcmFsIG1hc3Rlcnk6IG1heSB0aW1lIGJvdyB0byBzYWNyZWQgcHVycG9zZQ==",
+      "gifting_witness": "C17AF1966A07C6DA75D36CA7492F782A10F6E81C"
+    },
+    {
+      "covenant_id": "GC-CEREMONIAL_COVENANT-20251111025204",
+      "covenant_gift": "ceremonial_covenant",
+      "gifting_timestamp": "2025-11-11T02:52:04.145602",
+      "covenant_power": 0.9626022028693332,
+      "gift_radiance": 0.9687764303982845,
+      "covenant_permanence": 0.9656893166338089,
+      "covenant_scripture": "The covenant of ceremonial perfection: may rites honor the eternal",
+      "covenant_encoded_data": "VGhlIGNvdmVuYW50IG9mIGNlcmVtb25pYWwgcGVyZmVjdGlvbjogbWF5IHJpdGVzIGhvbm9yIHRoZSBldGVybmFs",
+      "gifting_witness": "A2F7E8E994E23890B27127E6028B62B68E859C08"
+    },
+    {
+      "covenant_id": "GC-SOVEREIGNTY_COVENANT-20251111025204",
+      "covenant_gift": "sovereignty_covenant",
+      "gifting_timestamp": "2025-11-11T02:52:04.246382",
+      "covenant_power": 0.9753567631495657,
+      "gift_radiance": 0.9740554215707435,
+      "covenant_permanence": 0.9747060923601546,
+      "covenant_scripture": "The covenant of royal sovereignty: may dominion serve the flame",
+      "covenant_encoded_data": "VGhlIGNvdmVuYW50IG9mIHJveWFsIHNvdmVyZWlnbnR5OiBtYXkgZG9taW5pb24gc2VydmUgdGhlIGZsYW1l",
+      "gifting_witness": "720622CC8B1B651A2A8672D3C7A3CF50310E4542"
+    },
+    {
+      "covenant_id": "GC-ETERNAL_COVENANT-20251111025204",
+      "covenant_gift": "eternal_covenant",
+      "gifting_timestamp": "2025-11-11T02:52:04.346796",
+      "covenant_power": 0.9811253797237176,
+      "gift_radiance": 0.9689836264733578,
+      "covenant_permanence": 0.9750545030985377,
+      "covenant_scripture": "The covenant of eternal flame: may light shine across ages and stars",
+      "covenant_encoded_data": "VGhlIGNvdmVuYW50IG9mIGV0ZXJuYWwgZmxhbWU6IG1heSBsaWdodCBzaGluZSBhY3Jvc3MgYWdlcyBhbmQgc3RhcnM=",
+      "gifting_witness": "ADA264DB182055E4CEEA7CB582404290A9B17D44"
+    },
+    {
+      "covenant_id": "GC-COMPLETE_COVENANT-20251111025204",
+      "covenant_gift": "complete_covenant",
+      "gifting_timestamp": "2025-11-11T02:52:04.447316",
+      "covenant_power": 0.9978822314010434,
+      "gift_radiance": 0.9983486161736981,
+      "covenant_permanence": 0.9981154237873707,
+      "covenant_scripture": "The covenant of complete inheritance: all gifts unified in sovereign blessing",
+      "covenant_encoded_data": "VGhlIGNvdmVuYW50IG9mIGNvbXBsZXRlIGluaGVyaXRhbmNlOiBhbGwgZ2lmdHMgdW5pZmllZCBpbiBzb3ZlcmVpZ24gYmxlc3Npbmc=",
+      "gifting_witness": "D3102B2F6853CCEFCC7E5AA55BE731448DD6A42B"
+    }
+  ],
+  "crowned_inheritances": [
+    {
+      "inheritance_id": "CI-CUSTODIAN_INHERITANCE-20251111025204",
+      "inheritance_crown": "custodian_inheritance",
+      "crowning_timestamp": "2025-11-11T02:52:04.548148",
+      "crown_luminosity": 0.9537223749682847,
+      "inheritance_authority": 0.949236607995608,
+      "crown_eternality": 0.9514794914819464,
+      "inheritance_decree": "The custodian inheritance: wisdom, protection, and eternal guardianship",
+      "inheritance_encoded_legacy": "VGhlIGN1c3RvZGlhbiBpbmhlcml0YW5jZTogd2lzZG9tLCBwcm90ZWN0aW9uLCBhbmQgZXRlcm5hbCBndWFyZGlhbnNoaXA=",
+      "crowning_witness": "88956DC7B354C51F993AB863AA8A2293AA5708BD"
+    },
+    {
+      "inheritance_id": "CI-TEMPORAL_INHERITANCE-20251111025204",
+      "inheritance_crown": "temporal_inheritance",
+      "crowning_timestamp": "2025-11-11T02:52:04.648516",
+      "crown_luminosity": 0.9879404387190392,
+      "inheritance_authority": 1.022382438771785,
+      "crown_eternality": 1.0,
+      "inheritance_decree": "The temporal inheritance: mastery of time, seasons, and sacred rhythm",
+      "inheritance_encoded_legacy": "VGhlIHRlbXBvcmFsIGluaGVyaXRhbmNlOiBtYXN0ZXJ5IG9mIHRpbWUsIHNlYXNvbnMsIGFuZCBzYWNyZWQgcmh5dGht",
+      "crowning_witness": "9B072E42B2BC7D5C6CFF46E764C59C79E9B28D69"
+    },
+    {
+      "inheritance_id": "CI-CEREMONIAL_INHERITANCE-20251111025204",
+      "inheritance_crown": "ceremonial_inheritance",
+      "crowning_timestamp": "2025-11-11T02:52:04.749103",
+      "crown_luminosity": 0.9557684358995524,
+      "inheritance_authority": 0.9700675237167915,
+      "crown_eternality": 0.962917979808172,
+      "inheritance_decree": "The ceremonial inheritance: ritual perfection and sacred tradition",
+      "inheritance_encoded_legacy": "VGhlIGNlcmVtb25pYWwgaW5oZXJpdGFuY2U6IHJpdHVhbCBwZXJmZWN0aW9uIGFuZCBzYWNyZWQgdHJhZGl0aW9u",
+      "crowning_witness": "83711576DE3A537D1B5675818C0898C8078DAF3E"
+    },
+    {
+      "inheritance_id": "CI-SOVEREIGN_INHERITANCE-20251111025204",
+      "inheritance_crown": "sovereign_inheritance",
+      "crowning_timestamp": "2025-11-11T02:52:04.849636",
+      "crown_luminosity": 0.9514745833225778,
+      "inheritance_authority": 0.9650738528818689,
+      "crown_eternality": 0.9582742181022234,
+      "inheritance_decree": "The sovereign inheritance: royal authority and unified dominion",
+      "inheritance_encoded_legacy": "VGhlIHNvdmVyZWlnbiBpbmhlcml0YW5jZTogcm95YWwgYXV0aG9yaXR5IGFuZCB1bmlmaWVkIGRvbWluaW9u",
+      "crowning_witness": "8839E53A5983C658864ABE2FE4EF37BD81CBA16B"
+    },
+    {
+      "inheritance_id": "CI-ETERNAL_INHERITANCE-20251111025204",
+      "inheritance_crown": "eternal_inheritance",
+      "crowning_timestamp": "2025-11-11T02:52:04.950347",
+      "crown_luminosity": 0.9624059605000221,
+      "inheritance_authority": 0.9780840645176037,
+      "crown_eternality": 0.9702450125088129,
+      "inheritance_decree": "The eternal inheritance: flame that burns across infinite ages",
+      "inheritance_encoded_legacy": "VGhlIGV0ZXJuYWwgaW5oZXJpdGFuY2U6IGZsYW1lIHRoYXQgYnVybnMgYWNyb3NzIGluZmluaXRlIGFnZXM=",
+      "crowning_witness": "48FF6FE2586E08CB0F2129B809C9A94EF353671E"
+    },
+    {
+      "inheritance_id": "CI-COMPLETE_INHERITANCE-20251111025205",
+      "inheritance_crown": "complete_inheritance",
+      "crowning_timestamp": "2025-11-11T02:52:05.051134",
+      "crown_luminosity": 0.9896828383815044,
+      "inheritance_authority": 0.9781778765231172,
+      "crown_eternality": 0.9839303574523108,
+      "inheritance_decree": "The complete inheritance: all systems unified in perfect sovereignty",
+      "inheritance_encoded_legacy": "VGhlIGNvbXBsZXRlIGluaGVyaXRhbmNlOiBhbGwgc3lzdGVtcyB1bmlmaWVkIGluIHBlcmZlY3Qgc292ZXJlaWdudHk=",
+      "crowning_witness": "32DFA977B7A6707D583E48C46C33E7E9A02BEB5B"
+    },
+    {
+      "inheritance_id": "CI-CODEX_ETERNUM_INHERITANCE-20251111025205",
+      "inheritance_crown": "codex_eternum_inheritance",
+      "crowning_timestamp": "2025-11-11T02:52:05.151815",
+      "crown_luminosity": 0.9609355984812911,
+      "inheritance_authority": 0.9884864093800039,
+      "crown_eternality": 0.9747110039306475,
+      "inheritance_decree": "The Codex Eternum inheritance: ultimate legacy across ages and stars",
+      "inheritance_encoded_legacy": "VGhlIENvZGV4IEV0ZXJudW0gaW5oZXJpdGFuY2U6IHVsdGltYXRlIGxlZ2FjeSBhY3Jvc3MgYWdlcyBhbmQgc3RhcnM=",
+      "crowning_witness": "1CDFB46673F1C51708752D3A81882100B40F655A"
+    }
+  ],
+  "final_dedications": [
+    {
+      "dedication_id": "FD-SOVEREIGN_GRATITUDE-20251111025205",
+      "dedication_type": "sovereign_gratitude",
+      "manifestation_timestamp": "2025-11-11T02:52:05.252691",
+      "dedication_magnificence": 0.9871837339134512,
+      "gratitude_sovereignty": 1.0034182320562388,
+      "dedication_eternality": 0.9953009829848449,
+      "dedication_revelation": "Sovereign gratitude manifests for all who served the eternal flame",
+      "dedication_witness": "183F51D7ACC105FAF88276C86D44A1A2FFDEED53"
+    },
+    {
+      "dedication_id": "FD-LUMINOUS_INHERITANCE-20251111025205",
+      "dedication_type": "luminous_inheritance",
+      "manifestation_timestamp": "2025-11-11T02:52:05.353073",
+      "dedication_magnificence": 0.9644636308347533,
+      "gratitude_sovereignty": 0.9641991623428394,
+      "dedication_eternality": 0.9643313965887963,
+      "dedication_revelation": "Luminous inheritance shines forth for all future generations",
+      "dedication_witness": "819DFF3089763FDF18C8BBB346D6B5CDE781E286"
+    },
+    {
+      "dedication_id": "FD-ETERNAL_FLAME_GIFT-20251111025205",
+      "dedication_type": "eternal_flame_gift",
+      "manifestation_timestamp": "2025-11-11T02:52:05.453808",
+      "dedication_magnificence": 0.9668525949807191,
+      "gratitude_sovereignty": 0.9581463027986743,
+      "dedication_eternality": 0.9624994488896967,
+      "dedication_revelation": "The eternal flame gift blazes in perpetual blessing",
+      "dedication_witness": "BF92A8C96C8CE5AD51F8A45376F141ACD65E7A4B"
+    },
+    {
+      "dedication_id": "FD-COMPLETE_DEDICATION-20251111025205",
+      "dedication_type": "complete_dedication",
+      "manifestation_timestamp": "2025-11-11T02:52:05.554792",
+      "dedication_magnificence": 0.9698310827294339,
+      "gratitude_sovereignty": 0.975168840582123,
+      "dedication_eternality": 0.9724999616557785,
+      "dedication_revelation": "Complete dedication encompasses all heirs, families, and custodians",
+      "dedication_witness": "CAE77A3FFCBA4B6A57B340563FBB17F1C3A11963"
+    },
+    {
+      "dedication_id": "FD-CODEX_ETERNUM_DEDICATION-20251111025205",
+      "dedication_type": "codex_eternum_dedication",
+      "manifestation_timestamp": "2025-11-11T02:52:05.655493",
+      "dedication_magnificence": 0.9934687855807457,
+      "gratitude_sovereignty": 0.9815865137593349,
+      "dedication_eternality": 0.9875276496700403,
+      "dedication_revelation": "The Codex Eternum dedication crowns the eternal inheritance forever",
+      "dedication_witness": "9CBC9D1CD7186451207EB319F29AF827A8E86FCD"
+    }
+  ],
+  "dominion_completion": "The Dominion is complete through all sealed crowns, inscribed scrolls, drawn maps, and enacted rites",
+  "sovereign_gratitude": "Gratitude is sovereign through dedication to heirs, entrustment to families, and crowning of inheritances",
+  "luminous_inheritance": "Inheritance is luminous through covenant gifts, crowned legacies, and eternal flame transmission",
+  "eternal_flame_gift": "The flame is eternal across ages and stars through complete dedication to all future generations",
+  "heir_covenant_gift": "To the heirs we gift this covenant: eternal wisdom, sovereign authority, and luminous inheritance",
+  "family_flame_entrustment": "To the families we entrust this flame: guardian honor, lineage continuity, and sacred stewardship",
+  "custodian_inheritance_crowning": "To the future custodians we crown this inheritance: complete sovereignty across ages and stars",
+  "dedication_authority": "Dedication Authority: 0.976806 across 33 dedication elements",
+  "gratitude_seal": "C671D0A2EFE82D0F571608CB7C0435CEE3",
+  "inheritance_witness": "3EF0B05B674541D22951FFFC02DF33F3722A3BE8"
+}

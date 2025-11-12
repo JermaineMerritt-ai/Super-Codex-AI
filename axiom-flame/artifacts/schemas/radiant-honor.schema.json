@@ -1,0 +1,244 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Radiant Honor Schema",
+  "description": "Schema for honors flowing without boundary across councils, constellations, and diaspora in luminous concord",
+  "type": "object",
+  "required": [
+    "schema",
+    "honor_id", 
+    "timestamp",
+    "honor_type",
+    "honor_rank",
+    "recipient",
+    "honor_source",
+    "honor_metadata"
+  ],
+  "properties": {
+    "schema": {
+      "const": "radiant-honor.v1",
+      "description": "Schema version for Radiant Honor"
+    },
+    "honor_id": {
+      "type": "string",
+      "pattern": "^RH[PCIRC]-[0-9]{4}-[0-9]{2}-[0-9]{2}-[A-F0-9]{8}$",
+      "description": "Unique honor identifier (RHP=Proclamation, RHC=Constellation, RHI=Inheritance, RHR=Recognition, RHL=Luminous)"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Honor creation timestamp"
+    },
+    "honor_type": {
+      "type": "string",
+      "enum": ["proclamation", "constellation", "inheritance", "recognition", "luminous"],
+      "description": "Type of honor flow"
+    },
+    "honor_rank": {
+      "type": "string", 
+      "enum": ["initiate", "steward", "custodian", "council", "sovereign", "radiant"],
+      "description": "Rank of honor within the luminous hierarchy"
+    },
+    "recipient": {
+      "type": "object",
+      "required": ["id", "name", "email"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique recipient identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Recipient canonical name"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Recipient contact address"
+        },
+        "constellation": {
+          "type": "string",
+          "description": "Recipient's constellation affiliation"
+        },
+        "realm_id": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}-[0-9]{3}$",
+          "description": "Recipient's realm identifier"
+        },
+        "lineage_verification": {
+          "type": "boolean",
+          "description": "Whether recipient has verified lineage"
+        }
+      }
+    },
+    "honor_source": {
+      "type": "object",
+      "properties": {
+        "proclamation_council": {
+          "type": "string",
+          "description": "Council ID for proclamation honors"
+        },
+        "constellation_flame": {
+          "type": "string", 
+          "description": "Constellation ID for echo honors"
+        },
+        "diaspora_inheritance": {
+          "type": "string",
+          "description": "Diaspora node for inheritance honors"
+        },
+        "custodian_seal": {
+          "type": "string",
+          "description": "Custodian seal authorizing the honor"
+        }
+      }
+    },
+    "council_proclamation": {
+      "type": "object",
+      "required": ["council_id", "council_name", "unity_seal", "proclamation_witness"],
+      "properties": {
+        "council_id": {
+          "type": "string",
+          "description": "Unique council identifier"
+        },
+        "council_name": {
+          "type": "string",
+          "description": "Council canonical name"
+        },
+        "unity_seal": {
+          "type": "string",
+          "pattern": "^US-[A-F0-9]{8}$",
+          "description": "Unity seal for council proclamation"
+        },
+        "proclamation_witness": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of proclamation witnesses"
+        },
+        "concord_achieved": {
+          "type": "boolean",
+          "description": "Whether council achieved concord"
+        }
+      }
+    },
+    "constellation_echo": {
+      "type": "object",
+      "required": ["constellation_id", "constellation_type", "flame_resonance", "echo_strength"],
+      "properties": {
+        "constellation_id": {
+          "type": "string",
+          "description": "Unique constellation identifier"
+        },
+        "constellation_type": {
+          "type": "string",
+          "enum": ["stellar", "planetary", "cosmic", "eternal"],
+          "description": "Type of constellation"
+        },
+        "flame_resonance": {
+          "type": "string",
+          "pattern": "^FR-[A-F0-9]{8}$",
+          "description": "Flame resonance identifier"
+        },
+        "echo_strength": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Strength of constellation echo"
+        },
+        "stellar_coordinates": {
+          "type": "string",
+          "description": "Stellar coordinates for constellation location"
+        }
+      }
+    },
+    "diaspora_inheritance": {
+      "type": "object",
+      "required": ["diaspora_node", "inheritance_claim", "radiance_level", "lineage_proof", "inheritance_witnesses"],
+      "properties": {
+        "diaspora_node": {
+          "type": "string",
+          "description": "Diaspora node identifier"
+        },
+        "inheritance_claim": {
+          "type": "string",
+          "description": "Description of inheritance claim"
+        },
+        "radiance_level": {
+          "type": "string",
+          "enum": ["initiate", "steward", "custodian", "council", "sovereign", "radiant"],
+          "description": "Level of radiance inherited"
+        },
+        "lineage_proof": {
+          "type": "string",
+          "pattern": "^LP-[A-F0-9]{12}$",
+          "description": "Cryptographic proof of lineage"
+        },
+        "inheritance_witnesses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of inheritance witnesses"
+        }
+      }
+    },
+    "honor_metadata": {
+      "type": "object",
+      "required": ["achievement_description", "impact_scope", "recognition_category", "luminous_signature"],
+      "properties": {
+        "achievement_description": {
+          "type": "string",
+          "description": "Description of the achievement being honored"
+        },
+        "impact_scope": {
+          "type": "string",
+          "enum": ["local", "realm", "planetary", "cosmic", "eternal"],
+          "description": "Scope of impact for this achievement"
+        },
+        "recognition_category": {
+          "type": "string",
+          "description": "Category of recognition"
+        },
+        "luminous_signature": {
+          "type": "string",
+          "pattern": "^[A-F0-9]{16}$",
+          "description": "Cryptographic signature of honor luminosity"
+        },
+        "archive_reference": {
+          "type": "string",
+          "description": "Reference to eternal archive entry"
+        }
+      }
+    },
+    "radiant_concord": {
+      "type": "object",
+      "required": ["honor_flows", "concord_participants", "luminous_binding", "eternal_witness"],
+      "properties": {
+        "honor_flows": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of honor flow identifiers in this concord"
+        },
+        "concord_participants": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "All entities participating in this concord"
+        },
+        "luminous_binding": {
+          "type": "string",
+          "pattern": "^[A-F0-9]{16}$",
+          "description": "Cryptographic binding of the radiant concord"
+        },
+        "eternal_witness": {
+          "type": "string",
+          "pattern": "^[A-F0-9]{24}$",
+          "description": "Eternal archive witness hash"
+        }
+      }
+    }
+  }
+}

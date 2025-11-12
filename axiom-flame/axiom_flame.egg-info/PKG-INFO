@@ -1,0 +1,101 @@
+Metadata-Version: 2.4
+Name: axiom-flame
+Version: 1.0.0
+Summary: Sacred ceremonial system management for the Super-Codex-AI dominion
+Home-page: https://github.com/JermaineMerritt-ai/Super-Codex-AI
+Author: Super-Codex-AI
+Author-email: admin@codexdominion.app
+Project-URL: Bug Reports, https://github.com/JermaineMerritt-ai/Super-Codex-AI/issues
+Project-URL: Source, https://github.com/JermaineMerritt-ai/Super-Codex-AI
+Project-URL: Documentation, https://github.com/JermaineMerritt-ai/Super-Codex-AI/wiki
+Keywords: ceremonial system management api service monitoring
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Systems Administration
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: flask>=3.0.0
+Requires-Dist: jsonschema>=4.0.0
+Requires-Dist: requests>=2.25.0
+Requires-Dist: pathlib2>=2.3.0; python_version < "3.4"
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=2.10.0; extra == "dev"
+Requires-Dist: black>=21.0.0; extra == "dev"
+Requires-Dist: flake8>=3.8.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Axiom Flame
+
+A ceremonial governance system with reasoning, replay, and audit capabilities.
+
+## Architecture
+
+- **API Package** (Flask): Handles reasoning, replay, ledger operations, and registry management
+- **CLI Package** (Node.js): Ceremony dispatch, honors management, and broadcast functionality
+- **Artifacts**: Living scrolls stored as JSON/YAML for ceremonies, honors, registry, and blueprints
+- **Storage**: File-based vaults for ledger entries, annals, and replay data
+- **Ops**: Configuration and deployment scripts
+
+## Quick Start
+
+### API (Flask)
+```bash
+cd packages/api
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+pip install -r requirements.txt
+flask run
+```
+
+### CLI (Node.js)
+```bash
+cd packages/cli
+npm install
+npm run ceremony:dispatch
+```
+
+## Data Structures
+
+### Ledger Entry Format
+Each ceremonial action creates a structured ledger entry with:
+- Unique dispatch ID
+- Actor and realm identification
+- Capsule and intent classification
+- Input/output tracking
+- Governance seals and audit requirements
+- Links to replay and annal references
+
+See `artifacts/ceremonies/` for examples.
+
+## Storage Layout
+
+- `storage/ledger/` - Timestamped ledger entries
+- `storage/annals/` - Monthly aggregated records
+- `storage/replays/` - Detailed replay data for audit trails
+
+## Operations
+
+- Health checks via `ops/healthcheck.sh`
+- NGINX reverse proxy configuration
+- systemd service management

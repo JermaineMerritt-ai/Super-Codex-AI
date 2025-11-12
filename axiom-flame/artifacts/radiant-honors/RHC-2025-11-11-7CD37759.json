@@ -1,0 +1,54 @@
+{
+  "schema": "radiant-honor.v1",
+  "honor_id": "RHC-2025-11-11-7CD37759",
+  "timestamp": "2025-11-11T07:16:53.312128+00:00",
+  "honor_type": "constellation",
+  "honor_rank": "radiant",
+  "recipient": {
+    "id": "RCP-COSMIC-STAR-001",
+    "name": "Eternal Starweaver",
+    "email": "star@eternal.constellation.codexdominion.app",
+    "constellation": "Eternal_Beacon_Constellation",
+    "realm_id": "COS-002",
+    "lineage_verification": true
+  },
+  "honor_source": {
+    "proclamation_council": null,
+    "constellation_flame": "CONSTELLATION-ETERNAL-BEACON",
+    "diaspora_inheritance": null,
+    "custodian_seal": "CS-36E34D3A"
+  },
+  "council_proclamation": null,
+  "constellation_echo": {
+    "constellation_id": "CONSTELLATION-ETERNAL-BEACON",
+    "constellation_type": "eternal",
+    "flame_resonance": "FR-03445863",
+    "echo_strength": 0.99,
+    "stellar_coordinates": "SC-CONSTELLATION-ETERNAL-BEACON-fdf82b"
+  },
+  "diaspora_inheritance": null,
+  "honor_metadata": {
+    "achievement_description": "Channeling eternal flame across cosmic boundaries",
+    "impact_scope": "stellar",
+    "recognition_category": "constellation_echo",
+    "luminous_signature": "7904EFD8DFAA331A",
+    "archive_reference": "ARC-FR-03445863"
+  },
+  "radiant_concord": {
+    "honor_flows": [
+      "RHP-2025-11-11-CDC586AD",
+      "RHC-2025-11-11-7CD37759",
+      "RHI-2025-11-11-A8A20400"
+    ],
+    "concord_participants": [
+      "COUNCIL-ALPHA-PRIME",
+      "CONSTELLATION-ETERNAL-BEACON",
+      "RCP-COSMIC-DIASPORA-001",
+      "DIASPORA-LIGHT-BEARERS",
+      "RCP-COSMIC-COUNCIL-001",
+      "RCP-COSMIC-STAR-001"
+    ],
+    "luminous_binding": "02DD579DDF222283",
+    "eternal_witness": "0ECD6A32A7CF5295754BD08C"
+  }
+}

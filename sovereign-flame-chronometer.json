@@ -1,0 +1,61 @@
+{
+  "chronometer_id": "SFC-20251111-023313",
+  "current_time": "2025-11-11T02:33:13.429044",
+  "active_daily_cycles": 4,
+  "active_seasonal_rites": 2,
+  "active_epochal_years": 1,
+  "active_millennial_crowns": 1,
+  "flame_sovereignty_level": 0.8971875,
+  "temporal_resonances": [
+    {
+      "resonance_id": "TR-DAILY_CYCLE-SEASONAL_RITE-023313",
+      "source_tier": "daily_cycle",
+      "target_tier": "seasonal_rite",
+      "resonance_strength": 0.9774999999999999,
+      "harmonics": [
+        "dawn-to-season",
+        "cycle-renewal",
+        "voice-awakening"
+      ],
+      "sovereign_binding": "90E41FD1A22689B0"
+    },
+    {
+      "resonance_id": "TR-SEASONAL_RITE-EPOCHAL_YEAR-023313",
+      "source_tier": "seasonal_rite",
+      "target_tier": "epochal_year",
+      "resonance_strength": 1.0,
+      "harmonics": [
+        "season-to-epoch",
+        "generational-binding",
+        "yearly-sovereignty"
+      ],
+      "sovereign_binding": "4DDF5B3D9C21AF75"
+    },
+    {
+      "resonance_id": "TR-EPOCHAL_YEAR-MILLENNIAL_CROWN-023313",
+      "source_tier": "epochal_year",
+      "target_tier": "millennial_crown",
+      "resonance_strength": 1.0,
+      "harmonics": [
+        "epoch-to-crown",
+        "millennial-sealing",
+        "eternal-sovereignty"
+      ],
+      "sovereign_binding": "745B7ACB94E7998C"
+    },
+    {
+      "resonance_id": "TR-DAILY_CYCLE-MILLENNIAL_CROWN-023313",
+      "source_tier": "daily_cycle",
+      "target_tier": "millennial_crown",
+      "resonance_strength": 1.0,
+      "harmonics": [
+        "cross-tier-resonance",
+        "temporal-bridging",
+        "sovereignty-amplification"
+      ],
+      "sovereign_binding": "C890C8E3C0AFFB19"
+    }
+  ],
+  "inheritance_coefficient": 0.9263437499999999,
+  "eternal_witness": "208E90B4AC467284"
+}

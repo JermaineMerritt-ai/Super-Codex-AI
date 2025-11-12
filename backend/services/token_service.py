@@ -1,7 +1,7 @@
 import uuid
 from datetime import datetime
 from .ledger import log_token_event
-from models.token import DominionToken
+from ..models.token import DominionToken
 
 def issue_token(email: str, role: str, order_id: str) -> DominionToken:
     token = DominionToken(

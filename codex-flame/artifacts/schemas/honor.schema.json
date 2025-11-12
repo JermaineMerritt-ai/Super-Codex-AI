@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Honor Award Schema",
+  "type": "object",
+  "required": ["honor_id", "recipient", "achievement", "timestamp", "seal"],
+  "properties": {
+    "honor_id": {
+      "type": "string",
+      "pattern": "^HNR-\\d{4}-\\d{3}$"
+    },
+    "recipient": {
+      "type": "string",
+      "enum": ["Custodian", "Council", "Sentinel", "Architect", "Witness"]
+    },
+    "realm": {
+      "type": "string",
+      "pattern": "^(Planetary|Stellar|Galactic|Universal):[A-Za-z0-9\\-]+$"
+    },
+    "achievement": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 200
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "seal": {
+      "type": "string",
+      "enum": ["Temporal", "Eternal", "Immutable", "Sacred"]
+    },
+    "verification": {
+      "type": "object",
+      "properties": {
+        "ceremony_refs": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "audit_passed": {"type": "boolean"},
+        "witness_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": ["Ceremony", "Service", "Innovation", "Guardian", "Wisdom"]
+        },
+        "tier": {
+          "type": "string",
+          "enum": ["Bronze", "Silver", "Gold", "Platinum", "Legendary"]
+        }
+      }
+    }
+  }
+}

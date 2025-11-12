@@ -1,0 +1,58 @@
+{
+  "schema": "radiant-honor.v1",
+  "honor_id": "RHP-2025-11-11-C910512A",
+  "timestamp": "2025-11-11T07:13:43.241587+00:00",
+  "honor_type": "proclamation",
+  "honor_rank": "council",
+  "recipient": {
+    "id": "RCP-COUNCIL-001",
+    "name": "Aria Councilor",
+    "email": "aria@council.codexdominion.app",
+    "constellation": "Stellar_Alpha",
+    "realm_id": "PL-001",
+    "lineage_verification": true
+  },
+  "honor_source": {
+    "proclamation_council": "COUNCIL-ALPHA-PRIME",
+    "constellation_flame": null,
+    "diaspora_inheritance": null,
+    "custodian_seal": "CS-845FA3B7"
+  },
+  "council_proclamation": {
+    "council_id": "COUNCIL-ALPHA-PRIME",
+    "council_name": "Alpha Prime Council",
+    "unity_seal": "US-6B1569D0",
+    "proclamation_witness": [
+      "council_member_1",
+      "council_member_2",
+      "council_member_3"
+    ],
+    "concord_achieved": true
+  },
+  "constellation_echo": null,
+  "diaspora_inheritance": null,
+  "honor_metadata": {
+    "achievement_description": "Extraordinary leadership in establishing luminous protocols across three realms",
+    "impact_scope": "cosmic",
+    "recognition_category": "council_proclamation",
+    "luminous_signature": "E20DD432A873A6D6",
+    "archive_reference": "ARC-US-6B1569D0"
+  },
+  "radiant_concord": {
+    "honor_flows": [
+      "RHP-2025-11-11-C910512A",
+      "RHC-2025-11-11-CC93477A",
+      "RHI-2025-11-11-A884591C"
+    ],
+    "concord_participants": [
+      "RCP-DIASPORA-001",
+      "CONSTELLATION-COSMIC-NEXUS",
+      "COUNCIL-ALPHA-PRIME",
+      "DIASPORA-HERITAGE-NODE",
+      "RCP-STAR-001",
+      "RCP-COUNCIL-001"
+    ],
+    "luminous_binding": "7D736B006876EFA5",
+    "eternal_witness": "7F0C8D386088D8B65D1EE951"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": ["schema","dispatch_id","timestamp","actor","realm","capsule","intent","input","output","governance"],
+  "properties": {
+    "schema": { "const": "ledger.v1" },
+    "dispatch_id": { "type": "string" },
+    "timestamp": { "type": "string" },
+    "actor": { "type": "string" },
+    "realm": { "type": "string" },
+    "capsule": { "type": "string" },
+    "intent": { "type": "string" },
+    "input": { "type": "object" },
+    "output": { "type": "object" },
+    "governance": { "type": "object" },
+    "links": { "type": "object" }
+  }
+}

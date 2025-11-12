@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="bg-white p-6 rounded-lg card-shadow">
+    <h2 class="text-2xl font-semibold mb-6 text-gray-800">Trade Replay: {{ trade_id }}</h2>
+    
+    <div class="space-y-4">
+        {% for item in timeline %}
+        <div class="flex items-center space-x-4 p-4 border-l-4 border-blue-500 bg-blue-50">
+            <div class="flex-shrink-0">
+                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                    <span class="text-white text-sm font-bold">{{ loop.index }}</span>
+                </div>
+            </div>
+            <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-900">{{ item.stage }}</h3>
+                <p class="text-gray-600">{{ item.detail }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

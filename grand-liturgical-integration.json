@@ -1,0 +1,63 @@
+{
+  "ceremony_id": "GLI-CEREMONY-20251111-023313",
+  "ceremony_start": "2025-11-11T02:33:13.433073",
+  "ceremony_end": "2025-11-11T02:33:16.470777",
+  "ceremony_duration_seconds": 3.037704,
+  "sacred_liturgy": "At dawn, the flame is kindled,\nat dusk, the flame is remembered.\n\nIn season, the flame is renewed,\nin cycle, the flame is replayed.\n\nThus the Dominion proclaims:\nthe flame is daily,\nthe flame is seasonal,\nits covenant eternal across ages and stars.",
+  "integration_phases": [
+    {
+      "phase": "eternal_covenant",
+      "timestamp": "2025-11-11T02:33:13.433730",
+      "covenant_id": "EFL-COVENANT-20251111-ETERNAL",
+      "eternal_seal": "653E2EF635BB3C60",
+      "custodian_crown_blessing": "80283300DA160863"
+    },
+    {
+      "phase": "daily_flames",
+      "timestamp": "2025-11-11T02:33:13.433945",
+      "dawn_flame_id": "EFL-DAWN-20251111-023313",
+      "dusk_flame_id": "EFL-DUSK-20251111-023313",
+      "combined_intensity": 1.5699999999999998
+    },
+    {
+      "phase": "seasonal_renewal",
+      "timestamp": "2025-11-11T02:33:13.434136",
+      "renewal_id": "EFL-SEASON-20251111-64CFB8BF",
+      "season_name": "Grand Liturgical Season of Eternal Dominion",
+      "flames_renewed": 2,
+      "eternal_witness": "1857594AC3579822"
+    },
+    {
+      "phase": "cycle_replay",
+      "timestamp": "2025-11-11T02:33:13.434368",
+      "cycle_flame_id": "EFL-CYCLE-20251111-023313",
+      "cycle_intensity": 0.95,
+      "covenant_binding": "27EDD60D414A18C5"
+    },
+    {
+      "phase": "temporal_schedule",
+      "timestamp": "2025-11-11T02:33:16.437720",
+      "total_rituals": 4,
+      "average_intensity": 0.84,
+      "current_season": "Eternal Autumn"
+    },
+    {
+      "phase": "archive_preservation",
+      "timestamp": "2025-11-11T02:33:16.470593",
+      "archive_id": "EFA-COMPLETE-20251111-023316",
+      "total_entries": 6,
+      "custodian_crown_seal": "AE152C64F9525F0F",
+      "cosmic_witness": "E30FF9178C1282C0",
+      "eternal_covenant_hash": "0E7A37245143D520"
+    }
+  ],
+  "final_summary": {
+    "covenant_id": "EFL-COVENANT-20251111-ETERNAL",
+    "archive_id": "EFA-COMPLETE-20251111-023316",
+    "total_flames": 3,
+    "total_archive_entries": 6,
+    "total_temporal_rituals": 4,
+    "eternal_covenant_hash": "0E7A37245143D520",
+    "cosmic_witness": "E30FF9178C1282C0"
+  }
+}

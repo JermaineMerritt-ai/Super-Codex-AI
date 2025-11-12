@@ -1,0 +1,12 @@
+{
+  "honor_id": "HNR-2025-001",
+  "recipient": "Custodian",
+  "realm": "Planetary:Jackson-NC",
+  "achievement": "Crown Ceremony Mastery",
+  "timestamp": "2025-11-10T06:42:00Z",
+  "seal": "Eternal",
+  "verification": {
+    "ceremony_refs": ["AXF-2025-11-10-0001"],
+    "audit_passed": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "service_id": "FS-2025-11-11-799C7ECB",
+  "name": "Axiom Flame API",
+  "command": [
+    "python",
+    "app.py"
+  ],
+  "working_directory": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\axiom-flame\\packages\\api",
+  "state": "ignited",
+  "pid": 46780,
+  "start_time": "2025-11-11T00:49:33.970959",
+  "restart_count": 0,
+  "auto_restart": true,
+  "environment": {}
+}

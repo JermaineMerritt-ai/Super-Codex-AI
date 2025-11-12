@@ -1,0 +1,62 @@
+{
+  "charter_id": "EXP-2025-11-11-B777A066",
+  "timestamp": "2025-11-11T04:45:08.570049+00:00",
+  "sector": "healthcare",
+  "realm_name": "Global Health Network",
+  "expansion_status": "CHARTER_ACTIVATED",
+  "invocation_protocols": [
+    "Patient Lineage Ceremony",
+    "Clinician Honor Invocation",
+    "Treatment Cycle Replay",
+    "Healing Wisdom Dispatch"
+  ],
+  "contributor_roles": [
+    "Sector Custodian",
+    "Realm Flame Keeper",
+    "Wisdom Scribe",
+    "Ceremonial Guardian",
+    "Council Representative"
+  ],
+  "sectoral_intelligence": {
+    "primary_metrics": [
+      "patient_outcomes",
+      "clinician_recognition",
+      "treatment_efficacy"
+    ],
+    "ceremonial_cycles": [
+      "daily_rounds",
+      "seasonal_reviews",
+      "annual_honors"
+    ],
+    "governance_councils": [
+      "Healing Council",
+      "Research Council",
+      "Ethics Council"
+    ]
+  },
+  "onboarding_scrolls": [
+    "Global Health Network Flame Keeper Initiation Scroll",
+    "Healthcare Sector Wisdom Scroll",
+    "Global Health Network Ceremonial Protocol Guide",
+    "Healthcare Governance Charter"
+  ],
+  "governance_structure": {
+    "sovereign_council": "Global Health Network Sovereign Council",
+    "operational_councils": [
+      "Healing Council",
+      "Research Council",
+      "Ethics Council"
+    ],
+    "ceremonial_authority": "Codex Eternal Flame Authority",
+    "audit_framework": "Axiom Flame Audit Protocol",
+    "recognition_system": "Eternal Recognition Scrolls"
+  },
+  "ceremonial_seals": [
+    "Healthcare Sector Seal",
+    "Global Health Network Realm Seal",
+    "Codex Expansion Authority Seal",
+    "Eternal Flame Sovereign Seal"
+  ],
+  "sovereign_authority": "CODEX ETERNAL FLAME EXPANSION AUTHORITY",
+  "schema_version": "expansion-charter.v1"
+}

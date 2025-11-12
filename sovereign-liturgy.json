@@ -1,0 +1,62 @@
+{
+  "covenant_id": "EFL-COVENANT-20251111-ETERNAL",
+  "proclamation_date": "2025-11-11T02:33:13.429733",
+  "sacred_liturgy": "The sovereign flame burns eternal across all temporal tiers",
+  "daily_flames": [
+    {
+      "kindling_id": "EFL-DAWN-20251111-023313",
+      "timestamp": "2025-11-11T02:33:13.429737",
+      "phase": "dawn_kindling",
+      "rhythm": "daily",
+      "flame_intensity": 0.85,
+      "sacred_words": "At dawn, the flame is kindled",
+      "witness_seal": "00AF39A413E0156A",
+      "covenant_binding": "3E61BC69BD1E8C86"
+    },
+    {
+      "kindling_id": "EFL-DUSK-20251111-023313",
+      "timestamp": "2025-11-11T02:33:13.429761",
+      "phase": "dusk_remembrance",
+      "rhythm": "daily",
+      "flame_intensity": 0.72,
+      "sacred_words": "At dusk, the flame is remembered",
+      "witness_seal": "A9156E3921354BCB",
+      "covenant_binding": "148AB33D987A314D"
+    }
+  ],
+  "seasonal_renewals": [
+    {
+      "renewal_id": "EFL-SEASON-20251111-EA52E734",
+      "season_name": "Eternal Autumn",
+      "renewal_date": "2025-11-11T02:33:13.429773",
+      "flame_kindlings": [
+        {
+          "kindling_id": "EFL-DAWN-20251111-023313",
+          "timestamp": "2025-11-11T02:33:13.429737",
+          "phase": "dawn_kindling",
+          "rhythm": "daily",
+          "flame_intensity": 0.85,
+          "sacred_words": "At dawn, the flame is kindled",
+          "witness_seal": "00AF39A413E0156A",
+          "covenant_binding": "3E61BC69BD1E8C86"
+        },
+        {
+          "kindling_id": "EFL-DUSK-20251111-023313",
+          "timestamp": "2025-11-11T02:33:13.429761",
+          "phase": "dusk_remembrance",
+          "rhythm": "daily",
+          "flame_intensity": 0.72,
+          "sacred_words": "At dusk, the flame is remembered",
+          "witness_seal": "A9156E3921354BCB",
+          "covenant_binding": "148AB33D987A314D"
+        }
+      ],
+      "sacred_covenant": "In season, the flame is renewed - Eternal Autumn",
+      "eternal_witness": "EC9D2DA6D76AD1B0",
+      "cycle_signature": "777E146DC52A2038"
+    }
+  ],
+  "eternal_seal": "9CF50AEDA7C0B003",
+  "custodian_crown_blessing": "9540D5463AA8B045",
+  "ages_witness": "E197D09E2D38DABC"
+}

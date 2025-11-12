@@ -1,3 +1,10 @@
+# Required imports
+from pydantic import BaseModel, Field
+from datetime import datetime
+from fastapi import APIRouter
+
+router = APIRouter()
+
 # Diaspora Council Engagement Model
 class DiasporaCouncilEngagement(BaseModel):
     purpose: list[str]
@@ -134,7 +141,7 @@ class AdapterContract(BaseModel):
 class CodexOrchestrationEvent(BaseModel):
     name: str
     source: str
-    schema: str
+    schema_: str = Field(..., alias="schema")
     guards: list[str]
     workflow: list[str | dict]
     compensation: list[str]
@@ -1474,7 +1481,7 @@ grant_procurement_calendar = GrantProcurementCalendar(
     Q2=["dod_sbir", "gsa_dla_procurement", "hospitality_franchises", "pitch_deck_delivery"],
     Q3=["federal_year_end_spending", "sole_source_awards", "at_risk_companies"],
     Q4=["foundation_grants", "federal_forecasts", "retail_franchises", "covenant_preparation"],
-    global_=["africa_caribbean_q2_q3", "europe_spring", "asia_q1_q2"]
+    **{"global": ["africa_caribbean_q2_q3", "europe_spring", "asia_q1_q2"]}
 )
 
 outreach_cadence = OutreachCadence(

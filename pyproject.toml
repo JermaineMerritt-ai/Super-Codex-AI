@@ -1,0 +1,28 @@
+[project]
+name = "super-codex-ai"
+version = "1.0.0"
+description = "Super-Codex-AI Backend System with FastAPI, authentication, and ceremonial services"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "fastapi>=0.121.1",
+    "uvicorn>=0.38.0",
+    "pydantic>=2.12.4",
+    "requests>=2.32.5",
+    "python-dotenv>=1.0.0",
+    "jsonschema>=4.19.2",
+    "PyYAML>=6.0",
+    "flask>=3.0.0",
+    "waitress>=3.0.2",
+]
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["backend*", "services*", "models*"]
+
+[project.scripts]
+codex-server = "backend.main:app"

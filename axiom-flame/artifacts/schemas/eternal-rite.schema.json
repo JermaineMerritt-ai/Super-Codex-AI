@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "required": ["schema","rite_id","timestamp","binding","summary"],
+  "properties": {
+    "schema": { "const": "eternal.v1" },
+    "rite_id": { "type": "string" },
+    "timestamp": { "type": "string" },
+    "binding": { "type": "object" },
+    "summary": { "type": "string" }
+  }
+}

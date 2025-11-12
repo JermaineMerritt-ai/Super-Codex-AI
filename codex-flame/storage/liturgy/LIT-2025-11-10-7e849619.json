@@ -1,0 +1,15 @@
+{
+  "schema": "liturgy.v1",
+  "cycle_id": "LIT-2025-11-10-7e849619",
+  "timestamp": "2025-11-11T03:29:06+00:00Z",
+  "season": "Autumn",
+  "honors": [],
+  "invocations": [
+    {
+      "dispatch_id": "AXF-2025-11-11-test123",
+      "intent": "Testing",
+      "summary": "Testing sealed for realm Test-Realm."
+    }
+  ],
+  "summary": "Eternal Flame Liturgy for Autumn season, 0 honors, 1 invocations recalled."
+}

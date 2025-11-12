@@ -1,4 +1,6 @@
 from pydantic import BaseModel
+from dataclasses import dataclass
+from datetime import datetime, timedelta, timezone
 
 class DominionToken(BaseModel):
     token_id: str
@@ -6,8 +8,6 @@ class DominionToken(BaseModel):
     role: str
     order_id: str
     issued_at: datetime
-from dataclasses import dataclass
-from datetime import datetime, timedelta, timezone
 
 
 @dataclass

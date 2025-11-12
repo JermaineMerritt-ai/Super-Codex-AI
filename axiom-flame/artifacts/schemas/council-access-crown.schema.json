@@ -1,0 +1,324 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Council Access Crown Schema",
+  "description": "Sovereign access hierarchy for the three modes of participation: Heirs inherit in witness, Councils govern in concord, Customers partake in luminous service",
+  "type": "object",
+  "required": [
+    "schema",
+    "access_crown_id",
+    "timestamp",
+    "sovereign_mode",
+    "participant",
+    "realm",
+    "access_grants",
+    "inheritance_level",
+    "covenant_seal"
+  ],
+  "properties": {
+    "schema": {
+      "const": "council-access-crown.v1",
+      "description": "Schema version for Council Access Crown"
+    },
+    "access_crown_id": {
+      "type": "string",
+      "pattern": "^CAC-[0-9]{4}-[0-9]{2}-[0-9]{2}-[A-F0-9]{8}$",
+      "description": "Unique Council Access Crown identifier"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Crown establishment timestamp"
+    },
+    "sovereign_mode": {
+      "type": "string",
+      "enum": ["heir", "council", "customer"],
+      "description": "The three modes of sovereign access"
+    },
+    "participant": {
+      "type": "object",
+      "required": ["id", "identity", "credentials"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique participant identifier"
+        },
+        "identity": {
+          "type": "object",
+          "required": ["name", "email"],
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Participant canonical name"
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "description": "Contact address for covenant notifications"
+            },
+            "did": {
+              "type": "string",
+              "description": "Decentralized identity (optional)"
+            }
+          }
+        },
+        "credentials": {
+          "type": "object",
+          "properties": {
+            "auth_tokens": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Active authentication tokens"
+            },
+            "certificates": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Digital certificates for verification"
+            }
+          }
+        }
+      }
+    },
+    "realm": {
+      "type": "object",
+      "required": ["realm_id", "domain", "access_level"],
+      "properties": {
+        "realm_id": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}-[0-9]{3}$",
+          "description": "Realm identifier (e.g., PL-001, ST-007)"
+        },
+        "domain": {
+          "type": "string",
+          "description": "Domain scope of access"
+        },
+        "access_level": {
+          "type": "string",
+          "enum": ["public", "council", "custodian", "sovereign"],
+          "description": "Access clearance level within realm"
+        }
+      }
+    },
+    "access_grants": {
+      "type": "object",
+      "properties": {
+        "heir_privileges": {
+          "type": "object",
+          "properties": {
+            "witness_access": {
+              "type": "boolean",
+              "description": "Access to witness ceremonial proceedings"
+            },
+            "inheritance_claims": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "List of inheritable assets/rights"
+            },
+            "lineage_verification": {
+              "type": "boolean",
+              "description": "Verified lineage status"
+            }
+          }
+        },
+        "council_powers": {
+          "type": "object",
+          "properties": {
+            "governance_vote": {
+              "type": "boolean",
+              "description": "Voting rights in council decisions"
+            },
+            "concord_seal": {
+              "type": "boolean",
+              "description": "Authority to seal agreements"
+            },
+            "ceremonial_oversight": {
+              "type": "boolean",
+              "description": "Oversight of ceremonial proceedings"
+            },
+            "realm_administration": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Administrative realms under council authority"
+            }
+          }
+        },
+        "customer_services": {
+          "type": "object",
+          "properties": {
+            "luminous_access": {
+              "type": "boolean",
+              "description": "Access to luminous service layer"
+            },
+            "service_tiers": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Available service tiers"
+            },
+            "participation_level": {
+              "type": "string",
+              "enum": ["basic", "enhanced", "premium", "sovereign"],
+              "description": "Level of service participation"
+            },
+            "covenant_benefits": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Covenant-granted benefits and services"
+            }
+          }
+        }
+      }
+    },
+    "inheritance_level": {
+      "type": "object",
+      "required": ["tier", "authority_scope"],
+      "properties": {
+        "tier": {
+          "type": "string",
+          "enum": ["initiate", "steward", "custodian", "council", "sovereign"],
+          "description": "Hierarchical tier within the covenant"
+        },
+        "authority_scope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Scope of authority granted at this level"
+        },
+        "succession_rights": {
+          "type": "boolean",
+          "description": "Rights to participate in succession ceremonies"
+        },
+        "archive_access": {
+          "type": "string",
+          "enum": ["read", "write", "admin", "sovereign"],
+          "description": "Level of access to eternal archives"
+        }
+      }
+    },
+    "covenant_seal": {
+      "type": "object",
+      "required": ["seal_id", "authority", "witness_count"],
+      "properties": {
+        "seal_id": {
+          "type": "string",
+          "pattern": "^CS-[0-9]{4}-[0-9]{2}-[0-9]{2}-[A-F0-9]{8}$",
+          "description": "Covenant seal identifier"
+        },
+        "authority": {
+          "type": "string",
+          "description": "Sealing authority (Custodian, Council, or Sovereign)"
+        },
+        "witness_count": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Number of witnesses to the covenant"
+        },
+        "signature_chain": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "signer": {
+                "type": "string"
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "signature": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "Chain of covenant signatures"
+        },
+        "eternal_binding": {
+          "type": "boolean",
+          "description": "Whether this covenant is eternally binding"
+        }
+      }
+    },
+    "expiration": {
+      "type": "object",
+      "properties": {
+        "expires_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Crown expiration timestamp (null for eternal grants)"
+        },
+        "renewal_required": {
+          "type": "boolean",
+          "description": "Whether renewal ceremonies are required"
+        },
+        "renewal_cycle": {
+          "type": "string",
+          "enum": ["quarterly", "annual", "generational", "eternal"],
+          "description": "Renewal cycle frequency"
+        }
+      }
+    },
+    "audit_trail": {
+      "type": "object",
+      "properties": {
+        "created_by": {
+          "type": "string",
+          "description": "Creator of this access crown"
+        },
+        "modified_history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "modifier": {
+                "type": "string"
+              },
+              "changes": {
+                "type": "object"
+              },
+              "witness": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "access_log": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "action": {
+                "type": "string"
+              },
+              "resource": {
+                "type": "string"
+              },
+              "result": {
+                "type": "string",
+                "enum": ["granted", "denied", "deferred"]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

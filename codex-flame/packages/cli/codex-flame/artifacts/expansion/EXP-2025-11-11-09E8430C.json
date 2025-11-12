@@ -1,0 +1,62 @@
+{
+  "charter_id": "EXP-2025-11-11-09E8430C",
+  "timestamp": "2025-11-11T04:46:10.597443+00:00",
+  "sector": "climate_tech",
+  "realm_name": "Global Climate Council",
+  "expansion_status": "CHARTER_ACTIVATED",
+  "invocation_protocols": [
+    "Sustainability Council Ceremony",
+    "Green Innovation Honor",
+    "Carbon Cycle Replay",
+    "Climate Wisdom Dispatch"
+  ],
+  "contributor_roles": [
+    "Sector Custodian",
+    "Realm Flame Keeper",
+    "Wisdom Scribe",
+    "Ceremonial Guardian",
+    "Council Representative"
+  ],
+  "sectoral_intelligence": {
+    "primary_metrics": [
+      "carbon_reduction",
+      "innovation_impact",
+      "sustainability_scores"
+    ],
+    "ceremonial_cycles": [
+      "daily_monitoring",
+      "seasonal_assessments",
+      "annual_summits"
+    ],
+    "governance_councils": [
+      "Climate Council",
+      "Innovation Council",
+      "Planetary Council"
+    ]
+  },
+  "onboarding_scrolls": [
+    "Global Climate Council Flame Keeper Initiation Scroll",
+    "Climate_Tech Sector Wisdom Scroll",
+    "Global Climate Council Ceremonial Protocol Guide",
+    "Climate_Tech Governance Charter"
+  ],
+  "governance_structure": {
+    "sovereign_council": "Global Climate Council Sovereign Council",
+    "operational_councils": [
+      "Climate Council",
+      "Innovation Council",
+      "Planetary Council"
+    ],
+    "ceremonial_authority": "Codex Eternal Flame Authority",
+    "audit_framework": "Axiom Flame Audit Protocol",
+    "recognition_system": "Eternal Recognition Scrolls"
+  },
+  "ceremonial_seals": [
+    "Climate_Tech Sector Seal",
+    "Global Climate Council Realm Seal",
+    "Codex Expansion Authority Seal",
+    "Eternal Flame Sovereign Seal"
+  ],
+  "sovereign_authority": "CODEX ETERNAL FLAME EXPANSION AUTHORITY",
+  "schema_version": "expansion-charter.v1"
+}

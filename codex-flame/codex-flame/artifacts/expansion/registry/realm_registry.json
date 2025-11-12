@@ -1,0 +1,22 @@
+{
+  "registry_id": "RR-2025-11-11-0170D307",
+  "timestamp": "2025-11-11T04:45:08.570659+00:00",
+  "total_realms": 1,
+  "active_realms": [
+    "Global Health Network (healthcare)"
+  ],
+  "sectoral_distribution": {
+    "healthcare": 1
+  },
+  "governance_metrics": {
+    "EXP-2025-11-11-B777A066": {
+      "realm_name": "Global Health Network",
+      "sector": "healthcare",
+      "protocols": 4,
+      "roles": 5,
+      "councils": 3,
+      "activation_date": "2025-11-11T04:45:08.570049+00:00"
+    }
+  },
+  "last_updated": "2025-11-11T04:45:08.570666+00:00"
+}

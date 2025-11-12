@@ -1,0 +1,14 @@
+{
+  "dispatch_id": "AXF-2025-11-11-e2dfa702",
+  "timestamp": "2025-11-12T01:20:38.168302+00:00",
+  "actor": "Custodian",
+  "realm": "PL-001",
+  "capsule": "Sovereign Crown",
+  "intent": "Crown.Invocation",
+  "reasoning": "",
+  "governance_seal": {
+    "authority": "ceremonial",
+    "classification": "reasoning",
+    "seal_hash": "73d33b880cd75a1f3a9ec3b142cfa24066a39d40b956dee2a2c26c2a1602b83f"
+  }
+}

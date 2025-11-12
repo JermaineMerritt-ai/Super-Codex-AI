@@ -1,0 +1,104 @@
+{
+  "registry_version": "1.0",
+  "realms": [
+    {
+      "realm_id": "PL-001",
+      "name": "Planetary Council — Jackson NC",
+      "status": "Crowned",
+      "capsules": ["Sovereign Crown", "Replay Invocation"],
+      "custodians": ["Jermaine Merritt"],
+      "broadcast_endpoint": "https://example.org/axiom/broadcast",
+      "governance": {
+        "authority_level": "High",
+        "requires_witness": true,
+        "max_seal_level": "Sacred"
+      },
+      "metadata": {
+        "created": "2025-11-10T00:00:00Z",
+        "last_ceremony": "2025-11-10T06:42:00Z",
+        "ceremony_count": 4,
+        "tags": ["sovereign", "crown", "replay", "planetary"]
+      }
+    },
+    {
+      "realm_id": "ST-007",
+      "name": "Stellar Sentinel — Andromeda Sector 7",
+      "status": "Active",
+      "capsules": ["Guardian Protocol", "Replay Invocation"],
+      "custodians": ["Stellar Sentinel"],
+      "governance": {
+        "authority_level": "High",
+        "requires_witness": false,
+        "max_seal_level": "Immutable"
+      },
+      "metadata": {
+        "created": "2025-11-10T00:00:00Z",
+        "last_ceremony": "2025-11-10T08:15:30Z",
+        "ceremony_count": 1,
+        "tags": ["security", "monitoring", "stellar"]
+      }
+    },
+    {
+      "realm_id": "UN-001",
+      "name": "Universal Core Nexus",
+      "status": "Sealed",
+      "capsules": ["Genesis Blueprint", "Council Decree", "Wisdom Convocation"],
+      "custodians": ["Architect", "Council"],
+      "governance": {
+        "authority_level": "Critical",
+        "requires_witness": true,
+        "max_seal_level": "Sacred"
+      },
+      "metadata": {
+        "created": "2025-11-10T00:00:00Z",
+        "last_ceremony": "2025-11-10T14:22:15Z",
+        "ceremony_count": 1,
+        "tags": ["genesis", "creation", "universal", "architecture"]
+      }
+    },
+    {
+      "realm_id": "GA-001",
+      "name": "Galactic Orion Assembly",
+      "status": "Active",
+      "capsules": ["Council Decree", "Wisdom Convocation", "Honor Ceremony"],
+      "custodians": ["Council"],
+      "governance": {
+        "authority_level": "Critical",
+        "requires_witness": true,
+        "max_seal_level": "Eternal"
+      },
+      "metadata": {
+        "created": "2025-11-10T00:00:00Z",
+        "last_ceremony": "2025-11-10T16:45:00Z",
+        "ceremony_count": 1,
+        "tags": ["governance", "council", "galactic", "assembly"]
+      }
+    }
+  ],
+  "actors": {
+    "Jermaine Merritt": {
+      "role": "Custodian",
+      "realms": ["PL-001"],
+      "permissions": ["ceremony.dispatch", "honor.grant", "audit.review"],
+      "active": true
+    },
+    "Stellar Sentinel": {
+      "role": "Sentinel", 
+      "realms": ["ST-007"],
+      "permissions": ["ceremony.dispatch", "audit.review", "broadcast.send"],
+      "active": true
+    },
+    "Architect": {
+      "role": "Architect",
+      "realms": ["UN-001"],
+      "permissions": ["ceremony.dispatch", "honor.grant", "audit.review", "registry.update"],
+      "active": true
+    },
+    "Council": {
+      "role": "Council",
+      "realms": ["GA-001", "UN-001"],
+      "permissions": ["ceremony.dispatch", "honor.grant", "audit.review", "registry.update", "broadcast.send"],
+      "active": true
+    }
+  }
+}

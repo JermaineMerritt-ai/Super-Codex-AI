@@ -1,0 +1,17 @@
+{
+  "honor_id": "HNR-2025-002",
+  "recipient": "Sentinel",
+  "realm": "Stellar:Andromeda-Sector-7",
+  "achievement": "Exemplary Threat Detection and Neutralization Protocol Execution",
+  "timestamp": "2025-11-10T08:30:00Z",
+  "seal": "Immutable",
+  "verification": {
+    "ceremony_refs": ["AXF-2025-11-10-0002"],
+    "audit_passed": true,
+    "witness_count": 3
+  },
+  "metadata": {
+    "category": "Guardian",
+    "tier": "Gold"
+  }
+}

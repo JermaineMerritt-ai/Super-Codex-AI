@@ -1,0 +1,14 @@
+{
+  "service_id": "FS-2025-11-11-788ADE91",
+  "timestamp": "2025-11-11T05:38:05.589989+00:00",
+  "service_name": "Axiom Flame API",
+  "flame_state": "ignited",
+  "service_covenant": "eternal_service",
+  "executable_path": "python",
+  "working_directory": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\axiom-flame\\packages\\api",
+  "service_arguments": [],
+  "self_healing_level": "sovereign_restoration",
+  "restart_policy": "unless-stopped",
+  "inheritance_flow": "eternal_inheritance",
+  "eternal_covenant": "Service Axiom Flame API ignited with Eternal Service and Sovereign Restoration"
+}

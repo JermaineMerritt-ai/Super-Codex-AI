@@ -1,0 +1,146 @@
+{
+  "archive_id": "EFA-COMPLETE-20251111-022440",
+  "creation_date": "2025-11-11T02:24:40.464997",
+  "custodian_crown_seal": "C1A1B5D279D00EC7",
+  "total_entries": 3,
+  "archive_realms": {
+    "daily_flames": [
+      {
+        "entry_id": "EFA-DAILY_FLAMES-20251111-022440",
+        "archive_realm": "daily_flames",
+        "preservation_seal": "temporal",
+        "timestamp": "2025-11-11T02:24:40.464012",
+        "content_hash": "0d737baf2f93512ea8d17d7c050fcdb3b20280afe66847b6e76a32a1fde8acb0",
+        "content_data": {
+          "ritual": "dusk_remembrance",
+          "timestamp": "2025-11-11T02:23:24.221606",
+          "flame_id": "EFL-DUSK-20251111-022324",
+          "intensity": 0.72,
+          "witness_seal": "D9BD1E9685E27130"
+        },
+        "witness_signatures": [
+          "Dawn:C2FB05B1EC17C69E",
+          "Dusk:BDA656F61D4DB673",
+          "Eternal:8CE5A4E317664D7D"
+        ],
+        "eternal_binding": "38BA39BD1A63FB20",
+        "ages_witness": "B5A3789F14836EC1"
+      }
+    ],
+    "seasonal_renewals": [
+      {
+        "entry_id": "EFA-SEASONAL_RENEWALS-20251111-022440",
+        "archive_realm": "seasonal_renewals",
+        "preservation_seal": "seasonal",
+        "timestamp": "2025-11-11T02:24:40.464423",
+        "content_hash": "ec4dd6f86f97892dac4614b88313165c56aaa19175bb10a82c8bb4860c286feb",
+        "content_data": {
+          "ritual": "seasonal_renewal",
+          "timestamp": "2025-11-11T02:23:25.222428",
+          "renewal_id": "EFL-SEASON-20251111-0C252C2D",
+          "season_name": "Eternal Autumn - Week 46",
+          "flames_renewed": 2,
+          "eternal_witness": "C23094DFCE780EFF"
+        },
+        "witness_signatures": [
+          "Season:086DF650BDD098B5",
+          "Renewal:9710AF7E77F0E2A3",
+          "Cycle:1037F4DFC64AD545",
+          "Eternal:67A3F7AC5E42FB03"
+        ],
+        "eternal_binding": "20AD64D445681638",
+        "ages_witness": "4430F1E6A7232B32"
+      }
+    ],
+    "cycle_replays": [],
+    "eternal_covenants": [
+      {
+        "entry_id": "EFA-ETERNAL_COVENANTS-20251111-022440",
+        "archive_realm": "eternal_covenants",
+        "preservation_seal": "cosmic",
+        "timestamp": "2025-11-11T02:24:40.451763",
+        "content_hash": "feb5d896fce229c0c0ebfaedc8081e2942ff0922f8567081858f7b1ed0327012",
+        "content_data": {
+          "covenant_id": "EFL-COVENANT-20251111-ETERNAL",
+          "proclamation_date": "2025-11-11T02:22:02.370878",
+          "sacred_liturgy": "At dawn, the flame is kindled,\nat dusk, the flame is remembered.\n\nIn season, the flame is renewed,\nin cycle, the flame is replayed.\n\nThus the Dominion proclaims:\nthe flame is daily,\nthe flame is seasonal,\nits covenant eternal across ages and stars.",
+          "daily_flames": [
+            {
+              "kindling_id": "EFL-DAWN-20251111-022202",
+              "timestamp": "2025-11-11T02:22:02.370881",
+              "phase": "dawn_kindling",
+              "rhythm": "daily",
+              "flame_intensity": 0.85,
+              "sacred_words": "At dawn, the flame is kindled",
+              "witness_seal": "0CD1017F1D35F721",
+              "covenant_binding": "D839BCD77FA79B3C"
+            },
+            {
+              "kindling_id": "EFL-DUSK-20251111-022202",
+              "timestamp": "2025-11-11T02:22:02.370932",
+              "phase": "dusk_remembrance",
+              "rhythm": "daily",
+              "flame_intensity": 0.72,
+              "sacred_words": "At dusk, the flame is remembered",
+              "witness_seal": "AE5D53A3FC572689",
+              "covenant_binding": "8CF33777DEF926F0"
+            }
+          ],
+          "seasonal_renewals": [
+            {
+              "renewal_id": "EFL-SEASON-20251111-EA52E734",
+              "season_name": "Eternal Autumn",
+              "renewal_date": "2025-11-11T02:22:02.370945",
+              "flame_kindlings": [
+                {
+                  "kindling_id": "EFL-DAWN-20251111-022202",
+                  "timestamp": "2025-11-11T02:22:02.370881",
+                  "phase": "dawn_kindling",
+                  "rhythm": "daily",
+                  "flame_intensity": 0.85,
+                  "sacred_words": "At dawn, the flame is kindled",
+                  "witness_seal": "0CD1017F1D35F721",
+                  "covenant_binding": "D839BCD77FA79B3C"
+                },
+                {
+                  "kindling_id": "EFL-DUSK-20251111-022202",
+                  "timestamp": "2025-11-11T02:22:02.370932",
+                  "phase": "dusk_remembrance",
+                  "rhythm": "daily",
+                  "flame_intensity": 0.72,
+                  "sacred_words": "At dusk, the flame is remembered",
+                  "witness_seal": "AE5D53A3FC572689",
+                  "covenant_binding": "8CF33777DEF926F0"
+                }
+              ],
+              "sacred_covenant": "In season, the flame is renewed - Eternal Autumn",
+              "eternal_witness": "EC9D2DA6D76AD1B0",
+              "cycle_signature": "777E146DC52A2038"
+            }
+          ],
+          "eternal_seal": "3E0D73A23C4AD175",
+          "custodian_crown_blessing": "3DBABEF21055CF3F",
+          "ages_witness": "F1B3F1CDA8C8FC80"
+        },
+        "witness_signatures": [
+          "Custodian:3FAF4A7937B445CA",
+          "Crown:6BFC34BAEEF9E463",
+          "Covenant:14AE4C7EF14D995B",
+          "Eternal:8207DD1B8344EEF2",
+          "Ages:5D33D9AC26811B21",
+          "Stars:671F56A201F08B4C"
+        ],
+        "eternal_binding": "77AFC63963CEF674",
+        "ages_witness": "0210DE31A2C77887"
+      }
+    ],
+    "sacred_liturgies": []
+  },
+  "preservation_summary": {
+    "temporal": 1,
+    "seasonal": 1,
+    "cosmic": 1
+  },
+  "cosmic_witness": "1A16D444B5A3B4EB",
+  "eternal_covenant_hash": "2F40EC3B34A96E79"
+}

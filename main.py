@@ -1,4 +1,6 @@
 
+#! .venv\Scripts\python.exe
+
 from fastapi import FastAPI
 
 app = FastAPI()

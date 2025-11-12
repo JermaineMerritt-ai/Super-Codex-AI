@@ -1,0 +1,17 @@
+# Docker ignore file for Flask API
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.coverage
+.pytest_cache/
+.env
+.venv
+venv/
+.git/
+.gitignore
+README.md
+Dockerfile
+.dockerignore

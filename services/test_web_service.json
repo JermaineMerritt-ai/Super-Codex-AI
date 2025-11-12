@@ -1,0 +1,6 @@
+{
+  "name": "Test Web Service",
+  "status": "stopped",
+  "stop_time": "2025-11-11T00:54:50.321772",
+  "restart_count": 10
+}

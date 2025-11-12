@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "required": ["schema","replay_id","timestamp","source_dispatch_id","realm","capsule","intent","audit","summary"],
+  "properties": {
+    "schema": { "const": "replay.v1" },
+    "replay_id": { "type": "string" },
+    "timestamp": { "type": "string" },
+    "source_dispatch_id": { "type": "string" },
+    "realm": { "type": "string" },
+    "capsule": { "type": "string" },
+    "intent": { "type": "string" },
+    "audit": { "type": "object" },
+    "summary": { "type": "string" }
+  }
+}

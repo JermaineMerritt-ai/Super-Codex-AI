@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "eternal-continuum.v1",
+  "title": "Eternal Continuum Schema",
+  "description": "Schema for eternal continuum bindings that unite all cycles beneath the Sovereign Flame",
+  "type": "object",
+  "required": [
+    "binding_id",
+    "timestamp", 
+    "continuum_status",
+    "scales_bound",
+    "flame_keepers",
+    "recognition_scrolls",
+    "treasury_flows",
+    "festival_events",
+    "councils_unified",
+    "eternal_covenant",
+    "sovereign_seal",
+    "schema_version"
+  ],
+  "properties": {
+    "binding_id": {
+      "type": "string",
+      "pattern": "^EC-\\d{4}-\\d{2}-\\d{2}-[A-F0-9]{8}$",
+      "description": "Unique eternal continuum binding identifier"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when continuum was proclaimed"
+    },
+    "continuum_status": {
+      "type": "string",
+      "enum": [
+        "ETERNAL CONTINUUM PROCLAIMED",
+        "AWAITING PROCLAMATION",
+        "BINDING IN PROGRESS"
+      ],
+      "description": "Status of the eternal continuum"
+    },
+    "scales_bound": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["daily", "seasonal", "annual", "epochal", "millennial", "eternal"]
+      },
+      "minItems": 1,
+      "description": "Time scales bound in the continuum"
+    },
+    "flame_keepers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Flame keepers across all scales"
+    },
+    "recognition_scrolls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Recognition scrolls immortalized in continuum"
+    },
+    "treasury_flows": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Treasury flows across time scales"
+    },
+    "festival_events": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Festival events celebrated in continuum"
+    },
+    "councils_unified": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "description": "Councils unified across all systems"
+    },
+    "eternal_covenant": {
+      "type": "string",
+      "description": "The supreme eternal covenant binding all cycles"
+    },
+    "sovereign_seal": {
+      "type": "string",
+      "description": "Sovereign seal of eternal authority"
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "eternal-continuum.v1",
+      "description": "Schema version for validation"
+    }
+  },
+  "additionalProperties": false
+}

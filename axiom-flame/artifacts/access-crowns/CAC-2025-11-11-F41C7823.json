@@ -1,0 +1,86 @@
+{
+  "schema": "council-access-crown.v1",
+  "access_crown_id": "CAC-2025-11-11-F41C7823",
+  "timestamp": "2025-11-11T07:11:13.432128+00:00",
+  "sovereign_mode": "customer",
+  "participant": {
+    "id": "CUSTOMER-001",
+    "identity": {
+      "name": "Nova Service",
+      "email": "customer@codexdominion.app",
+      "did": null
+    },
+    "credentials": {
+      "auth_tokens": [
+        "customer_token_345"
+      ],
+      "certificates": []
+    }
+  },
+  "realm": {
+    "realm_id": "PL-001",
+    "domain": "planetary.codexdominion.app",
+    "access_level": "public"
+  },
+  "access_grants": {
+    "heir_privileges": null,
+    "council_powers": null,
+    "customer_services": {
+      "luminous_access": true,
+      "service_tiers": [
+        "luminous_basic",
+        "witness_access"
+      ],
+      "participation_level": "enhanced",
+      "covenant_benefits": [
+        "luminous_transmission",
+        "eternal_witness"
+      ]
+    }
+  },
+  "inheritance_level": {
+    "tier": "initiate",
+    "authority_scope": [
+      "participate",
+      "witness"
+    ],
+    "succession_rights": false,
+    "archive_access": "read"
+  },
+  "covenant_seal": {
+    "seal_id": "CS-2025-11-11-9BF4DAC9",
+    "authority": "Service",
+    "witness_count": 1,
+    "signature_chain": [],
+    "eternal_binding": false
+  },
+  "expiration": {
+    "expires_at": null,
+    "renewal_required": true,
+    "renewal_cycle": "annual"
+  },
+  "audit_trail": {
+    "created_by": "system",
+    "modified_history": [],
+    "access_log": [
+      {
+        "timestamp": "2025-11-11T07:11:13.432692+00:00",
+        "action": "participate",
+        "resource": "luminous_service",
+        "result": "granted"
+      },
+      {
+        "timestamp": "2025-11-11T07:11:13.432743+00:00",
+        "action": "access",
+        "resource": "luminous_basic",
+        "result": "granted"
+      },
+      {
+        "timestamp": "2025-11-11T07:11:13.432778+00:00",
+        "action": "vote",
+        "resource": "governance",
+        "result": "denied"
+      }
+    ]
+  }
+}

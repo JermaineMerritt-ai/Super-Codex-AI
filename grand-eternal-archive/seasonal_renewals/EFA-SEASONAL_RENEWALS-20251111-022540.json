@@ -1,0 +1,45 @@
+{
+  "entry_id": "EFA-SEASONAL_RENEWALS-20251111-022540",
+  "archive_realm": "seasonal_renewals",
+  "preservation_seal": "seasonal",
+  "timestamp": "2025-11-11T02:25:40.178990",
+  "content_hash": "cba79872b4940a921df00c14023125c60a0a68fd640380d65c058c5dd5451d11",
+  "content_data": {
+    "renewal_id": "EFL-SEASON-20251111-64CFB8BF",
+    "season_name": "Grand Liturgical Season of Eternal Dominion",
+    "renewal_date": "2025-11-11T02:25:37.170918",
+    "flame_kindlings": [
+      {
+        "kindling_id": "EFL-DAWN-20251111-022537",
+        "timestamp": "2025-11-11T02:25:37.170606",
+        "phase": "dawn_kindling",
+        "rhythm": "daily",
+        "flame_intensity": 0.85,
+        "sacred_words": "Sacred dawn kindling in the Grand Liturgical Integration",
+        "witness_seal": "3A6A04107D106FE1",
+        "covenant_binding": "EA54D4B089F0072A"
+      },
+      {
+        "kindling_id": "EFL-DUSK-20251111-022537",
+        "timestamp": "2025-11-11T02:25:37.170629",
+        "phase": "dusk_remembrance",
+        "rhythm": "daily",
+        "flame_intensity": 0.72,
+        "sacred_words": "Sacred dusk remembrance in the Grand Liturgical Integration",
+        "witness_seal": "99006EE2A205675A",
+        "covenant_binding": "D64DA765EA30AA48"
+      }
+    ],
+    "sacred_covenant": "In season, the flame is renewed - Grand Liturgical Season of Eternal Dominion",
+    "eternal_witness": "1857594AC3579822",
+    "cycle_signature": "116097092C3DF86B"
+  },
+  "witness_signatures": [
+    "Season:83DC039F0780D9C8",
+    "Renewal:3F5313FEA24A3A8B",
+    "Cycle:FE73CF946C397FC6",
+    "Eternal:615BE704A8A557C4"
+  ],
+  "eternal_binding": "D4D614C25034ABD7",
+  "ages_witness": "9135244E552958B6"
+}

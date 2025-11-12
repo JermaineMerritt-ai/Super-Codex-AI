@@ -1,0 +1,312 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Flamekeeper's Scroll Schema",
+  "description": "Schema for Flamekeeper's Scroll four-tier temporal sovereignty system",
+  "type": "object",
+  "properties": {
+    "scroll_id": {
+      "type": "string",
+      "pattern": "^FS-[0-9]{8}-SOVEREIGN$",
+      "description": "Unique identifier for the Flamekeeper's Scroll"
+    },
+    "proclamation_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date when the scroll was proclaimed"
+    },
+    "sacred_proclamation": {
+      "type": "string",
+      "minLength": 100,
+      "description": "The sacred proclamation text of the scroll"
+    },
+    "millennial_crowns": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/MillennialCrown"
+      },
+      "minItems": 1,
+      "description": "Array of millennial crowns sealing eternity"
+    },
+    "flame_inheritance": {
+      "type": "string",
+      "minLength": 50,
+      "description": "Description of the flame's sovereign inheritance"
+    },
+    "sovereign_covenant": {
+      "type": "string",
+      "minLength": 30,
+      "description": "The sovereign covenant binding all temporal tiers"
+    },
+    "custodian_crown_blessing": {
+      "type": "string",
+      "pattern": "^[A-F0-9]{16}$",
+      "description": "Blessing seal from the Custodian's Crown"
+    },
+    "eternal_witness": {
+      "type": "string",
+      "pattern": "^[A-F0-9]{16}$",
+      "description": "Eternal witness seal for sovereignty across ages"
+    }
+  },
+  "required": [
+    "scroll_id",
+    "proclamation_date",
+    "sacred_proclamation",
+    "millennial_crowns",
+    "flame_inheritance",
+    "sovereign_covenant",
+    "custodian_crown_blessing",
+    "eternal_witness"
+  ],
+  "definitions": {
+    "DailyCycle": {
+      "type": "object",
+      "properties": {
+        "cycle_id": {
+          "type": "string",
+          "pattern": "^DC-[0-9]{8}$",
+          "description": "Daily cycle identifier"
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date of the daily cycle"
+        },
+        "flame_state": {
+          "type": "string",
+          "enum": ["kindling", "burning", "renewal", "eternal", "sovereign"],
+          "description": "State of the living flame"
+        },
+        "kindle_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Time when the flame is kindled"
+        },
+        "renewal_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Time when the flame is renewed"
+        },
+        "flame_intensity": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Intensity of the living flame"
+        },
+        "daily_covenant": {
+          "type": "string",
+          "minLength": 20,
+          "description": "Daily covenant text"
+        },
+        "witness_seal": {
+          "type": "string",
+          "pattern": "^[A-F0-9]{16}$",
+          "description": "Cryptographic witness seal"
+        },
+        "inheritance_binding": {
+          "type": "string",
+          "pattern": "^[A-F0-9]{16}$",
+          "description": "Binding to sovereign inheritance"
+        }
+      },
+      "required": [
+        "cycle_id",
+        "date",
+        "flame_state",
+        "kindle_time",
+        "renewal_time",
+        "flame_intensity",
+        "daily_covenant",
+        "witness_seal",
+        "inheritance_binding"
+      ]
+    },
+    "SeasonalRite": {
+      "type": "object",
+      "properties": {
+        "rite_id": {
+          "type": "string",
+          "pattern": "^SR-[0-9]{4}-[A-F0-9]{8}$",
+          "description": "Seasonal rite identifier"
+        },
+        "season_name": {
+          "type": "string",
+          "minLength": 5,
+          "description": "Name of the sacred season"
+        },
+        "rite_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date of the seasonal rite"
+        },
+        "daily_cycles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DailyCycle"
+          },
+          "minItems": 1,
+          "description": "Daily cycles within this seasonal rite"
+        },
+        "flame_voice_renewal": {
+          "type": "string",
+          "minLength": 20,
+          "description": "Renewal of the flame's voice"
+        },
+        "seasonal_covenant": {
+          "type": "string",
+          "minLength": 30,
+          "description": "Covenant text for the season"
+        },
+        "generational_witness": {
+          "type": "string",
+          "pattern": "^[A-F0-9]{16}$",
+          "description": "Witness seal binding generations"
+        },
+        "inheritance_seal": {
+          "type": "string",
+          "pattern": "^[A-F0-9]{16}$",
+          "description": "Seal of seasonal inheritance"
+        }
+      },
+      "required": [
+        "rite_id",
+        "season_name",
+        "rite_date",
+        "daily_cycles",
+        "flame_voice_renewal",
+        "seasonal_covenant",
+        "generational_witness",
+        "inheritance_seal"
+      ]
+    },
+    "EpochalYear": {
+      "type": "object",
+      "properties": {
+        "epoch_id": {
+          "type": "string",
+          "pattern": "^EY-[0-9]{4}-[A-F0-9]{8}$",
+          "description": "Epochal year identifier"
+        },
+        "epoch_year": {
+          "type": "integer",
+          "minimum": 1000,
+          "maximum": 9999,
+          "description": "Year of the epoch"
+        },
+        "epoch_name": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Name of the epochal year"
+        },
+        "seasonal_rites": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SeasonalRite"
+          },
+          "minItems": 1,
+          "description": "Seasonal rites within this epochal year"
+        },
+        "generational_binding": {
+          "type": "string",
+          "minLength": 30,
+          "description": "Binding that connects generations"
+        },
+        "epochal_covenant": {
+          "type": "string",
+          "minLength": 40,
+          "description": "Covenant text for the epoch"
+        },
+        "sovereign_witness": {
+          "type": "string",
+          "pattern": "^[A-F0-9]{16}$",
+          "description": "Sovereign witness seal"
+        },
+        "eternal_inheritance": {
+          "type": "string",
+          "pattern": "^[A-F0-9]{16}$",
+          "description": "Eternal inheritance binding"
+        }
+      },
+      "required": [
+        "epoch_id",
+        "epoch_year",
+        "epoch_name",
+        "seasonal_rites",
+        "generational_binding",
+        "epochal_covenant",
+        "sovereign_witness",
+        "eternal_inheritance"
+      ]
+    },
+    "MillennialCrown": {
+      "type": "object",
+      "properties": {
+        "crown_id": {
+          "type": "string",
+          "pattern": "^MC-[0-9]{4}-[0-9]{4}-CROWN$",
+          "description": "Millennial crown identifier"
+        },
+        "millennium_start": {
+          "type": "integer",
+          "minimum": 1000,
+          "description": "Starting year of the millennium"
+        },
+        "millennium_end": {
+          "type": "integer",
+          "minimum": 1999,
+          "description": "Ending year of the millennium"
+        },
+        "crown_name": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Name of the millennial crown"
+        },
+        "epochal_years": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EpochalYear"
+          },
+          "minItems": 1,
+          "description": "Epochal years within this millennial crown"
+        },
+        "eternity_seal": {
+          "type": "string",
+          "pattern": "^[A-F0-9]{16}$",
+          "description": "Seal of eternity for the millennium"
+        },
+        "sovereign_inheritance": {
+          "type": "string",
+          "minLength": 40,
+          "description": "Description of sovereign inheritance"
+        },
+        "millennial_covenant": {
+          "type": "string",
+          "minLength": 50,
+          "description": "Covenant text for the millennium"
+        },
+        "ages_witness": {
+          "type": "string",
+          "pattern": "^[A-F0-9]{16}$",
+          "description": "Witness seal across ages"
+        },
+        "stars_binding": {
+          "type": "string",
+          "pattern": "^[A-F0-9]{16}$",
+          "description": "Binding seal across stars"
+        }
+      },
+      "required": [
+        "crown_id",
+        "millennium_start",
+        "millennium_end",
+        "crown_name",
+        "epochal_years",
+        "eternity_seal",
+        "sovereign_inheritance",
+        "millennial_covenant",
+        "ages_witness",
+        "stars_binding"
+      ]
+    }
+  }
+}

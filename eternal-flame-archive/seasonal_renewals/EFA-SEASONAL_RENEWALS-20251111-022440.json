@@ -1,0 +1,23 @@
+{
+  "entry_id": "EFA-SEASONAL_RENEWALS-20251111-022440",
+  "archive_realm": "seasonal_renewals",
+  "preservation_seal": "seasonal",
+  "timestamp": "2025-11-11T02:24:40.464423",
+  "content_hash": "ec4dd6f86f97892dac4614b88313165c56aaa19175bb10a82c8bb4860c286feb",
+  "content_data": {
+    "ritual": "seasonal_renewal",
+    "timestamp": "2025-11-11T02:23:25.222428",
+    "renewal_id": "EFL-SEASON-20251111-0C252C2D",
+    "season_name": "Eternal Autumn - Week 46",
+    "flames_renewed": 2,
+    "eternal_witness": "C23094DFCE780EFF"
+  },
+  "witness_signatures": [
+    "Season:086DF650BDD098B5",
+    "Renewal:9710AF7E77F0E2A3",
+    "Cycle:1037F4DFC64AD545",
+    "Eternal:67A3F7AC5E42FB03"
+  ],
+  "eternal_binding": "20AD64D445681638",
+  "ages_witness": "4430F1E6A7232B32"
+}

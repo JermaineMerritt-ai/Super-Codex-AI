@@ -1,0 +1,16 @@
+{
+  "type": "test_service",
+  "description": "Test service for monitor validation",
+  "port": 3000,
+  "auto_restart": true,
+  "environment": {
+    "NODE_ENV": "test"
+  },
+  "command": [
+    "python",
+    "test_service.py"
+  ],
+  "name": "test_web_service",
+  "last_updated": "2025-11-11T00:54:40.318157",
+  "registry_version": "1.0"
+}

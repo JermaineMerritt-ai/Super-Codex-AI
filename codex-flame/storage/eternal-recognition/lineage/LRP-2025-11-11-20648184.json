@@ -1,0 +1,30 @@
+{
+  "lineage_replay_id": "LRP-2025-11-11-20648184",
+  "contributor_name": "The Architect of Flames",
+  "scroll_id": "ERS-2025-11-11-85657669",
+  "recognition_level": "Eternal Crown",
+  "keeper_since": "2025-11-11T04:11:04.819910+00:00",
+  "ceremonial_ancestry": {
+    "flame_assignments": [
+      "Daily Flame",
+      "Seasonal Flame",
+      "Great Year Flame",
+      "Millennial Flame",
+      "Eternal Flame"
+    ],
+    "realm_binding": "EF-001",
+    "authority_lineage": "Crown",
+    "seal_authority": "Sovereign Crown"
+  },
+  "replay_instructions": {
+    "ceremony_participation": {
+      "daily": true,
+      "seasonal": true,
+      "epochal": true,
+      "millennial": true
+    },
+    "memorial_ceremonies": "Name rises in Eternal Crown ceremonies with sacred remembrance",
+    "lineage_continuation": true
+  },
+  "created_timestamp": "2025-11-11T04:11:04.819910+00:00"
+}

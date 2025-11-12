@@ -1,0 +1,34 @@
+{
+  email you@example.com
+}
+
+your-domain.com {
+  encode gzip
+  handle_path /api* { reverse_proxy 127.0.0.1:8010 }
+  handle_path /ws*  { reverse_proxy 127.0.0.1:8010 }
+  handle { reverse_proxy 127.0.0.1:3001 }
+}
+
+# Previous Docker configuration (for reference)
+# CodexDominion.app {
+#   encode gzip
+#   
+#   # API and WebSocket routes to backend
+#   handle_path /api* {
+#     reverse_proxy backend:8000
+#   }
+#   handle_path /ws* {
+#     reverse_proxy backend:8000
+#   }
+#   
+#   # Axiom flame ceremonial API
+#   handle_path /axiom* {
+#     reverse_proxy axiom-flame:5000
+#   }
+#   
+#   # Frontend - try static files first, fallback to SPA
+#   handle {
+#     try_files {path} /index.html
+#     reverse_proxy frontend:3000
+#   }
+# }

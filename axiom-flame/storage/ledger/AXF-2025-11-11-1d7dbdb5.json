@@ -1,0 +1,14 @@
+{
+  "dispatch_id": "AXF-2025-11-11-1d7dbdb5",
+  "timestamp": "2025-11-12T01:21:33.466269+00:00",
+  "actor": "Council",
+  "realm": "ST-007",
+  "capsule": "Sacred Protocols",
+  "intent": "Protocol.Enhancement",
+  "reasoning": "",
+  "governance_seal": {
+    "authority": "ceremonial",
+    "classification": "reasoning",
+    "seal_hash": "d049990c6efe257d3eea7f458caa11fd5827cd2e85c683a3a0d7db4451ed6eb7"
+  }
+}
