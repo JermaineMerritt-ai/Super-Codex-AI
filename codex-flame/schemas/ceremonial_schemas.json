@@ -1,0 +1,196 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CODEX-FLAME Ceremonial Schemas",
+  "description": "Sacred JSON schemas for validating ceremonial data structures",
+  
+  "definitions": {
+    "treasuryBinding": {
+      "type": "object",
+      "properties": {
+        "binding_id": {
+          "type": "string",
+          "pattern": "^TRE-[0-9]{4}-[0-9]{2}-[0-9]{2}-[A-F0-9]{8}$"
+        },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "resource_type": {
+          "type": "string",
+          "enum": ["SACRED_COINS", "DIVINE_ENERGY", "BLESSED_MATERIALS", "ETHEREAL_ESSENCE", "TEMPORAL_CRYSTALS"]
+        },
+        "amount": { "type": "number", "minimum": 0 },
+        "operation": {
+          "type": "string", 
+          "enum": ["ALLOCATION", "BINDING", "TRANSMUTATION", "SANCTIFICATION", "PURIFICATION"]
+        },
+        "custodian": { "type": "string", "minLength": 1 },
+        "purpose": { "type": "string", "minLength": 1 },
+        "sacred_seal": { "type": "string" }
+      },
+      "required": ["binding_id", "timestamp", "resource_type", "amount", "operation", "custodian", "purpose", "sacred_seal"]
+    },
+    
+    "eternalRecognition": {
+      "type": "object",
+      "properties": {
+        "recognition_id": {
+          "type": "string",
+          "pattern": "^ERS-[0-9]{4}-[0-9]{2}-[0-9]{2}-[A-F0-9]{8}$"
+        },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "honoree": { "type": "string", "minLength": 1 },
+        "honor_type": {
+          "type": "string",
+          "enum": ["VALOR", "WISDOM", "SERVICE", "SACRIFICE", "CREATION", "PROTECTION", "GUIDANCE"]
+        },
+        "recognition_level": {
+          "type": "string",
+          "enum": ["BRONZE", "SILVER", "GOLD", "PLATINUM", "DIVINE"]
+        },
+        "deed_description": { "type": "string", "minLength": 1 },
+        "lineage_reference": { "type": "string" },
+        "eternal_seal": { "type": "string" }
+      },
+      "required": ["recognition_id", "timestamp", "honoree", "honor_type", "recognition_level", "deed_description", "eternal_seal"]
+    },
+    
+    "flameKeeper": {
+      "type": "object", 
+      "properties": {
+        "keeper_id": {
+          "type": "string",
+          "pattern": "^FKP-[0-9]{4}-[0-9]{2}-[0-9]{2}-[A-F0-9]{8}$"
+        },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "keeper_name": { "type": "string", "minLength": 1 },
+        "flame_assignment": { "type": "string", "minLength": 1 },
+        "duty_type": {
+          "type": "string",
+          "enum": ["PRIMARY_GUARDIAN", "SACRED_MONITOR", "CEREMONIAL_KEEPER", "TEMPLE_WARDEN", "FLAME_TENDER"]
+        },
+        "sacred_vows": { "type": "string", "minLength": 1 },
+        "ordination_seal": { "type": "string" }
+      },
+      "required": ["keeper_id", "timestamp", "keeper_name", "flame_assignment", "duty_type", "sacred_vows", "ordination_seal"]
+    },
+    
+    "liturgicalCeremony": {
+      "type": "object",
+      "properties": {
+        "ceremony_id": {
+          "type": "string",
+          "pattern": "^LIT-[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-f0-9]{8}$"
+        },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "ceremony_name": { "type": "string", "minLength": 1 },
+        "ceremony_type": {
+          "type": "string",
+          "enum": ["INVOCATION", "CONSECRATION", "BENEDICTION", "PURIFICATION", "CELEBRATION", "MEMORIAL"]
+        },
+        "scheduled_time": { "type": "string", "format": "date-time" },
+        "duration_minutes": { "type": "integer", "minimum": 1 },
+        "officiant": { "type": "string", "minLength": 1 },
+        "participants": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "sacred_elements": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "ceremonial_seal": { "type": "string" }
+      },
+      "required": ["ceremony_id", "timestamp", "ceremony_name", "ceremony_type", "scheduled_time", "duration_minutes", "officiant", "ceremonial_seal"]
+    },
+    
+    "sacredHonor": {
+      "type": "object",
+      "properties": {
+        "honor_id": {
+          "type": "string",
+          "pattern": "^HN-[0-9]{4}-[0-9]{2}-[0-9]{2}-[A-F0-9]{8}$"
+        },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "recipient": { "type": "string", "minLength": 1 },
+        "honor_type": {
+          "type": "string",
+          "enum": ["FLAME_GUARDIAN", "SACRED_SCHOLAR", "DIVINE_SERVANT", "CEREMONIAL_MASTER", "TEMPLE_ARCHITECT"]
+        },
+        "merit_points": { "type": "integer", "minimum": 0 },
+        "achievement": { "type": "string", "minLength": 1 },
+        "distinction": { "type": "string" },
+        "honor_seal": { "type": "string" }
+      },
+      "required": ["honor_id", "timestamp", "recipient", "honor_type", "merit_points", "achievement", "honor_seal"]
+    },
+    
+    "triumvirateMember": {
+      "type": "object",
+      "properties": {
+        "member_id": {
+          "type": "string",
+          "pattern": "^TM-[0-9]{4}-[0-9]{2}-[0-9]{2}-[A-F0-9]{8}$"
+        },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "member_name": { "type": "string", "minLength": 1 },
+        "authority_domain": {
+          "type": "string",
+          "enum": ["CEREMONIAL", "ADMINISTRATIVE", "SPIRITUAL"]
+        },
+        "appointment_duration": { "type": "string" },
+        "sacred_oath": { "type": "string", "minLength": 1 },
+        "succession_plan": { "type": "string" },
+        "triumvirate_seal": { "type": "string" }
+      },
+      "required": ["member_id", "timestamp", "member_name", "authority_domain", "sacred_oath", "triumvirate_seal"]
+    },
+    
+    "sacredContract": {
+      "type": "object",
+      "properties": {
+        "contract_id": {
+          "type": "string", 
+          "pattern": "^SC-[0-9]{4}-[0-9]{2}-[0-9]{2}-[A-F0-9]{8}$"
+        },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "parties": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 2
+        },
+        "contract_type": {
+          "type": "string",
+          "enum": ["SERVICE", "ALLIANCE", "EXCHANGE", "COVENANT", "DEDICATION"]
+        },
+        "terms": { "type": "string", "minLength": 1 },
+        "sacred_conditions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "effective_date": { "type": "string", "format": "date" },
+        "expiration_date": { "type": "string", "format": "date" },
+        "contract_seal": { "type": "string" }
+      },
+      "required": ["contract_id", "timestamp", "parties", "contract_type", "terms", "effective_date", "contract_seal"]
+    }
+  },
+  
+  "ceremonialManifest": {
+    "type": "object",
+    "properties": {
+      "manifest_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+      "created_timestamp": { "type": "string", "format": "date-time" },
+      "sacred_flame_status": {
+        "type": "string",
+        "enum": ["IGNITED", "BURNING", "CONSECRATED", "ETERNAL"]
+      },
+      "active_ceremonies": { "type": "integer", "minimum": 0 },
+      "total_bindings": { "type": "integer", "minimum": 0 },
+      "flame_keepers": { "type": "integer", "minimum": 0 },
+      "sacred_honors": { "type": "integer", "minimum": 0 },
+      "triumvirate_members": { "type": "integer", "maximum": 3 },
+      "active_contracts": { "type": "integer", "minimum": 0 },
+      "eternal_recognitions": { "type": "integer", "minimum": 0 },
+      "ceremonial_integrity": { "type": "boolean" }
+    },
+    "required": ["manifest_version", "created_timestamp", "sacred_flame_status", "ceremonial_integrity"]
+  }
+}

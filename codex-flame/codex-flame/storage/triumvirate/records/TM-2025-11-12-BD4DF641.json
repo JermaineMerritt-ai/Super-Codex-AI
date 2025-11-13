@@ -1,0 +1,31 @@
+{
+  "member_id": "TM-2025-11-12-BD4DF641",
+  "member_name": "Test Triumvir",
+  "position": "flame_keeper_prime",
+  "appointment_date": "2025-11-13T04:30:38.391107+00:00",
+  "appointing_authority": "Test Authority",
+  "ceremonial_investiture": "Test Investiture",
+  "authority_domains": [
+    "sacred_flames"
+  ],
+  "sacred_oath": "I solemnly swear to tend the sacred flames with unwavering devotion, to preserve the eternal light for all generations, and to lead with wisdom in the sacred triumvirate covenant.",
+  "ceremonial_seal": "ST-2B6F4CE8408B85F6",
+  "term_duration": "eternal",
+  "succession_plan": {
+    "succession_criteria": [
+      "Demonstrated ceremonial expertise",
+      "Community recognition",
+      "Sacred flame devotion",
+      "Wisdom preservation commitment"
+    ],
+    "preparation_period": "minimum_one_year",
+    "ceremonial_validation": "required",
+    "triumvirate_consensus": "required"
+  },
+  "status": "active",
+  "metadata": {
+    "inscription_ceremony": "sacred_triumvirate_investiture",
+    "ceremonial_authority": "supreme",
+    "sacred_covenant": "triumvirate_unity"
+  }
+}

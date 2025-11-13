@@ -1,0 +1,17 @@
+{
+  "entry_id": "TRE-2025-11-12-2080561E",
+  "timestamp": "2025-11-13T04:44:39.640191+00:00",
+  "resource_type": "sacred_bonds",
+  "amount": 500.0,
+  "operation": "allocation",
+  "actor": "Test_Custodian",
+  "realm": "TEST-001",
+  "capsule": null,
+  "governance_seal": "GS-7C462552",
+  "binding_hash": "7C4625523A682B3E",
+  "metadata": {
+    "purpose": "Module testing",
+    "allocation_authority": "Test_Custodian",
+    "binding_ceremony": "sacred_resource_allocation"
+  }
+}

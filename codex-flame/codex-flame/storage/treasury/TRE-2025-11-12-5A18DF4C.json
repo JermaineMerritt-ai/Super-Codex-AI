@@ -1,0 +1,17 @@
+{
+  "entry_id": "TRE-2025-11-12-5A18DF4C",
+  "timestamp": "2025-11-13T04:30:38.131487+00:00",
+  "resource_type": "flame_essence",
+  "amount": 100.0,
+  "operation": "allocation",
+  "actor": "Test Custodian",
+  "realm": "TEST-001",
+  "capsule": null,
+  "governance_seal": "GS-A0974C37",
+  "binding_hash": "A0974C37D78689D3",
+  "metadata": {
+    "purpose": "module_testing",
+    "allocation_authority": "Test Custodian",
+    "binding_ceremony": "sacred_resource_allocation"
+  }
+}

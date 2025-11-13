@@ -1,0 +1,35 @@
+{
+  "contract_id": "SC-2025-11-12-E2A60327",
+  "contract_name": "Test Contract",
+  "contract_type": "ceremonial_service",
+  "parties": [
+    {
+      "name": "Test Party 1",
+      "role": "contractor"
+    }
+  ],
+  "contract_terms": [
+    "Test term 1",
+    "Test term 2"
+  ],
+  "obligations": {
+    "Test Party 1": [
+      "Test obligation"
+    ]
+  },
+  "ceremonial_conditions": [
+    "Test condition"
+  ],
+  "effective_date": "2025-11-13T04:30:38.407138+00:00",
+  "expiration_date": null,
+  "renewal_terms": null,
+  "contract_status": "active",
+  "witness_seals": [],
+  "sacred_binding": "SB-C4704C306698B2EC",
+  "enforcement_authority": "Ceremonial Council",
+  "metadata": {
+    "creation_date": "2025-11-13T04:30:38.407149+00:00",
+    "contract_authority": "sacred_covenant_system",
+    "ceremonial_weight": "binding"
+  }
+}

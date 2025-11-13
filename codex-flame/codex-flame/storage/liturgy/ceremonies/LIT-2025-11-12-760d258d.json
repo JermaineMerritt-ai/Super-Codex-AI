@@ -1,0 +1,30 @@
+{
+  "ceremony_id": "LIT-2025-11-12-760d258d",
+  "ceremony_name": "Test Ceremony",
+  "ceremony_type": "daily_flame_tending",
+  "scheduled_datetime": "2025-11-13T04:30:38.348172+00:00",
+  "duration_minutes": 60,
+  "location": "Test Chamber",
+  "presider": "Test Presider",
+  "participants": [
+    {
+      "name": "Test Participant",
+      "role": "participant"
+    }
+  ],
+  "required_resources": [],
+  "sacred_preparations": [],
+  "ceremony_purpose": "Testing ceremonial scheduling",
+  "priority": "important",
+  "status": "planned",
+  "ceremonial_notes": "",
+  "notification_schedule": {
+    "reminder": "2025-11-13T02:30:38.348172+00:00",
+    "final_call": "2025-11-13T04:15:38.348172+00:00"
+  },
+  "metadata": {
+    "scheduling_authority": "Test Presider",
+    "ceremonial_coordination": "liturgical_scheduler",
+    "sacred_protocol": "traditional_ceremony_ordering"
+  }
+}

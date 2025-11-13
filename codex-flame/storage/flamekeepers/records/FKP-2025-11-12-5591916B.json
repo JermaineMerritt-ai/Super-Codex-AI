@@ -1,0 +1,22 @@
+{
+  "keeper_id": "FKP-2025-11-12-5591916B",
+  "keeper_name": "Test Guardian",
+  "rank": "guardian_keeper",
+  "ordination_date": "2025-11-13T04:44:39.642303+00:00",
+  "assigned_flames": [],
+  "specializations": [
+    "eternal_flame_tending",
+    "ceremonial_lighting"
+  ],
+  "mentor": null,
+  "apprentices": [],
+  "ceremonial_authorities": [],
+  "sacred_oath": "I swear to protect the sacred flames from all threats and to guide those who would learn the keeper's path.",
+  "keeper_seal": "FK-7D60245EA7110B67",
+  "status": "active",
+  "metadata": {
+    "ordination_ceremony": "sacred_flame_custodial_rite",
+    "ceremonial_witness": "Elder Council",
+    "flame_keeper_covenant": "eternal_flame_preservation"
+  }
+}
