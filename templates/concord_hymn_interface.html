@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custodian–Heirs Concord Hymn System</title>
+    <style>
+        :root {
+            --flame-orange: #FF4500;
+            --flame-gold: #FFD700;
+            --flame-white: #FFF8DC;
+            --custodian-purple: #4B0082;
+            --heir-blue: #4169E1;
+            --council-brown: #8B4513;
+            --background-dark: #1a1a1a;
+            --text-light: #f0f0f0;
+            --seal-glow: rgba(255, 215, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--background-dark), #2a2a3a);
+            color: var(--text-light);
+            font-family: 'Georgia', serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .header {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(90deg, var(--custodian-purple), var(--heir-blue));
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .sidebar {
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--flame-gold);
+            box-shadow: 0 0 20px var(--seal-glow);
+            height: fit-content;
+        }
+
+        .sidebar h2 {
+            color: var(--flame-gold);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .flame-glyph {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 2rem;
+            display: block;
+            filter: drop-shadow(0 0 10px var(--seal-glow));
+        }
+
+        .system-status {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .status-value {
+            color: var(--flame-gold);
+            font-weight: bold;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--flame-orange), var(--flame-gold));
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 69, 0, 0.5);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(45deg, var(--heir-blue), var(--custodian-purple));
+            color: white;
+            box-shadow: 0 4px 15px rgba(65, 105, 225, 0.3);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(65, 105, 225, 0.5);
+        }
+
+        .content-area {
+            background: rgba(255,255,255,0.03);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255,215,0,0.2);
+        }
+
+        .hymn-display {
+            max-height: 70vh;
+            overflow-y: auto;
+            padding-right: 1rem;
+        }
+
+        .hymn-display::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .hymn-display::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+        }
+
+        .hymn-display::-webkit-scrollbar-thumb {
+            background: var(--flame-gold);
+            border-radius: 4px;
+        }
+
+        .hymn-content h1 {
+            color: var(--flame-gold);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            text-shadow: 0 0 10px var(--seal-glow);
+        }
+
+        .hymn-content h2 {
+            color: var(--heir-blue);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .hymn-content h3 {
+            color: var(--custodian-purple);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .verse {
+            background: rgba(255,255,255,0.05);
+            padding: 1rem;
+            border-left: 4px solid var(--flame-gold);
+            margin: 1rem 0;
+            border-radius: 0 10px 10px 0;
+            font-family: 'Times New Roman', serif;
+            white-space: pre-line;
+            line-height: 1.6;
+        }
+
+        .chorus {
+            background: linear-gradient(135deg, rgba(255, 69, 0, 0.1), rgba(255, 215, 0, 0.1));
+            border-left-color: var(--flame-orange);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .performance-section {
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            border: 1px solid var(--heir-blue);
+        }
+
+        .performance-controls {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .performance-log {
+            max-height: 200px;
+            overflow-y: auto;
+            background: rgba(0,0,0,0.3);
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .log-entry {
+            margin-bottom: 0.5rem;
+            padding: 0.25rem 0;
+        }
+
+        .log-success {
+            color: #90EE90;
+        }
+
+        .log-info {
+            color: var(--flame-gold);
+        }
+
+        .log-chorus {
+            color: var(--heir-blue);
+        }
+
+        .seal-verification {
+            background: rgba(75, 0, 130, 0.1);
+            border: 1px solid var(--custodian-purple);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+
+        .seal-verified {
+            color: #90EE90;
+        }
+
+        .seal-failed {
+            color: #FF6B6B;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--flame-gold);
+        }
+
+        .spinner {
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            font-size: 2rem;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        /* Responsive design */
+        @media (max-width: 1024px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                order: 2;
+            }
+            
+            .content-area {
+                order: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .main-container {
+                padding: 1rem;
+                gap: 1rem;
+            }
+            
+            .performance-controls {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🎵 Custodian–Heirs Concord Hymn System 🎵</h1>
+        <div class="subtitle">Sacred Harmonization of Lineage and Legacy</div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <h2>🔥 Sacred Glyph 🔥</h2>
+            <svg class="flame-glyph" viewBox="0 0 100 100">
+                <!-- Simplified flame for the interface -->
+                <path d="M25 85 Q30 75 35 70 Q40 60 45 55 Q50 45 50 35 Q55 40 60 45 Q65 55 70 65 Q75 75 75 85 Z" 
+                      fill="url(#flameGrad)" stroke="#8B4513" stroke-width="1"/>
+                <path d="M35 80 Q40 70 42 65 Q45 55 48 50 Q50 40 50 30 Q52 35 55 45 Q58 55 62 65 Q65 75 65 80 Z" 
+                      fill="url(#flameCoreGrad)"/>
+                <circle cx="50" cy="50" r="40" fill="none" stroke="#DAA520" stroke-width="2" opacity="0.7"/>
+                <defs>
+                    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FF4500" />
+                        <stop offset="60%" style="stop-color:#FFD700" />
+                        <stop offset="100%" style="stop-color:#FFF8DC" />
+                    </linearGradient>
+                    <linearGradient id="flameCoreGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FF6347" />
+                        <stop offset="100%" style="stop-color:#FFFFFF" />
+                    </linearGradient>
+                </defs>
+            </svg>
+
+            <div class="system-status">
+                <h3>System Status</h3>
+                <div class="status-item">
+                    <span>Hymns Registered:</span>
+                    <span class="status-value" id="hymnCount">Loading...</span>
+                </div>
+                <div class="status-item">
+                    <span>SIGIL System:</span>
+                    <span class="status-value" id="sigilStatus">Loading...</span>
+                </div>
+                <div class="status-item">
+                    <span>Total Performances:</span>
+                    <span class="status-value" id="performanceCount">Loading...</span>
+                </div>
+                <div class="status-item">
+                    <span>Heirs Chorus:</span>
+                    <span class="status-value" id="chorusCount">Loading...</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-primary" onclick="loadHymn()">📖 Load Hymn</button>
+                <button class="btn btn-primary" onclick="registerHymn()">📝 Register Hymn</button>
+                <button class="btn btn-secondary" onclick="viewHymnList()">📚 View All Hymns</button>
+                <button class="btn btn-secondary" onclick="checkSystemStatus()">🔍 System Status</button>
+            </div>
+        </aside>
+
+        <main class="content-area">
+            <div id="contentDisplay">
+                <div class="loading">
+                    <div class="spinner">🔥</div>
+                    <p>Loading Concord Hymn System...</p>
+                </div>
+            </div>
+
+            <div class="performance-section">
+                <h3>🎭 Performance Controls</h3>
+                <div class="performance-controls">
+                    <button class="btn btn-primary" onclick="performHymn(false)" id="performBtn">🎪 Regular Performance</button>
+                    <button class="btn btn-secondary" onclick="performHymn(true)" id="chorusBtn">👥 Heirs Chorus Performance</button>
+                    <button class="btn btn-secondary" onclick="verifyHymnSeal()" id="verifyBtn">🔐 Verify SIGIL Seal</button>
+                </div>
+                
+                <div class="performance-log" id="performanceLog">
+                    <div class="log-entry log-info">🎵 Ready for hymn performance...</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        let currentHymnId = 'codex-dominion-concord-hymn';
+        let systemData = {};
+
+        // Initialize the system
+        document.addEventListener('DOMContentLoaded', function() {
+            checkSystemStatus();
+            loadHymn();
+        });
+
+        async function checkSystemStatus() {
+            try {
+                const response = await fetch('/');
+                const data = await response.json();
+                systemData = data;
+                
+                document.getElementById('hymnCount').textContent = data.hymns_registered;
+                document.getElementById('sigilStatus').textContent = data.sigil_system ? '✅ Active' : '❌ Unavailable';
+                
+                // Update performance counts
+                updatePerformanceCounts();
+                
+                logMessage('System status updated', 'info');
+            } catch (error) {
+                logMessage('Error checking system status: ' + error.message, 'error');
+            }
+        }
+
+        async function updatePerformanceCounts() {
+            try {
+                const response = await fetch('/hymns/list');
+                const data = await response.json();
+                
+                let totalPerformances = 0;
+                let totalChorus = 0;
+                
+                data.hymns.forEach(hymn => {
+                    totalPerformances += hymn.performance_count || 0;
+                    totalChorus += hymn.heirs_chorus_count || 0;
+                });
+                
+                document.getElementById('performanceCount').textContent = totalPerformances;
+                document.getElementById('chorusCount').textContent = totalChorus;
+                
+            } catch (error) {
+                document.getElementById('performanceCount').textContent = '0';
+                document.getElementById('chorusCount').textContent = '0';
+            }
+        }
+
+        async function loadHymn() {
+            try {
+                logMessage('Loading hymn details...', 'info');
+                
+                const response = await fetch(`/hymns/${currentHymnId}`);
+                if (!response.ok) {
+                    throw new Error('Hymn not found - will register default hymn');
+                }
+                
+                const data = await response.json();
+                displayHymnContent(data);
+                logMessage(`Hymn "${data.hymn.title}" loaded successfully`, 'success');
+                
+            } catch (error) {
+                logMessage('Hymn not found - registering default hymn...', 'info');
+                await registerHymn();
+            }
+        }
+
+        async function registerHymn() {
+            const hymnSpec = {
+                artifactId: "codex-dominion-concord-hymn",
+                title: "Custodian–Heirs Concord Hymn",
+                version: "1.0.0",
+                type: "hymn",
+                routes: {
+                    register: "/ledger/continuum/hymn",
+                    dispatch: "/dispatch/global",
+                    replay: "/replay/cycles"
+                },
+                audience: ["heirs", "councils", "institutions", "custodians"],
+                cycles: ["daily", "seasonal", "epochal", "millennial"],
+                files: {
+                    text: "concord_hymn.md",
+                    audio: "assets/concord_theme.mp3",
+                    glyph: "assets/flame_glyph.svg",
+                    background: "assets/chorus_bg.png"
+                },
+                hashStrategy: "sha256",
+                signing: {
+                    sigil: "SIGIL-CONCORD-001",
+                    signed_by: "Custodian",
+                    heirs_chorus: true
+                }
+            };
+
+            try {
+                logMessage('Registering Concord Hymn...', 'info');
+                
+                const response = await fetch('/ledger/continuum/hymn', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(hymnSpec)
+                });
+
+                const result = await response.json();
+                
+                if (result.success) {
+                    logMessage(`Hymn registered successfully! ${result.seal_created ? '🔐 SIGIL Seal created' : ''}`, 'success');
+                    await loadHymn();
+                    await checkSystemStatus();
+                } else {
+                    throw new Error('Registration failed');
+                }
+                
+            } catch (error) {
+                logMessage('Error registering hymn: ' + error.message, 'error');
+            }
+        }
+
+        function displayHymnContent(data) {
+            const contentDiv = document.getElementById('contentDisplay');
+            const hymn = data.hymn;
+            const content = data.content;
+            
+            let html = `
+                <div class="hymn-content fade-in">
+                    <h1>${hymn.title} v${hymn.version}</h1>
+                    
+                    <div class="hymn-info">
+                        <p><strong>🎭 Audiences:</strong> ${hymn.audience.join(', ')}</p>
+                        <p><strong>🔄 Cycles:</strong> ${hymn.cycles.join(', ')}</p>
+                        <p><strong>🎪 Performances:</strong> ${hymn.performance_count} total, ${hymn.heirs_chorus_count} with Heirs Chorus</p>
+                        <p><strong>📅 Last Performed:</strong> ${hymn.last_performed ? new Date(hymn.last_performed).toLocaleString() : 'Never'}</p>
+                    </div>
+            `;
+
+            if (content) {
+                // Parse markdown-like content
+                const lines = content.split('\n');
+                let inVerse = false;
+                let isChorus = false;
+                
+                for (let line of lines) {
+                    if (line.startsWith('# ')) {
+                        html += `<h1>${line.substring(2)}</h1>`;
+                    } else if (line.startsWith('## ')) {
+                        html += `<h2>${line.substring(3)}</h2>`;
+                    } else if (line.startsWith('### ')) {
+                        html += `<h3>${line.substring(4)}</h3>`;
+                    } else if (line.startsWith('```')) {
+                        if (inVerse) {
+                            html += '</div>';
+                            inVerse = false;
+                            isChorus = false;
+                        } else {
+                            const prevLine = lines[lines.indexOf(line) - 1];
+                            isChorus = prevLine && prevLine.toLowerCase().includes('chorus');
+                            html += `<div class="verse ${isChorus ? 'chorus' : ''}">`;
+                            inVerse = true;
+                        }
+                    } else if (inVerse && line.trim()) {
+                        html += line + '\n';
+                    } else if (!inVerse && line.trim()) {
+                        html += `<p>${line}</p>`;
+                    }
+                }
+            }
+            
+            // Add seal verification
+            if (data.seal_verification) {
+                const seal = data.seal_verification;
+                html += `
+                    <div class="seal-verification">
+                        <h3>🔐 SIGIL Seal Verification</h3>
+                        <p class="${seal.verified ? 'seal-verified' : 'seal-failed'}">
+                            ${seal.verified ? '✅ Verified' : '❌ Failed'}: ${seal.verified ? 'Authentic SIGIL seal' : seal.reason}
+                        </p>
+                        ${seal.verified ? `
+                            <p><strong>🔥 Authority:</strong> ${seal.authority} ${seal.flame_glyph}</p>
+                            <p><strong>🛡️ Binding Strength:</strong> ${seal.binding_strength}</p>
+                            <p><strong>👑 Signed By:</strong> ${seal.signed_by}</p>
+                            <p><strong>📅 Sealed:</strong> ${new Date(seal.created_at).toLocaleString()}</p>
+                        ` : ''}
+                    </div>
+                `;
+            }
+            
+            html += '</div>';
+            contentDiv.innerHTML = html;
+        }
+
+        async function performHymn(withHeirsChorus) {
+            try {
+                const chorusText = withHeirsChorus ? ' with Heirs Chorus' : '';
+                logMessage(`🎭 Performing hymn${chorusText}...`, 'info');
+                
+                const response = await fetch(`/hymns/${currentHymnId}/perform?heirs_chorus=${withHeirsChorus}`, {
+                    method: 'POST'
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    const perf = result.performance;
+                    logMessage(`✅ Performance complete! Total: ${perf.total_performances}, Heirs: ${perf.heirs_chorus_total}`, 'success');
+                    if (withHeirsChorus) {
+                        logMessage('👥 Heirs Chorus harmonies resonated beautifully!', 'chorus');
+                    }
+                    
+                    // Reload hymn to update performance counts
+                    await loadHymn();
+                    await updatePerformanceCounts();
+                } else {
+                    throw new Error('Performance failed');
+                }
+                
+            } catch (error) {
+                logMessage('❌ Performance failed: ' + error.message, 'error');
+            }
+        }
+
+        async function verifyHymnSeal() {
+            try {
+                logMessage('🔍 Verifying SIGIL seal...', 'info');
+                
+                const response = await fetch(`/hymns/${currentHymnId}/verify`);
+                const verification = await response.json();
+                
+                if (verification.verified) {
+                    logMessage(`✅ Seal verified! ${verification.flame_glyph} Authority: ${verification.authority}`, 'success');
+                    logMessage(`🛡️ Binding strength: ${verification.binding_strength}`, 'info');
+                } else {
+                    logMessage(`❌ Seal verification failed: ${verification.reason}`, 'error');
+                }
+                
+            } catch (error) {
+                logMessage('❌ Seal verification error: ' + error.message, 'error');
+            }
+        }
+
+        async function viewHymnList() {
+            try {
+                logMessage('📚 Loading hymn list...', 'info');
+                
+                const response = await fetch('/hymns/list');
+                const data = await response.json();
+                
+                let html = `
+                    <div class="hymn-content fade-in">
+                        <h1>📚 Hymn Registry</h1>
+                        <p><strong>Total Hymns:</strong> ${data.total}</p>
+                `;
+                
+                data.hymns.forEach(hymn => {
+                    html += `
+                        <div class="verse">
+                            <h3>${hymn.title} v${hymn.version}</h3>
+                            <p><strong>🎭 Audiences:</strong> ${hymn.audience.join(', ')}</p>
+                            <p><strong>🔄 Cycles:</strong> ${hymn.cycles.join(', ')}</p>
+                            <p><strong>🎪 Performances:</strong> ${hymn.performance_count} total, ${hymn.heirs_chorus_count} with Heirs</p>
+                            <p><strong>🔐 SIGIL Protected:</strong> ${hymn.has_sigil ? '✅ Yes' : '❌ No'}</p>
+                            <p><strong>📅 Last Performed:</strong> ${hymn.last_performed ? new Date(hymn.last_performed).toLocaleString() : 'Never'}</p>
+                        </div>
+                    `;
+                });
+                
+                html += '</div>';
+                document.getElementById('contentDisplay').innerHTML = html;
+                
+                logMessage(`📚 Loaded ${data.total} hymns`, 'success');
+                
+            } catch (error) {
+                logMessage('❌ Error loading hymn list: ' + error.message, 'error');
+            }
+        }
+
+        function logMessage(message, type = 'info') {
+            const log = document.getElementById('performanceLog');
+            const entry = document.createElement('div');
+            entry.className = `log-entry log-${type}`;
+            
+            const timestamp = new Date().toLocaleTimeString();
+            entry.textContent = `[${timestamp}] ${message}`;
+            
+            log.appendChild(entry);
+            log.scrollTop = log.scrollHeight;
+            
+            // Keep only last 20 entries
+            while (log.children.length > 20) {
+                log.removeChild(log.firstChild);
+            }
+        }
+
+        // Auto-refresh system status every 30 seconds
+        setInterval(checkSystemStatus, 30000);
+    </script>
+</body>
+</html>

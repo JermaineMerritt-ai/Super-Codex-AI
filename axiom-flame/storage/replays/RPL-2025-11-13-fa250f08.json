@@ -1,0 +1,145 @@
+{
+  "replay_id": "RPL-2025-11-13-fa250f08",
+  "dispatch_id": "AXF-2025-11-10-0002",
+  "timestamp": "2025-11-14T03:54:04.668539Z",
+  "capsule_version": "1.0",
+  "full_context": {
+    "ledger_version": "1.0",
+    "dispatch_id": "AXF-2025-11-10-0002",
+    "timestamp": "2025-11-10T08:15:30Z",
+    "actor": "Sentinel",
+    "realm": "Stellar:Andromeda-Sector-7",
+    "capsule": "Guardian Protocol",
+    "intent": "Security.Monitoring.Alert",
+    "input": {
+      "threat_level": "Medium",
+      "anomaly_detected": "unauthorized_access_attempt",
+      "source_realm": "Unknown"
+    },
+    "output": {
+      "summary": "Threat contained; monitoring protocols enhanced.",
+      "action_taken": "realm_access_restrictions_updated",
+      "status": "resolved"
+    },
+    "governance": {
+      "seal": "Immutable",
+      "audit_required": true,
+      "authority_level": "High"
+    },
+    "links": {
+      "replay_ref": "replays/AXF-2025-11-10-0002.json",
+      "annal_ref": "annals/2025-11.json"
+    },
+    "metadata": {
+      "priority": "High",
+      "tags": [
+        "security",
+        "monitoring",
+        "threat-response"
+      ],
+      "category": "guardian"
+    }
+  },
+  "steps": [
+    {
+      "step": "validate_actor",
+      "timestamp": "2025-11-14T03:54:04.668545Z",
+      "status": "completed",
+      "details": "Actor validation against registry for Sentinel",
+      "duration_ms": 150
+    },
+    {
+      "step": "verify_capsule",
+      "timestamp": "2025-11-14T03:54:04.818545Z",
+      "status": "completed",
+      "details": "Capsule type and permissions verification for Sentinel",
+      "duration_ms": 200
+    },
+    {
+      "step": "load_context",
+      "timestamp": "2025-11-14T03:54:05.018545Z",
+      "status": "completed",
+      "details": "Context and input data loading for Sentinel",
+      "duration_ms": 100
+    },
+    {
+      "step": "execute_reasoning",
+      "timestamp": "2025-11-14T03:54:05.118545Z",
+      "status": "completed",
+      "details": "Core reasoning and logic execution for Sentinel",
+      "duration_ms": 800
+    },
+    {
+      "step": "create_output",
+      "timestamp": "2025-11-14T03:54:05.918545Z",
+      "status": "completed",
+      "details": "Output generation and formatting for Sentinel",
+      "duration_ms": 300
+    },
+    {
+      "step": "seal_governance",
+      "timestamp": "2025-11-14T03:54:06.218545Z",
+      "status": "completed",
+      "details": "Governance seal application for Sentinel",
+      "duration_ms": 250
+    },
+    {
+      "step": "update_ledger",
+      "timestamp": "2025-11-14T03:54:06.468545Z",
+      "status": "completed",
+      "details": "Ledger entry creation and storage for Sentinel",
+      "duration_ms": 400
+    },
+    {
+      "step": "generate_audit",
+      "timestamp": "2025-11-14T03:54:06.868545Z",
+      "status": "completed",
+      "details": "Audit trail and replay data generation for Sentinel",
+      "duration_ms": 200
+    }
+  ],
+  "governance_seal": {
+    "seal_type": "Replay",
+    "seal_id": "RS-a6b22de28fd05fce",
+    "authority": "ceremonial",
+    "classification": "replay_audit",
+    "created_at": "2025-11-14T03:54:04.668592",
+    "sealed_by": "Super-Codex-AI",
+    "integrity_hash": "a6b22de28fd05fce"
+  },
+  "audit_trail": {
+    "audit_version": "1.0",
+    "replay_id": "RPL-2025-11-13-fa250f08",
+    "original_dispatch": "AXF-2025-11-10-0002",
+    "integrity_checks": {
+      "input_hash": "a9c2905b8141bf90",
+      "context_verified": true,
+      "governance_validated": true,
+      "seal_authentic": true
+    },
+    "compliance": {
+      "regulation_framework": "Super-Codex-AI Ceremonial Standard v1.0",
+      "audit_requirements": [
+        "actor_validation",
+        "seal_verification",
+        "ledger_integrity"
+      ],
+      "compliance_status": "PASSED"
+    },
+    "lineage": {
+      "parent_ceremony": "AXF-2025-11-10-0002",
+      "replay_chain": [
+        "RPL-2025-11-13-fa250f08"
+      ],
+      "ancestral_depth": 1
+    }
+  },
+  "metadata": {
+    "generator": "Super-Codex-AI Replay Engine",
+    "generator_version": "1.0.0",
+    "total_steps": 8,
+    "total_duration_ms": 2400,
+    "replay_type": "ceremonial_audit",
+    "preservation_class": "eternal"
+  }
+}

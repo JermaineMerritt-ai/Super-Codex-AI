@@ -1,0 +1,253 @@
+{
+  "created_at": "2025-11-13T06:59:08.451551+00:00",
+  "total_seals": 13,
+  "seals": [
+    {
+      "seal_id": "d73aaa97-8528-4d51-b591-c125c45bd16b",
+      "custodian_name": "Jermaine Merritt",
+      "avatar_role": "Supreme Custodian",
+      "cycle_tag": "Eternal Dominion",
+      "cycle_type": "eternal",
+      "authority": "supreme",
+      "issued_at": "2025-11-13T06:57:50.246503+00:00",
+      "content_hash": "eternal_codex_hash_001",
+      "signature": "4da901c55c5fb946eaed3ab0d0da481eddbc36a0e62b72e83cc9407a9dc30746",
+      "metadata": {
+        "content_hash": "eternal_codex_hash_001",
+        "binding_strength": 100,
+        "ceremonial_weight": 10.0,
+        "authority_level": "supreme",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "6aa71aef-4ec9-4042-91ad-134cdf3f118f",
+      "custodian_name": "Avatar Council",
+      "avatar_role": "Council Collective",
+      "cycle_tag": "Millennial Governance",
+      "cycle_type": "millennial",
+      "authority": "high",
+      "issued_at": "2025-11-13T06:57:50.248219+00:00",
+      "content_hash": "98968cb4eebdb6de",
+      "signature": "41895c030005ca8ec947e3642221a8497f558161893859e5450287451fd9a44b",
+      "metadata": {
+        "content_hash": "98968cb4eebdb6de",
+        "binding_strength": 85,
+        "ceremonial_weight": 6.8,
+        "authority_level": "high",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "260a01df-5316-4531-8ad7-71b5abf817bb",
+      "custodian_name": "Archon Memorialis",
+      "avatar_role": "Flame Keeper",
+      "cycle_tag": "Sacred Preservation",
+      "cycle_type": "eternal",
+      "authority": "sacred",
+      "issued_at": "2025-11-13T06:57:50.249121+00:00",
+      "content_hash": "f47aa04a0d8597a6",
+      "signature": "78881fe2c01cdc93bcf10d9672909818e75b619852d1aed8e5b61e99bcf09cc9",
+      "metadata": {
+        "content_hash": "f47aa04a0d8597a6",
+        "binding_strength": 70,
+        "ceremonial_weight": 7.0,
+        "authority_level": "sacred",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "7405ef8e-a0c8-4f87-9468-9eb3eec70183",
+      "custodian_name": "Jermaine Merritt",
+      "avatar_role": "Supreme Custodian",
+      "cycle_tag": "Eternal Dominion",
+      "cycle_type": "eternal",
+      "authority": "supreme",
+      "issued_at": "2025-11-13T06:58:21.939096+00:00",
+      "content_hash": "eternal_codex_hash_001",
+      "signature": "65c1c26c52913e2185125684831aa1e9d313d4ed4d2dd2aa4a7dbb53b6c0da7a",
+      "metadata": {
+        "content_hash": "eternal_codex_hash_001",
+        "binding_strength": 100,
+        "ceremonial_weight": 10.0,
+        "authority_level": "supreme",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "57afd2cb-60ec-47be-8009-2062cf4be80f",
+      "custodian_name": "Avatar Council",
+      "avatar_role": "Council Collective",
+      "cycle_tag": "Millennial Governance",
+      "cycle_type": "millennial",
+      "authority": "high",
+      "issued_at": "2025-11-13T06:58:21.939960+00:00",
+      "content_hash": "c38ebb1e6a21113a",
+      "signature": "055b86bf9028231488ac6aa17c9a331ebdf459f3a40a9a998479d018e434448b",
+      "metadata": {
+        "content_hash": "c38ebb1e6a21113a",
+        "binding_strength": 85,
+        "ceremonial_weight": 6.8,
+        "authority_level": "high",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "5b6c5f88-8a81-4113-9788-b2fa61ad4f49",
+      "custodian_name": "Archon Memorialis",
+      "avatar_role": "Flame Keeper",
+      "cycle_tag": "Sacred Preservation",
+      "cycle_type": "eternal",
+      "authority": "sacred",
+      "issued_at": "2025-11-13T06:58:21.940442+00:00",
+      "content_hash": "848c086a2423ef0b",
+      "signature": "4f97546574352b06ba6d18e9fa81b1c4476c7bf8f3a04540cb4d81cc909c8b7a",
+      "metadata": {
+        "content_hash": "848c086a2423ef0b",
+        "binding_strength": 70,
+        "ceremonial_weight": 7.0,
+        "authority_level": "sacred",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "03cb4adf-5f4c-44ce-84f6-b54216a42019",
+      "custodian_name": "Saga the Storyteller",
+      "avatar_role": "Ceremonial Guide",
+      "cycle_tag": "Ceremony of Memory Archive",
+      "cycle_type": "seasonal",
+      "authority": "ceremonial",
+      "issued_at": "2025-11-13T06:58:21.940883+00:00",
+      "content_hash": "33c3a65450946f2a",
+      "signature": "b67f8f024ad3f7b3717882e7cbfb6793d066bdf66196af80e56f70442659c7b0",
+      "metadata": {
+        "content_hash": "33c3a65450946f2a",
+        "binding_strength": 40,
+        "ceremonial_weight": 0.8,
+        "authority_level": "ceremonial",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "b3e785ac-5243-4450-894a-95b557dd7366",
+      "custodian_name": "Echo the Dispatcher",
+      "avatar_role": "Herald",
+      "cycle_tag": "Message Distribution",
+      "cycle_type": "lunar",
+      "authority": "herald",
+      "issued_at": "2025-11-13T06:58:21.941335+00:00",
+      "content_hash": "b761254a4aa0a190",
+      "signature": "7fd3f06e151afc781fadf1dc1391dbe0955c49993d53da24c809bb3c890c8cc2",
+      "metadata": {
+        "content_hash": "b761254a4aa0a190",
+        "binding_strength": 30,
+        "ceremonial_weight": 0.3,
+        "authority_level": "herald",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "42d103d0-c592-404c-8e32-69ab45dd73cc",
+      "custodian_name": "Jermaine Merritt",
+      "avatar_role": "Supreme Custodian",
+      "cycle_tag": "Eternal Dominion",
+      "cycle_type": "eternal",
+      "authority": "supreme",
+      "issued_at": "2025-11-13T06:59:08.449083+00:00",
+      "content_hash": "eternal_codex_hash_001",
+      "signature": "994dbd584a2dc4d8043dc2430697cda5d9ef28705dc6c144cbb8b511bcc64e98",
+      "metadata": {
+        "content_hash": "eternal_codex_hash_001",
+        "binding_strength": 100,
+        "ceremonial_weight": 10.0,
+        "authority_level": "supreme",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "17784753-5a50-4e23-9fbd-45e40c85e890",
+      "custodian_name": "Avatar Council",
+      "avatar_role": "Council Collective",
+      "cycle_tag": "Millennial Governance",
+      "cycle_type": "millennial",
+      "authority": "high",
+      "issued_at": "2025-11-13T06:59:08.449853+00:00",
+      "content_hash": "abd14ce6733d0d63",
+      "signature": "8f5aca8c88f5ce259841d63a2fe360d276abab5bd6c09ecd3e98d078d7d97359",
+      "metadata": {
+        "content_hash": "abd14ce6733d0d63",
+        "binding_strength": 85,
+        "ceremonial_weight": 6.8,
+        "authority_level": "high",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "61015313-c243-41ba-95ec-0bddefa5afa1",
+      "custodian_name": "Archon Memorialis",
+      "avatar_role": "Flame Keeper",
+      "cycle_tag": "Sacred Preservation",
+      "cycle_type": "eternal",
+      "authority": "sacred",
+      "issued_at": "2025-11-13T06:59:08.450344+00:00",
+      "content_hash": "f7c476ba6b530b43",
+      "signature": "f2cd8dac3413dbce6072dbe5bbfd0a40b2ecc65f149611c7a0d837fecfb799d6",
+      "metadata": {
+        "content_hash": "f7c476ba6b530b43",
+        "binding_strength": 70,
+        "ceremonial_weight": 7.0,
+        "authority_level": "sacred",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "c919f267-9e04-4022-be32-34760dc38a8a",
+      "custodian_name": "Saga the Storyteller",
+      "avatar_role": "Ceremonial Guide",
+      "cycle_tag": "Ceremony of Memory Archive",
+      "cycle_type": "seasonal",
+      "authority": "ceremonial",
+      "issued_at": "2025-11-13T06:59:08.450918+00:00",
+      "content_hash": "1117534562aa8a7c",
+      "signature": "5e1603a2c69d2bd4b37d86e585f497feebac34b28e4966f7f07b69565cdf511d",
+      "metadata": {
+        "content_hash": "1117534562aa8a7c",
+        "binding_strength": 40,
+        "ceremonial_weight": 0.8,
+        "authority_level": "ceremonial",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "bbefe3d2-54bb-47fe-adf9-de0880f3b3fd",
+      "custodian_name": "Echo the Dispatcher",
+      "avatar_role": "Herald",
+      "cycle_tag": "Message Distribution",
+      "cycle_type": "lunar",
+      "authority": "herald",
+      "issued_at": "2025-11-13T06:59:08.451507+00:00",
+      "content_hash": "c4e27a81a405a5cd",
+      "signature": "4a81f93e8fd5b5e50b6742f1272366d1f6c6351ab8e959b925782724cefbdf44",
+      "metadata": {
+        "content_hash": "c4e27a81a405a5cd",
+        "binding_strength": 30,
+        "ceremonial_weight": 0.3,
+        "authority_level": "herald",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    }
+  ]
+}

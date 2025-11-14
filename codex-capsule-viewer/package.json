@@ -1,0 +1,45 @@
+{
+  "name": "codex-capsule-viewer",
+  "version": "1.0.0",
+  "description": "Sacred knowledge preserved in temporal capsules - A sovereign viewing interface",
+  "main": "services/main.py",
+  "scripts": {
+    "dev": "uvicorn services.main:app --host 127.0.0.1 --port 8080 --reload",
+    "start": "uvicorn services.main:app --host 127.0.0.1 --port 8080",
+    "build": "echo 'Build complete - Static files ready'",
+    "test": "python -m pytest tests/",
+    "lint": "flake8 services/ models/",
+    "serve": "python -m http.server 3000 --directory ui"
+  },
+  "keywords": [
+    "codex",
+    "capsule",
+    "viewer",
+    "sovereign",
+    "knowledge",
+    "temporal",
+    "ceremonial"
+  ],
+  "author": "Codex Custodians",
+  "license": "Sovereign-License-1.0",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.0"
+  },
+  "devDependencies": {
+    "@babel/standalone": "^7.23.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "python": ">=3.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sovereign-codex/capsule-viewer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sovereign-codex/capsule-viewer/issues"
+  },
+  "homepage": "https://codex.sovereign.realm/capsules"
+}

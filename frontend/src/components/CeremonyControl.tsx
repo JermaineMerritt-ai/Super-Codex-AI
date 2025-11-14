@@ -1,283 +1,188 @@
-// frontend/src/components/CeremonyControl.tsx
-// Advanced ceremony control panel using ceremony helper functions
-
-import React, { useState } from 'react';
-import { invokeCeremony, reasonCeremony, auditCeremony, replayCeremony, checkCeremonyHealth } from '../lib/ceremony';
-import { notify } from '../lib/notify';
+import React, { useState, useEffect } from 'react';
 
 interface CeremonyControlProps {
-  token?: string;
   onCeremonyComplete?: (ceremony: any) => void;
 }
 
-export const CeremonyControl: React.FC<CeremonyControlProps> = ({ token, onCeremonyComplete }) => {
-  const [loading, setLoading] = useState(false);
-  const [ceremonialData, setCeremonialData] = useState({
+export default function CeremonyControl({ onCeremonyComplete }: CeremonyControlProps) {
+  const [formData, setFormData] = useState({
     actor: 'Custodian',
     realm: 'PL-001',
     capsule: 'Sovereign Crown',
-    intent: 'Crown.Invocation'
+    intent: 'System.Invocation'
   });
-  const [auditId, setAuditId] = useState('');
-  const [dispatchId, setDispatchId] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [results, setResults] = useState<any[]>([]);
 
-  // Example 1: Simple ceremony invocation with automatic error handling
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const notify = (message: string, type: string = 'info') => {
+    const icon = type === 'success' ? '✅' : type === 'error' ? '❌' : 'ℹ️';
+    console.log(`${icon} ${message}`);
+  };
+
   const handleInvokeCeremony = async () => {
-    if (!token) {
-      notify.error('Authentication token required');
-      return;
-    }
-
     setLoading(true);
     try {
-      // Handles errors automatically with notifications!
-      const ceremony = await invokeCeremony(ceremonialData, token);
+      const response = await fetch('/api/ceremonial/invoke', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
       
-      onCeremonyComplete?.(ceremony);
-      console.log('Ceremony result:', ceremony);
-    } catch (error) {
-      // Error already shown by invokeCeremony helper
-      console.error('Ceremony invocation failed:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  // Example 2: Ceremony reasoning with automatic error handling
-  const handleReasonCeremony = async () => {
-    if (!token) {
-      notify.error('Authentication token required');
-      return;
-    }
-
-    setLoading(true);
-    try {
-      // Automatic success/error notifications
-      const result = await reasonCeremony(ceremonialData, token);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
       
+      const result = await response.json();
+      setResults(prev => [result, ...prev]);
       onCeremonyComplete?.(result);
-      console.log('Reasoning result:', result);
-    } catch (error) {
-      console.error('Ceremony reasoning failed:', error);
+      notify(`🔥 Ceremony dispatched: ${result.dispatch_id}`, 'success');
+    } catch (error: any) {
+      notify(`❌ Ceremony failed: ${error.message}`, 'error');
     } finally {
       setLoading(false);
     }
   };
 
-  // Example 3: Audit ceremony with ID
-  const handleAuditCeremony = async () => {
-    if (!token || !auditId.trim()) {
-      notify.error('Authentication token and audit ID required');
-      return;
-    }
-
+  const handleReasonCeremony = async () => {
     setLoading(true);
     try {
-      // Automatic error handling
-      const auditResult = await auditCeremony(auditId, token);
+      const response = await fetch('/api/reasoning', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
       
-      console.log('Audit result:', auditResult);
-    } catch (error) {
-      console.error('Ceremony audit failed:', error);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      
+      const result = await response.json();
+      setResults(prev => [result, ...prev]);
+      notify(`💭 Reasoning completed: ${result.dispatch_id}`, 'success');
+    } catch (error: any) {
+      notify(`❌ Reasoning failed: ${error.message}`, 'error');
     } finally {
       setLoading(false);
     }
   };
 
-  // Example 4: Replay ceremony
-  const handleReplayCeremony = async () => {
-    if (!token || !dispatchId.trim()) {
-      notify.error('Authentication token and dispatch ID required');
-      return;
-    }
-
-    setLoading(true);
-    try {
-      const replayResult = await replayCeremony(dispatchId, token);
-      
-      console.log('Replay result:', replayResult);
-    } catch (error) {
-      console.error('Ceremony replay failed:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  // Example 5: Health check
   const handleHealthCheck = async () => {
-    if (!token) {
-      notify.error('Authentication token required');
-      return;
-    }
-
-    setLoading(true);
     try {
-      const healthResult = await checkCeremonyHealth(token);
-      
-      console.log('Health check result:', healthResult);
-    } catch (error) {
-      console.error('Health check failed:', error);
-    } finally {
-      setLoading(false);
+      const response = await fetch('/health/ceremony');
+      const health = await response.json();
+      notify(`🏥 Ceremony Health: ${health.status}`, 'info');
+    } catch (error: any) {
+      notify(`⚠️ Health check failed: ${error.message}`, 'error');
     }
   };
 
   return (
-    <div style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '8px', margin: '10px' }}>
-      <h3>🎭 Advanced Ceremony Control</h3>
-      <p><em>All operations use automatic error handling with notifications</em></p>
-
-      {/* Ceremonial Parameters */}
-      <div style={{ marginBottom: '20px', backgroundColor: '#f8f9fa', padding: '15px', borderRadius: '5px' }}>
-        <h4>Ceremonial Parameters:</h4>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
-          <div>
-            <label>Actor:</label>
-            <input
-              value={ceremonialData.actor}
-              onChange={(e) => setCeremonialData(prev => ({ ...prev, actor: e.target.value }))}
-              style={{ width: '100%', padding: '5px' }}
-            />
+    <div className="space-y-6">
+      <div className="border rounded-lg p-4">
+        <div className="mb-4">
+          <h2 className="text-xl font-bold">🔥 Ceremony Control</h2>
+          <p className="text-gray-600">
+            Invoke ceremonial processes and manage dominion operations
+          </p>
+        </div>
+        <div className="grid gap-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium mb-1">Actor</label>
+              <input
+                type="text"
+                value={formData.actor}
+                onChange={(e) => handleInputChange('actor', e.target.value)}
+                placeholder="Enter actor name"
+                className="w-full px-3 py-2 border rounded"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium mb-1">Realm</label>
+              <input
+                type="text"
+                value={formData.realm}
+                onChange={(e) => handleInputChange('realm', e.target.value)}
+                placeholder="Enter realm ID"
+                className="w-full px-3 py-2 border rounded"
+              />
+            </div>
           </div>
-          <div>
-            <label>Realm:</label>
-            <input
-              value={ceremonialData.realm}
-              onChange={(e) => setCeremonialData(prev => ({ ...prev, realm: e.target.value }))}
-              style={{ width: '100%', padding: '5px' }}
-            />
+          
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium mb-1">Capsule</label>
+              <input
+                type="text"
+                value={formData.capsule}
+                onChange={(e) => handleInputChange('capsule', e.target.value)}
+                placeholder="Enter capsule type"
+                className="w-full px-3 py-2 border rounded"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium mb-1">Intent</label>
+              <input
+                type="text"
+                value={formData.intent}
+                onChange={(e) => handleInputChange('intent', e.target.value)}
+                placeholder="Enter intent"
+                className="w-full px-3 py-2 border rounded"
+              />
+            </div>
           </div>
-          <div>
-            <label>Capsule:</label>
-            <input
-              value={ceremonialData.capsule}
-              onChange={(e) => setCeremonialData(prev => ({ ...prev, capsule: e.target.value }))}
-              style={{ width: '100%', padding: '5px' }}
-            />
-          </div>
-          <div>
-            <label>Intent:</label>
-            <input
-              value={ceremonialData.intent}
-              onChange={(e) => setCeremonialData(prev => ({ ...prev, intent: e.target.value }))}
-              style={{ width: '100%', padding: '5px' }}
-            />
+          
+          <div className="flex gap-2 flex-wrap">
+            <button
+              onClick={handleInvokeCeremony}
+              disabled={loading}
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+            >
+              {loading ? 'Processing...' : '🔥 Invoke Ceremony'}
+            </button>
+            
+            <button
+              onClick={handleReasonCeremony}
+              disabled={loading}
+              className="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50 disabled:opacity-50"
+            >
+              💭 Reason Ceremony
+            </button>
+            
+            <button
+              onClick={handleHealthCheck}
+              className="px-4 py-2 border border-gray-300 rounded hover:bg-gray-50"
+            >
+              🏥 Health Check
+            </button>
           </div>
         </div>
       </div>
-
-      {/* Ceremony Operations */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '20px' }}>
-        <button
-          onClick={handleInvokeCeremony}
-          disabled={loading}
-          style={{ 
-            padding: '12px', 
-            backgroundColor: '#007bff', 
-            color: 'white', 
-            border: 'none', 
-            borderRadius: '5px',
-            cursor: loading ? 'not-allowed' : 'pointer'
-          }}
-        >
-          🎭 Invoke Ceremony
-        </button>
-
-        <button
-          onClick={handleReasonCeremony}
-          disabled={loading}
-          style={{ 
-            padding: '12px', 
-            backgroundColor: '#28a745', 
-            color: 'white', 
-            border: 'none', 
-            borderRadius: '5px',
-            cursor: loading ? 'not-allowed' : 'pointer'
-          }}
-        >
-          🧠 Reason Ceremony
-        </button>
-
-        <button
-          onClick={handleHealthCheck}
-          disabled={loading}
-          style={{ 
-            padding: '12px', 
-            backgroundColor: '#17a2b8', 
-            color: 'white', 
-            border: 'none', 
-            borderRadius: '5px',
-            cursor: loading ? 'not-allowed' : 'pointer'
-          }}
-        >
-          ❤️ Health Check
-        </button>
-
-        <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-          {loading && <span style={{ color: '#007bff' }}>⏳ Processing...</span>}
-          {!loading && <span style={{ color: '#28a745' }}>✅ Ready</span>}
+      
+      {results.length > 0 && (
+        <div className="border rounded-lg p-4">
+          <h3 className="text-lg font-bold mb-4">📋 Recent Ceremonies</h3>
+          <div className="space-y-2 max-h-64 overflow-y-auto">
+            {results.map((result, index) => (
+              <div key={index} className="p-3 bg-gray-50 rounded text-sm">
+                <div className="font-mono text-xs text-gray-600">
+                  {result.dispatch_id} - {result.timestamp}
+                </div>
+                <div className="mt-1">
+                  <strong>{result.actor}</strong> → <strong>{result.realm}</strong> → <strong>{result.capsule}</strong>
+                </div>
+                <div className="text-gray-600 text-xs mt-1">
+                  Intent: {result.intent}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-
-      {/* Audit Operations */}
-      <div style={{ marginBottom: '15px' }}>
-        <h4>🔍 Audit Operations:</h4>
-        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-          <input
-            placeholder="Audit ID (e.g., AXF-2025-11-10-12345678)"
-            value={auditId}
-            onChange={(e) => setAuditId(e.target.value)}
-            style={{ flex: 1, padding: '8px' }}
-          />
-          <button
-            onClick={handleAuditCeremony}
-            disabled={loading || !auditId.trim()}
-            style={{ 
-              padding: '8px 16px', 
-              backgroundColor: '#ffc107', 
-              color: 'black', 
-              border: 'none', 
-              borderRadius: '5px' 
-            }}
-          >
-            🔍 Audit
-          </button>
-        </div>
-      </div>
-
-      {/* Replay Operations */}
-      <div>
-        <h4>🔄 Replay Operations:</h4>
-        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-          <input
-            placeholder="Dispatch ID"
-            value={dispatchId}
-            onChange={(e) => setDispatchId(e.target.value)}
-            style={{ flex: 1, padding: '8px' }}
-          />
-          <button
-            onClick={handleReplayCeremony}
-            disabled={loading || !dispatchId.trim()}
-            style={{ 
-              padding: '8px 16px', 
-              backgroundColor: '#6f42c1', 
-              color: 'white', 
-              border: 'none', 
-              borderRadius: '5px' 
-            }}
-          >
-            🔄 Replay
-          </button>
-        </div>
-      </div>
-
-      <div style={{ marginTop: '15px', fontSize: '12px', color: '#666', padding: '10px', backgroundColor: '#f8f9fa', borderRadius: '5px' }}>
-        <strong>💡 Usage Pattern:</strong><br/>
-        <code>import {`{ invokeCeremony }`} from './lib/ceremony';</code><br/>
-        <code>await invokeCeremony(ceremonyPayload, token); // Handles errors automatically</code>
-      </div>
+      )}
     </div>
   );
-};
-
-export default CeremonyControl;
+}

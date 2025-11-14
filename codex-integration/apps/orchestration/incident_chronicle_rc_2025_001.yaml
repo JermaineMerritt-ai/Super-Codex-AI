@@ -1,8 +1,0 @@
-chronicle_id: rc_2025_001
-title: "Database Connection Outage"
-author: "Custodian Jermaine Merritt"
-timestamp: "2025-10-29T23:47:00Z"
-arc: "Resilience Arc"
-ritual: "Incident & Recovery Testimony"
-severity: "high"
-status: "resolved"

@@ -1,3 +1,0 @@
-[console_scripts]
-axiom = axiom_flame:main
-axiom-flame = axiom_flame:main

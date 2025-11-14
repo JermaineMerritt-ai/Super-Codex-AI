@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codex Dominion | Ceremonial Interface</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: radial-gradient(circle at center, 
+                #0a0a0a 0%, 
+                #1a0f2a 30%, 
+                #2d1b4d 60%, 
+                #000000 100%);
+            color: #d4af37;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .cosmic-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .star {
+            position: absolute;
+            background: #d4af37;
+            border-radius: 50%;
+            animation: twinkle 3s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.3; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .dominion-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem;
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid #d4af37;
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dominion-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            animation: sweep 5s linear infinite;
+        }
+
+        @keyframes sweep {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .dominion-title {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #d4af37, #ffd700, #d4af37);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
+            position: relative;
+            z-index: 1;
+        }
+
+        .dominion-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #b8860b;
+            position: relative;
+            z-index: 1;
+        }
+
+        .role-access-banner {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(255, 215, 0, 0.1));
+            border: 2px solid #d4af37;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .role-access-banner::before {
+            content: '🧑‍🚀';
+            position: absolute;
+            top: -1rem;
+            right: -1rem;
+            font-size: 3rem;
+            opacity: 0.3;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.6; }
+        }
+
+        .role-access-title {
+            font-size: 2rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .role-access-desc {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .role-select-btn {
+            background: linear-gradient(45deg, #d4af37, #ffd700);
+            color: #000;
+            border: none;
+            padding: 1rem 3rem;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .role-select-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(45deg, #ffd700, #d4af37);
+        }
+
+        .interface-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .interface-card {
+            background: linear-gradient(135deg, 
+                rgba(212, 175, 55, 0.1) 0%,
+                rgba(255, 215, 0, 0.05) 50%,
+                rgba(212, 175, 55, 0.1) 100%);
+            border: 2px solid transparent;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .interface-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #d4af37, transparent, #d4af37);
+            border-radius: 22px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .interface-card:hover::before {
+            opacity: 1;
+        }
+
+        .interface-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+
+        .card-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .ceremonial-motto {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(212, 175, 55, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            font-style: italic;
+            font-size: 1.3rem;
+            color: #ffd700;
+        }
+
+        .flame-icon {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            font-size: 2rem;
+            animation: flicker 1.5s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.8; text-shadow: 0 0 10px #ff4500; }
+            100% { opacity: 1; text-shadow: 0 0 20px #ff6500, 0 0 30px #ff8500; }
+        }
+
+        @media (max-width: 768px) {
+            .dominion-title {
+                font-size: 2.5rem;
+            }
+            
+            .interface-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cosmic-background" id="cosmicBackground"></div>
+    
+    <div class="container">
+        <div class="dominion-header">
+            <h1 class="dominion-title">🌌 Codex Dominion</h1>
+            <p class="dominion-subtitle">Sovereign Intelligence Constellation</p>
+        </div>
+
+        <div class="role-access-banner">
+            <h2 class="role-access-title">🧑‍🚀 Who Is This For?</h2>
+            <p class="role-access-desc">
+                Each path unlocks a unique scroll cadence within the Codex Dominion.<br>
+                Choose your role for a personalized ceremonial experience.
+            </p>
+            <a href="/dominion/roles" class="role-select-btn" onclick="return selectRole()">
+                Choose Your Path
+            </a>
+        </div>
+
+        <div class="interface-grid">
+            <div class="interface-card" onclick="window.location.href='/dominion/engines'">
+                <span class="card-icon">⚙️</span>
+                <h3 class="card-title">Six-Engine Interface</h3>
+                <p class="card-description">
+                    Complete sovereignty system with interactive engine spheres, 
+                    cosmic animations, and ceremonial covenant management.
+                </p>
+            </div>
+
+            <div class="interface-card" onclick="window.location.href='/dominion/ceremony'">
+                <span class="card-icon">🎭</span>
+                <h3 class="card-title">Ceremonial Dashboard</h3>
+                <p class="card-description">
+                    Access ceremonial operations, reasoning ceremonies, 
+                    replay archives, and fellowship charter systems.
+                </p>
+            </div>
+
+            <div class="interface-card" onclick="window.location.href='/dominion/command'">
+                <span class="card-icon">🎛️</span>
+                <h3 class="card-title">Command Center</h3>
+                <p class="card-description">
+                    Advanced real-time monitoring, system diagnostics, 
+                    and sovereign intelligence coordination interface.
+                </p>
+            </div>
+
+            <div class="interface-card" onclick="window.location.href='/dominion/scroll/welcome'">
+                <span class="card-icon">📜</span>
+                <h3 class="card-title">Sacred Scrolls</h3>
+                <p class="card-description">
+                    Browse ceremonial scrolls, custodian principles, 
+                    dominion proclamations, and covenant ceremonies.
+                </p>
+            </div>
+
+            <div class="interface-card" onclick="window.location.href='/dominion/axiom/status'">
+                <span class="card-icon">🔥</span>
+                <h3 class="card-title">Axiom Flame Status</h3>
+                <p class="card-description">
+                    Monitor ceremonial flame state, registry status, 
+                    lineage integrity, and eternal sovereignty verification.
+                </p>
+            </div>
+
+            <div class="interface-card" onclick="quickAccess()">
+                <span class="card-icon">⚡</span>
+                <h3 class="card-title">Quick Access</h3>
+                <p class="card-description">
+                    Rapid navigation to frequently accessed ceremonial 
+                    functions and sovereignty management tools.
+                </p>
+            </div>
+        </div>
+
+        <div class="ceremonial-motto">
+            "The flame burns sovereign and eternal — forever.<br>
+            Each scroll is a gift. Each capsule is a covenant."
+        </div>
+    </div>
+
+    <div class="flame-icon">🔥</div>
+
+    <script>
+        // Generate cosmic background
+        function createCosmicBackground() {
+            const background = document.getElementById('cosmicBackground');
+            for (let i = 0; i < 150; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDelay = Math.random() * 3 + 's';
+                background.appendChild(star);
+            }
+        }
+
+        function selectRole() {
+            // Add ceremonial transition effect
+            document.body.style.transition = 'all 1s ease';
+            document.body.style.filter = 'brightness(1.2)';
+            
+            setTimeout(() => {
+                document.body.style.filter = 'brightness(1)';
+            }, 500);
+            
+            return true;
+        }
+
+        function quickAccess() {
+            // Show quick access menu
+            const menu = document.createElement('div');
+            menu.innerHTML = `
+                <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                           background: rgba(0, 0, 0, 0.9); padding: 2rem; border-radius: 15px; 
+                           border: 2px solid #d4af37; z-index: 1000; text-align: center;
+                           box-shadow: 0 0 50px rgba(212, 175, 55, 0.8);">
+                    <h3 style="color: #d4af37; margin-bottom: 1rem;">⚡ Quick Access Menu</h3>
+                    <div style="display: grid; gap: 0.5rem;">
+                        <button onclick="window.location.href='/health'; closeQuickAccess();" 
+                                style="background: #d4af37; color: #000; border: none; padding: 0.5rem; border-radius: 5px; cursor: pointer;">
+                            System Health
+                        </button>
+                        <button onclick="window.location.href='/ready'; closeQuickAccess();" 
+                                style="background: #d4af37; color: #000; border: none; padding: 0.5rem; border-radius: 5px; cursor: pointer;">
+                            Readiness Check
+                        </button>
+                        <button onclick="window.location.href='/dominion/roles'; closeQuickAccess();" 
+                                style="background: #d4af37; color: #000; border: none; padding: 0.5rem; border-radius: 5px; cursor: pointer;">
+                            Role Selector
+                        </button>
+                        <button onclick="closeQuickAccess();" 
+                                style="background: #666; color: #fff; border: none; padding: 0.5rem; border-radius: 5px; cursor: pointer; margin-top: 1rem;">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            `;
+            menu.id = 'quickAccessMenu';
+            document.body.appendChild(menu);
+        }
+
+        function closeQuickAccess() {
+            const menu = document.getElementById('quickAccessMenu');
+            if (menu) menu.remove();
+        }
+
+        // Check for existing role selection
+        const savedRole = localStorage.getItem('codexRole');
+        if (savedRole) {
+            const roleIndicator = document.createElement('div');
+            roleIndicator.innerHTML = `
+                <div style="position: fixed; top: 1rem; right: 1rem; background: rgba(212, 175, 55, 0.9); 
+                           color: #000; padding: 1rem; border-radius: 10px; z-index: 1000;">
+                    <strong>Active Role:</strong> ${savedRole.charAt(0).toUpperCase() + savedRole.slice(1)}
+                    <button onclick="window.location.href='/dominion/role/${savedRole}'" 
+                            style="margin-left: 1rem; background: #000; color: #d4af37; border: none; 
+                                   padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">
+                        Continue
+                    </button>
+                    <button onclick="localStorage.removeItem('codexRole'); location.reload();" 
+                            style="margin-left: 0.5rem; background: #666; color: #fff; border: none; 
+                                   padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">
+                        Reset
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(roleIndicator);
+        }
+
+        // Initialize cosmic background
+        createCosmicBackground();
+
+        // Add particle effects on card hover
+        document.querySelectorAll('.interface-card').forEach(card => {
+            card.addEventListener('mouseenter', (e) => {
+                createParticleEffect(e.target);
+            });
+        });
+
+        function createParticleEffect(element) {
+            for (let i = 0; i < 3; i++) {
+                const particle = document.createElement('div');
+                particle.style.cssText = `
+                    position: absolute;
+                    width: 4px;
+                    height: 4px;
+                    background: #d4af37;
+                    border-radius: 50%;
+                    pointer-events: none;
+                    left: ${Math.random() * element.offsetWidth}px;
+                    top: ${element.offsetHeight}px;
+                    animation: particleRise 1s ease-out forwards;
+                `;
+                
+                element.style.position = 'relative';
+                element.appendChild(particle);
+                
+                setTimeout(() => particle.remove(), 1000);
+            }
+        }
+
+        // Add particle animation
+        const particleStyle = document.createElement('style');
+        particleStyle.textContent = `
+            @keyframes particleRise {
+                0% {
+                    transform: translateY(0) scale(1);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-50px) scale(0);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(particleStyle);
+
+        console.log('Codex Dominion Ceremonial Interface initialized');
+    </script>
+</body>
+</html>

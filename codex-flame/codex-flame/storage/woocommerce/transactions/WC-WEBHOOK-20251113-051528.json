@@ -1,0 +1,29 @@
+{
+  "transaction_id": "WC-WEBHOOK-20251113-051528",
+  "operation_type": "order_update",
+  "product_type": "sacred_service",
+  "amount": 399.98,
+  "currency": "USD",
+  "customer_id": "789",
+  "sacred_binding_hash": "82b64415dd5a6f79",
+  "ceremonial_seal": "WC-33eae7a7e85c",
+  "transaction_timestamp": "2025-11-13T05:15:28.879165+00:00",
+  "wc_order_id": "12345",
+  "treasury_entry_id": null,
+  "metadata": {
+    "webhook_type": "order.completed",
+    "webhook_data": {
+      "action": "order.completed",
+      "arg": {
+        "id": 12345,
+        "number": "ORD-SACRED-12345",
+        "status": "completed",
+        "total": "399.98",
+        "currency": "USD",
+        "customer_id": 789,
+        "payment_method": "sacred_treasury",
+        "date_completed": "2025-11-13T05:15:28.879127+00:00"
+      }
+    }
+  }
+}

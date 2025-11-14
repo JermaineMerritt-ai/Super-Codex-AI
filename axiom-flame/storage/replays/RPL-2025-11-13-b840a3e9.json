@@ -1,0 +1,148 @@
+{
+  "replay_id": "RPL-2025-11-13-b840a3e9",
+  "dispatch_id": "AXF-2025-11-10-0003",
+  "timestamp": "2025-11-14T03:54:04.678005Z",
+  "capsule_version": "1.0",
+  "full_context": {
+    "ledger_version": "1.0",
+    "dispatch_id": "AXF-2025-11-10-0003",
+    "timestamp": "2025-11-10T14:22:15Z",
+    "actor": "Architect",
+    "realm": "Universal:Core-Nexus",
+    "capsule": "Genesis Blueprint",
+    "intent": "Creation.Design.Manifest",
+    "input": {
+      "blueprint_type": "realm_expansion",
+      "target_capacity": "1000_entities",
+      "governance_model": "council_hybrid"
+    },
+    "output": {
+      "summary": "Blueprint approved; genesis sequence authorized.",
+      "blueprint_id": "GEN-2025-11-001",
+      "estimated_completion": "2025-12-01T00:00:00Z"
+    },
+    "governance": {
+      "seal": "Sacred",
+      "audit_required": true,
+      "authority_level": "Critical"
+    },
+    "links": {
+      "replay_ref": "replays/AXF-2025-11-10-0003.json",
+      "annal_ref": "annals/2025-11.json",
+      "parent_ceremony": "AXF-2025-11-09-0055"
+    },
+    "metadata": {
+      "priority": "Critical",
+      "tags": [
+        "creation",
+        "expansion",
+        "blueprint",
+        "genesis"
+      ],
+      "category": "architectural",
+      "expiration": "2025-12-31T23:59:59Z"
+    }
+  },
+  "steps": [
+    {
+      "step": "validate_actor",
+      "timestamp": "2025-11-14T03:54:04.678011Z",
+      "status": "completed",
+      "details": "Actor validation against registry for Architect",
+      "duration_ms": 150
+    },
+    {
+      "step": "verify_capsule",
+      "timestamp": "2025-11-14T03:54:04.828011Z",
+      "status": "completed",
+      "details": "Capsule type and permissions verification for Architect",
+      "duration_ms": 200
+    },
+    {
+      "step": "load_context",
+      "timestamp": "2025-11-14T03:54:05.028011Z",
+      "status": "completed",
+      "details": "Context and input data loading for Architect",
+      "duration_ms": 100
+    },
+    {
+      "step": "execute_reasoning",
+      "timestamp": "2025-11-14T03:54:05.128011Z",
+      "status": "completed",
+      "details": "Core reasoning and logic execution for Architect",
+      "duration_ms": 800
+    },
+    {
+      "step": "create_output",
+      "timestamp": "2025-11-14T03:54:05.928011Z",
+      "status": "completed",
+      "details": "Output generation and formatting for Architect",
+      "duration_ms": 300
+    },
+    {
+      "step": "seal_governance",
+      "timestamp": "2025-11-14T03:54:06.228011Z",
+      "status": "completed",
+      "details": "Governance seal application for Architect",
+      "duration_ms": 250
+    },
+    {
+      "step": "update_ledger",
+      "timestamp": "2025-11-14T03:54:06.478011Z",
+      "status": "completed",
+      "details": "Ledger entry creation and storage for Architect",
+      "duration_ms": 400
+    },
+    {
+      "step": "generate_audit",
+      "timestamp": "2025-11-14T03:54:06.878011Z",
+      "status": "completed",
+      "details": "Audit trail and replay data generation for Architect",
+      "duration_ms": 200
+    }
+  ],
+  "governance_seal": {
+    "seal_type": "Replay",
+    "seal_id": "RS-dc401e6d3c6bff1d",
+    "authority": "ceremonial",
+    "classification": "replay_audit",
+    "created_at": "2025-11-14T03:54:04.678058",
+    "sealed_by": "Super-Codex-AI",
+    "integrity_hash": "dc401e6d3c6bff1d"
+  },
+  "audit_trail": {
+    "audit_version": "1.0",
+    "replay_id": "RPL-2025-11-13-b840a3e9",
+    "original_dispatch": "AXF-2025-11-10-0003",
+    "integrity_checks": {
+      "input_hash": "675e70d7844771a8",
+      "context_verified": true,
+      "governance_validated": true,
+      "seal_authentic": true
+    },
+    "compliance": {
+      "regulation_framework": "Super-Codex-AI Ceremonial Standard v1.0",
+      "audit_requirements": [
+        "actor_validation",
+        "seal_verification",
+        "ledger_integrity"
+      ],
+      "compliance_status": "PASSED"
+    },
+    "lineage": {
+      "parent_ceremony": "AXF-2025-11-10-0003",
+      "replay_chain": [
+        "RPL-2025-11-13-b840a3e9"
+      ],
+      "ancestral_depth": 1
+    }
+  },
+  "metadata": {
+    "generator": "Super-Codex-AI Replay Engine",
+    "generator_version": "1.0.0",
+    "total_steps": 8,
+    "total_duration_ms": 2400,
+    "replay_type": "ceremonial_audit",
+    "preservation_class": "eternal"
+  }
+}

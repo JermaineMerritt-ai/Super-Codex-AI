@@ -1,0 +1,47 @@
+{
+  "timestamp": 1762998852,
+  "test_type": "six_engine_dominion",
+  "results": {
+    "Health Check": {
+      "status": "error",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E4EC897620>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+    },
+    "Main Interface": {
+      "status": "error",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /dominion (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E4EC97A5D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+    },
+    "Six-Engine Interface": {
+      "status": "error",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /dominion/engines (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E4EC97AD50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+    },
+    "Command Center": {
+      "status": "error",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /dominion/command (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E4EC957CE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+    },
+    "Ceremony Dashboard": {
+      "status": "error",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /dominion/ceremony (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E4EC9F8510>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+    },
+    "Scroll - Welcome": {
+      "status": "error",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /dominion/scroll/welcome (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E4EC9A15B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+    },
+    "Scroll - Custodian Principles": {
+      "status": "error",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /dominion/scroll/custodian_principles (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E4EC9E6580>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+    },
+    "Scroll - Dominion Proclamation": {
+      "status": "error",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /dominion/scroll/dominion_proclamation (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E4EC9E6F10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+    },
+    "System Status": {
+      "status": "error",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /api/status (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E4EC9E7350>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+    },
+    "Health Metrics": {
+      "status": "error",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /metrics/health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E4EC9E7790>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+    }
+  },
+  "summary": "Comprehensive validation of Codex Dominion sovereignty system"
+}

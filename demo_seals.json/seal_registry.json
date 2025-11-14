@@ -1,0 +1,576 @@
+{
+  "created_at": "2025-11-13T07:08:20.004541+00:00",
+  "total_seals": 30,
+  "seals": [
+    {
+      "seal_id": "e8ac5a74-c890-48bc-898e-1a8326aba19f",
+      "custodian_name": "Jermaine Merritt",
+      "avatar_role": "Supreme Custodian",
+      "cycle_tag": "Eternal Archive",
+      "cycle_type": "eternal",
+      "authority": "supreme",
+      "issued_at": "2025-11-13T07:05:47.109255+00:00",
+      "content_hash": "4100241e1d335437",
+      "signature": "5594570c57779f74e3e3ed2a4450a3fdaa9edc28be3dd09f7a813485421b8522",
+      "metadata": {
+        "content_hash": "4100241e1d335437",
+        "binding_strength": 100,
+        "ceremonial_weight": 10.0,
+        "authority_level": "supreme",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "efba3162-f5df-4c74-b478-f785067a8fcb",
+      "custodian_name": "Avatar Collective",
+      "avatar_role": "High Council",
+      "cycle_tag": "Millennial Archive",
+      "cycle_type": "millennial",
+      "authority": "high",
+      "issued_at": "2025-11-13T07:05:47.110107+00:00",
+      "content_hash": "7342b411aee47a83",
+      "signature": "fd580d721cdc3150f548bd5d44ed8064cf4445fc4c64ed23fe3af09f31cc2474",
+      "metadata": {
+        "content_hash": "7342b411aee47a83",
+        "binding_strength": 85,
+        "ceremonial_weight": 6.8,
+        "authority_level": "high",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "0ac4a920-7ebf-4cdc-9025-34e8115749e8",
+      "custodian_name": "Flame Keeper",
+      "avatar_role": "Sacred Guardian",
+      "cycle_tag": "Centennial Archive",
+      "cycle_type": "centennial",
+      "authority": "sacred",
+      "issued_at": "2025-11-13T07:05:47.110763+00:00",
+      "content_hash": "f92611ee2498b914",
+      "signature": "204bc0826d2d4183a2c3c1e3976c671630c8d1898705ad33b4ea0f8f295f2b88",
+      "metadata": {
+        "content_hash": "f92611ee2498b914",
+        "binding_strength": 70,
+        "ceremonial_weight": 4.2,
+        "authority_level": "sacred",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "a1c2af0e-8a12-487a-9251-74c1c7a06a19",
+      "custodian_name": "Ritual Master",
+      "avatar_role": "Ceremonial Guide",
+      "cycle_tag": "Seasonal Archive",
+      "cycle_type": "seasonal",
+      "authority": "ceremonial",
+      "issued_at": "2025-11-13T07:05:47.111355+00:00",
+      "content_hash": "b5eb470a6530fc62",
+      "signature": "83c59a2c234069c186eeff877298c8b163c5a5a55826956d67ccc4a6e2f1dd3b",
+      "metadata": {
+        "content_hash": "b5eb470a6530fc62",
+        "binding_strength": 40,
+        "ceremonial_weight": 0.8,
+        "authority_level": "ceremonial",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "94e8722f-5bda-4c34-b47f-5cb1bbc2ba73",
+      "custodian_name": "Message Bearer",
+      "avatar_role": "Archive Herald",
+      "cycle_tag": "Annual Archive",
+      "cycle_type": "annual",
+      "authority": "herald",
+      "issued_at": "2025-11-13T07:05:47.112086+00:00",
+      "content_hash": "480f0764e1d87df5",
+      "signature": "06fb80e7cf7887d11ac452acd7d852c8078b1f62403170594d2bc548269fe02f",
+      "metadata": {
+        "content_hash": "480f0764e1d87df5",
+        "binding_strength": 30,
+        "ceremonial_weight": 0.9,
+        "authority_level": "herald",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "42da17bd-d105-41b2-bffa-e8775270f1b4",
+      "custodian_name": "Jermaine Merritt",
+      "avatar_role": "Supreme Custodian",
+      "cycle_tag": "Eternal Archive",
+      "cycle_type": "eternal",
+      "authority": "supreme",
+      "issued_at": "2025-11-13T07:06:28.792652+00:00",
+      "content_hash": "8431023dcf279d70",
+      "signature": "6ee14db80d06865161e560a90386ea4e9be25163733e100acd399bbae08581ae",
+      "metadata": {
+        "content_hash": "8431023dcf279d70",
+        "binding_strength": 100,
+        "ceremonial_weight": 10.0,
+        "authority_level": "supreme",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "44d81720-66c1-4ded-a4ce-ef6c3bd9ef96",
+      "custodian_name": "Avatar Collective",
+      "avatar_role": "High Council",
+      "cycle_tag": "Millennial Archive",
+      "cycle_type": "millennial",
+      "authority": "high",
+      "issued_at": "2025-11-13T07:06:28.793434+00:00",
+      "content_hash": "d0535bf1b6ca5173",
+      "signature": "bb19a811fd6852e4ec1db79cc58acdf40f8d2328ab329c1081fd0ca78131de23",
+      "metadata": {
+        "content_hash": "d0535bf1b6ca5173",
+        "binding_strength": 85,
+        "ceremonial_weight": 6.8,
+        "authority_level": "high",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "e793c0e7-30df-4525-97b6-e7accbf596d8",
+      "custodian_name": "Flame Keeper",
+      "avatar_role": "Sacred Guardian",
+      "cycle_tag": "Centennial Archive",
+      "cycle_type": "centennial",
+      "authority": "sacred",
+      "issued_at": "2025-11-13T07:06:28.794078+00:00",
+      "content_hash": "3601d9544e673f38",
+      "signature": "5528d8f0accbad4d2f730041726ebebe8b06629e0874d907d89e917c59cd4a34",
+      "metadata": {
+        "content_hash": "3601d9544e673f38",
+        "binding_strength": 70,
+        "ceremonial_weight": 4.2,
+        "authority_level": "sacred",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "a22a0024-a733-4805-8c67-18181b2e7211",
+      "custodian_name": "Ritual Master",
+      "avatar_role": "Ceremonial Guide",
+      "cycle_tag": "Seasonal Archive",
+      "cycle_type": "seasonal",
+      "authority": "ceremonial",
+      "issued_at": "2025-11-13T07:06:28.794790+00:00",
+      "content_hash": "7907c8dabe58681c",
+      "signature": "6303973daa8ae3e14a66885b6443e3d367b2e26494772f4472af881fdc13340b",
+      "metadata": {
+        "content_hash": "7907c8dabe58681c",
+        "binding_strength": 40,
+        "ceremonial_weight": 0.8,
+        "authority_level": "ceremonial",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "d593de29-877c-4b8d-8972-4d31291e9d81",
+      "custodian_name": "Message Bearer",
+      "avatar_role": "Archive Herald",
+      "cycle_tag": "Annual Archive",
+      "cycle_type": "annual",
+      "authority": "herald",
+      "issued_at": "2025-11-13T07:06:28.795388+00:00",
+      "content_hash": "23a896a3a2352b38",
+      "signature": "a79c7eec6177999100caf72e5f7dd40486bf6a02c81d3651327cbb892023f8a0",
+      "metadata": {
+        "content_hash": "23a896a3a2352b38",
+        "binding_strength": 30,
+        "ceremonial_weight": 0.9,
+        "authority_level": "herald",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "aad3a768-fedb-436d-89e1-96f12bb8a690",
+      "custodian_name": "Jermaine Merritt",
+      "avatar_role": "Supreme Custodian",
+      "cycle_tag": "Eternal Archive",
+      "cycle_type": "eternal",
+      "authority": "supreme",
+      "issued_at": "2025-11-13T07:06:56.442743+00:00",
+      "content_hash": "dae81ef65158bb86",
+      "signature": "f0b903a19b8843ea227158faebe0fa587930ebb00b996b67c6ea1e895c301ce6",
+      "metadata": {
+        "content_hash": "dae81ef65158bb86",
+        "binding_strength": 100,
+        "ceremonial_weight": 10.0,
+        "authority_level": "supreme",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "600e8b7e-b4fd-49fa-8227-b61140e9df46",
+      "custodian_name": "Avatar Collective",
+      "avatar_role": "High Council",
+      "cycle_tag": "Millennial Archive",
+      "cycle_type": "millennial",
+      "authority": "high",
+      "issued_at": "2025-11-13T07:06:56.443578+00:00",
+      "content_hash": "c8ad009b61c828ef",
+      "signature": "36c21064cab41603cad977d190d4c788b2cf287d437483403e382a7bc2116854",
+      "metadata": {
+        "content_hash": "c8ad009b61c828ef",
+        "binding_strength": 85,
+        "ceremonial_weight": 6.8,
+        "authority_level": "high",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "7464b681-65c6-41b6-96f2-e4ba29cc0adc",
+      "custodian_name": "Flame Keeper",
+      "avatar_role": "Sacred Guardian",
+      "cycle_tag": "Centennial Archive",
+      "cycle_type": "centennial",
+      "authority": "sacred",
+      "issued_at": "2025-11-13T07:06:56.444295+00:00",
+      "content_hash": "8cce0ea93b299ea1",
+      "signature": "df79dcd48b3d46ffa476f25d20f9f73c6e8eddfc9ea04c096aa51a009f2473ab",
+      "metadata": {
+        "content_hash": "8cce0ea93b299ea1",
+        "binding_strength": 70,
+        "ceremonial_weight": 4.2,
+        "authority_level": "sacred",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "3349bb8c-9634-4bdb-b598-5ddb0276b1d5",
+      "custodian_name": "Ritual Master",
+      "avatar_role": "Ceremonial Guide",
+      "cycle_tag": "Seasonal Archive",
+      "cycle_type": "seasonal",
+      "authority": "ceremonial",
+      "issued_at": "2025-11-13T07:06:56.444939+00:00",
+      "content_hash": "0d87ce7748dbf826",
+      "signature": "4e65cce96011dba67044dc149e880efa0e210ab1406a35d513a2724e8773eda7",
+      "metadata": {
+        "content_hash": "0d87ce7748dbf826",
+        "binding_strength": 40,
+        "ceremonial_weight": 0.8,
+        "authority_level": "ceremonial",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "67d84a6e-e258-4f44-aca5-cc1bdb5dd896",
+      "custodian_name": "Message Bearer",
+      "avatar_role": "Archive Herald",
+      "cycle_tag": "Annual Archive",
+      "cycle_type": "annual",
+      "authority": "herald",
+      "issued_at": "2025-11-13T07:06:56.445621+00:00",
+      "content_hash": "4e3d5362726d2992",
+      "signature": "c2aa4fe48dab9d159c6798ccf01cbcd589e5235aa5311c7073ebe8ccf2686ed5",
+      "metadata": {
+        "content_hash": "4e3d5362726d2992",
+        "binding_strength": 30,
+        "ceremonial_weight": 0.9,
+        "authority_level": "herald",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "bd6a9e41-12fa-4e33-80b7-5507d413c622",
+      "custodian_name": "Jermaine Merritt",
+      "avatar_role": "Supreme Custodian",
+      "cycle_tag": "Eternal Archive",
+      "cycle_type": "eternal",
+      "authority": "supreme",
+      "issued_at": "2025-11-13T07:07:19.979373+00:00",
+      "content_hash": "a0be0be72bd17a13",
+      "signature": "3537c83441724aedf0f3f0619ed7264eeface2e8d5a41167413b561a983839a8",
+      "metadata": {
+        "content_hash": "a0be0be72bd17a13",
+        "binding_strength": 100,
+        "ceremonial_weight": 10.0,
+        "authority_level": "supreme",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "431201cd-0910-477a-b93f-11a8b2573c6a",
+      "custodian_name": "Avatar Collective",
+      "avatar_role": "High Council",
+      "cycle_tag": "Millennial Archive",
+      "cycle_type": "millennial",
+      "authority": "high",
+      "issued_at": "2025-11-13T07:07:19.980490+00:00",
+      "content_hash": "b7efece6a702b637",
+      "signature": "258e87527705f0b68d035b3da90e0cb8c57f4f1bff44b2ff950ddd3faf89b39d",
+      "metadata": {
+        "content_hash": "b7efece6a702b637",
+        "binding_strength": 85,
+        "ceremonial_weight": 6.8,
+        "authority_level": "high",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "d81c1a26-c811-4079-ad1e-5d105910d4ca",
+      "custodian_name": "Flame Keeper",
+      "avatar_role": "Sacred Guardian",
+      "cycle_tag": "Centennial Archive",
+      "cycle_type": "centennial",
+      "authority": "sacred",
+      "issued_at": "2025-11-13T07:07:19.981204+00:00",
+      "content_hash": "b4e85a2bf00804f7",
+      "signature": "5a7949bc3a8b75f91f68828d7dcc565651b1467ce144cee144a78aa3fb88f87c",
+      "metadata": {
+        "content_hash": "b4e85a2bf00804f7",
+        "binding_strength": 70,
+        "ceremonial_weight": 4.2,
+        "authority_level": "sacred",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "5b53d1f3-92fd-486b-ad64-e1d2a7650207",
+      "custodian_name": "Ritual Master",
+      "avatar_role": "Ceremonial Guide",
+      "cycle_tag": "Seasonal Archive",
+      "cycle_type": "seasonal",
+      "authority": "ceremonial",
+      "issued_at": "2025-11-13T07:07:19.981923+00:00",
+      "content_hash": "fc85bff8a2e95827",
+      "signature": "b45ad0f2440d38f297557575612212dbdb2a30912bc438d554a3218c60caed6b",
+      "metadata": {
+        "content_hash": "fc85bff8a2e95827",
+        "binding_strength": 40,
+        "ceremonial_weight": 0.8,
+        "authority_level": "ceremonial",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "9453c2ce-ba6f-478f-9b17-d814b639d2dd",
+      "custodian_name": "Message Bearer",
+      "avatar_role": "Archive Herald",
+      "cycle_tag": "Annual Archive",
+      "cycle_type": "annual",
+      "authority": "herald",
+      "issued_at": "2025-11-13T07:07:19.982787+00:00",
+      "content_hash": "189e32cea0ec6063",
+      "signature": "e527c8db64685b4a0e0cab237756cf62833b469a9d21a1e7d7eca963156681ba",
+      "metadata": {
+        "content_hash": "189e32cea0ec6063",
+        "binding_strength": 30,
+        "ceremonial_weight": 0.9,
+        "authority_level": "herald",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "5c614a67-6165-4d6f-857f-8df2a7aed24e",
+      "custodian_name": "Jermaine Merritt",
+      "avatar_role": "Supreme Custodian",
+      "cycle_tag": "Eternal Archive",
+      "cycle_type": "eternal",
+      "authority": "supreme",
+      "issued_at": "2025-11-13T07:07:49.566123+00:00",
+      "content_hash": "77c8eacc0f5468f3",
+      "signature": "871b85f6ac69b7ec293aa5fda1959422e899ff3b8148cafdc3c999fa023ee0db",
+      "metadata": {
+        "content_hash": "77c8eacc0f5468f3",
+        "binding_strength": 100,
+        "ceremonial_weight": 10.0,
+        "authority_level": "supreme",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "2307f100-a212-4b2b-9c3d-5a441d482d3d",
+      "custodian_name": "Avatar Collective",
+      "avatar_role": "High Council",
+      "cycle_tag": "Millennial Archive",
+      "cycle_type": "millennial",
+      "authority": "high",
+      "issued_at": "2025-11-13T07:07:49.567173+00:00",
+      "content_hash": "7e2e66ed23a9dd07",
+      "signature": "698753b4fbf6e6de243ca3614c2c18b25783d4660b425a1d47505006d3e63079",
+      "metadata": {
+        "content_hash": "7e2e66ed23a9dd07",
+        "binding_strength": 85,
+        "ceremonial_weight": 6.8,
+        "authority_level": "high",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "f2a30291-06be-40a2-a49f-d3621d886640",
+      "custodian_name": "Flame Keeper",
+      "avatar_role": "Sacred Guardian",
+      "cycle_tag": "Centennial Archive",
+      "cycle_type": "centennial",
+      "authority": "sacred",
+      "issued_at": "2025-11-13T07:07:49.568373+00:00",
+      "content_hash": "762ba504ca452dd1",
+      "signature": "7ad240849114177755a56cb6b7220b25111e8001a247ab3a08344ba205506f8f",
+      "metadata": {
+        "content_hash": "762ba504ca452dd1",
+        "binding_strength": 70,
+        "ceremonial_weight": 4.2,
+        "authority_level": "sacred",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "8c420802-2282-4bec-8ca6-9247941f82ee",
+      "custodian_name": "Ritual Master",
+      "avatar_role": "Ceremonial Guide",
+      "cycle_tag": "Seasonal Archive",
+      "cycle_type": "seasonal",
+      "authority": "ceremonial",
+      "issued_at": "2025-11-13T07:07:49.569198+00:00",
+      "content_hash": "a9339fdadd77f331",
+      "signature": "d2f655234363a70fe92033b21e9bce76d44897f192aa355c783f093bde6fc360",
+      "metadata": {
+        "content_hash": "a9339fdadd77f331",
+        "binding_strength": 40,
+        "ceremonial_weight": 0.8,
+        "authority_level": "ceremonial",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "0df003d1-0e3a-4148-a671-f963c746a76e",
+      "custodian_name": "Message Bearer",
+      "avatar_role": "Archive Herald",
+      "cycle_tag": "Annual Archive",
+      "cycle_type": "annual",
+      "authority": "herald",
+      "issued_at": "2025-11-13T07:07:49.570045+00:00",
+      "content_hash": "035b5791ca9040ec",
+      "signature": "0f39f21007e1002cc3df52cc266e9ace5404929bca94d3e3b2698dcd445d0c70",
+      "metadata": {
+        "content_hash": "035b5791ca9040ec",
+        "binding_strength": 30,
+        "ceremonial_weight": 0.9,
+        "authority_level": "herald",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "2c3c0ea4-9d3d-454b-a649-93f56b120c31",
+      "custodian_name": "Jermaine Merritt",
+      "avatar_role": "Supreme Custodian",
+      "cycle_tag": "Eternal Archive",
+      "cycle_type": "eternal",
+      "authority": "supreme",
+      "issued_at": "2025-11-13T07:08:20.000733+00:00",
+      "content_hash": "b8f762561ef3f88a",
+      "signature": "7c5bb5344b72da30fe58f4ba88cabb67507346663be43ae1298c609776a50aa0",
+      "metadata": {
+        "content_hash": "b8f762561ef3f88a",
+        "binding_strength": 100,
+        "ceremonial_weight": 10.0,
+        "authority_level": "supreme",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "faee7339-dc33-419e-aa9f-caf3346aca80",
+      "custodian_name": "Avatar Collective",
+      "avatar_role": "High Council",
+      "cycle_tag": "Millennial Archive",
+      "cycle_type": "millennial",
+      "authority": "high",
+      "issued_at": "2025-11-13T07:08:20.001825+00:00",
+      "content_hash": "5d9eb2e87562a9dd",
+      "signature": "c671f018838f7c3f009c5b4e68f55aff309343c58219cc3b306ae50eb0129626",
+      "metadata": {
+        "content_hash": "5d9eb2e87562a9dd",
+        "binding_strength": 85,
+        "ceremonial_weight": 6.8,
+        "authority_level": "high",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "1ed2143f-fe74-4b39-981f-64b91a067aa5",
+      "custodian_name": "Flame Keeper",
+      "avatar_role": "Sacred Guardian",
+      "cycle_tag": "Centennial Archive",
+      "cycle_type": "centennial",
+      "authority": "sacred",
+      "issued_at": "2025-11-13T07:08:20.002716+00:00",
+      "content_hash": "84b04bd8452a6ccb",
+      "signature": "2fe83268fe044535b26e799073053bd5db34d588c93cc9fb06cfa472cb313bf6",
+      "metadata": {
+        "content_hash": "84b04bd8452a6ccb",
+        "binding_strength": 70,
+        "ceremonial_weight": 4.2,
+        "authority_level": "sacred",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "32c80bdf-29e2-4f2f-a961-a2a3705c9b26",
+      "custodian_name": "Ritual Master",
+      "avatar_role": "Ceremonial Guide",
+      "cycle_tag": "Seasonal Archive",
+      "cycle_type": "seasonal",
+      "authority": "ceremonial",
+      "issued_at": "2025-11-13T07:08:20.003558+00:00",
+      "content_hash": "98ace62a5e369ec3",
+      "signature": "c6e08f95d214b5d11e53b7084dfd9283f0b8632a86e741badba7d8a133664083",
+      "metadata": {
+        "content_hash": "98ace62a5e369ec3",
+        "binding_strength": 40,
+        "ceremonial_weight": 0.8,
+        "authority_level": "ceremonial",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    },
+    {
+      "seal_id": "eece3470-c3ed-4d7d-8b3c-feade09ffb56",
+      "custodian_name": "Message Bearer",
+      "avatar_role": "Archive Herald",
+      "cycle_tag": "Annual Archive",
+      "cycle_type": "annual",
+      "authority": "herald",
+      "issued_at": "2025-11-13T07:08:20.004498+00:00",
+      "content_hash": "448d73fe1f7c63da",
+      "signature": "97452ff0a0694f1f6ad30329c86b7abc5a45b4f390ff1e73c886646398159105",
+      "metadata": {
+        "content_hash": "448d73fe1f7c63da",
+        "binding_strength": 30,
+        "ceremonial_weight": 0.9,
+        "authority_level": "herald",
+        "verification_count": 1,
+        "linked_seals": []
+      }
+    }
+  ]
+}

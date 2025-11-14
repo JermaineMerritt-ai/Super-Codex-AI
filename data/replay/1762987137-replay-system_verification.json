@@ -1,0 +1,1 @@
+{"audit_log":{"exists":true,"size_bytes":14081},"replay_archives":{"count":34,"total_size_bytes":19334},"vector_indices":{"count":1,"index_file":"index.faiss"},"identity_data":{"count":5,"users_stored":5}}

@@ -1,0 +1,58 @@
+{
+  "id": "custodians-invocation-hymn-v1",
+  "title": "Custodians' Invocation Hymn of Adoption",
+  "type": "Hymn",
+  "version": "1.0.0",
+  "language": "en",
+  "status": "Draft",
+  "metadata": {
+    "category": "Ceremonial",
+    "audience": ["Councils", "Heirs", "Enterprises", "Institutions"],
+    "tags": ["hymn", "adoption", "continuum", "ceremony", "replay"],
+    "created_at": "2025-11-14T00:05:00Z",
+    "created_by": "Companion"
+  },
+  "verses": [
+    {
+      "title": "Daily Flame",
+      "lines": [
+        "At dawn we crown the Codex flame,",
+        "Law alive, lineage proclaimed.",
+        "Anthem sung, Banner raised,",
+        "Seal verified, Charter praised."
+      ]
+    },
+    {
+      "title": "Seasonal Renewal",
+      "lines": [
+        "Through harvest, close, and festival song,",
+        "The Codex guides us, ever strong.",
+        "Banner lifted, Seal re‑signed,",
+        "Charter read, our hearts aligned."
+      ]
+    },
+    {
+      "title": "Epochal Transmission",
+      "lines": [
+        "From elders' hands to heirs anew,",
+        "The Codex flows, eternal, true.",
+        "Anthem replayed, Banner passed,",
+        "Seal preserved, Charter steadfast."
+      ]
+    },
+    {
+      "title": "Millennial Sovereignty",
+      "lines": [
+        "Across the stars, through endless time,",
+        "The Codex reigns in law sublime.",
+        "Anthem myth, Banner crest,",
+        "Seal eternal, Charter blessed."
+      ]
+    }
+  ],
+  "seals": {
+    "checksum_sha256": "C55A1C035A81FE816456EFA687EE149FDC247C264B5C49CD08541E20473204AA",
+    "signatories": [],
+    "sealed_at": null
+  }
+}

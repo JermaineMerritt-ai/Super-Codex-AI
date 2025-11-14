@@ -1,0 +1,290 @@
+# Super-Codex-AI Development Environment
+# Complete development stack with all dependencies
+
+version: '3.8'
+
+services:
+  # ============================================================================
+  # Core Application Services
+  # ============================================================================
+  
+  codex-api:
+    build:
+      context: ../..
+      dockerfile: ops/docker/Dockerfile
+      target: development
+      args:
+        BUILD_VERSION: ${BUILD_VERSION:-dev}
+        BUILD_DATE: ${BUILD_DATE:-unknown}
+        GIT_COMMIT: ${GIT_COMMIT:-unknown}
+    container_name: codex-api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      # Application Configuration
+      - ENVIRONMENT=development
+      - DEBUG=true
+      - LOG_LEVEL=DEBUG
+      
+      # Database Configuration
+      - DATABASE_URL=postgresql://codex_user:codex_password@postgres:5432/codex_db
+      
+      # Redis Configuration
+      - REDIS_URL=redis://redis:6379/0
+      
+      # Vector Database Configuration
+      - VECTOR_DB_PATH=/app/data/vectors
+      - CORPUS_PATH=/app/data/corpus
+      
+      # Scroll Configuration
+      - SCROLL_TEMPLATES_PATH=/app/scrolls/templates
+      - SCROLL_OUTPUT_PATH=/app/data/scrolls
+      
+      # RAG Configuration
+      - CHUNK_SIZE=1000
+      - CHUNK_OVERLAP=200
+      - SIMILARITY_THRESHOLD=0.7
+      - MAX_SEARCH_RESULTS=10
+      
+      # Audit and Replay
+      - AUDIT_ENABLED=true
+      - AUDIT_DETAIL_LEVEL=verbose
+      - REPLAY_CAPTURE_ENABLED=true
+      - REPLAY_MAX_SNAPSHOTS=1000
+      
+      # Authentication (Development)
+      - AUTH_SECRET_KEY=development-secret-key-change-in-production
+      - AUTH_ALGORITHM=HS256
+      - ACCESS_TOKEN_EXPIRE_MINUTES=30
+      
+      # External Services
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+      - MINIO_SECURE=false
+      
+      # Monitoring
+      - PROMETHEUS_METRICS=true
+      - JAEGER_ENDPOINT=http://jaeger:14268
+    volumes:
+      - ../../:/app
+      - codex-data:/app/data
+      - codex-logs:/app/logs
+      - codex-artifacts:/app/artifacts
+    depends_on:
+      - postgres
+      - redis
+      - minio
+    networks:
+      - codex-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # ============================================================================
+  # Database Services
+  # ============================================================================
+  
+  postgres:
+    image: postgres:15
+    container_name: codex-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=codex_db
+      - POSTGRES_USER=codex_user
+      - POSTGRES_PASSWORD=codex_password
+      - POSTGRES_INITDB_ARGS=--auth-host=scram-sha-256
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./init-scripts:/docker-entrypoint-initdb.d
+    networks:
+      - codex-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U codex_user -d codex_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  
+  redis:
+    image: redis:7-alpine
+    container_name: codex-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes --requirepass redis_password
+    volumes:
+      - redis-data:/data
+    networks:
+      - codex-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "redis_password", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  # ============================================================================
+  # Storage Services
+  # ============================================================================
+  
+  minio:
+    image: minio/minio:latest
+    container_name: codex-minio
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      - MINIO_ROOT_USER=minioadmin
+      - MINIO_ROOT_PASSWORD=minioadmin
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio-data:/data
+    networks:
+      - codex-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ============================================================================
+  # Monitoring and Observability
+  # ============================================================================
+  
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: codex-prometheus
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.enable-lifecycle'
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    networks:
+      - codex-network
+    depends_on:
+      - codex-api
+  
+  grafana:
+    image: grafana/grafana:latest
+    container_name: codex-grafana
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning
+    networks:
+      - codex-network
+    depends_on:
+      - prometheus
+  
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: codex-jaeger
+    restart: unless-stopped
+    ports:
+      - "16686:16686"
+      - "14268:14268"
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+    networks:
+      - codex-network
+
+  # ============================================================================
+  # Development Tools
+  # ============================================================================
+  
+  nginx:
+    image: nginx:alpine
+    container_name: codex-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/ssl:/etc/nginx/ssl
+    depends_on:
+      - codex-api
+      - grafana
+    networks:
+      - codex-network
+  
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: codex-mailhog
+    restart: unless-stopped
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+    networks:
+      - codex-network
+
+# ============================================================================
+# Network Configuration
+# ============================================================================
+
+networks:
+  codex-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+# ============================================================================
+# Volume Configuration
+# ============================================================================
+
+volumes:
+  postgres-data:
+    driver: local
+  redis-data:
+    driver: local
+  minio-data:
+    driver: local
+  prometheus-data:
+    driver: local
+  grafana-data:
+    driver: local
+  codex-data:
+    driver: local
+  codex-logs:
+    driver: local
+  codex-artifacts:
+    driver: local
+
+# ============================================================================
+# Additional Compose Configurations
+# ============================================================================
+
+# Override for production
+x-production-overrides: &production-overrides
+  restart: always
+  logging:
+    driver: "json-file"
+    options:
+      max-size: "10m"
+      max-file: "3"
+
+# Override for testing
+x-testing-overrides: &testing-overrides
+  restart: "no"
+  profiles:
+    - testing

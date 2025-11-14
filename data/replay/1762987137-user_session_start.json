@@ -1,0 +1,1 @@
+{"event":{"ts":1762987137.5442438,"type":"user_session_start","payload":{"user_id":"integration-analyst-001","session_type":"integration_testing","capabilities":["rag_queries","audit_review","system_analysis"]}}}

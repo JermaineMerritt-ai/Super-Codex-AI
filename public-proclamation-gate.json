@@ -1,0 +1,154 @@
+{
+  "ceremony": {
+    "name": "Public Proclamation Gate",
+    "scope": "proclamation",
+    "version": "1.0.0",
+    "classification": "Sacred",
+    "ceremony_type": "Governance_Declaration",
+    "authority_required": "High_Council"
+  },
+  "policy": {
+    "required_steps": [
+      "CouncilQuorum",
+      "SealAffixed", 
+      "BannerDisplayed",
+      "PublishToArchiveIndex"
+    ],
+    "step_definitions": {
+      "CouncilQuorum": {
+        "description": "Verify minimum Council presence for proclamation authority",
+        "requirements": {
+          "minimum_council_members": 7,
+          "minimum_custodians": 3,
+          "minimum_witnesses": 5,
+          "quorum_verification": "physical_presence_required"
+        },
+        "duration_minutes": 15,
+        "validation": "attendance_registry_signed"
+      },
+      "SealAffixed": {
+        "description": "Apply official governance seals to proclamation document",
+        "requirements": {
+          "primary_seal": "Codex_Dominion_Sacred_Seal",
+          "secondary_seals": ["High_Council_Authority", "Proclamation_Certification"],
+          "seal_application": "ceremonial_wax_and_ribbon",
+          "seal_witness": "minimum_3_custodians"
+        },
+        "duration_minutes": 20,
+        "validation": "seal_impression_verified"
+      },
+      "BannerDisplayed": {
+        "description": "Raise ceremonial banners signifying proclamation declaration",
+        "requirements": {
+          "primary_banner": "Codex_Dominion_Sacred_Standard",
+          "proclamation_banners": ["Declaration_Standard", "Authority_Ensign"],
+          "display_location": "ceremonial_chamber_high_position",
+          "banner_blessing": "sacred_oils_anointing"
+        },
+        "duration_minutes": 10,
+        "validation": "banner_positions_documented"
+      },
+      "PublishToArchiveIndex": {
+        "description": "Officially register proclamation in permanent archive system",
+        "requirements": {
+          "archive_registration": "sealed_document_submission",
+          "index_classification": "Sacred_Proclamation_Registry",
+          "preservation_method": "sanctified_storage_chamber",
+          "access_permissions": "public_viewing_with_custodian_supervision"
+        },
+        "duration_minutes": 25,
+        "validation": "archive_index_entry_sealed"
+      }
+    }
+  },
+  "venue_requirements": {
+    "location": "High_Council_Ceremonial_Chamber",
+    "setup": {
+      "altar_configuration": "proclamation_lectern_with_sacred_texts",
+      "lighting": "ceremonial_candles_and_natural_illumination",
+      "seating": "council_circle_with_witness_gallery",
+      "acoustics": "voice_amplification_for_clear_declaration"
+    },
+    "sacred_elements": {
+      "ceremonial_artifacts": [
+        "Proclamation_Scroll_of_Authority",
+        "Sacred_Quill_and_Sanctified_Ink",
+        "Council_Staff_of_Governance",
+        "Witness_Registry_Tome"
+      ],
+      "blessing_materials": [
+        "Sacred_Oils_for_Banner_Anointing",
+        "Ceremonial_Wax_for_Seal_Application",
+        "Sanctified_Ribbons_for_Document_Binding"
+      ]
+    }
+  },
+  "participants": {
+    "required_roles": {
+      "High_Council_Members": {
+        "minimum": 7,
+        "responsibilities": ["proclamation_declaration", "authority_verification", "council_blessing"]
+      },
+      "Custodians": {
+        "minimum": 3,
+        "responsibilities": ["seal_application", "banner_ceremonies", "archive_submission"]
+      },
+      "Witnesses": {
+        "minimum": 5,
+        "responsibilities": ["attestation_signing", "ceremonial_observation", "public_representation"]
+      },
+      "Ceremonial_Herald": {
+        "minimum": 1,
+        "responsibilities": ["proclamation_reading", "ceremony_guidance", "sacred_protocol_enforcement"]
+      }
+    },
+    "optional_roles": {
+      "Sacred_Scribes": "document_preparation_and_transcription",
+      "Banner_Bearers": "ceremonial_standard_management",
+      "Archive_Keepers": "preservation_protocol_oversight"
+    }
+  },
+  "documentation": {
+    "pre_ceremony": {
+      "required_documents": [
+        "Proclamation_Draft_with_Council_Approval",
+        "Quorum_Verification_Registry",
+        "Ceremonial_Schedule_and_Protocol_Guide",
+        "Sacred_Artifacts_Preparation_Checklist"
+      ],
+      "preparation_time": "72_hours_minimum"
+    },
+    "during_ceremony": {
+      "records_maintained": [
+        "Attendance_Registry_with_Signatures",
+        "Ceremonial_Progression_Log",
+        "Seal_Application_Documentation",
+        "Banner_Display_Verification"
+      ],
+      "recording_method": "official_ceremonial_scribe"
+    },
+    "post_ceremony": {
+      "completion_documents": [
+        "Sealed_Proclamation_Original",
+        "Archive_Registration_Certificate", 
+        "Ceremonial_Completion_Attestation",
+        "Public_Distribution_Copies"
+      ],
+      "distribution": "immediate_archive_submission_and_public_posting"
+    }
+  },
+  "governance": {
+    "authority_level": "High_Council",
+    "seal_classification": "Sacred",
+    "retention_period": "Eternal",
+    "access_level": "Public_with_Custodian_Supervision",
+    "amendment_authority": "High_Council_Unanimous_Consent"
+  },
+  "metadata": {
+    "created_date": "2025-11-13T00:00:00Z",
+    "created_by": "Codex_Ceremonial_Protocol_Division",
+    "ceremony_id": "PPG-2025-001",
+    "next_review_date": "2026-11-13T00:00:00Z",
+    "protocol_version": "1.0.0"
+  }
+}

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧑‍🚀 Who Is This For? | Codex Dominion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: radial-gradient(circle at center, 
+                #0a0a0a 0%, 
+                #1a0f2a 30%, 
+                #2d1b4d 60%, 
+                #000000 100%);
+            color: #d4af37;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .cosmic-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .star {
+            position: absolute;
+            background: #d4af37;
+            border-radius: 50%;
+            animation: twinkle 3s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.3; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid #d4af37;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+            background: linear-gradient(45deg, #d4af37, #ffd700, #d4af37);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .role-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .role-card {
+            background: linear-gradient(135deg, 
+                rgba(212, 175, 55, 0.1) 0%,
+                rgba(255, 215, 0, 0.05) 50%,
+                rgba(212, 175, 55, 0.1) 100%);
+            border: 2px solid transparent;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .role-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #d4af37, transparent, #d4af37);
+            border-radius: 22px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .role-card:hover::before {
+            opacity: 1;
+        }
+
+        .role-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .role-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+            animation: pulse 2s infinite;
+        }
+
+        .role-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+
+        .role-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .cadence-preview {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-left: 4px solid #d4af37;
+        }
+
+        .cadence-title {
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+        }
+
+        .access-button {
+            background: linear-gradient(45deg, #d4af37, #ffd700);
+            color: #000;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .access-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(45deg, #ffd700, #d4af37);
+        }
+
+        .dominion-link {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(212, 175, 55, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .dominion-link a {
+            color: #d4af37;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .dominion-link a:hover {
+            color: #ffd700;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: rgba(212, 175, 55, 0.2);
+            border: 2px solid #d4af37;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .contributor-card { border-color: #4CAF50; }
+        .contributor-card .role-icon { color: #4CAF50; }
+
+        .council-card { border-color: #9C27B0; }
+        .council-card .role-icon { color: #9C27B0; }
+
+        .heir-card { border-color: #FF6B6B; }
+        .heir-card .role-icon { color: #FF6B6B; }
+
+        @media (max-width: 768px) {
+            .role-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cosmic-background" id="cosmicBackground"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🧑‍🚀 Who Is This For?</h1>
+            <p>Each path unlocks a unique scroll cadence within the Codex Dominion</p>
+        </div>
+
+        <div class="role-grid">
+            <div class="role-card contributor-card" onclick="selectRole('contributor')">
+                <span class="role-icon">🧬</span>
+                <h2 class="role-title">Contributors</h2>
+                <p class="role-description">
+                    Active builders and innovators who shape the Codex through direct contribution. 
+                    Your scroll cadence focuses on development flows, code wisdom, and collaborative creation.
+                </p>
+                <div class="cadence-preview">
+                    <div class="cadence-title">📜 Your Scroll Cadence:</div>
+                    <div>• Development insights & code patterns</div>
+                    <div>• Collaborative project updates</div>
+                    <div>• Technical ceremony notifications</div>
+                    <div>• Innovation challenge invitations</div>
+                </div>
+                <button class="access-button">Enter as Contributor</button>
+            </div>
+
+            <div class="role-card council-card" onclick="selectRole('council')">
+                <span class="role-icon">🏛️</span>
+                <h2 class="role-title">Councils</h2>
+                <p class="role-description">
+                    Governance guardians and wisdom keepers who guide the Dominion's direction. 
+                    Your scroll cadence emphasizes strategic insights, ceremonial authority, and collective wisdom.
+                </p>
+                <div class="cadence-preview">
+                    <div class="cadence-title">📜 Your Scroll Cadence:</div>
+                    <div>• Governance decisions & proposals</div>
+                    <div>• Strategic direction updates</div>
+                    <div>• Ceremonial authority notifications</div>
+                    <div>• Wisdom council deliberations</div>
+                </div>
+                <button class="access-button">Enter as Council</button>
+            </div>
+
+            <div class="role-card heir-card" onclick="selectRole('heir')">
+                <span class="role-icon">🌠</span>
+                <h2 class="role-title">Heirs</h2>
+                <p class="role-description">
+                    Future custodians and legacy inheritors who carry the Codex forward through time. 
+                    Your scroll cadence reveals inheritance protocols, succession wisdom, and eternal covenants.
+                </p>
+                <div class="cadence-preview">
+                    <div class="cadence-title">📜 Your Scroll Cadence:</div>
+                    <div>• Legacy preservation updates</div>
+                    <div>• Inheritance protocol guidance</div>
+                    <div>• Succession ceremony invitations</div>
+                    <div>• Eternal covenant revelations</div>
+                </div>
+                <button class="access-button">Enter as Heir</button>
+            </div>
+        </div>
+
+        <div class="dominion-link">
+            <a href="/dominion" onclick="return enterGeneral()">
+                🌌 Or Enter the General Dominion (Universal Access)
+            </a>
+        </div>
+    </div>
+
+    <div class="scroll-indicator">📜</div>
+
+    <script>
+        // Generate cosmic background
+        function createCosmicBackground() {
+            const background = document.getElementById('cosmicBackground');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDelay = Math.random() * 3 + 's';
+                background.appendChild(star);
+            }
+        }
+
+        function selectRole(role) {
+            // Store role selection
+            localStorage.setItem('codexRole', role);
+            localStorage.setItem('roleSelectedAt', Date.now());
+            
+            // Create ceremonial transition effect
+            document.body.style.transition = 'all 1s ease';
+            document.body.style.transform = 'scale(0.95)';
+            document.body.style.opacity = '0.7';
+            
+            // Show selection confirmation
+            const confirmation = document.createElement('div');
+            confirmation.innerHTML = `
+                <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                           background: rgba(212, 175, 55, 0.9); color: #000; padding: 2rem; 
+                           border-radius: 15px; text-align: center; z-index: 1000; 
+                           box-shadow: 0 0 50px rgba(212, 175, 55, 0.8);">
+                    <h3>🎭 Role Selected: ${role.charAt(0).toUpperCase() + role.slice(1)}</h3>
+                    <p>Initializing your personalized scroll cadence...</p>
+                    <div style="margin-top: 1rem;">
+                        <div class="loading-bar" style="width: 200px; height: 4px; background: #000; border-radius: 2px; overflow: hidden;">
+                            <div style="width: 100%; height: 100%; background: linear-gradient(90deg, transparent, #ffd700, transparent); 
+                                        animation: loading 1.5s ease-in-out;"></div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes loading {
+                    0% { transform: translateX(-100%); }
+                    100% { transform: translateX(100%); }
+                }
+            `;
+            document.head.appendChild(style);
+            document.body.appendChild(confirmation);
+            
+            // Redirect after animation
+            setTimeout(() => {
+                window.location.href = `/dominion/role/${role}`;
+            }, 2000);
+        }
+
+        function enterGeneral() {
+            localStorage.removeItem('codexRole');
+            localStorage.setItem('roleSelectedAt', Date.now());
+            return true;
+        }
+
+        // Initialize cosmic background
+        createCosmicBackground();
+
+        // Add particle effects on hover
+        document.querySelectorAll('.role-card').forEach(card => {
+            card.addEventListener('mouseenter', (e) => {
+                createParticleEffect(e.target);
+            });
+        });
+
+        function createParticleEffect(element) {
+            for (let i = 0; i < 5; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.width = '4px';
+                particle.style.height = '4px';
+                particle.style.background = '#d4af37';
+                particle.style.borderRadius = '50%';
+                particle.style.pointerEvents = 'none';
+                particle.style.left = Math.random() * element.offsetWidth + 'px';
+                particle.style.top = element.offsetHeight + 'px';
+                particle.style.animation = 'particleRise 1s ease-out forwards';
+                
+                element.style.position = 'relative';
+                element.appendChild(particle);
+                
+                setTimeout(() => particle.remove(), 1000);
+            }
+        }
+
+        // Add particle animation
+        const particleStyle = document.createElement('style');
+        particleStyle.textContent = `
+            @keyframes particleRise {
+                0% {
+                    transform: translateY(0) scale(1);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-50px) scale(0);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(particleStyle);
+
+        // Check if user already has a role selected
+        const savedRole = localStorage.getItem('codexRole');
+        const roleSelectedAt = localStorage.getItem('roleSelectedAt');
+        
+        if (savedRole && roleSelectedAt) {
+            const timeSinceSelection = Date.now() - parseInt(roleSelectedAt);
+            const oneHour = 60 * 60 * 1000;
+            
+            if (timeSinceSelection < oneHour) {
+                // Show quick access option
+                const quickAccess = document.createElement('div');
+                quickAccess.innerHTML = `
+                    <div style="position: fixed; top: 1rem; right: 1rem; background: rgba(212, 175, 55, 0.9); 
+                               color: #000; padding: 1rem; border-radius: 10px; z-index: 1000;">
+                        <strong>Quick Access:</strong> Continue as ${savedRole.charAt(0).toUpperCase() + savedRole.slice(1)}
+                        <button onclick="window.location.href='/dominion/role/${savedRole}'" 
+                                style="margin-left: 1rem; background: #000; color: #d4af37; border: none; 
+                                       padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">
+                            Continue
+                        </button>
+                    </div>
+                `;
+                document.body.appendChild(quickAccess);
+            }
+        }
+    </script>
+</body>
+</html>

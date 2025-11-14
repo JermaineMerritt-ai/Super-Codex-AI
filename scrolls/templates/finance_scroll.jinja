@@ -1,0 +1,9 @@
+<!-- scrolls/templates/finance_scroll.jinja -->
+<h1>Finance Governance Scroll</h1>
+<p><strong>Latest Budget:</strong> {{ budget }}</p>
+<p><strong>Trend:</strong> {{ grants }}</p>
+<p><strong>Tools & Foresight:</strong></p>
+<ul>
+  {% for t in tools %}<li>{{ t }}</li>{% endfor %}
+</ul>
+<p><em>Foresight sealed and archived for replay.</em></p>

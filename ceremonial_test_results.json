@@ -1,0 +1,180 @@
+{
+  "total_tests": 10,
+  "successful_tests": 10,
+  "failed_tests": 0,
+  "success_rate": 100.0,
+  "ceremonial_content_detected": 7,
+  "average_response_time_ms": 29.19,
+  "total_test_time_seconds": 0.29,
+  "test_results": [
+    {
+      "endpoint": "/",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 282.01,
+      "content_type": "application/json",
+      "content_length": 260,
+      "error": null,
+      "json_keys": [
+        "service",
+        "version",
+        "status",
+        "flame_state",
+        "ceremonial_interface",
+        "health_check",
+        "readiness_check",
+        "motto"
+      ],
+      "ceremonial_content": true
+    },
+    {
+      "endpoint": "/health",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 1.14,
+      "content_type": "application/json",
+      "content_length": 226,
+      "error": null,
+      "json_keys": [
+        "status",
+        "timestamp",
+        "environment",
+        "uptime_seconds",
+        "checks"
+      ],
+      "ceremonial_content": false
+    },
+    {
+      "endpoint": "/ready",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 2.96,
+      "content_type": "application/json",
+      "content_length": 522,
+      "error": null,
+      "json_keys": [
+        "status",
+        "timestamp",
+        "services",
+        "ready",
+        "response_time_ms",
+        "checks_performed"
+      ],
+      "ceremonial_content": false
+    },
+    {
+      "endpoint": "/api/status",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 0.93,
+      "content_type": "application/json",
+      "content_length": 195,
+      "error": null,
+      "json_keys": [
+        "database",
+        "redis",
+        "environment",
+        "sentry",
+        "dominion_status",
+        "flame_state",
+        "ceremonial_interface"
+      ],
+      "ceremonial_content": true
+    },
+    {
+      "endpoint": "/dominion",
+      "status_code": 307,
+      "success": true,
+      "response_time_ms": 0.86,
+      "content_type": "unknown",
+      "content_length": 0,
+      "error": null,
+      "ceremonial_content": false
+    },
+    {
+      "endpoint": "/dominion/ceremony",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 0.8,
+      "content_type": "text/html; charset=utf-8",
+      "content_length": 4187,
+      "error": null,
+      "ceremonial_content": true
+    },
+    {
+      "endpoint": "/dominion/scroll/welcome",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 0.83,
+      "content_type": "application/json",
+      "content_length": 520,
+      "error": null,
+      "json_keys": [
+        "title",
+        "type",
+        "purpose",
+        "content",
+        "closing",
+        "seal"
+      ],
+      "ceremonial_content": true
+    },
+    {
+      "endpoint": "/dominion/scroll/custodian_principles",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 0.8,
+      "content_type": "application/json",
+      "content_length": 626,
+      "error": null,
+      "json_keys": [
+        "title",
+        "type",
+        "purpose",
+        "principles",
+        "rites",
+        "governance",
+        "closing",
+        "seal"
+      ],
+      "ceremonial_content": true
+    },
+    {
+      "endpoint": "/dominion/scroll/dominion_proclamation",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 0.78,
+      "content_type": "application/json",
+      "content_length": 643,
+      "error": null,
+      "json_keys": [
+        "title",
+        "type",
+        "invocation",
+        "call",
+        "principles",
+        "witness",
+        "closing",
+        "seal"
+      ],
+      "ceremonial_content": true
+    },
+    {
+      "endpoint": "/dominion/axiom/status",
+      "status_code": 200,
+      "success": true,
+      "response_time_ms": 0.78,
+      "content_type": "application/json",
+      "content_length": 124,
+      "error": null,
+      "json_keys": [
+        "status",
+        "flame_state",
+        "ceremonial_registry",
+        "lineage",
+        "timestamp"
+      ],
+      "ceremonial_content": true
+    }
+  ]
+}

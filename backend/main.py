@@ -3,8 +3,11 @@ from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.requests import Request
+from fastapi.staticfiles import StaticFiles
 import sys
 import os
+from app.middleware.governance import GovernanceMiddleware
+from app.middleware.audit import AuditMiddleware
 
 # Add paths for imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
@@ -19,6 +22,9 @@ try:
     from app.health import router as health_router
     from capsule_api import router as capsule_router
     from services.dominion.outreach_engagement import router as outreach_router
+    import sys
+    sys.path.append('..')
+    from ceremonial_interface import router as ceremonial_router
 except ImportError as e:
     print(f"Import error (using fallbacks): {e}")
     # Create fallback routers
@@ -31,6 +37,7 @@ except ImportError as e:
     health_router = APIRouter()
     capsule_router = APIRouter()
     outreach_router = APIRouter()
+    ceremonial_router = APIRouter()
     
     # Create dummy auth functions
     def get_user():
@@ -70,6 +77,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Governance middleware for authority validation and ceremonial compliance
+app.add_middleware(GovernanceMiddleware)
+
+# Audit middleware for request/response logging
+app.add_middleware(AuditMiddleware)
+
 # Include routers
 app.include_router(health_router, prefix="/health")
 app.include_router(auth_router, prefix="/auth")
@@ -78,6 +91,13 @@ app.include_router(upload_router, prefix="/api")
 app.include_router(capsule_router, prefix="/api")
 app.include_router(outreach_router)
 app.include_router(gateway_router, prefix="/axiom")
+app.include_router(ceremonial_router, prefix="/dominion")
+
+# Mount static files for ceremonial interface assets
+try:
+    app.mount("/static", StaticFiles(directory="static"), name="static")
+except:
+    pass  # Static directory may not exist in all environments
 
 # Global exception handler
 @app.exception_handler(Exception)
@@ -90,7 +110,13 @@ async def global_exception_handler(request: Request, exc: Exception):
 
 @app.get("/")
 async def root():
-    return {"message": "Super-Codex-AI Backend is running", "status": "healthy"}
+    return {
+        "message": "Super-Codex-AI Backend - Codex Dominion", 
+        "status": "operational",
+        "flame_state": "sovereign",
+        "ceremonial_interface": "/dominion",
+        "motto": "The flame burns sovereign and eternal — forever."
+    }
 
 @app.get("/health")
 async def health_check():

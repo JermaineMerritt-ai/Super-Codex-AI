@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Flame Glyph for SIGIL-CONCORD-001 -->
+  
+  <!-- Outer flame aura -->
+  <ellipse cx="50" cy="85" rx="45" ry="12" fill="url(#flameAura)" opacity="0.3"/>
+  
+  <!-- Flame base -->
+  <path d="M25 85 Q30 75 35 70 Q40 60 45 55 Q50 45 50 35 Q55 40 60 45 Q65 55 70 65 Q75 75 75 85 Z" 
+        fill="url(#flameGradient)" stroke="#8B4513" stroke-width="1"/>
+  
+  <!-- Inner flame core -->
+  <path d="M35 80 Q40 70 42 65 Q45 55 48 50 Q50 40 50 30 Q52 35 55 45 Q58 55 62 65 Q65 75 65 80 Z" 
+        fill="url(#flameCoreGradient)"/>
+  
+  <!-- Flame tip -->
+  <path d="M45 45 Q48 35 50 25 Q50 15 48 10 Q50 8 52 10 Q50 15 50 25 Q52 35 55 45 Q52 40 50 35 Q48 40 45 45 Z" 
+        fill="url(#flameTipGradient)"/>
+  
+  <!-- SIGIL binding circle -->
+  <circle cx="50" cy="50" r="40" fill="none" stroke="url(#sigilCircle)" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Sacred geometries -->
+  <!-- Triangle of harmony -->
+  <path d="M50 20 L35 65 L65 65 Z" fill="none" stroke="url(#sacredLines)" stroke-width="1.5" opacity="0.5"/>
+  
+  <!-- Concord symbols -->
+  <circle cx="35" cy="65" r="3" fill="url(#concordSymbol)"/>
+  <circle cx="65" cy="65" r="3" fill="url(#concordSymbol)"/>
+  <circle cx="50" cy="20" r="3" fill="url(#concordSymbol)"/>
+  
+  <!-- Heirs chorus notation -->
+  <path d="M20 30 Q25 25 30 30 Q25 35 20 30" fill="none" stroke="url(#chorusLines)" stroke-width="1"/>
+  <path d="M70 30 Q75 25 80 30 Q75 35 70 30" fill="none" stroke="url(#chorusLines)" stroke-width="1"/>
+  
+  <!-- Custodian seal at base -->
+  <rect x="45" y="85" width="10" height="4" rx="2" fill="url(#custodianSeal)"/>
+  
+  <!-- Gradients and patterns -->
+  <defs>
+    <!-- Flame gradient (orange to yellow) -->
+    <linearGradient id="flameGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF4500;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#FF6347;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFF8DC;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Flame core (brighter) -->
+    <linearGradient id="flameCoreGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF6347;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <!-- Flame tip (white-blue) -->
+    <linearGradient id="flameTipGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#87CEEB;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <!-- Flame aura -->
+    <radialGradient id="flameAura">
+      <stop offset="0%" style="stop-color:#FF4500;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0.1" />
+    </radialGradient>
+    
+    <!-- SIGIL circle -->
+    <linearGradient id="sigilCircle">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#DAA520;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Sacred geometry lines -->
+    <linearGradient id="sacredLines">
+      <stop offset="0%" style="stop-color:#DAA520;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:0.7" />
+    </linearGradient>
+    
+    <!-- Concord symbols -->
+    <radialGradient id="concordSymbol">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Chorus lines -->
+    <linearGradient id="chorusLines">
+      <stop offset="0%" style="stop-color:#4169E1;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#1E90FF;stop-opacity:0.6" />
+    </linearGradient>
+    
+    <!-- Custodian seal -->
+    <linearGradient id="custodianSeal">
+      <stop offset="0%" style="stop-color:#800080;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4B0082;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Hymn verse markers -->
+  <text x="50" y="95" text-anchor="middle" font-family="serif" font-size="6" fill="#8B4513" opacity="0.7">
+    CONCORD
+  </text>
+  
+  <!-- Animated flame flicker effect -->
+  <animateTransform
+    attributeName="transform"
+    attributeType="XML"
+    type="scale"
+    values="1;1.02;1;0.98;1"
+    dur="3s"
+    repeatCount="indefinite"/>
+    
+</svg>

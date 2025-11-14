@@ -1,0 +1,399 @@
+{
+  "codex-dominion-concord-hymn": {
+    "artifact_id": "codex-dominion-concord-hymn",
+    "title": "Custodian–Heirs Concord Hymn",
+    "version": "1.0.0",
+    "type": "hymn",
+    "routes": {
+      "register": "/ledger/continuum/hymn",
+      "dispatch": "/dispatch/global",
+      "replay": "/replay/cycles"
+    },
+    "audience": [
+      "heirs",
+      "councils",
+      "institutions",
+      "custodians"
+    ],
+    "cycles": [
+      "daily",
+      "seasonal",
+      "epochal",
+      "millennial"
+    ],
+    "files": {
+      "text": "concord_hymn.md",
+      "audio": "assets/concord_theme.mp3",
+      "glyph": "assets/flame_glyph.svg",
+      "background": "assets/chorus_bg.png"
+    },
+    "hash_strategy": "sha256",
+    "signing": {
+      "sigil": "SIGIL-CONCORD-001",
+      "signed_by": "Custodian",
+      "heirs_chorus": true,
+      "seal_object": {
+        "seal_id": "db055431-73fb-4c3a-b45a-13a2f61521bb",
+        "custodian_name": "Custodian",
+        "avatar_role": "Hymn Custodian",
+        "content_hash": "e12dbee705ec04989599c4c6c40ca0470f944e2216f30f717440256551dc32a9",
+        "authority": "supreme",
+        "binding_strength": 100,
+        "flame_glyph": "🔥🔥🔥-HYM-COD-db055431",
+        "binding_sigil": "💎🔥🔥🔥-HYM-COD-db055431💎",
+        "created_at": "2025-11-13T08:05:31.870130+00:00",
+        "cycle_tag": "codex-dominion-concord-hymn",
+        "cycle_type": "eternal",
+        "metadata": {
+          "hymn_id": "codex-dominion-concord-hymn",
+          "hymn_title": "Custodian–Heirs Concord Hymn",
+          "hymn_version": "1.0.0",
+          "heirs_chorus": true,
+          "audience": [
+            "heirs",
+            "councils",
+            "institutions",
+            "custodians"
+          ],
+          "cycles": [
+            "daily",
+            "seasonal",
+            "epochal",
+            "millennial"
+          ]
+        }
+      }
+    },
+    "created_at": "2025-11-13T08:05:31.869835+00:00",
+    "last_performed": "2025-11-13T08:05:31.872719+00:00",
+    "performance_count": 2,
+    "heirs_chorus_count": 1
+  },
+  "test-upload-hymn-1763020258": {
+    "artifact_id": "test-upload-hymn-1763020258",
+    "title": "Test Upload Hymn",
+    "version": "1.0.0",
+    "type": "hymn",
+    "routes": {
+      "register": "/ledger/continuum/hymn",
+      "dispatch": "/dispatch/global",
+      "replay": "/replay/cycles"
+    },
+    "audience": [
+      "heirs",
+      "councils",
+      "institutions",
+      "custodians"
+    ],
+    "cycles": [
+      "daily",
+      "seasonal",
+      "epochal",
+      "millennial"
+    ],
+    "files": {
+      "text": "concord-hymn/concord_hymn.md",
+      "audio": null,
+      "glyph": "concord-hymn/assets/flame_glyph.svg",
+      "background": null
+    },
+    "hash_strategy": "sha256",
+    "signing": {
+      "sigil": "TEST-SIGIL-001",
+      "signed_by": "Custodian",
+      "heirs_chorus": true,
+      "seal_object": {
+        "seal_id": "988a968f-d321-4100-8a42-4863c6a39ab1",
+        "custodian_name": "Custodian",
+        "avatar_role": "Hymn Custodian",
+        "content_hash": "d98955b8d755d4b78eadf4b17b9b2b7232bc3f13231d3fa0683d80c76afa4420",
+        "authority": "supreme",
+        "binding_strength": 100,
+        "flame_glyph": "🔥🔥🔥-HYM-TES-988a968f",
+        "binding_sigil": "👑🔥🔥🔥-HYM-TES-988a968f👑",
+        "created_at": "2025-11-13T07:50:58.772549+00:00",
+        "cycle_tag": "test-upload-hymn-1763020258",
+        "cycle_type": "eternal",
+        "metadata": {
+          "hymn_id": "test-upload-hymn-1763020258",
+          "hymn_title": "Test Upload Hymn",
+          "hymn_version": "1.0.0",
+          "heirs_chorus": true,
+          "audience": [
+            "heirs",
+            "councils",
+            "institutions",
+            "custodians"
+          ],
+          "cycles": [
+            "daily",
+            "seasonal",
+            "epochal",
+            "millennial"
+          ]
+        }
+      }
+    },
+    "created_at": "2025-11-13T07:50:58.772010+00:00",
+    "last_performed": "2025-11-13T07:50:58.779515+00:00",
+    "performance_count": 1,
+    "heirs_chorus_count": 1
+  },
+  "test-upload-hymn-1763020282": {
+    "artifact_id": "test-upload-hymn-1763020282",
+    "title": "Test Upload Hymn",
+    "version": "1.0.0",
+    "type": "hymn",
+    "routes": {
+      "register": "/ledger/continuum/hymn",
+      "dispatch": "/dispatch/global",
+      "replay": "/replay/cycles"
+    },
+    "audience": [
+      "heirs",
+      "councils",
+      "institutions",
+      "custodians"
+    ],
+    "cycles": [
+      "daily",
+      "seasonal",
+      "epochal",
+      "millennial"
+    ],
+    "files": {
+      "text": "concord-hymn/concord_hymn.md",
+      "audio": null,
+      "glyph": "concord-hymn/assets/flame_glyph.svg",
+      "background": null
+    },
+    "hash_strategy": "sha256",
+    "signing": {
+      "sigil": "TEST-SIGIL-001",
+      "signed_by": "Custodian",
+      "heirs_chorus": true,
+      "seal_object": {
+        "seal_id": "8468f181-93b2-4703-a719-8e5243f6b2bd",
+        "custodian_name": "Custodian",
+        "avatar_role": "Hymn Custodian",
+        "content_hash": "d98955b8d755d4b78eadf4b17b9b2b7232bc3f13231d3fa0683d80c76afa4420",
+        "authority": "supreme",
+        "binding_strength": 100,
+        "flame_glyph": "🔥🔥🔥-HYM-TES-8468f181",
+        "binding_sigil": "⚖️🔥🔥🔥-HYM-TES-8468f181⚖️",
+        "created_at": "2025-11-13T07:51:22.019188+00:00",
+        "cycle_tag": "test-upload-hymn-1763020282",
+        "cycle_type": "eternal",
+        "metadata": {
+          "hymn_id": "test-upload-hymn-1763020282",
+          "hymn_title": "Test Upload Hymn",
+          "hymn_version": "1.0.0",
+          "heirs_chorus": true,
+          "audience": [
+            "heirs",
+            "councils",
+            "institutions",
+            "custodians"
+          ],
+          "cycles": [
+            "daily",
+            "seasonal",
+            "epochal",
+            "millennial"
+          ]
+        }
+      }
+    },
+    "created_at": "2025-11-13T07:51:22.018858+00:00",
+    "last_performed": "2025-11-13T07:51:22.024463+00:00",
+    "performance_count": 1,
+    "heirs_chorus_count": 1
+  },
+  "api-test-hymn-1763020425": {
+    "artifact_id": "api-test-hymn-1763020425",
+    "title": "API Test Hymn",
+    "version": "1.0.0",
+    "type": "hymn",
+    "routes": {
+      "register": "/ledger/continuum/hymn",
+      "dispatch": "/dispatch/global",
+      "replay": "/replay/cycles"
+    },
+    "audience": [
+      "heirs"
+    ],
+    "cycles": [
+      "daily"
+    ],
+    "files": {
+      "text": "concord-hymn/concord_hymn.md",
+      "audio": null,
+      "glyph": null,
+      "background": null
+    },
+    "hash_strategy": "sha256",
+    "signing": {
+      "sigil": "API-TEST-001",
+      "signed_by": "Custodian",
+      "heirs_chorus": true,
+      "seal_object": {
+        "seal_id": "25bebab5-58e6-4fa5-a655-3587eee7d6ce",
+        "custodian_name": "Custodian",
+        "avatar_role": "Hymn Custodian",
+        "content_hash": "d98955b8d755d4b78eadf4b17b9b2b7232bc3f13231d3fa0683d80c76afa4420",
+        "authority": "supreme",
+        "binding_strength": 100,
+        "flame_glyph": "🔥🔥🔥-HYM-API-25bebab5",
+        "binding_sigil": "💎🔥🔥🔥-HYM-API-25bebab5💎",
+        "created_at": "2025-11-13T07:53:45.590504+00:00",
+        "cycle_tag": "api-test-hymn-1763020425",
+        "cycle_type": "eternal",
+        "metadata": {
+          "hymn_id": "api-test-hymn-1763020425",
+          "hymn_title": "API Test Hymn",
+          "hymn_version": "1.0.0",
+          "heirs_chorus": true,
+          "audience": [
+            "heirs"
+          ],
+          "cycles": [
+            "daily"
+          ]
+        }
+      }
+    },
+    "created_at": "2025-11-13T07:53:45.590155+00:00",
+    "last_performed": null,
+    "performance_count": 0,
+    "heirs_chorus_count": 0
+  },
+  "custodian-heirs-concord-hymn-v1": {
+    "artifact_id": "custodian-heirs-concord-hymn-v1",
+    "title": "Custodian–Heirs Concord Hymn",
+    "version": "1.0.0",
+    "type": "sacred-hymn",
+    "routes": {
+      "register": "/ledger/continuum/hymn",
+      "dispatch": "/dispatch/global",
+      "replay": "/replay/cycles",
+      "performance": "/hymns/{artifact_id}/perform"
+    },
+    "audience": [
+      "heirs",
+      "councils",
+      "institutions",
+      "custodians"
+    ],
+    "cycles": [
+      "daily",
+      "seasonal",
+      "epochal",
+      "millennial"
+    ],
+    "files": {
+      "text": "concord_hymn.md",
+      "audio": null,
+      "glyph": null,
+      "background": null
+    },
+    "hash_strategy": "sha256",
+    "signing": {
+      "sigil": "SIGIL-CUSTODIAN-HEIRS-CONCORD-HYMN-V1-001",
+      "signed_by": "custodian",
+      "heirs_chorus": true,
+      "seal_object": {
+        "seal_id": "f1da2aac-364d-4fe4-8fa7-168b93b62886",
+        "custodian_name": "custodian",
+        "avatar_role": "Hymn Custodian",
+        "content_hash": "e12dbee705ec04989599c4c6c40ca0470f944e2216f30f717440256551dc32a9",
+        "authority": "initiate",
+        "binding_strength": 20,
+        "flame_glyph": "✨-HYM-CUS-f1da2aac",
+        "binding_sigil": "✨-HYM-CUS-f1da2aac",
+        "created_at": "2025-11-13T07:54:06.703881+00:00",
+        "cycle_tag": "custodian-heirs-concord-hymn-v1",
+        "cycle_type": "eternal",
+        "metadata": {
+          "hymn_id": "custodian-heirs-concord-hymn-v1",
+          "hymn_title": "Custodian–Heirs Concord Hymn",
+          "hymn_version": "1.0.0",
+          "heirs_chorus": true,
+          "audience": [
+            "heirs",
+            "councils",
+            "institutions",
+            "custodians"
+          ],
+          "cycles": [
+            "daily",
+            "seasonal",
+            "epochal",
+            "millennial"
+          ]
+        }
+      }
+    },
+    "created_at": "2025-11-13T07:54:06.703120+00:00",
+    "last_performed": null,
+    "performance_count": 0,
+    "heirs_chorus_count": 0
+  },
+  "api-test-hymn-1763020498": {
+    "artifact_id": "api-test-hymn-1763020498",
+    "title": "API Test Hymn",
+    "version": "1.0.0",
+    "type": "hymn",
+    "routes": {
+      "register": "/ledger/continuum/hymn",
+      "dispatch": "/dispatch/global",
+      "replay": "/replay/cycles"
+    },
+    "audience": [
+      "heirs"
+    ],
+    "cycles": [
+      "daily"
+    ],
+    "files": {
+      "text": "concord-hymn/concord_hymn.md",
+      "audio": null,
+      "glyph": null,
+      "background": null
+    },
+    "hash_strategy": "sha256",
+    "signing": {
+      "sigil": "API-TEST-001",
+      "signed_by": "Custodian",
+      "heirs_chorus": true,
+      "seal_object": {
+        "seal_id": "598bfd78-1204-4b20-a0da-04c825e042da",
+        "custodian_name": "Custodian",
+        "avatar_role": "Hymn Custodian",
+        "content_hash": "d98955b8d755d4b78eadf4b17b9b2b7232bc3f13231d3fa0683d80c76afa4420",
+        "authority": "supreme",
+        "binding_strength": 100,
+        "flame_glyph": "🔥🔥🔥-HYM-API-598bfd78",
+        "binding_sigil": "👑🔥🔥🔥-HYM-API-598bfd78👑",
+        "created_at": "2025-11-13T07:54:58.285092+00:00",
+        "cycle_tag": "api-test-hymn-1763020498",
+        "cycle_type": "eternal",
+        "metadata": {
+          "hymn_id": "api-test-hymn-1763020498",
+          "hymn_title": "API Test Hymn",
+          "hymn_version": "1.0.0",
+          "heirs_chorus": true,
+          "audience": [
+            "heirs"
+          ],
+          "cycles": [
+            "daily"
+          ]
+        }
+      }
+    },
+    "created_at": "2025-11-13T07:54:58.284782+00:00",
+    "last_performed": null,
+    "performance_count": 0,
+    "heirs_chorus_count": 0
+  }
+}

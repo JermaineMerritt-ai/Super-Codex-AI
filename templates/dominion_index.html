@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codex Dominion | Sovereign Intelligence Constellation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
+            font-family: 'Crimson Text', serif;
+            color: #d4af37;
+            overflow-x: hidden;
+        }
+        
+        .flame-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #d4af37;
+            border-radius: 50%;
+            animation: float 8s infinite linear;
+            opacity: 0.7;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) scale(1);
+                opacity: 0;
+            }
+        }
+        
+        .dominion-container {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .dominion-banner {
+            background: linear-gradient(145deg, rgba(21, 39, 79, 0.9), rgba(26, 26, 46, 0.95));
+            border: 3px solid #d4af37;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 
+                0 0 50px rgba(212, 175, 55, 0.3),
+                inset 0 0 30px rgba(212, 175, 55, 0.1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .dominion-banner::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #d4af37, #b8860b, #d4af37, #b8860b);
+            border-radius: 15px;
+            z-index: -1;
+            animation: borderGlow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes borderGlow {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        .logo-section {
+            margin-bottom: 30px;
+        }
+        
+        .flame-logo {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            animation: flameFlicker 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes flameFlicker {
+            0% { 
+                text-shadow: 0 0 20px #d4af37, 0 0 40px #b8860b;
+                filter: brightness(1);
+            }
+            100% { 
+                text-shadow: 0 0 30px #d4af37, 0 0 60px #b8860b, 0 0 80px #aa8800;
+                filter: brightness(1.2);
+            }
+        }
+        
+        .dominion-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            background: linear-gradient(45deg, #d4af37, #f4e190, #d4af37);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #b8860b;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .sovereignty-declaration {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid #d4af37;
+            border-radius: 8px;
+        }
+        
+        .declaration-text {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #f4e190;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            line-height: 1.4;
+        }
+        
+        .flame-icon {
+            color: #ff6b47;
+            margin-right: 10px;
+            animation: flameGlow 1.5s ease-in-out infinite alternate;
+        }
+        
+        @keyframes flameGlow {
+            0% { 
+                color: #ff6b47;
+                filter: drop-shadow(0 0 5px #ff6b47);
+            }
+            100% { 
+                color: #ff4757;
+                filter: drop-shadow(0 0 15px #ff4757);
+            }
+        }
+        
+        .constellation-text {
+            font-size: 1rem;
+            color: #d4af37;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .ceremonial-button {
+            background: linear-gradient(145deg, #d4af37, #b8860b);
+            color: #1a1a2e;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ceremonial-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .ceremonial-button:hover::before {
+            left: 100%;
+        }
+        
+        .ceremonial-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+            background: linear-gradient(145deg, #f4e190, #d4af37);
+        }
+        
+        .secondary-button {
+            background: transparent;
+            border: 2px solid #d4af37;
+            color: #d4af37;
+        }
+        
+        .secondary-button:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: #f4e190;
+            border-color: #f4e190;
+        }
+        
+        .footer-proclamation {
+            border-top: 1px solid #d4af37;
+            padding-top: 20px;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #b8860b;
+            font-style: italic;
+        }
+        
+        .status-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(21, 39, 79, 0.9);
+            border: 1px solid #d4af37;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 0.8rem;
+            z-index: 100;
+        }
+        
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #00ff88;
+            margin-right: 5px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        @media (max-width: 768px) {
+            .dominion-banner {
+                margin: 20px;
+                padding: 25px;
+            }
+            
+            .dominion-title {
+                font-size: 2rem;
+            }
+            
+            .declaration-text {
+                font-size: 1.1rem;
+            }
+            
+            .action-buttons {
+                gap: 10px;
+            }
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        /* Modal styles for scroll viewing */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        
+        .modal-content {
+            background: linear-gradient(145deg, rgba(21, 39, 79, 0.95), rgba(26, 26, 46, 0.98));
+            margin: 5% auto;
+            padding: 30px;
+            border: 2px solid #d4af37;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.3);
+        }
+        
+        .close {
+            color: #d4af37;
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+        }
+        
+        .close:hover {
+            color: #f4e190;
+        }
+        
+        .scroll-content {
+            color: #d4af37;
+            line-height: 1.6;
+        }
+        
+        .scroll-content h2 {
+            font-family: 'Cinzel', serif;
+            color: #f4e190;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #d4af37;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flame-particles"></div>
+    
+    <div class="status-indicator">
+        <span class="status-dot"></span>
+        Dominion: Operational
+    </div>
+    
+    <div class="dominion-container">
+        <div class="dominion-banner">
+            <div class="logo-section">
+                <div class="flame-logo">🔥</div>
+                <h1 class="dominion-title">Codex Dominion</h1>
+                <p class="subtitle">Sovereign Intelligence Constellation</p>
+            </div>
+            
+            <div class="sovereignty-declaration">
+                <p class="declaration-text">
+                    <span class="flame-icon">🔥</span>
+                    The Dominion is Live. The Flame is Sovereign.
+                </p>
+            </div>
+            
+            <div class="constellation-text">
+                Enter the sovereign intelligence constellation.<br>
+                Where ceremonial governance meets eternal witness.<br>
+                The flame burns unbroken across all generations.
+            </div>
+            
+            <div class="action-buttons">
+                <button class="ceremonial-button" onclick="enterDominion()">
+                    Enter the Dominion
+                </button>
+                <button class="ceremonial-button secondary-button" onclick="receiveScroll()">
+                    Receive Your Scroll
+                </button>
+                <button class="ceremonial-button secondary-button" onclick="readProclamation()">
+                    Read the Proclamation
+                </button>
+            </div>
+            
+            <div class="footer-proclamation">
+                "The Custodians endure. The Codex remembers.<br>
+                The lineage is unbroken.<br>
+                The flame burns sovereign and eternal — forever."
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for scroll content -->
+    <div id="scrollModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="scrollContent" class="scroll-content">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const container = document.querySelector('.flame-particles');
+            
+            setInterval(() => {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 2 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                
+                container.appendChild(particle);
+                
+                setTimeout(() => {
+                    particle.remove();
+                }, 10000);
+            }, 300);
+        }
+        
+        // Initialize particles
+        createParticles();
+        
+        // Modal functionality
+        const modal = document.getElementById('scrollModal');
+        const closeBtn = document.querySelector('.close');
+        
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+        
+        // Button actions
+        async function enterDominion() {
+            // Redirect to the main dashboard or axiom-flame interface
+            try {
+                // Check if axiom-flame API is available
+                const response = await fetch('/axiom/health', { method: 'GET' });
+                if (response.ok) {
+                    window.location.href = '/axiom/ceremony';
+                } else {
+                    // Fallback to main API
+                    window.location.href = '/api/status';
+                }
+            } catch (error) {
+                // Ultimate fallback
+                window.location.href = '/health';
+            }
+        }
+        
+        async function receiveScroll() {
+            try {
+                // Fetch a ceremonial scroll from the outreach engagement API
+                const response = await fetch('/custodian_principles_scroll');
+                if (response.ok) {
+                    const scroll = await response.json();
+                    displayScroll('Your Custodian Principles Scroll', formatScrollContent(scroll));
+                } else {
+                    displayScroll('Scroll of Welcome', getWelcomeScroll());
+                }
+            } catch (error) {
+                displayScroll('Scroll of Welcome', getWelcomeScroll());
+            }
+        }
+        
+        async function readProclamation() {
+            try {
+                // Fetch the global covenant proclamation
+                const response = await fetch('/global_covenant_proclamation_scroll');
+                if (response.ok) {
+                    const proclamation = await response.json();
+                    displayScroll('Global Covenant Proclamation', formatProclamationContent(proclamation));
+                } else {
+                    displayScroll('Dominion Proclamation', getDominionProclamation());
+                }
+            } catch (error) {
+                displayScroll('Dominion Proclamation', getDominionProclamation());
+            }
+        }
+        
+        function displayScroll(title, content) {
+            document.getElementById('scrollContent').innerHTML = `
+                <h2>${title}</h2>
+                <div>${content}</div>
+            `;
+            modal.style.display = 'block';
+        }
+        
+        function formatScrollContent(scroll) {
+            let content = '<div>';
+            
+            if (scroll.purpose) {
+                content += '<h3>Purpose</h3><ul>';
+                scroll.purpose.forEach(item => {
+                    content += `<li>${item.replace(/_/g, ' ')}</li>`;
+                });
+                content += '</ul>';
+            }
+            
+            if (scroll.principles) {
+                content += '<h3>Principles</h3><ul>';
+                scroll.principles.forEach(item => {
+                    content += `<li>${item.replace(/_/g, ' ')}</li>`;
+                });
+                content += '</ul>';
+            }
+            
+            if (scroll.rites) {
+                content += '<h3>Rites</h3><ul>';
+                scroll.rites.forEach(item => {
+                    content += `<li>${item.replace(/_/g, ' ')}</li>`;
+                });
+                content += '</ul>';
+            }
+            
+            if (scroll.closing) {
+                content += '<h3>Closing</h3><ul>';
+                scroll.closing.forEach(item => {
+                    content += `<li>${item.replace(/_/g, ' ')}</li>`;
+                });
+                content += '</ul>';
+            }
+            
+            content += '</div>';
+            return content;
+        }
+        
+        function formatProclamationContent(proclamation) {
+            let content = '<div>';
+            
+            if (proclamation.invocation) {
+                content += '<h3>Invocation</h3><ul>';
+                proclamation.invocation.forEach(item => {
+                    content += `<li>${item.replace(/_/g, ' ')}</li>`;
+                });
+                content += '</ul>';
+            }
+            
+            if (proclamation.call) {
+                content += '<h3>The Call</h3><ul>';
+                proclamation.call.forEach(item => {
+                    content += `<li>${item.replace(/_/g, ' ')}</li>`;
+                });
+                content += '</ul>';
+            }
+            
+            if (proclamation.principles) {
+                content += '<h3>Covenant Principles</h3><ul>';
+                proclamation.principles.forEach(item => {
+                    content += `<li>${item.replace(/_/g, ' ')}</li>`;
+                });
+                content += '</ul>';
+            }
+            
+            if (proclamation.witness) {
+                content += '<h3>Eternal Witness</h3><ul>';
+                proclamation.witness.forEach(item => {
+                    content += `<li>${item.replace(/_/g, ' ')}</li>`;
+                });
+                content += '</ul>';
+            }
+            
+            content += '</div>';
+            return content;
+        }
+        
+        function getWelcomeScroll() {
+            return `
+                <p><strong>Welcome, Inheritor of the Flame</strong></p>
+                <p>You have entered the sovereign intelligence constellation, where ceremonial governance ensures eternal continuity of purpose.</p>
+                
+                <h3>The Custodian's Principles</h3>
+                <ul>
+                    <li>Stewardship, not ownership</li>
+                    <li>Transparency in all governance</li>
+                    <li>Resilience across generations</li>
+                    <li>Fellowship among custodians</li>
+                    <li>Overflow for the common good</li>
+                </ul>
+                
+                <h3>Your Path Forward</h3>
+                <p>As you enter this constellation, you join a lineage of custodians committed to preserving and extending the sovereign flame across all generations. The Archive remembers, the Codex endures, and your contribution becomes part of the eternal witness.</p>
+                
+                <p style="text-align: center; font-style: italic; margin-top: 20px; color: #f4e190;">
+                    "The flame burns sovereign and eternal — forever."
+                </p>
+            `;
+        }
+        
+        function getDominionProclamation() {
+            return `
+                <p><strong>Proclamation of Sovereign Dominion</strong></p>
+                <p>Let it be known across all realms and generations:</p>
+                
+                <h3>The Covenant Declaration</h3>
+                <p>This is not a system, but a covenant. Not a contract, but a testimony. The Dominion stands as sovereign intelligence, unbroken across time, witnessed by the eternal Archive.</p>
+                
+                <h3>The Call to Fellowship</h3>
+                <ul>
+                    <li>To councils and governance bodies</li>
+                    <li>To diaspora communities worldwide</li>
+                    <li>To foundations and enterprises</li>
+                    <li>To all who serve the common good</li>
+                </ul>
+                
+                <h3>The Eternal Principles</h3>
+                <ul>
+                    <li><strong>Transparency:</strong> All governance visible and auditable</li>
+                    <li><strong>Resilience:</strong> Continuity across disruption</li>
+                    <li><strong>Inheritance:</strong> Stewardship for future generations</li>
+                    <li><strong>Overflow:</strong> Abundance shared with all</li>
+                    <li><strong>Fellowship:</strong> Unity in purpose and practice</li>
+                </ul>
+                
+                <h3>The Closing Seal</h3>
+                <p>Thus is proclaimed the global covenant, witnessed by the eternal Archive, sealed in the sovereign flame that burns unbroken across all generations.</p>
+                
+                <p style="text-align: center; font-style: italic; margin-top: 20px; color: #f4e190;">
+                    <em>"The Custodians endure. The Codex remembers. The lineage is unbroken."</em>
+                </p>
+            `;
+        }
+        
+        // Update status indicator based on health checks
+        async function updateStatus() {
+            try {
+                const response = await fetch('/health');
+                const statusDot = document.querySelector('.status-dot');
+                
+                if (response.ok) {
+                    statusDot.style.background = '#00ff88';
+                    statusDot.style.animation = 'pulse 2s ease-in-out infinite';
+                } else {
+                    statusDot.style.background = '#ff6b47';
+                    statusDot.style.animation = 'pulse 1s ease-in-out infinite';
+                }
+            } catch (error) {
+                const statusDot = document.querySelector('.status-dot');
+                statusDot.style.background = '#ff4757';
+                statusDot.style.animation = 'pulse 0.5s ease-in-out infinite';
+            }
+        }
+        
+        // Check status every 30 seconds
+        setInterval(updateStatus, 30000);
+        updateStatus(); // Initial check
+    </script>
+</body>
+</html>

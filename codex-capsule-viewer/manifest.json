@@ -1,0 +1,154 @@
+{
+  "appName": "Codex Capsule Viewer",
+  "version": "1.0.0",
+  "description": "Sacred knowledge preserved in temporal capsules - A sovereign viewing interface for accessing ceremonial content with heir recognition and covenant replay capabilities",
+  "modules": [
+    {
+      "name": "capsule-list",
+      "description": "Grid view of available knowledge capsules with sigils and summaries",
+      "component": "CapsuleList",
+      "features": ["search", "filter", "theme-switching", "loading-states"]
+    },
+    {
+      "name": "capsule-detail",
+      "description": "Detailed view of individual capsule content and metadata",
+      "component": "CapsuleDetail", 
+      "features": ["content-display", "metadata-view", "seal-visualization"]
+    },
+    {
+      "name": "heir-recognition",
+      "description": "Access control system validating user permissions against capsule heir rights",
+      "component": "HeirRecognition",
+      "features": ["role-validation", "access-control", "privilege-display"]
+    },
+    {
+      "name": "covenant-replay",
+      "description": "Historical event replay system showing capsule covenant seal progression",
+      "component": "CovenantReplay",
+      "features": ["event-timeline", "replay-animation", "integrity-verification"]
+    }
+  ],
+  "uiThemes": [
+    {
+      "name": "dark-constellation",
+      "description": "Dark stellar theme with amber accents representing the vast codex cosmos",
+      "colors": {
+        "primary": "#f59e0b",
+        "secondary": "#fbbf24", 
+        "background": "#0f172a",
+        "surface": "#1e293b",
+        "text": "#fef3c7",
+        "accent": "#d97706"
+      },
+      "effects": ["constellation-stars", "twinkle-animation"]
+    },
+    {
+      "name": "amber-flame",
+      "description": "Warm flame theme with amber and gold tones representing ceremonial fire",
+      "colors": {
+        "primary": "#b45309",
+        "secondary": "#d97706",
+        "background": "#fef7cd", 
+        "surface": "#fde68a",
+        "text": "#1f2937",
+        "accent": "#f59e0b"
+      },
+      "effects": ["flame-gradient", "flicker-animation"]
+    }
+  ],
+  "apis": [
+    {
+      "name": "listCapsules",
+      "route": "/api/capsules",
+      "method": "GET",
+      "description": "Retrieve all available knowledge capsules with summary information",
+      "response": "List[CapsuleResponse]"
+    },
+    {
+      "name": "getCapsule", 
+      "route": "/api/capsules/{id}",
+      "method": "GET",
+      "description": "Get detailed information about a specific capsule including content and seals",
+      "parameters": {"id": "string"},
+      "response": "Capsule"
+    },
+    {
+      "name": "createCapsule",
+      "route": "/api/capsules", 
+      "method": "POST",
+      "description": "Create a new knowledge capsule with specified content and heir rights",
+      "body": "CapsuleCreate",
+      "response": "Capsule"
+    },
+    {
+      "name": "health",
+      "route": "/health",
+      "method": "GET", 
+      "description": "API health check endpoint",
+      "response": "HealthStatus"
+    }
+  ],
+  "dataModels": [
+    {
+      "name": "Capsule",
+      "description": "Complete knowledge capsule with content, rights, and seals",
+      "fields": {
+        "id": "string",
+        "title": "string", 
+        "sigil": "string",
+        "createdAt": "datetime",
+        "content": "string | null",
+        "heirRights": "List[string] | null",
+        "covenantSeals": "List[string] | null"
+      }
+    },
+    {
+      "name": "CapsuleResponse",
+      "description": "Capsule summary for list display",
+      "fields": {
+        "id": "string",
+        "title": "string",
+        "sigil": "string", 
+        "createdAt": "datetime",
+        "summary": "string | null"
+      }
+    },
+    {
+      "name": "CapsuleCreate",
+      "description": "Data required to create a new capsule",
+      "fields": {
+        "title": "string",
+        "sigil": "string",
+        "content": "string | null", 
+        "heirRights": "List[string] | null"
+      }
+    }
+  ],
+  "deployment": {
+    "backend": {
+      "framework": "FastAPI",
+      "host": "127.0.0.1",
+      "port": 8080,
+      "cors": "enabled"
+    },
+    "frontend": {
+      "framework": "React",
+      "build": "standalone-html",
+      "styling": "TailwindCSS",
+      "bundling": "babel-standalone"
+    }
+  },
+  "features": {
+    "authentication": "heir-based-roles",
+    "theming": "dynamic-switching", 
+    "accessibility": "wcag-compliant",
+    "performance": "lazy-loading",
+    "security": "covenant-seals"
+  },
+  "ceremonial": {
+    "governance": "sovereign-codex",
+    "seals": ["genesis", "authority", "honor", "ritual", "legacy"],
+    "roles": ["custodian", "flamekeeper", "council"],
+    "protocols": "covenant-replay-verification"
+  }
+}

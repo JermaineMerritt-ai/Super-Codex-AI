@@ -1,0 +1,1 @@
+{"event":{"ts":1762987013.1472397,"type":"security_event","payload":{"event_type":"failed_authentication","attempted_user":"unknown","timestamp":"2025-11-12T17:03:00Z","ip_address":"10.0.0.50","attempts_count":3,"blocked":true}}}

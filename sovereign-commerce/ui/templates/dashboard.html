@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funder Dashboard - Sovereign Commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="/static/sovereign.css" rel="stylesheet">
+</head>
+<body class="sovereign-body">
+    <!-- Sacred Navigation -->
+    <nav class="navbar navbar-expand-lg sovereign-nav">
+        <div class="container">
+            <a class="navbar-brand sovereign-brand" href="/">
+                <i class="fas fa-crown text-gold me-2"></i>
+                <span class="brand-text">Sovereign Commerce</span>
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link sovereign-link" href="/catalog">
+                    <i class="fas fa-scroll me-1"></i>Sacred Catalog
+                </a>
+                <a class="nav-link sovereign-link" href="#" onclick="logout()">
+                    <i class="fas fa-sign-out-alt me-1"></i>Exit Portal
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Header -->
+    <section class="dashboard-header py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="hero-title mb-3">
+                        <i class="fas fa-tachometer-alt text-gold me-3"></i>
+                        Funder Dashboard
+                    </h1>
+                    <p class="lead text-light opacity-75">Welcome to your sacred portal, honored funder</p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <div class="sigil-display">
+                        <div class="sigil-badge">
+                            <i class="fas fa-star text-gold"></i>
+                            <div class="sigil-text">
+                                <small class="text-muted">Your Sacred Sigil</small><br>
+                                <strong class="text-gold" id="userSigil">{{ user.sigil if user else 'SIGIL-LOADING' }}</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Stats -->
+    <section class="dashboard-stats py-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4 id="totalOrders">0</h4>
+                            <p>Sacred Orders</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4 id="totalSpent">$0.00</h4>
+                            <p>Total Tribute</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-seal"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4 id="ceremonialSeals">0</h4>
+                            <p>Ceremonial Seals</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4 id="daysSince">0</h4>
+                            <p>Days Since Joined</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Dashboard Content -->
+    <section class="dashboard-content py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Recent Orders -->
+                <div class="col-lg-8">
+                    <div class="dashboard-card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="fas fa-scroll me-2 text-gold"></i>Recent Sacred Orders
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div id="recentOrders">
+                                <div class="text-center py-4">
+                                    <div class="spinner-border text-gold" role="status">
+                                        <span class="visually-hidden">Loading orders...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile & Quick Actions -->
+                <div class="col-lg-4">
+                    <!-- Profile Card -->
+                    <div class="dashboard-card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="fas fa-user me-2 text-gold"></i>Sacred Profile
+                            </h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <div class="profile-avatar mb-3">
+                                <i class="fas fa-user-circle fa-4x text-gold"></i>
+                            </div>
+                            <h5 class="text-gold" id="userName">{{ user.full_name if user else 'Loading...' }}</h5>
+                            <p class="text-muted" id="userEmail">{{ user.email if user else '' }}</p>
+                            <div class="role-badge">
+                                <span class="badge bg-gradient-gold" id="userRole">
+                                    <i class="fas fa-crown me-1"></i>{{ user.role.title() if user else 'Funder' }}
+                                </span>
+                            </div>
+                            <small class="text-muted d-block mt-2">Joined: <span id="joinDate">{{ user.created_at.strftime('%B %Y') if user else 'Loading...' }}</span></small>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="fas fa-bolt me-2 text-gold"></i>Quick Actions
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-grid gap-2">
+                                <a href="/catalog" class="btn btn-sovereign">
+                                    <i class="fas fa-scroll me-2"></i>Browse Sacred Catalog
+                                </a>
+                                <button class="btn btn-outline-sovereign" onclick="viewAllOrders()">
+                                    <i class="fas fa-list me-2"></i>View All Orders
+                                </button>
+                                <button class="btn btn-outline-sovereign" onclick="updateProfile()">
+                                    <i class="fas fa-edit me-2"></i>Update Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Detail Modal -->
+    <div class="modal fade" id="orderDetailModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content sovereign-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-scroll me-2 text-gold"></i>Sacred Order Details
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="orderDetailBody">
+                    <!-- Order details will be loaded here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-sovereign" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-2"></i>Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- All Orders Modal -->
+    <div class="modal fade" id="allOrdersModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content sovereign-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-list me-2 text-gold"></i>All Sacred Orders
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="allOrdersBody">
+                    <!-- All orders will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/sovereign.js"></script>
+    <script src="/static/dashboard.js"></script>
+</body>
+</html>

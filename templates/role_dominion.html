@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ role_config.title }} | Codex Dominion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --role-color: {{ role_config.color_scheme }};
+            --role-glow: {{ role_config.color_scheme }}40;
+            --role-bg: {{ role_config.color_scheme }}10;
+        }
+
+        body {
+            background: radial-gradient(circle at center, 
+                #0a0a0a 0%, 
+                #1a0f2a 30%, 
+                #2d1b4d 60%, 
+                #000000 100%);
+            color: #d4af37;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .cosmic-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        .particle {
+            position: absolute;
+            background: var(--role-color);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .role-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--role-bg), rgba(212, 175, 55, 0.1));
+            border: 2px solid var(--role-color);
+            border-radius: 20px;
+            box-shadow: 0 0 40px var(--role-glow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .role-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, var(--role-glow), transparent);
+            animation: sweep 3s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes sweep {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .role-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .role-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--role-color);
+            text-shadow: 0 0 20px var(--role-glow);
+            position: relative;
+            z-index: 1;
+        }
+
+        .role-greeting {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .covenant-focus {
+            font-size: 1.2rem;
+            color: #ffd700;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--role-color);
+            position: relative;
+            z-index: 1;
+        }
+
+        .dominion-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .scroll-cadence-panel {
+            background: linear-gradient(135deg, var(--role-bg), rgba(212, 175, 55, 0.05));
+            border: 2px solid var(--role-color);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .panel-title {
+            font-size: 1.8rem;
+            color: var(--role-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .scroll-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .scroll-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--role-color);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .scroll-item:hover {
+            transform: translateX(10px);
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 5px 15px var(--role-glow);
+        }
+
+        .engine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .engine-sphere {
+            background: linear-gradient(135deg, var(--role-bg), rgba(0, 0, 0, 0.5));
+            border: 2px solid var(--role-color);
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            margin: 0 auto;
+            box-shadow: 0 0 20px var(--role-glow);
+        }
+
+        .engine-sphere:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 0 30px var(--role-color);
+        }
+
+        .special-access-panel {
+            background: linear-gradient(135deg, var(--role-bg), rgba(212, 175, 55, 0.05));
+            border: 2px solid var(--role-color);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .access-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .access-card {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid var(--role-color);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .access-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px var(--role-glow);
+            border-color: #ffd700;
+        }
+
+        .navigation-panel {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 15px;
+            border: 1px solid var(--role-color);
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background: linear-gradient(45deg, var(--role-color), #d4af37);
+            color: #000;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px var(--role-glow);
+        }
+
+        .live-feed {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid var(--role-color);
+            border-radius: 10px;
+            padding: 1rem;
+            max-width: 300px;
+            backdrop-filter: blur(10px);
+        }
+
+        .feed-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--role-color);
+        }
+
+        .feed-item {
+            font-size: 0.9rem;
+            padding: 0.5rem;
+            border-left: 2px solid var(--role-color);
+            margin-bottom: 0.5rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .dominion-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .live-feed {
+                position: relative;
+                bottom: auto;
+                right: auto;
+                margin-top: 2rem;
+            }
+        }
+
+        .role-contributor { --role-color: #4CAF50; --role-glow: #4CAF5040; --role-bg: #4CAF5010; }
+        .role-council { --role-color: #9C27B0; --role-glow: #9C27B040; --role-bg: #9C27B010; }
+        .role-heir { --role-color: #FF6B6B; --role-glow: #FF6B6B40; --role-bg: #FF6B6B10; }
+        .role-general { --role-color: #d4af37; --role-glow: #d4af3740; --role-bg: #d4af3710; }
+    </style>
+</head>
+<body class="role-{{ role_type }}">
+    <div class="cosmic-background" id="cosmicBackground"></div>
+    
+    <div class="container">
+        <div class="role-header">
+            <span class="role-icon">{{ role_config.icon }}</span>
+            <h1 class="role-title">{{ role_config.title }}</h1>
+            <p class="role-greeting">{{ role_config.greeting }}</p>
+            <div class="covenant-focus">{{ role_config.covenant_focus }}</div>
+        </div>
+
+        <div class="dominion-grid">
+            <div class="scroll-cadence-panel">
+                <h2 class="panel-title">📜 Your Scroll Cadence</h2>
+                <ul class="scroll-list">
+                    {% for scroll in role_config.scroll_cadence %}
+                    <li class="scroll-item" onclick="accessScroll('{{ scroll }}')">{{ scroll }}</li>
+                    {% endfor %}
+                </ul>
+                
+                <h3 style="margin-top: 2rem; text-align: center; color: var(--role-color);">Primary Engines</h3>
+                <div class="engine-grid">
+                    {% for engine in role_config.primary_engines %}
+                    <div class="engine-sphere" onclick="activateEngine('{{ engine }}')">{{ engine }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="special-access-panel">
+                <h2 class="panel-title">🔑 Special Access</h2>
+                <div class="access-grid">
+                    {% for access in role_config.special_access %}
+                    <div class="access-card" onclick="accessSpecial('{{ access }}')">
+                        <div>{{ access }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="navigation-panel">
+                <h2 class="panel-title">🌌 Dominion Navigation</h2>
+                <div class="nav-buttons">
+                    <a href="/dominion/engines" class="nav-btn">Six-Engine Interface</a>
+                    <a href="/dominion/ceremony" class="nav-btn">Ceremonial Dashboard</a>
+                    <a href="/dominion/command" class="nav-btn">Command Center</a>
+                    <a href="/dominion/roles" class="nav-btn">Change Role</a>
+                    <a href="/dominion" class="nav-btn">General Dominion</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="live-feed" id="liveFeed">
+        <div class="feed-title">🔴 Live {{ role_type.title() }} Feed</div>
+        <div id="feedContent">
+            <div class="feed-item">Connecting to role-specific scrolls...</div>
+        </div>
+    </div>
+
+    <script>
+        // Generate role-colored cosmic background
+        function createRoleCosmicBackground() {
+            const background = document.getElementById('cosmicBackground');
+            const roleColor = getComputedStyle(document.documentElement).getPropertyValue('--role-color');
+            
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.width = Math.random() * 4 + 2 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                background.appendChild(particle);
+            }
+        }
+
+        function accessScroll(scrollType) {
+            console.log(`Accessing scroll: ${scrollType}`);
+            showNotification(`📜 Accessing: ${scrollType}`, 'scroll');
+            
+            // Simulate scroll access
+            const scrollElement = event.target;
+            scrollElement.style.background = 'rgba(var(--role-color), 0.3)';
+            setTimeout(() => {
+                scrollElement.style.background = 'rgba(0, 0, 0, 0.3)';
+            }, 1000);
+        }
+
+        function activateEngine(engineName) {
+            console.log(`Activating engine: ${engineName}`);
+            showNotification(`🚀 Activating ${engineName} Engine`, 'engine');
+            
+            const engineElement = event.target;
+            engineElement.style.transform = 'scale(1.2) rotate(180deg)';
+            engineElement.style.boxShadow = '0 0 40px var(--role-color)';
+            
+            setTimeout(() => {
+                engineElement.style.transform = 'scale(1) rotate(0deg)';
+                engineElement.style.boxShadow = '0 0 20px var(--role-glow)';
+            }, 1500);
+        }
+
+        function accessSpecial(accessType) {
+            console.log(`Accessing special: ${accessType}`);
+            showNotification(`🔑 Accessing: ${accessType}`, 'special');
+        }
+
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.innerHTML = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 2rem;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(0, 0, 0, 0.9);
+                color: var(--role-color);
+                padding: 1rem 2rem;
+                border-radius: 25px;
+                border: 2px solid var(--role-color);
+                box-shadow: 0 0 20px var(--role-glow);
+                z-index: 1000;
+                font-weight: bold;
+                backdrop-filter: blur(10px);
+                animation: slideIn 0.5s ease, slideOut 0.5s ease 2s forwards;
+            `;
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn { 
+                    from { transform: translateX(-50%) translateY(-100%); opacity: 0; } 
+                    to { transform: translateX(-50%) translateY(0); opacity: 1; } 
+                }
+                @keyframes slideOut { 
+                    from { transform: translateX(-50%) translateY(0); opacity: 1; } 
+                    to { transform: translateX(-50%) translateY(-100%); opacity: 0; } 
+                }
+            `;
+            document.head.appendChild(style);
+            document.body.appendChild(notification);
+            
+            setTimeout(() => notification.remove(), 3000);
+        }
+
+        // Initialize live feed
+        async function initializeLiveFeed() {
+            const roleType = '{{ role_type }}';
+            try {
+                const response = await fetch(`/dominion/role/${roleType}/scrolls`);
+                const data = await response.json();
+                
+                const feedContent = document.getElementById('feedContent');
+                feedContent.innerHTML = '';
+                
+                data.recent_scrolls.forEach((scroll, index) => {
+                    setTimeout(() => {
+                        const feedItem = document.createElement('div');
+                        feedItem.className = 'feed-item';
+                        feedItem.innerHTML = `
+                            <strong>${scroll.title}</strong><br>
+                            <small>${scroll.type} • ${scroll.priority}</small>
+                        `;
+                        feedContent.appendChild(feedItem);
+                        
+                        // Auto-scroll to latest
+                        feedContent.scrollTop = feedContent.scrollHeight;
+                    }, index * 500);
+                });
+                
+            } catch (error) {
+                console.log('Live feed connection pending...');
+            }
+        }
+
+        // Update live feed every 30 seconds
+        setInterval(initializeLiveFeed, 30000);
+
+        // Initialize everything
+        createRoleCosmicBackground();
+        initializeLiveFeed();
+
+        // Store role selection
+        localStorage.setItem('codexRole', '{{ role_type }}');
+        localStorage.setItem('roleSelectedAt', Date.now());
+
+        // Add dynamic interactions
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            document.documentElement.style.setProperty('--mouse-x', mouseX);
+            document.documentElement.style.setProperty('--mouse-y', mouseY);
+        });
+
+        console.log('{{ role_config.title }} initialized');
+        console.log('Role configuration:', {{ role_config | tojson | safe }});
+    </script>
+</body>
+</html>

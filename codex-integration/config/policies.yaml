@@ -1,8 +1,0 @@
-privacy:
-  pii_minimization: true
-  redact_fields: ["email", "phone", "address"]
-approvals:
-  council_required_events: ["commons.grant.sealed", "payout.requested"]
-audit:
-  hash_chain: blake3
-  notarization_enabled: false

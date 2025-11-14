@@ -1,36 +1,30 @@
-# app/main.py
+import os
+from dotenv import load_dotenv
 from fastapi import FastAPI, Depends
-from fastapi.responses import JSONResponse
-from fastapi.requests import Request
-from fastapi.middleware.cors import CORSMiddleware
-from app.logging_setup import logger
-from app.gateway import router as axiom_router
-from app.health import router as health_router
-from app.deps import require_api_key
-from app.authz import require_roles
+from app.routes import artifacts, ceremonies, governance, identity, recall
+from app.routers import authentication
+from app.security.auth import get_current_user
 
-app = FastAPI()
+# Load environment variables
+load_dotenv()
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:3001"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-app.include_router(health_router)  # Health endpoints don't need API key
+app = FastAPI(title="AXIOM-FLAME API", version="1.0.0")
 
-# Apply role-based authorization to AXIOM routes
-# Requires users to have either "operator" or "admin" roles
-app.include_router(
-    axiom_router, 
-    dependencies=[
-        Depends(require_api_key),
-        Depends(require_roles("operator", "admin"))
-    ]
-)
+app.include_router(artifacts.router, prefix="/v1/artifacts", tags=["artifacts"])
+app.include_router(ceremonies.router, prefix="/v1/ceremonies", tags=["ceremonies"])
+app.include_router(governance.router, prefix="/v1/governance", tags=["governance"])
+app.include_router(identity.router, prefix="/v1/identity", tags=["identity"])
+app.include_router(recall.router, prefix="/v1/recall", tags=["recall"])
+app.include_router(authentication.router, prefix="/v1")
 
-@app.exception_handler(Exception)
-async def global_exception_handler(request: Request, exc: Exception):
-    logger.exception("Unhandled error: %s", exc)
-    return JSONResponse(status_code=500, content={"error": "Internal Server Error"})
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
+@app.get("/protected")
+async def protected_route(current_user = Depends(get_current_user)):
+    return {"message": f"Hello {current_user.get('user_id', 'unknown')}"}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8080, reload=True)

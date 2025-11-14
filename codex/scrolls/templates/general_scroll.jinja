@@ -1,0 +1,106 @@
+{#
+  General Scroll Template
+  For comprehensive responses to general inquiries about the Super-Codex-AI system
+  Maintains ceremonial tone while providing practical information
+#}
+
+# 📜 Super-Codex-AI General Inquiry Response
+
+**Query**: {{ query }}
+**Scroll Type**: General Knowledge  
+**Response Generated**: {{ timestamp }}
+**Confidence Score**: {{ confidence_score }}%
+
+---
+
+## 🎯 Direct Response
+
+{{ main_response }}
+
+---
+
+## 📚 Supporting Documentation
+
+{% if sources and sources|length > 0 %}
+The following sources informed this response:
+
+{% for source in sources %}
+### Source {{ loop.index }}: {{ source.metadata.get('file_name', 'Unknown Document') }}
+
+**Document Type**: {{ source.metadata.get('document_type', 'General').title() }}
+**Content Type**: {{ source.metadata.get('content_type', 'text').title() }}
+{% if source.metadata.get('file_modified') %}
+**Last Modified**: {{ source.metadata.file_modified[:10] }}
+{% endif %}
+
+**Relevant Content**:
+```
+{{ source.content[:500] }}{% if source.content|length > 500 %}...{% endif %}
+```
+
+{% if source.metadata.get('ceremonial_context') %}
+**Ceremonial Context**: {{ source.metadata.ceremonial_context.significance or 'Standard documentation' }}
+{% endif %}
+
+{% endfor %}
+{% else %}
+*No specific documentation sources were identified for this query. Response based on general system knowledge.*
+{% endif %}
+
+---
+
+## 🏛️ Ceremonial Context
+
+{% if scroll_context and scroll_context.get('ceremonial_significance') %}
+**Ceremonial Significance**: {{ scroll_context.ceremonial_significance }}
+{% endif %}
+
+{% if scroll_context and scroll_context.get('governance_level') %}
+**Governance Level**: {{ scroll_context.governance_level }}
+{% endif %}
+
+{% if scroll_context and scroll_context.get('honor_implications') %}
+**Honor System Implications**: {{ scroll_context.honor_implications }}
+{% endif %}
+
+This response upholds the principles of the Super-Codex-AI honor system, providing accurate information while maintaining the dignity and ceremonial nature of our documentation.
+
+---
+
+## 🔄 Processing Details
+
+**Query Processing Time**: {{ processing_time|round(2) if processing_time else 'N/A' }} seconds
+**Sources Analyzed**: {{ sources|length if sources else 0 }} documents
+**Vector Search Results**: {{ vector_results_count if vector_results_count else 'N/A' }}
+**RAG Pipeline Version**: {{ rag_version if rag_version else '1.0' }}
+
+{% if related_queries and related_queries|length > 0 %}
+## 🔗 Related Inquiries
+
+You might also find these topics relevant:
+
+{% for related in related_queries %}
+- {{ related }}
+{% endfor %}
+{% endif %}
+
+---
+
+## 📋 Recommendations
+
+{% if recommendations and recommendations|length > 0 %}
+{% for recommendation in recommendations %}
+- {{ recommendation }}
+{% endfor %}
+{% else %}
+- For additional details, consider exploring specific documentation sections
+- Consult the ceremonial governance framework for protocol questions  
+- Review honor system documentation for advancement pathways
+{% endif %}
+
+---
+
+**Scroll Seal**: 🔱 *Authenticated by Super-Codex-AI RAG System*  
+**Generation ID**: `{{ generation_id if generation_id else 'SCX-' + timestamp.replace(':', '').replace('-', '')[:12] }}`
+
+*"Knowledge shared in honor, wisdom preserved in ceremony, progress achieved through understanding."*

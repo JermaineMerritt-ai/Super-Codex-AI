@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="95" fill="#0a0a0a" stroke="#ff6b35" stroke-width="3"/>
+  
+  <!-- Outer Ring -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#ff6b35" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Sacred Flame - Central Element -->
+  <g id="eternal-flame" transform="translate(100,100)">
+    <!-- Base of Flame -->
+    <ellipse cx="0" cy="35" rx="15" ry="8" fill="#ff6b35" opacity="0.6"/>
+    
+    <!-- Primary Flame Body -->
+    <path d="M -12 35 Q -15 20 -8 5 Q -5 -10 0 -25 Q 5 -10 8 5 Q 15 20 12 35 Z" 
+          fill="url(#flameGradient)" stroke="#ff8c42" stroke-width="1"/>
+    
+    <!-- Inner Flame -->
+    <path d="M -8 30 Q -10 18 -5 8 Q -3 -5 0 -18 Q 3 -5 5 8 Q 10 18 8 30 Z" 
+          fill="url(#innerFlame)" opacity="0.9"/>
+    
+    <!-- Flame Core -->
+    <path d="M -4 25 Q -5 15 -2 10 Q -1 5 0 -8 Q 1 5 2 10 Q 5 15 4 25 Z" 
+          fill="#ffd700" opacity="0.8"/>
+    
+    <!-- Sacred Spark -->
+    <circle cx="0" cy="-5" r="2" fill="#ffffff" opacity="0.9"/>
+  </g>
+  
+  <!-- Radiating Energy Lines -->
+  <g id="energy-rays" transform="translate(100,100)" opacity="0.6">
+    <line x1="0" y1="-70" x2="0" y2="-85" stroke="#ff6b35" stroke-width="2" stroke-linecap="round"/>
+    <line x1="49" y1="-49" x2="60" y2="-60" stroke="#ff6b35" stroke-width="2" stroke-linecap="round"/>
+    <line x1="70" y1="0" x2="85" y2="0" stroke="#ff6b35" stroke-width="2" stroke-linecap="round"/>
+    <line x1="49" y1="49" x2="60" y2="60" stroke="#ff6b35" stroke-width="2" stroke-linecap="round"/>
+    <line x1="0" y1="70" x2="0" y2="85" stroke="#ff6b35" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-49" y1="49" x2="-60" y2="60" stroke="#ff6b35" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-70" y1="0" x2="-85" y2="0" stroke="#ff6b35" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-49" y1="-49" x2="-60" y2="-60" stroke="#ff6b35" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Sacred Geometry - Inner Pattern -->
+  <g id="sacred-geometry" transform="translate(100,100)" opacity="0.4">
+    <!-- Octagon -->
+    <path d="M -25 -10 L -10 -25 L 10 -25 L 25 -10 L 25 10 L 10 25 L -10 25 L -25 10 Z" 
+          fill="none" stroke="#ff6b35" stroke-width="1"/>
+    
+    <!-- Cross Pattern -->
+    <line x1="0" y1="-25" x2="0" y2="25" stroke="#ff6b35" stroke-width="1"/>
+    <line x1="-25" y1="0" x2="25" y2="0" stroke="#ff6b35" stroke-width="1"/>
+    
+    <!-- Diagonal Cross -->
+    <line x1="-18" y1="-18" x2="18" y2="18" stroke="#ff6b35" stroke-width="1" opacity="0.6"/>
+    <line x1="18" y1="-18" x2="-18" y2="18" stroke="#ff6b35" stroke-width="1" opacity="0.6"/>
+  </g>
+  
+  <!-- Outer Sacred Symbols -->
+  <g id="outer-symbols" opacity="0.7">
+    <!-- Alpha at top -->
+    <text x="100" y="25" text-anchor="middle" font-family="serif" font-size="14" font-weight="bold" fill="#ff6b35">Α</text>
+    
+    <!-- Omega at bottom -->
+    <text x="100" y="185" text-anchor="middle" font-family="serif" font-size="14" font-weight="bold" fill="#ff6b35">Ω</text>
+    
+    <!-- Cardinal symbols -->
+    <circle cx="25" cy="100" r="3" fill="#ff6b35" opacity="0.8"/>
+    <circle cx="175" cy="100" r="3" fill="#ff6b35" opacity="0.8"/>
+    <circle cx="100" cy="25" r="2" fill="#ff6b35" opacity="0.6"/>
+    <circle cx="100" cy="175" r="2" fill="#ff6b35" opacity="0.6"/>
+  </g>
+  
+  <!-- Charter Identifier -->
+  <text x="100" y="195" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#ff6b35" opacity="0.8">
+    SIGIL-OMEGA-CHARTER-001
+  </text>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="flameGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ff6b35"/>
+      <stop offset="30%" stop-color="#ff8c42"/>
+      <stop offset="70%" stop-color="#ffaa00"/>
+      <stop offset="100%" stop-color="#ffd700"/>
+    </linearGradient>
+    
+    <linearGradient id="innerFlame" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ff8c42"/>
+      <stop offset="50%" stop-color="#ffaa00"/>
+      <stop offset="100%" stop-color="#ffd700"/>
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Apply glow effect to flame -->
+  <style>
+    #eternal-flame {
+      filter: url(#glow);
+    }
+  </style>
+</svg>

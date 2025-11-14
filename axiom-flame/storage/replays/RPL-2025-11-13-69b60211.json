@@ -1,0 +1,151 @@
+{
+  "replay_id": "RPL-2025-11-13-69b60211",
+  "dispatch_id": "AXF-2025-11-10-0004",
+  "timestamp": "2025-11-14T03:54:04.686788Z",
+  "capsule_version": "1.0",
+  "full_context": {
+    "ledger_version": "1.0",
+    "dispatch_id": "AXF-2025-11-10-0004",
+    "timestamp": "2025-11-10T16:45:00Z",
+    "actor": "Council",
+    "realm": "Galactic:Orion-Assembly",
+    "capsule": "Wisdom Convocation",
+    "intent": "Governance.Decision.Ratify",
+    "input": {
+      "proposal_id": "PROP-2025-084",
+      "proposal_type": "realm_governance_update",
+      "voting_period": "7_days",
+      "quorum_required": true
+    },
+    "output": {
+      "summary": "Proposal ratified; governance protocols updated.",
+      "vote_result": {
+        "in_favor": 12,
+        "against": 2,
+        "abstain": 1
+      },
+      "effective_date": "2025-11-17T00:00:00Z"
+    },
+    "governance": {
+      "seal": "Eternal",
+      "audit_required": true,
+      "authority_level": "Critical"
+    },
+    "links": {
+      "replay_ref": "replays/AXF-2025-11-10-0004.json",
+      "annal_ref": "annals/2025-11.json"
+    },
+    "metadata": {
+      "priority": "High",
+      "tags": [
+        "governance",
+        "voting",
+        "council",
+        "ratification"
+      ],
+      "category": "legislative"
+    }
+  },
+  "steps": [
+    {
+      "step": "validate_actor",
+      "timestamp": "2025-11-14T03:54:04.686793Z",
+      "status": "completed",
+      "details": "Actor validation against registry for Council",
+      "duration_ms": 150
+    },
+    {
+      "step": "verify_capsule",
+      "timestamp": "2025-11-14T03:54:04.836793Z",
+      "status": "completed",
+      "details": "Capsule type and permissions verification for Council",
+      "duration_ms": 200
+    },
+    {
+      "step": "load_context",
+      "timestamp": "2025-11-14T03:54:05.036793Z",
+      "status": "completed",
+      "details": "Context and input data loading for Council",
+      "duration_ms": 100
+    },
+    {
+      "step": "execute_reasoning",
+      "timestamp": "2025-11-14T03:54:05.136793Z",
+      "status": "completed",
+      "details": "Core reasoning and logic execution for Council",
+      "duration_ms": 800
+    },
+    {
+      "step": "create_output",
+      "timestamp": "2025-11-14T03:54:05.936793Z",
+      "status": "completed",
+      "details": "Output generation and formatting for Council",
+      "duration_ms": 300
+    },
+    {
+      "step": "seal_governance",
+      "timestamp": "2025-11-14T03:54:06.236793Z",
+      "status": "completed",
+      "details": "Governance seal application for Council",
+      "duration_ms": 250
+    },
+    {
+      "step": "update_ledger",
+      "timestamp": "2025-11-14T03:54:06.486793Z",
+      "status": "completed",
+      "details": "Ledger entry creation and storage for Council",
+      "duration_ms": 400
+    },
+    {
+      "step": "generate_audit",
+      "timestamp": "2025-11-14T03:54:06.886793Z",
+      "status": "completed",
+      "details": "Audit trail and replay data generation for Council",
+      "duration_ms": 200
+    }
+  ],
+  "governance_seal": {
+    "seal_type": "Replay",
+    "seal_id": "RS-8fddad3842385ce4",
+    "authority": "ceremonial",
+    "classification": "replay_audit",
+    "created_at": "2025-11-14T03:54:04.686841",
+    "sealed_by": "Super-Codex-AI",
+    "integrity_hash": "8fddad3842385ce4"
+  },
+  "audit_trail": {
+    "audit_version": "1.0",
+    "replay_id": "RPL-2025-11-13-69b60211",
+    "original_dispatch": "AXF-2025-11-10-0004",
+    "integrity_checks": {
+      "input_hash": "68a379a8ebee335d",
+      "context_verified": true,
+      "governance_validated": true,
+      "seal_authentic": true
+    },
+    "compliance": {
+      "regulation_framework": "Super-Codex-AI Ceremonial Standard v1.0",
+      "audit_requirements": [
+        "actor_validation",
+        "seal_verification",
+        "ledger_integrity"
+      ],
+      "compliance_status": "PASSED"
+    },
+    "lineage": {
+      "parent_ceremony": "AXF-2025-11-10-0004",
+      "replay_chain": [
+        "RPL-2025-11-13-69b60211"
+      ],
+      "ancestral_depth": 1
+    }
+  },
+  "metadata": {
+    "generator": "Super-Codex-AI Replay Engine",
+    "generator_version": "1.0.0",
+    "total_steps": 8,
+    "total_duration_ms": 2400,
+    "replay_type": "ceremonial_audit",
+    "preservation_class": "eternal"
+  }
+}

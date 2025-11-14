@@ -1,34 +1,151 @@
+# Caddyfile for Super-Codex-AI Ceremonial Infrastructure
+# Sacred routing and eternal flame endpoint management
+
 {
-  email you@example.com
+    # Global options for ceremonial security
+    admin localhost:2019
+    log {
+        level INFO
+        format console {
+            time_format wall
+        }
+    }
+    
+    # Sacred flame ceremonies
+    servers :443 {
+        protocols h1 h2 h3
+    }
 }
 
-your-domain.com {
-  encode gzip
-  handle_path /api* { reverse_proxy 127.0.0.1:8010 }
-  handle_path /ws*  { reverse_proxy 127.0.0.1:8010 }
-  handle { reverse_proxy 127.0.0.1:3001 }
+# Main ceremonial domain
+codex.sacred {
+    # Sacred flame API routing
+    route /api/ceremonial/* {
+        uri strip_prefix /api/ceremonial
+        reverse_proxy localhost:8080 {
+            header_up Host {upstream_hostport}
+            header_up X-Forwarded-Proto {scheme}
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Sacred-Flame "eternal_burning"
+        }
+    }
+    
+    # Axiom flame reasoning endpoints
+    route /api/reasoning/* {
+        uri strip_prefix /api/reasoning
+        reverse_proxy localhost:5000 {
+            header_up Host {upstream_hostport}
+            header_up X-Axiom-Authority "sacred_council"
+        }
+    }
+    
+    # Dashboard and ceremonial interface
+    route /dashboard/* {
+        uri strip_prefix /dashboard
+        reverse_proxy localhost:3000 {
+            header_up Host {upstream_hostport}
+        }
+    }
+    
+    # Sacred artifacts and replays
+    route /artifacts/* {
+        root * ./storage
+        file_server browse {
+            hide .*
+        }
+        header Cache-Control "public, max-age=3600"
+        header X-Ceremonial-Blessing "eternal_preservation"
+    }
+    
+    # Health and ceremonial status
+    route /health {
+        respond "Sacred Flame Status: Eternal Burning 🔥" 200
+        header Content-Type "text/plain; charset=utf-8"
+        header X-Sacred-Seal "eternal_covenant"
+    }
+    
+    # Default ceremonial welcome
+    route {
+        root * ./frontend/dist
+        try_files {path} /index.html
+        file_server
+        header X-Ceremonial-Welcome "flame_blessed"
+    }
+    
+    # Sacred error handling
+    handle_errors {
+        @5xx expression {http.error.status_code} >= 500
+        handle @5xx {
+            respond "Sacred Flame Disruption - Council Notified 🌟" {http.error.status_code}
+            header Content-Type "text/plain; charset=utf-8"
+        }
+        
+        @4xx expression {http.error.status_code} >= 400
+        handle @4xx {
+            respond "Ceremonial Access Requires Sacred Authority 🔥" {http.error.status_code}
+            header Content-Type "text/plain; charset=utf-8"
+        }
+    }
+    
+    # Ceremonial logging
+    log {
+        output file ./logs/ceremonial_access.log {
+            roll_size 100mb
+            roll_keep 5
+            roll_keep_for 720h
+        }
+        format transform `{ts} {request>remote_ip} {request>method} {request>uri} {status} {size} "{request>headers>User-Agent[0]}" {duration}` {
+            time_format "2006-01-02T15:04:05Z07:00"
+        }
+    }
 }
 
-# Previous Docker configuration (for reference)
-# CodexDominion.app {
-#   encode gzip
-#   
-#   # API and WebSocket routes to backend
-#   handle_path /api* {
-#     reverse_proxy backend:8000
-#   }
-#   handle_path /ws* {
-#     reverse_proxy backend:8000
-#   }
-#   
-#   # Axiom flame ceremonial API
-#   handle_path /axiom* {
-#     reverse_proxy axiom-flame:5000
-#   }
-#   
-#   # Frontend - try static files first, fallback to SPA
-#   handle {
-#     try_files {path} /index.html
-#     reverse_proxy frontend:3000
-#   }
-# }
+# Sacred development environment
+localhost:8443 {
+    # Enable HTTPS for ceremonial development
+    tls internal
+    
+    # Same routing as production but with dev headers
+    route /api/* {
+        reverse_proxy localhost:8080 {
+            header_up X-Development-Flame "dev_burning"
+        }
+    }
+    
+    route {
+        root * ./frontend/dist
+        file_server
+        header X-Dev-Ceremony "development_blessing"
+    }
+}
+
+# Ceremonial metrics and monitoring
+metrics.codex.sacred {
+    route /metrics {
+        reverse_proxy localhost:9090 {
+            header_up X-Ceremonial-Metrics "sacred_monitoring"
+        }
+    }
+    
+    route /health {
+        respond "Ceremonial Metrics: Active 📊" 200
+    }
+}
+
+# Sacred ceremony broadcast endpoint  
+broadcast.codex.sacred {
+    route /broadcast/* {
+        reverse_proxy localhost:6000 {
+            header_up X-Broadcast-Authority "ceremonial_council"
+        }
+    }
+    
+    route /ceremony/status {
+        respond "Broadcast Flame: Eternal 📡" 200
+    }
+}
+
+# Fallback for any unmatched ceremonial requests
+:80 {
+    redir https://codex.sacred{uri} permanent
+}

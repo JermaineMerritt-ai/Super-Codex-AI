@@ -1,0 +1,117 @@
+{
+  "artifactId": "codex-build-0001",
+  "title": "Sovereign Commerce — Enhanced Diaspora Funders Platform",
+  "version": "2.0.0",
+  "type": "app",
+  "description": "A comprehensive ceremonial commerce platform designed for diaspora funders with enhanced cultural recognition, community support, and sovereign dignity",
+  "engines": ["AXIOM", "RAG", "SIGIL", "ORACLE", "LANTERN", "FLAME"],
+  "routes": {
+    "register": "/ledger/builds",
+    "dispatch": "/dispatch/global",
+    "replay": "/replay/builds"
+  },
+  "audience": ["heirs", "councils", "custodians", "diaspora-funders", "community-contributors", "cultural-curators"],
+  "files": {
+    "spec": "spec.json",
+    "ui": "ui/",
+    "backend": "services/",
+    "schema": "db/",
+    "ops": "ops/",
+    "enhanced": "services/enhanced/"
+  },
+  "signing": {
+    "sigil": "SIGIL-BUILD-0001-ENHANCED",
+    "signedBy": "Custodian",
+    "timestamp": "2025-01-13T18:00:00Z",
+    "authority": "Council-Prime"
+  },
+  "platform": {
+    "framework": "FastAPI with Enhanced Modules",
+    "authentication": "JWT with Sigil Generation and Role-Based Access",
+    "database": "SQLite with SQLAlchemy and Enhanced Tables",
+    "frontend": "Bootstrap 5 with Sovereign Styling and Cultural Themes",
+    "roles": ["funder", "flamekeeper", "custodian", "contributor"],
+    "enhanced_features": ["cultural_catalog", "ceremonial_checkout", "diaspora_dashboard", "recognition_system"]
+  },
+  "features": {
+    "authentication": "Multi-tier role-based access control with contributor profiles",
+    "catalog": "Enhanced sacred offerings with cultural significance, diaspora collections, and community reviews",
+    "checkout": "Advanced ceremonial purchase flow with community fund contributions and cultural ceremonies",
+    "dashboard": "Comprehensive funder portal with cultural insights, community connections, and personalized recommendations",
+    "recognition": "Complete contributor honor system with milestones, endorsements, and ceremonial awards",
+    "styling": "Mythic design with sovereign color palette and cultural heritage themes",
+    "community": "Diaspora-focused community building, fund management, and cultural preservation"
+  },
+  "endpoints": {
+    "/": "Landing page with sovereign welcome and diaspora recognition",
+    "/catalog": "Enhanced product catalog with cultural collections",
+    "/dashboard": "Comprehensive authenticated funder dashboard",
+    "/auth/register": "User registration with role and contributor profile assignment",
+    "/auth/login": "Authentication with JWT tokens and sigil generation",
+    "/api/products": "Enhanced product management API with cultural attributes",
+    "/api/orders": "Advanced order management API with ceremonial features",
+    "/api/enhanced/catalog/*": "Enhanced product catalog APIs with cultural context and diaspora collections",
+    "/api/enhanced/checkout/*": "Advanced checkout system with community funds and ceremonial elements",
+    "/api/enhanced/dashboard/*": "Comprehensive dashboard APIs with insights and recommendations",
+    "/api/enhanced/recognition/*": "Complete contributor recognition system APIs",
+    "/api/enhanced/status": "Enhanced system status monitoring",
+    "/api/enhanced/initialize": "Initialize enhanced features with sample data",
+    "/health": "System health monitoring",
+    "/ledger/builds": "AXIOM-FLAME ceremonial build registration and listing",
+    "/dispatch/global": "Global build dispatch via AXIOM-FLAME",
+    "/replay/builds": "Build replay and audit via AXIOM-FLAME",
+    "/register/self": "Self-registration of platform build"
+  },
+  "enhanced_modules": {
+    "product_catalog": {
+      "features": ["cultural_categories", "diaspora_collections", "product_attributes", "community_reviews"],
+      "cultural_focus": "Products organized by diaspora regions and cultural significance",
+      "endpoints": ["/api/enhanced/catalog/categories", "/api/enhanced/catalog/collections", "/api/enhanced/catalog/enhanced"]
+    },
+    "checkout_system": {
+      "features": ["ceremonial_payment_methods", "community_fund_contributions", "checkout_sessions", "order_ceremonies"],
+      "cultural_focus": "Payment methods with cultural context and community support integration",
+      "endpoints": ["/api/enhanced/checkout/sessions", "/api/enhanced/checkout/community-funds", "/api/enhanced/checkout/payment-methods"]
+    },
+    "funder_dashboard": {
+      "features": ["cultural_insights", "community_connections", "personalized_recommendations", "activity_tracking", "milestone_tracking"],
+      "cultural_focus": "Dashboard tailored for diaspora funder experience with community analytics",
+      "endpoints": ["/api/enhanced/dashboard/overview", "/api/enhanced/dashboard/cultural-insights", "/api/enhanced/dashboard/community"]
+    },
+    "contributor_recognition": {
+      "features": ["contributor_profiles", "contribution_tracking", "community_honors", "endorsement_system", "leaderboard"],
+      "cultural_focus": "Recognition system celebrating diaspora community contributions and cultural preservation",
+      "endpoints": ["/api/enhanced/recognition/profiles", "/api/enhanced/recognition/contributions", "/api/enhanced/recognition/honors"]
+    }
+  },
+  "governance": {
+    "access_control": "Enhanced role-based permissions for funders, flamekeepers, custodians, and contributors",
+    "audit_trail": "Complete transaction and contribution logging with ceremonial seals",
+    "sigil_system": "Unique identification for authenticated users and contributors",
+    "sovereignty": "Enhanced recognition system for diaspora community members with cultural honors",
+    "axiom_flame_integration": "Ceremonial build management with AXIOM-FLAME for enhanced features",
+    "build_ledger": "Immutable build registration and dispatch tracking for platform enhancements",
+    "replay_system": "Complete audit trail for all build and contribution operations",
+    "cultural_preservation": "Systems for maintaining and celebrating diaspora cultural heritage",
+    "community_support": "Infrastructure for mutual aid and community fund management"
+  },
+  "axiom_flame": {
+    "endpoints": {
+      "reason": "Ceremonial reasoning for build and recognition operations",
+      "replay": "Build and contribution audit and replay functionality", 
+      "ledger": "Enhanced build registration ledger access"
+    },
+    "governance": {
+      "actor_validation": "Required for all ceremonial operations including recognition ceremonies",
+      "realm_verification": "Sovereign-Commerce realm context with enhanced features",
+      "capsule_authorization": "Build-specific and feature-specific capsule permissions"
+    }
+  },
+  "cultural_framework": {
+    "diaspora_regions": ["African Diaspora", "Latin American Diaspora", "Asian Diaspora", "Caribbean Diaspora", "Middle Eastern Diaspora", "Digital Nomad"],
+    "contribution_categories": ["financial_support", "cultural_preservation", "educational_advancement", "community_building", "mentorship_guidance", "advocacy_leadership", "innovation_development", "environmental_stewardship"],
+    "recognition_levels": ["emerging_contributor", "established_contributor", "distinguished_contributor", "legendary_contributor", "ancestral_honor"],
+    "payment_types": ["ceremonial", "traditional", "crypto", "solidarity"],
+    "cultural_significance_tracking": "Complete system for tracking and honoring cultural contributions and heritage preservation"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "continuum-map-adoption-v1",
+  "title": "Continuum Map of Adoption",
+  "type": "Schema",
+  "version": "1.0.0",
+  "language": "en",
+  "status": "Draft",
+  "metadata": {
+    "category": "Ceremonial",
+    "audience": ["Councils", "Enterprises", "Institutions"],
+    "tags": ["governance", "ceremony", "lineage", "continuum", "replay"],
+    "created_at": "2025-11-14T00:00:00Z",
+    "created_by": "Companion"
+  },
+  "cycles": {
+    "daily": {
+      "anthem": "Recited in councils' daily assemblies, affirming Codex as living law.",
+      "banner": "Displayed on governance dashboards and cultural spaces.",
+      "seal": "Verified in daily audits, ensuring integrity of every transaction.",
+      "charter": "Referenced in daily decisions, binding every act to eternal replay."
+    },
+    "seasonal": {
+      "anthem": "Sung at seasonal ceremonies (harvest, fiscal close, cultural festivals).",
+      "banner": "Raised in public gatherings, marking continuity of lineage.",
+      "seal": "Re-signed by councils at seasonal quorum, reaffirming authenticity.",
+      "charter": "Read aloud as covenant, reminding participants of custodianship."
+    },
+    "epochal": {
+      "anthem": "Archived in replay capsules, replayed at generational transitions.",
+      "banner": "Woven into heritage scrolls, passed to heirs as crest of governance.",
+      "seal": "Preserved in lineage archives, signatures immortalized for descendants.",
+      "charter": "Entrusted to new custodians, binding them to eternal replay law."
+    },
+    "millennial": {
+      "anthem": "Becomes cultural myth, sung across civilizations as eternal flame.",
+      "banner": "Crowned as universal crest, symbolizing Codex's supreme permanence.",
+      "seal": "Immutable in Primordialis Registry, proof across millennia.",
+      "charter": "Supreme covenant text, law of eternal replay binding all councils forever."
+    }
+  },
+  "seals": {
+    "checksum_sha256": null,
+    "signatories": [],
+    "sealed_at": null
+  }
+}

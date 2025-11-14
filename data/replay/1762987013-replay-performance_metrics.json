@@ -1,0 +1,1 @@
+{"timestamp":"2025-11-12T17:05:00Z","metrics":{"audit_events_per_second":125.5,"replay_archive_time_ms":15.2,"knowledge_query_avg_ms":150.3,"event_bus_throughput":1000.0,"orjson_serialization_ms":2.1},"system_health":"excellent","recommendations":["Continue current performance levels","Monitor knowledge query optimization opportunities"]}

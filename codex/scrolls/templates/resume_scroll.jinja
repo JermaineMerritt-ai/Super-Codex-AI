@@ -1,0 +1,210 @@
+{#
+  Resume Scroll Template
+  For career development and resume-building assistance
+  Professional tone with actionable guidance
+#}
+
+# 💼 Professional Development Scroll
+
+**Career Inquiry**: {{ query }}
+**Scroll Type**: Resume & Career Development  
+**Generated**: {{ timestamp }}
+**Professional Guidance Level**: {{ guidance_level or 'Comprehensive' }}
+
+---
+
+## 🎯 Career Development Response
+
+{{ main_response }}
+
+---
+
+## 📈 Professional Background Analysis
+
+{% if career_data and career_data|length > 0 %}
+### Career Highlights Identified
+
+{% for career_item in career_data %}
+#### {{ career_item.get('title', 'Professional Experience') }}
+
+{% if career_item.get('organization') %}
+**Organization**: {{ career_item.organization }}
+{% endif %}
+{% if career_item.get('duration') %}
+**Duration**: {{ career_item.duration }}
+{% endif %}
+{% if career_item.get('responsibilities') %}
+**Key Responsibilities**:
+{% for responsibility in career_item.responsibilities %}
+- {{ responsibility }}
+{% endfor %}
+{% endif %}
+{% if career_item.get('achievements') %}
+**Notable Achievements**:
+{% for achievement in career_item.achievements %}
+- {{ achievement }}
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+{% else %}
+*Career background analysis will be enhanced as more professional documentation becomes available.*
+{% endif %}
+
+---
+
+## 🏆 Achievement Portfolio
+
+{% if achievements and achievements|length > 0 %}
+{% for achievement in achievements %}
+### {{ achievement.get('category', 'Professional Achievement') }}
+
+**Title**: {{ achievement.get('title', 'Achievement') }}
+{% if achievement.get('date') %}
+**Date**: {{ achievement.date }}
+{% endif %}
+{% if achievement.get('description') %}
+**Description**: {{ achievement.description }}
+{% endif %}
+{% if achievement.get('impact') %}
+**Impact/Value**: {{ achievement.impact }}
+{% endif %}
+{% if achievement.get('skills_demonstrated') %}
+**Skills Demonstrated**: {{ achievement.skills_demonstrated|join(', ') }}
+{% endif %}
+
+{% endfor %}
+{% else %}
+### Honor System Achievements
+
+*Achievement documentation from the Super-Codex-AI honor system:*
+
+{% if sources %}
+{% for source in sources %}
+{% if 'honor' in source.metadata.get('content_type', '').lower() or 'achievement' in source.content.lower() %}
+- **{{ source.metadata.get('file_name', 'Honor Record') }}**: {{ source.content[:200] }}...
+{% endif %}
+{% endfor %}
+{% endif %}
+
+{% endif %}
+
+---
+
+## 📝 Resume Enhancement Recommendations
+
+{% if resume_recommendations and resume_recommendations|length > 0 %}
+{% for section, recommendations in resume_recommendations.items() %}
+### {{ section.replace('_', ' ').title() }}
+
+{% for rec in recommendations %}
+- {{ rec }}
+{% endfor %}
+
+{% endfor %}
+{% else %}
+### Professional Summary Optimization
+- Craft a compelling professional summary that highlights unique value proposition
+- Emphasize quantifiable achievements and measurable impact
+- Align language with target industry and role requirements
+
+### Skills and Competencies
+- Identify and prominently feature both technical and soft skills
+- Group related skills into logical categories
+- Include proficiency levels where relevant
+
+### Experience Presentation
+- Use action verbs to describe responsibilities and achievements
+- Quantify accomplishments with specific metrics and outcomes
+- Focus on results rather than just duties
+
+### Professional Development
+- Highlight continuous learning and skill development
+- Include relevant certifications, training, and honors
+- Show progression and growth trajectory
+{% endif %}
+
+---
+
+## 🎨 Industry-Specific Guidance
+
+{% if industry_focus %}
+### {{ industry_focus.title() }} Industry Focus
+
+{% if industry_guidance and industry_guidance|length > 0 %}
+{% for guidance in industry_guidance %}
+- {{ guidance }}
+{% endfor %}
+{% else %}
+- Research current industry trends and incorporate relevant keywords
+- Emphasize technologies, methodologies, and practices valued in this field
+- Highlight cross-functional collaboration and industry-specific achievements
+- Consider industry-standard formatting and presentation preferences
+{% endif %}
+{% else %}
+### General Professional Standards
+
+- Maintain clean, professional formatting with consistent typography
+- Use industry-appropriate language and terminology
+- Ensure ATS (Applicant Tracking System) compatibility
+- Tailor content for specific roles and organizations
+{% endif %}
+
+---
+
+## 📊 Supporting Documentation
+
+{% if sources and sources|length > 0 %}
+**Professional Background Sources**:
+
+{% for source in sources %}
+- **{{ source.metadata.get('file_name', 'Document') }}**: {{ source.metadata.get('document_type', 'Unknown').title() }} ({{ source.content|length }} chars)
+{% endfor %}
+{% endif %}
+
+**Professional Development Resources**:
+- Super-Codex-AI Achievement Framework
+- Honor System Recognition Protocols
+- Governance Excellence Standards
+
+---
+
+## 🔄 Next Steps
+
+{% if next_steps and next_steps|length > 0 %}
+{% for step in next_steps %}
+{{ loop.index }}. {{ step }}
+{% endfor %}
+{% else %}
+1. **Review and Update**: Regularly update resume content with new achievements
+2. **Tailor for Opportunities**: Customize resume for specific roles and companies  
+3. **Seek Feedback**: Get professional feedback on content and presentation
+4. **Track Performance**: Monitor application success rates and adjust strategy
+5. **Build Portfolio**: Develop supporting materials (portfolio, references, cover letters)
+{% endif %}
+
+---
+
+## 💡 Professional Development Insights
+
+{% if insights and insights|length > 0 %}
+{% for insight in insights %}
+**{{ insight.category }}**: {{ insight.message }}
+{% endfor %}
+{% else %}
+**Career Advancement**: Focus on building both technical expertise and leadership capabilities
+
+**Network Building**: Leverage professional connections and industry associations for growth opportunities
+
+**Continuous Learning**: Stay current with industry developments and emerging technologies
+
+**Personal Branding**: Develop a consistent professional identity across all career materials
+{% endif %}
+
+---
+
+**Professional Scroll Seal**: 💼 *Certified by Super-Codex-AI Career Development System*  
+**Guidance ID**: `{{ guidance_id if guidance_id else 'PDS-' + timestamp.replace(':', '').replace('-', '')[:12] }}`
+**Processing Time**: {{ processing_time|round(2) if processing_time else 'N/A' }} seconds
+
+*"Excellence in service, advancement through merit, success achieved with honor."*

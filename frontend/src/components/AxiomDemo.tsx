@@ -1,149 +1,59 @@
-// src/components/AxiomDemo.tsx
-import React, { useState } from 'react';
-import { apiClient } from '../api';
-import { notify } from '../lib/notify';
+import React, { useState, useEffect } from 'react';
 
 interface AxiomDemoProps {
-  token?: string;
+  className?: string;
 }
 
-export const AxiomDemo: React.FC<AxiomDemoProps> = ({ token }) => {
-  const [response, setResponse] = useState<any>(null);
+export function AxiomDemo({ className }: AxiomDemoProps) {
+  const [health, setHealth] = useState<any>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
-  const handleRequest = async (operation: string, payload?: any) => {
+  const checkHealth = async () => {
     setLoading(true);
-    setError(null);
-    setResponse(null);
-
     try {
-      let result;
-      
-      switch (operation) {
-        case 'health':
-          result = await apiClient.axiom.health(token);
-          break;
-        case 'reason':
-          result = await apiClient.axiom.reason({
-            actor: 'FrontendUser',
-            realm: 'PL-001',
-            capsule: 'Frontend Test Crown',
-            intent: 'Frontend.Test'
-          }, token);
-          break;
-        case 'grant':
-          result = await apiClient.axiom.grant({
-            recipient: 'FrontendTester',
-            honor: 'API Integration Mastery',
-            authority: 'Frontend-Council'
-          }, token);
-          break;
-        case 'ceremonies':
-          result = await apiClient.axiom.ceremonies(token);
-          break;
-        case 'broadcast':
-          result = await apiClient.axiom.broadcast({
-            message: 'Frontend successfully connected to unified API',
-            realm: 'PL-001',
-            priority: 'medium'
-          }, token);
-          break;
-        default:
-          result = await apiClient.axiom.execute(operation, payload, token);
-      }
-      
-      setResponse(result);
-      
-      // Success notification
-      notify.success(`AXIOM ${operation} operation completed`);
-    } catch (err: any) {
-      const errorMessage = err instanceof Error ? err.message : 'Unknown error occurred';
-      setError(errorMessage);
-      
-      // Error notification - your exact pattern!
-      notify.error(`AXIOM ${operation} failed: ${err.message ?? err}`);
+      const response = await fetch('/health/');
+      const healthData = await response.json();
+      setHealth(healthData);
+      console.log('✅ Axiom health check successful');
+    } catch (error: any) {
+      console.error('❌ Health check failed:', error.message);
     } finally {
       setLoading(false);
     }
   };
 
-  return (
-    <div style={{ padding: '20px', maxWidth: '800px' }}>
-      <h2>AXIOM Unified API Demo</h2>
-      <p>All requests go through <code>/api/axiom/execute</code> - no direct Flask calls</p>
-      
-      <div style={{ marginBottom: '20px' }}>
-        <button 
-          onClick={() => handleRequest('health')}
-          disabled={loading}
-          style={{ margin: '5px', padding: '10px' }}
-        >
-          Health Check
-        </button>
-        
-        <button 
-          onClick={() => handleRequest('reason')}
-          disabled={loading}
-          style={{ margin: '5px', padding: '10px' }}
-        >
-          Ceremonial Reasoning
-        </button>
-        
-        <button 
-          onClick={() => handleRequest('grant')}
-          disabled={loading}
-          style={{ margin: '5px', padding: '10px' }}
-        >
-          Grant Honor
-        </button>
-        
-        <button 
-          onClick={() => handleRequest('ceremonies')}
-          disabled={loading}
-          style={{ margin: '5px', padding: '10px' }}
-        >
-          List Ceremonies
-        </button>
-        
-        <button 
-          onClick={() => handleRequest('broadcast')}
-          disabled={loading}
-          style={{ margin: '5px', padding: '10px' }}
-        >
-          Broadcast Message
-        </button>
-      </div>
+  useEffect(() => {
+    checkHealth();
+  }, []);
 
-      {loading && <div style={{ color: 'blue' }}>Loading...</div>}
-      
-      {error && (
-        <div style={{ color: 'red', backgroundColor: '#ffebee', padding: '10px', marginBottom: '10px' }}>
-          Error: {error}
+  return (
+    <div className={`space-y-4 ${className}`}>
+      <div className="border rounded-lg p-4">
+        <div className="mb-4">
+          <h2 className="text-xl font-bold">🔥 Axiom Flame Demo</h2>
+          <p className="text-gray-600">
+            Demonstrating the Super-Codex-AI ceremonial system
+          </p>
         </div>
-      )}
-      
-      {response && (
-        <div>
-          <h3>Response:</h3>
-          <pre style={{ 
-            backgroundColor: '#f5f5f5', 
-            padding: '10px', 
-            border: '1px solid #ddd',
-            overflow: 'auto',
-            fontSize: '12px'
-          }}>
-            {JSON.stringify(response, null, 2)}
-          </pre>
+        <div className="space-y-4">
+          <button
+            onClick={checkHealth}
+            disabled={loading}
+            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+          >
+            {loading ? 'Checking...' : 'Check System Health'}
+          </button>
+          
+          {health && (
+            <div className="p-4 bg-gray-100 rounded">
+              <h3 className="font-semibold mb-2">System Status</h3>
+              <pre className="text-sm">
+                {JSON.stringify(health, null, 2)}
+              </pre>
+            </div>
+          )}
         </div>
-      )}
-      
-      <div style={{ marginTop: '20px', fontSize: '12px', color: '#666' }}>
-        <strong>Configuration:</strong><br/>
-        API Base: {process.env.REACT_APP_API_BASE || '/api'}<br/>
-        Environment: {process.env.NODE_ENV}<br/>
-        All AXIOM operations route through: <code>/api/axiom/execute</code>
       </div>
     </div>
   );
-};
+}

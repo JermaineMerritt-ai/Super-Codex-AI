@@ -1,0 +1,45 @@
+{
+  "check_interval": 30,
+  "services": {
+    "super_codex_api": {
+      "command": [
+        "python",
+        "-m",
+        "uvicorn",
+        "simple_server:app"
+      ],
+      "working_dir": ".",
+      "port": 8080,
+      "expected_memory_mb": 200,
+      "restart_on_failure": true,
+      "max_restarts": 3
+    },
+    "axiom_flame_api": {
+      "command": [
+        "python",
+        "app.py"
+      ],
+      "working_dir": "axiom-flame/packages/api",
+      "port": 8095,
+      "expected_memory_mb": 100,
+      "restart_on_failure": true,
+      "max_restarts": 5
+    },
+    "ceremonial_interface": {
+      "command": [
+        "python",
+        "ceremonial_interface.py"
+      ],
+      "working_dir": ".",
+      "port": 8090,
+      "expected_memory_mb": 150,
+      "restart_on_failure": true,
+      "max_restarts": 3
+    }
+  },
+  "alerts": {
+    "high_memory_threshold": 80,
+    "high_cpu_threshold": 85,
+    "max_downtime_minutes": 5
+  }
+}

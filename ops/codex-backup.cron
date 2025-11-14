@@ -1,0 +1,34 @@
+# Codex Backup and Maintenance Cron Jobs
+# This file should be installed to /etc/cron.d/codex-backup on the production system
+# 
+# Cron format: minute hour day month day-of-week command
+# 
+# Schedule breakdown:
+# - 02:00 Daily: PostgreSQL database backup
+# - 02:15 Daily: Generate replay capsules for ceremonial archives
+# - 02:30 Daily: Generate checksums for replay verification
+#
+# Prerequisites:
+# - Docker container 'codex_postgres' running PostgreSQL
+# - /backups directory exists with proper permissions
+# - Python environment configured for Super-Codex-AI
+# - /opt/Super-Codex-AI directory structure in place
+# - storage/replays directory exists
+
+# Daily PostgreSQL backup at 2:00 AM
+# Dumps the codexdb database to a timestamped SQL file
+0 2 * * * docker exec codex_postgres pg_dump -U codex codexdb > /backups/codexdb_$(date +\%F).sql
+
+# Daily replay capsule generation at 2:15 AM
+# Processes ceremonial data into replay archives
+15 2 * * * /usr/bin/python /opt/Super-Codex-AI/scripts/generate_replay_capsule.py
+
+# Daily checksum generation at 2:30 AM
+# Creates SHA256 checksums for all replay archives for integrity verification
+30 2 * * * sha256sum /opt/Super-Codex-AI/storage/replays/*.zip > /opt/Super-Codex-AI/storage/replays/checksums.txt
+
+# Optional: Weekly cleanup of old backups (uncomment if needed)
+# 0 3 * * 0 find /backups -name "codexdb_*.sql" -mtime +30 -delete
+
+# Optional: Monthly replay archive cleanup (uncomment if needed) 
+# 0 4 1 * * find /opt/Super-Codex-AI/storage/replays -name "*.zip" -mtime +90 -delete

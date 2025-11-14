@@ -1,0 +1,1 @@
+{"event":{"ts":1762987137.541761,"type":"knowledge_ingestion_complete","payload":{"index_path":"data\\vectors\\index.faiss","ingestion_audit_id":"unknown","vector_file":"index.faiss"}}}

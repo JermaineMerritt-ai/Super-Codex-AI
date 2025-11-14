@@ -1,0 +1,1783 @@
+{
+  "diagnostic_summary": {
+    "total_issues": 239,
+    "total_fixes": 0,
+    "python_files_scanned": 293,
+    "missing_imports": 84,
+    "config_issues": 2,
+    "broken_scripts": 0
+  },
+  "issues": [
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\avatar_guide_system.py",
+      "issue": "Missing module: treasury",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\crypto_utils.py",
+      "issue": "Missing module: nacl",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sacred_document_archive.py",
+      "issue": "Missing module: asyncpg",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sacred_document_archive.py",
+      "issue": "Missing module: treasury",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\server.py",
+      "issue": "Missing module: engines.rag",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\server.py",
+      "issue": "Missing module: core.audit",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\server.py",
+      "issue": "Missing module: core.replay",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\server.py",
+      "issue": "Missing module: scrolls.capsule",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\test_codex_flame_simple.py",
+      "issue": "Missing module: treasury",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\test_codex_flame_simple.py",
+      "issue": "Missing module: flamekeepers_scroll",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\test_codex_flame_simple.py",
+      "issue": "Missing module: treasury",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\test_codex_flame_simple.py",
+      "issue": "Missing module: flamekeepers_scroll",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\test_imports.py",
+      "issue": "Missing module: treasury",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\test_imports.py",
+      "issue": "Missing module: flamekeepers_scroll",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\test_sigil_direct.py",
+      "issue": "Missing module: sigil",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\app\\middleware\\__init__.py",
+      "issue": "Missing module: governance",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\app\\middleware\\__init__.py",
+      "issue": "Missing module: audit",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\axiom-flame\\packages\\api\\app.py",
+      "issue": "Missing module: routes",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\codex_restore_api.py",
+      "issue": "Missing module: services.dominion",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\codex_restore_api.py",
+      "issue": "Missing module: api",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\codex_restore_api.py",
+      "issue": "Missing module: api",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\codex_restore_api.py",
+      "issue": "Missing module: capsule_api",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\codex_restore_api.py",
+      "issue": "Missing module: gateway",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\main.py",
+      "issue": "Missing module: api.webhooks",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\main.py",
+      "issue": "Missing module: api.upload",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\main.py",
+      "issue": "Missing module: app.gateway",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\main.py",
+      "issue": "Missing module: app.auth_routes",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\main.py",
+      "issue": "Missing module: app.health",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\main.py",
+      "issue": "Missing module: capsule_api",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\main.py",
+      "issue": "Missing module: services.dominion.outreach_engagement",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\api\\webhooks.py",
+      "issue": "Missing module: services.token_service",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\api\\__init__.py",
+      "issue": "Missing module: webhooks",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\api\\__init__.py",
+      "issue": "Missing module: upload",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\app\\auth_routes.py",
+      "issue": "Missing module: auth",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\middleware\\__init__.py",
+      "issue": "Missing module: audit",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\models\\__init__.py",
+      "issue": "Missing module: user",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\services\\auth.py",
+      "issue": "Missing module: models.user",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\services\\ledger.py",
+      "issue": "Missing module: models.token",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\services\\token_service.py",
+      "issue": "Missing module: ledger",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\services\\token_service.py",
+      "issue": "Missing module: models.token",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\services\\dominion\\protocol_registry.py",
+      "issue": "Missing module: base_protocol",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\services\\dominion\\upload_handler.py",
+      "issue": "Missing module: protocol_registry",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\services\\dominion\\upload_handler.py",
+      "issue": "Missing module: base_protocol",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\tasks\\purge.py",
+      "issue": "Missing module: models.token",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\tests\\conftest.py",
+      "issue": "Missing module: tasks.purge",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\tests\\conftest.py",
+      "issue": "Missing module: codex_project.backend.models.token",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\tests\\test_purge_file.py",
+      "issue": "Missing module: codex_project.backend.tasks.purge",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\backend\\tests\\test_purge_with_fixture.py",
+      "issue": "Missing module: codex_project.backend.tasks.purge",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\capsule_video\\__init__.py",
+      "issue": "Missing module: scene",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\capsule_video\\__init__.py",
+      "issue": "Missing module: render",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\capsule_video\\__init__.py",
+      "issue": "Missing module: publish",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\server.py",
+      "issue": "Missing module: core.bus",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\server.py",
+      "issue": "Missing module: core.audit",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\server.py",
+      "issue": "Missing module: core.replay",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\server.py",
+      "issue": "Missing module: engines.flame",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\server.py",
+      "issue": "Missing module: scrolls.capsule",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\server.py",
+      "issue": "Missing module: scrolls.capsule",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\server.py",
+      "issue": "Missing module: engines.flame",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\core\\events.py",
+      "issue": "Missing module: bus",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\core\\__init__.py",
+      "issue": "Missing module: bus",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\core\\__init__.py",
+      "issue": "Missing module: audit",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\core\\__init__.py",
+      "issue": "Missing module: replay",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\core\\__init__.py",
+      "issue": "Missing module: identity",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\core\\__init__.py",
+      "issue": "Missing module: utils",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engine\\app.py",
+      "issue": "Missing module: ledger_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engine\\app.py",
+      "issue": "Missing module: artifact_dispatch_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engine\\app.py",
+      "issue": "Missing module: rag",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engine\\app.py",
+      "issue": "Missing module: audit",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engine\\app.py",
+      "issue": "Missing module: replay",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engine\\app.py",
+      "issue": "Missing module: models.prompts",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engine\\audit.py",
+      "issue": "Missing module: ledger_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engine\\ingest.py",
+      "issue": "Missing module: rag",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engine\\replay.py",
+      "issue": "Missing module: rag",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engines\\axiom.py",
+      "issue": "Missing module: core.audit",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engines\\axiom.py",
+      "issue": "Missing module: core.replay",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engines\\__init__.py",
+      "issue": "Missing module: axiom",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engines\\__init__.py",
+      "issue": "Missing module: rag",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engines\\__init__.py",
+      "issue": "Missing module: sigil",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engines\\__init__.py",
+      "issue": "Missing module: oracle",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engines\\__init__.py",
+      "issue": "Missing module: lantern",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\engines\\__init__.py",
+      "issue": "Missing module: flame",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\scrolls\\capsule.py",
+      "issue": "Missing module: engine.models.prompts",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\scrolls\\capsule.py",
+      "issue": "Missing module: engine.config",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\scrolls\\capsule.py",
+      "issue": "Missing module: engine.models.prompts",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\scrolls\\realtime.py",
+      "issue": "Missing module: capsule",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\scrolls\\realtime.py",
+      "issue": "Missing module: engine.config",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\scrolls\\realtime.py",
+      "issue": "Missing module: engine.models.prompts",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\scrolls\\realtime.py",
+      "issue": "Missing module: capsule",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\scrolls\\__init__.py",
+      "issue": "Missing module: capsule",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\conftest.py",
+      "issue": "Missing module: engine.rag",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\conftest.py",
+      "issue": "Missing module: scrolls.capsule",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\conftest.py",
+      "issue": "Missing module: engine.models.prompts",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\conftest.py",
+      "issue": "Missing module: scrolls.capsule",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\conftest.py",
+      "issue": "Missing module: engine.config",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_integration.py",
+      "issue": "Missing module: engine.app",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_integration.py",
+      "issue": "Missing module: engine.config",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_integration.py",
+      "issue": "Missing module: engine.rag",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_integration.py",
+      "issue": "Missing module: engine.ingest",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_integration.py",
+      "issue": "Missing module: scrolls.capsule",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_integration.py",
+      "issue": "Missing module: scrolls.realtime",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_integration.py",
+      "issue": "Missing module: scrolls.capsule",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_integration.py",
+      "issue": "Missing module: engine.models.prompts",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_integration.py",
+      "issue": "Missing module: scrolls.capsule",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_integration.py",
+      "issue": "Missing module: engine.app",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_integration.py",
+      "issue": "Missing module: engine.models.prompts",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_rag.py",
+      "issue": "Missing module: engine.rag",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_rag.py",
+      "issue": "Missing module: engine.config",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_rag.py",
+      "issue": "Missing module: engine.ingest",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_scrolls.py",
+      "issue": "Missing module: scrolls.capsule",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_scrolls.py",
+      "issue": "Missing module: scrolls.realtime",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex\\tests\\test_scrolls.py",
+      "issue": "Missing module: engine.models.prompts",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-capsule-viewer\\services\\main.py",
+      "issue": "Missing module: models.capsule",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\test_ceremonial_modules.py",
+      "issue": "Missing module: treasury",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\test_ceremonial_modules.py",
+      "issue": "Missing module: ETERNAL_RECOGNITION_SCROLL",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\test_ceremonial_modules.py",
+      "issue": "Missing module: flamekeepers_scroll",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\test_ceremonial_modules.py",
+      "issue": "Missing module: liturgical_scheduling",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\test_ceremonial_modules.py",
+      "issue": "Missing module: honors",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\test_ceremonial_modules.py",
+      "issue": "Missing module: inscribe_sacred_triumvirate",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\test_ceremonial_modules.py",
+      "issue": "Missing module: contracts_appals",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\test_whatsapp_integration.py",
+      "issue": "Missing module: whatsapp_integration",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\test_woocommerce_integration.py",
+      "issue": "Missing module: woocommerce_integration",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\treasury.py",
+      "issue": "Missing module: twilio.rest",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\whatsapp_demo.py",
+      "issue": "Missing module: whatsapp_integration",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\whatsapp_integration.py",
+      "issue": "Missing module: treasury",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\whatsapp_integration.py",
+      "issue": "Missing module: schema_validator",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\whatsapp_integration.py",
+      "issue": "Missing module: twilio.rest",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\whatsapp_integration.py",
+      "issue": "Missing module: twilio.base.exceptions",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\woocommerce_demo.py",
+      "issue": "Missing module: woocommerce_integration",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\woocommerce_integration.py",
+      "issue": "Missing module: treasury",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\woocommerce_integration.py",
+      "issue": "Missing module: schema_validator",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\__init__.py",
+      "issue": "Missing module: treasury",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\__init__.py",
+      "issue": "Missing module: ETERNAL_RECOGNITION_SCROLL",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\__init__.py",
+      "issue": "Missing module: flamekeepers_scroll",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\__init__.py",
+      "issue": "Missing module: liturgical_scheduling",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\__init__.py",
+      "issue": "Missing module: honors",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\__init__.py",
+      "issue": "Missing module: inscribe_sacred_triumvirate",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\__init__.py",
+      "issue": "Missing module: contracts_appals",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\__init__.py",
+      "issue": "Missing module: schema_validator",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\tests\\conftest.py",
+      "issue": "Missing module: treasury",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\tests\\conftest.py",
+      "issue": "Missing module: flamekeepers_scroll",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\tests\\conftest.py",
+      "issue": "Missing module: treasury",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\tests\\conftest.py",
+      "issue": "Missing module: flamekeepers_scroll",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\tests\\conftest.py",
+      "issue": "Missing module: flamekeepers_scroll",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\tests\\test_basic_functionality.py",
+      "issue": "Missing module: treasury",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\tests\\test_basic_functionality.py",
+      "issue": "Missing module: flamekeepers_scroll",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\tests\\test_basic_functionality.py",
+      "issue": "Missing module: treasury",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\tests\\test_basic_functionality.py",
+      "issue": "Missing module: flamekeepers_scroll",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\tests\\test_basic_functionality.py",
+      "issue": "Missing module: treasury",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\tests\\test_basic_functionality.py",
+      "issue": "Missing module: flamekeepers_scroll",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\tests\\test_basic_functionality.py",
+      "issue": "Missing module: treasury",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\tests\\test_basic_functionality.py",
+      "issue": "Missing module: flamekeepers_scroll",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\tests\\test_flamekeepers_scroll.py",
+      "issue": "Missing module: flamekeepers_scroll",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\codex-flame\\tests\\test_treasury.py",
+      "issue": "Missing module: treasury",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\core\\rate_limit.py",
+      "issue": "Missing module: slowapi",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\core\\rate_limit.py",
+      "issue": "Missing module: slowapi.util",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\engines\\flame.py",
+      "issue": "Missing module: core.replay",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\engines\\__init__.py",
+      "issue": "Missing module: rag",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\engines\\__init__.py",
+      "issue": "Missing module: axiom",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\engines\\__init__.py",
+      "issue": "Missing module: sigil",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\engines\\__init__.py",
+      "issue": "Missing module: oracle",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\engines\\__init__.py",
+      "issue": "Missing module: lantern",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\engines\\__init__.py",
+      "issue": "Missing module: rag",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\engines\\__init__.py",
+      "issue": "Missing module: axiom",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\engines\\__init__.py",
+      "issue": "Missing module: sigil",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\engines\\__init__.py",
+      "issue": "Missing module: oracle",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\engines\\__init__.py",
+      "issue": "Missing module: lantern",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\engines\\__init__.py",
+      "issue": "Missing module: flame",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\scrolls\\capsule.py",
+      "issue": "Missing module: engines.flame",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\start_enhanced_server.py",
+      "issue": "Missing module: sovereign_main",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\axiom_api.py",
+      "issue": "Missing module: sovereign_main",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\axiom_api.py",
+      "issue": "Missing module: axiom_parser",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\checkout_system.py",
+      "issue": "Missing module: sovereign_main",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\checkout_system.py",
+      "issue": "Missing module: sovereign_main",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\contributor_recognition.py",
+      "issue": "Missing module: sovereign_main",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\contributor_recognition.py",
+      "issue": "Missing module: funder_dashboard",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\contributor_recognition.py",
+      "issue": "Missing module: sovereign_main",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: sovereign_main",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: axiom_parser",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: product_catalog",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: product_catalog",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: product_catalog",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: product_catalog",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: product_catalog",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: product_catalog",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: product_catalog",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: checkout_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: checkout_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: checkout_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: checkout_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: checkout_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: checkout_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: checkout_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: funder_dashboard",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: funder_dashboard",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: funder_dashboard",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: funder_dashboard",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: funder_dashboard",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: funder_dashboard",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: contributor_recognition",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: contributor_recognition",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: contributor_recognition",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: contributor_recognition",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: contributor_recognition",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: contributor_recognition",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: contributor_recognition",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: contributor_recognition",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: contributor_recognition",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: contributor_recognition",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: product_catalog",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: checkout_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: funder_dashboard",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: contributor_recognition",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: product_catalog",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: checkout_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: contributor_recognition",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: product_catalog",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: checkout_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\enhanced_api.py",
+      "issue": "Missing module: contributor_recognition",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\funder_dashboard.py",
+      "issue": "Missing module: sovereign_main",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\funder_dashboard.py",
+      "issue": "Missing module: product_catalog",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\funder_dashboard.py",
+      "issue": "Missing module: checkout_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\funder_dashboard.py",
+      "issue": "Missing module: sovereign_main",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\product_catalog.py",
+      "issue": "Missing module: sovereign_main",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\product_catalog.py",
+      "issue": "Missing module: sovereign_main",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\sovereign_main.py",
+      "issue": "Missing module: product_catalog",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\sovereign_main.py",
+      "issue": "Missing module: checkout_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\sovereign_main.py",
+      "issue": "Missing module: funder_dashboard",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\sovereign_main.py",
+      "issue": "Missing module: contributor_recognition",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\sovereign_main.py",
+      "issue": "Missing module: enhanced_api",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\sovereign_main.py",
+      "issue": "Missing module: axiom_api",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\sovereign_main.py",
+      "issue": "Missing module: orchestrator_api",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\sovereign_main.py",
+      "issue": "Missing module: sovereign_suite",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\sovereign_main.py",
+      "issue": "Missing module: portfolio_capsule",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\sovereign_main.py",
+      "issue": "Missing module: funder_dashboard",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\sovereign_main.py",
+      "issue": "Missing module: mythic_design_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_IMPORT",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\sovereign-commerce\\services\\sovereign_main.py",
+      "issue": "Missing module: mythic_design_system",
+      "severity": "ERROR",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_CONFIG",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\package.json",
+      "issue": "Missing Node.js dependencies file",
+      "severity": "WARNING",
+      "timestamp": null
+    },
+    {
+      "category": "MISSING_CONFIG",
+      "file": "C:\\Users\\JMerr\\OneDrive\\Documents\\.vscode\\codex_project\\backend\\services\\dominion\\Super-Codex-AI\\Caddyfile",
+      "issue": "Missing Caddy configuration file",
+      "severity": "WARNING",
+      "timestamp": null
+    },
+    {
+      "category": "DEPENDENCY_INSTALL",
+      "file": "SYSTEM",
+      "issue": "Failed to install packages: ERROR: Could not find a version that satisfies the requirement engine.models.prompts (from versions: none)\nERROR: No matching distribution found for engine.models.prompts\n",
+      "severity": "ERROR",
+      "timestamp": null
+    }
+  ],
+  "fixes_applied": [],
+  "missing_imports": [
+    "engine.models.prompts",
+    "liturgical_scheduling",
+    "twilio.rest",
+    "scene",
+    "mythic_design_system",
+    "replay",
+    "sovereign_suite",
+    "user",
+    "publish",
+    "render",
+    "sigil",
+    "engine.ingest",
+    "funder_dashboard",
+    "core.bus",
+    "capsule_api",
+    "engines.rag",
+    "contracts_appals",
+    "portfolio_capsule",
+    "gateway",
+    "base_protocol",
+    "asyncpg",
+    "whatsapp_integration",
+    "slowapi.util",
+    "ETERNAL_RECOGNITION_SCROLL",
+    "woocommerce_integration",
+    "engines.flame",
+    "scrolls.capsule",
+    "slowapi",
+    "orchestrator_api",
+    "bus",
+    "flamekeepers_scroll",
+    "upload",
+    "models.capsule",
+    "scrolls.realtime",
+    "models.user",
+    "product_catalog",
+    "codex_project.backend.models.token",
+    "api",
+    "honors",
+    "app.health",
+    "protocol_registry",
+    "schema_validator",
+    "tasks.purge",
+    "routes",
+    "engine.rag",
+    "app.gateway",
+    "flame",
+    "engine.config",
+    "twilio.base.exceptions",
+    "services.token_service",
+    "axiom_api",
+    "services.dominion.outreach_engagement",
+    "auth",
+    "nacl",
+    "core.replay",
+    "ledger",
+    "lantern",
+    "oracle",
+    "models.token",
+    "rag",
+    "axiom",
+    "audit",
+    "models.prompts",
+    "webhooks",
+    "identity",
+    "api.webhooks",
+    "contributor_recognition",
+    "services.dominion",
+    "treasury",
+    "artifact_dispatch_system",
+    "utils",
+    "codex_project.backend.tasks.purge",
+    "inscribe_sacred_triumvirate",
+    "governance",
+    "api.upload",
+    "checkout_system",
+    "capsule",
+    "app.auth_routes",
+    "enhanced_api",
+    "engine.app",
+    "sovereign_main",
+    "ledger_system",
+    "axiom_parser",
+    "core.audit"
+  ],
+  "config_issues": [
+    [
+      "package.json",
+      "Missing"
+    ],
+    [
+      "Caddyfile",
+      "Missing"
+    ]
+  ],
+  "broken_scripts": []
+}

@@ -1,0 +1,1 @@
+{"event":{"ts":1762987137.5913188,"type":"knowledge_query_complete","payload":{"user_id":"integration-analyst-001","query":"Production deployment strategies for Super Codex AI","results_count":3,"query_time_ms":0.0,"category":"deployment","query_start_audit_id":"unknown"}}}

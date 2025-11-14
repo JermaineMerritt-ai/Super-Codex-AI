@@ -1,0 +1,22 @@
+{
+  "recognition_id": "ERS-2025-11-13-B0A80068",
+  "timestamp": "2025-11-13T05:07:27.451177+00:00",
+  "honoree_name": "Test Guardian",
+  "honor_type": "flame_keeping",
+  "recognition_level": "keeper",
+  "bestower": "Test Elder",
+  "realm": "TEST-001",
+  "citation": "Test citation for module verification",
+  "ceremonial_witness": [
+    "Test Witness 1",
+    "Test Witness 2"
+  ],
+  "sacred_seal": "SS-373C55DBE45D8344",
+  "lineage_binding": "LB-BFB6EE09F372",
+  "scroll_status": "sealed",
+  "metadata": {
+    "ceremonial_authority": "Test Elder",
+    "recognition_ceremony": "eternal_honor_bestowment",
+    "sacred_covenant": "eternal_flame_preservation"
+  }
+}

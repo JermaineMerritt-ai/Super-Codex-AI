@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - Eternal Replay Archive</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e94560;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .error-container {
+            background: rgba(26, 26, 46, 0.9);
+            border: 3px solid #e94560;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            max-width: 600px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(233, 69, 96, 0.3);
+        }
+
+        .error-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #feca57;
+        }
+
+        .error-title {
+            font-size: 2rem;
+            color: #ff4757;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .error-message {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .error-details {
+            background: rgba(15, 52, 96, 0.5);
+            border: 1px solid #54a0ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            text-align: left;
+            color: #a0a0a0;
+        }
+
+        .back-button {
+            background: linear-gradient(45deg, #e94560, #ff6b6b);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+        }
+
+        .timestamp {
+            color: #a0a0a0;
+            font-size: 0.8rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-icon">⚡</div>
+        <h1 class="error-title">{{ error_code or "Error" }}</h1>
+        <p class="error-message">{{ error_message or "Something went wrong in the eternal archives." }}</p>
+        
+        {% if error_details %}
+        <div class="error-details">
+            {{ error_details }}
+        </div>
+        {% endif %}
+        
+        <a href="/" class="back-button">🏛️ Return to Archive</a>
+        
+        <div class="timestamp">
+            Error occurred: {{ timestamp or "Unknown time" }}
+        </div>
+    </div>
+</body>
+</html>

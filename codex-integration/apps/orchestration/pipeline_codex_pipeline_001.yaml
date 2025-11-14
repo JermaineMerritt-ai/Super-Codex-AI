@@ -1,6 +1,0 @@
-pipeline_id: codex_pipeline_001
-title: "CI/CD Invocation for Dominion"
-author: "Custodian + Algorithmic Custodian"
-arc: "Foundational Arc"
-ritual: "Continuous Integration & Deployment"
-timestamp: "<UTC_datetime>"

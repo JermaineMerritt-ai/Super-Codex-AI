@@ -1,0 +1,1 @@
+{"session_id":"SESSION_12345","user_id":"admin-001","start_time":"2025-11-12T17:00:00Z","actions":[{"action":"login","timestamp":"2025-11-12T17:00:00Z"},{"action":"query_knowledge","timestamp":"2025-11-12T17:01:00Z"},{"action":"review_audit","timestamp":"2025-11-12T17:02:00Z"},{"action":"system_config","timestamp":"2025-11-12T17:03:00Z"}],"duration_minutes":15,"status":"active"}

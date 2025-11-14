@@ -1,0 +1,110 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: super-codex-ai
+  labels:
+    app: super-codex-ai
+    version: v1.0.0
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: super-codex-ai
+  template:
+    metadata:
+      labels:
+        app: super-codex-ai
+        version: v1.0.0
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+        prometheus.io/path: "/metrics"
+    spec:
+      containers:
+      - name: super-codex-ai
+        image: super-codex-ai:latest
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        env:
+        - name: PORT
+          value: "8080"
+        - name: ENVIRONMENT
+          value: "kubernetes"
+        - name: SENTRY_DSN
+          valueFrom:
+            secretKeyRef:
+              name: super-codex-secrets
+              key: sentry-dsn
+              optional: true
+        - name: SENTRY_ENVIRONMENT
+          value: "production"
+        - name: SENTRY_TRACES_SAMPLE_RATE
+          value: "0.1"  # Reduced for production
+        # Health check probes
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+          successThreshold: 1
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 5
+          timeoutSeconds: 3
+          failureThreshold: 3
+          successThreshold: 1
+        # Resource limits and requests
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        # Security context
+        securityContext:
+          runAsNonRoot: true
+          runAsUser: 1000
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: false
+          capabilities:
+            drop:
+            - ALL
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: super-codex-ai-service
+  labels:
+    app: super-codex-ai
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "8080"
+    prometheus.io/path: "/metrics"
+spec:
+  selector:
+    app: super-codex-ai
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080
+    protocol: TCP
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: super-codex-secrets
+type: Opaque
+data:
+  # Base64 encoded Sentry DSN - replace with actual value
+  # echo -n "your-actual-sentry-dsn" | base64
+  sentry-dsn: eW91ci1hY3R1YWwtc2VudHJ5LWRzbg==

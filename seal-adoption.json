@@ -1,0 +1,24 @@
+{
+  "seal_id": "seal-adoption-v1",
+  "artifact_ref": "anthem-universal-adoption-v1",
+  "checksum_sha256": "B105FB3B120E3FEA6C5C6FC21FCEB757FE220030BC00BBD0F7B94A51C8F0BFEB",
+  "quorum_verified_at": "2025-11-13T23:41:00Z",
+  "signatories": [
+    {
+      "council": "Diaspora Council",
+      "public_key": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEm8q7VqJ4VxF2Kp9LmN8wD3xRtYz\n2Q5cH6vB9sA1eF3gR7tY8nM2pK4uL6vX9zC5bE2fW1qS3dF4gH5jI6kL7mN8\n-----END PUBLIC KEY-----",
+      "signature": "MEUCIQD7hBxKVf1EtjPQqMx4Z2vN8wL3yF5gH6rB9sA1eF2dR3tY8nM2pK4uL6vX9zC5bE2fW1qS3dF4gH5jI6kL7mN8AIgB8cH2tY5pK4uL6vX9zC5bE2fW1qS3dF4gH5jI6kL7mN8wD3xRtYz2Q5cH6vB9sA1eF3gR7"
+    },
+    {
+      "council": "Planetary Council",
+      "public_key": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEp9LmN8wD3xRtYz2Q5cH6vB9sA1\neF3gR7tY8nM2pK4uL6vX9zC5bE2fW1qS3dF4gH5jI6kL7mN8wD3xRtYz2Q5c\n-----END PUBLIC KEY-----",
+      "signature": "MGYCMQC4Z2vN8wL3yF5gH6rB9sA1eF2dR3tY8nM2pK4uL6vX9zC5bE2fW1qS3dF4gH5jI6kL7mN8wD3xRtYz2Q5cH6vB9sA1eF3gR7tY8nM2pK4uL6vX9zC5bE2fW1qS3"
+    }
+  ],
+  "metadata": {
+    "sealed_at": "2025-11-13T23:41:00Z",
+    "seal_type": "council_quorum",
+    "verification_method": "ecdsa_p256",
+    "status": "active"
+  }
+}

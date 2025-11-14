@@ -1,0 +1,41 @@
+{
+  "transaction_id": "WC-DEMO-12345",
+  "operation_type": "order_create",
+  "product_type": "flame_essence",
+  "amount": 399.98,
+  "currency": "USD",
+  "customer_id": "789",
+  "sacred_binding_hash": "25b75b72fd96fe94",
+  "ceremonial_seal": "WC-d0d0bdfc6469",
+  "transaction_timestamp": "2025-11-13T05:15:28.878267+00:00",
+  "wc_order_id": "12345",
+  "treasury_entry_id": null,
+  "metadata": {
+    "demo_mode": true,
+    "order_data": {
+      "id": 12345,
+      "number": "ORD-SACRED-12345",
+      "status": "processing",
+      "total": "399.98",
+      "total_tax": "0.00",
+      "currency": "USD",
+      "customer_id": 789,
+      "date_created": "2025-11-13T05:15:28.878267+00:00",
+      "line_items": [
+        {
+          "product_id": 1,
+          "name": "Sacred Flame Essence - Digital Download",
+          "quantity": 1,
+          "price": 99.99
+        },
+        {
+          "product_id": 3,
+          "name": "Dominion Treasury Token Pack",
+          "quantity": 1,
+          "price": 299.99
+        }
+      ]
+    },
+    "sacred_ceremony_id": "DEMO-CEREMONY-2025-11-13"
+  }
+}

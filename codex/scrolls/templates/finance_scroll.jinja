@@ -1,0 +1,268 @@
+{#
+  Finance Scroll Template
+  For financial education and guidance inquiries
+  Educational focus with appropriate disclaimers
+#}
+
+# 💰 Financial Wisdom Scroll
+
+**Financial Inquiry**: {{ query }}
+**Scroll Type**: Financial Education & Guidance  
+**Generated**: {{ timestamp }}
+**Risk Assessment Context**: {{ risk_level or 'General Education' }}
+
+---
+
+## 🎯 Financial Guidance Response
+
+{{ main_response }}
+
+---
+
+## 📊 Financial Context Analysis
+
+{% if financial_data and financial_data|length > 0 %}
+### Budget and Financial Information
+
+{% for item in financial_data %}
+#### {{ item.get('category', 'Financial Item') }}
+
+{% if item.get('amount') %}
+**Amount**: {{ item.amount }}
+{% endif %}
+{% if item.get('frequency') %}
+**Frequency**: {{ item.frequency }}
+{% endif %}
+{% if item.get('description') %}
+**Description**: {{ item.description }}
+{% endif %}
+{% if item.get('impact') %}
+**Financial Impact**: {{ item.impact }}
+{% endif %}
+
+{% endfor %}
+{% else %}
+*Financial analysis will be more comprehensive as additional financial documentation becomes available.*
+{% endif %}
+
+---
+
+## 💡 Educational Principles
+
+{% if financial_principles and financial_principles|length > 0 %}
+{% for principle in financial_principles %}
+### {{ principle.get('title', 'Financial Principle') }}
+
+{{ principle.get('description', 'Important financial concept') }}
+
+{% if principle.get('application') %}
+**Practical Application**: {{ principle.application }}
+{% endif %}
+
+{% if principle.get('considerations') %}
+**Key Considerations**:
+{% for consideration in principle.considerations %}
+- {{ consideration }}
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+{% else %}
+### Core Financial Planning Principles
+
+#### Emergency Fund Planning
+- Establish 3-6 months of expenses in easily accessible savings
+- Prioritize emergency fund before other financial goals
+- Consider high-yield savings accounts for emergency funds
+
+#### Budgeting and Cash Flow Management
+- Track income and expenses to understand spending patterns
+- Use the 50/30/20 rule as a starting framework (needs/wants/savings)
+- Regularly review and adjust budget based on changing circumstances
+
+#### Debt Management Strategy
+- Prioritize high-interest debt for accelerated payoff
+- Consider debt consolidation options when appropriate
+- Maintain good credit through consistent, on-time payments
+
+#### Investment Fundamentals
+- Diversify investments across asset classes and risk levels
+- Consider low-cost index funds for broad market exposure
+- Align investment strategy with time horizon and risk tolerance
+{% endif %}
+
+---
+
+## 📈 Financial Planning Recommendations
+
+{% if recommendations and recommendations|length > 0 %}
+{% for rec in recommendations %}
+### {{ rec.get('category', 'Recommendation') }}
+
+{{ rec.get('suggestion', 'Financial planning guidance') }}
+
+{% if rec.get('rationale') %}
+**Rationale**: {{ rec.rationale }}
+{% endif %}
+
+{% if rec.get('considerations') %}
+**Important Considerations**:
+{% for consideration in rec.considerations %}
+- {{ consideration }}
+{% endfor %}
+{% endif %}
+
+{% if rec.get('next_steps') %}
+**Suggested Next Steps**:
+{% for step in rec.next_steps %}
+- {{ step }}
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+{% else %}
+### General Financial Wellness
+
+#### Short-term Focus (0-2 years)
+- Build emergency fund to target level
+- Optimize high-interest debt payoff strategy
+- Establish consistent budgeting and tracking systems
+- Review and optimize insurance coverage
+
+#### Medium-term Planning (2-10 years)
+- Develop systematic investment strategy
+- Consider tax-advantaged retirement account contributions
+- Evaluate major purchase planning (home, education, etc.)
+- Build credit history and optimize credit utilization
+
+#### Long-term Wealth Building (10+ years)
+- Maximize retirement savings opportunities
+- Consider estate planning and wealth transfer strategies
+- Evaluate business ownership or entrepreneurial opportunities
+- Plan for major life transitions and financial independence
+{% endif %}
+
+---
+
+## ⚖️ Risk Assessment Framework
+
+{% if risk_analysis %}
+### Personalized Risk Profile
+
+**Risk Tolerance**: {{ risk_analysis.get('tolerance', 'Moderate') }}
+**Time Horizon**: {{ risk_analysis.get('time_horizon', 'Mixed objectives') }}
+**Current Financial Position**: {{ risk_analysis.get('position', 'Assessment pending') }}
+
+{% if risk_analysis.get('factors') %}
+**Key Risk Factors**:
+{% for factor in risk_analysis.factors %}
+- {{ factor }}
+{% endfor %}
+{% endif %}
+
+{% if risk_analysis.get('mitigation') %}
+**Risk Mitigation Strategies**:
+{% for strategy in risk_analysis.mitigation %}
+- {{ strategy }}
+{% endfor %}
+{% endif %}
+{% else %}
+### Standard Risk Considerations
+
+**Market Risk**: Investment values fluctuate with market conditions
+**Inflation Risk**: Purchasing power erosion over time
+**Interest Rate Risk**: Impact of changing rates on fixed-income investments
+**Liquidity Risk**: Ability to access funds when needed
+**Concentration Risk**: Over-exposure to single investments or sectors
+
+**Risk Management Strategies**:
+- Diversification across asset classes and investment types
+- Regular portfolio rebalancing to maintain target allocation
+- Dollar-cost averaging for systematic investment approach
+- Maintaining adequate emergency liquidity
+- Professional consultation for complex financial decisions
+{% endif %}
+
+---
+
+## 📚 Supporting Financial Documentation
+
+{% if sources and sources|length > 0 %}
+**Financial Information Sources**:
+
+{% for source in sources %}
+- **{{ source.metadata.get('file_name', 'Financial Document') }}**: {{ source.metadata.get('document_type', 'Unknown').title() }}
+  - Content type: {{ source.metadata.get('content_type', 'general') }}
+  - Analysis: {{ source.content[:150] }}{% if source.content|length > 150 %}...{% endif %}
+{% endfor %}
+{% endif %}
+
+**Educational Resources Referenced**:
+- Financial planning best practices and frameworks
+- Risk management and investment fundamentals
+- Budgeting and cash flow optimization strategies
+
+---
+
+## ⚠️ Important Disclaimers
+
+### Educational Purpose Only
+This scroll provides educational information and general principles for financial planning consideration. It does not constitute personalized financial advice.
+
+### Professional Consultation Recommended
+{% if consultation_areas and consultation_areas|length > 0 %}
+Consider professional consultation for:
+{% for area in consultation_areas %}
+- {{ area }}
+{% endfor %}
+{% else %}
+- Complex investment strategy development
+- Tax optimization and planning
+- Estate planning and wealth transfer
+- Insurance needs analysis
+- Major financial decisions and life transitions
+{% endif %}
+
+### Individual Circumstances Matter
+Financial decisions should be based on individual circumstances, goals, risk tolerance, and professional guidance appropriate to specific situations.
+
+---
+
+## 🔄 Next Steps for Financial Development
+
+{% if next_steps and next_steps|length > 0 %}
+{% for step in next_steps %}
+{{ loop.index }}. {{ step }}
+{% endfor %}
+{% else %}
+1. **Assess Current Position**: Complete comprehensive financial inventory
+2. **Define Goals**: Establish clear, measurable financial objectives
+3. **Create Action Plan**: Develop step-by-step implementation strategy
+4. **Monitor Progress**: Establish regular review and adjustment schedule
+5. **Seek Professional Guidance**: Consult qualified professionals for complex decisions
+{% endif %}
+
+---
+
+## 💼 Professional Resources
+
+{% if professional_resources and professional_resources|length > 0 %}
+{% for resource in professional_resources %}
+**{{ resource.get('type', 'Financial Professional') }}**: {{ resource.get('description', 'Professional financial guidance') }}
+{% endfor %}
+{% else %}
+**Financial Planner**: Comprehensive financial planning and strategy development
+**Tax Professional**: Tax planning and optimization strategies
+**Investment Advisor**: Investment management and portfolio construction
+**Insurance Agent**: Risk management and insurance needs analysis
+**Estate Attorney**: Estate planning and wealth transfer strategies
+{% endif %}
+
+---
+
+**Financial Wisdom Seal**: 💎 *Certified Educational Content - Super-Codex-AI Financial Guidance System*  
+**Guidance ID**: `{{ guidance_id if guidance_id else 'FWS-' + timestamp.replace(':', '').replace('-', '')[:12] }}`
+**Risk Level**: {{ risk_level or 'General Education' }}
+**Processing Time**: {{ processing_time|round(2) if processing_time else 'N/A' }} seconds
+
+*"Wisdom in wealth, prudence in planning, prosperity through principled decisions."*

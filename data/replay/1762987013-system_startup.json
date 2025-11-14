@@ -1,0 +1,1 @@
+{"event":{"ts":1762987013.145279,"type":"system_startup","payload":{"component":"core_system","timestamp":"2025-11-12T17:01:00Z","version":"1.0.0","modules_loaded":["config","audit","replay","events","identity","rag"],"startup_time_ms":2500}}}

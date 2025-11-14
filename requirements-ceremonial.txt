@@ -1,0 +1,34 @@
+# Super-Codex-AI Requirements
+# Core FastAPI and web server dependencies
+fastapi>=0.104.1
+uvicorn[standard]>=0.23.0
+python-multipart>=0.0.6
+jinja2>=3.1.2
+
+# CORS and middleware
+starlette>=0.27.0
+
+# Pydantic for data validation
+pydantic>=2.0.0
+
+# Monitoring and metrics
+prometheus-fastapi-instrumentator>=6.1.0
+prometheus-client>=0.17.0
+
+# Error tracking
+sentry-sdk[fastapi]>=1.32.0
+
+# File and async operations
+aiofiles>=23.0.0
+
+# Optional dependencies for full functionality
+# python-jose[cryptography]  # For JWT handling
+# passlib[bcrypt]  # For password hashing
+# sqlalchemy  # For database operations
+# redis  # For caching
+# psycopg2-binary  # For PostgreSQL
+
+# Development dependencies (uncomment for dev)
+# pytest>=7.0.0
+# pytest-asyncio
+# httpx  # For testing async endpoints

@@ -1,6 +1,0 @@
-migration_id: <unique_id_here>
-title: "<short_description_of_change>"
-author: "<custodian_name>"
-timestamp: "<UTC_datetime>"
-arc: "Foundational Arc"
-ritual: "Schema Evolution"

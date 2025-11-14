@@ -1,0 +1,1 @@
+{"event":{"ts":1762987013.146195,"type":"knowledge_query","payload":{"query":"How to optimize RAG performance?","user_id":"researcher-002","timestamp":"2025-11-12T17:02:00Z","results_count":5,"processing_time_ms":150,"embedding_model":"sentence-transformers/all-MiniLM-L6-v2"}}}

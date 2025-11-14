@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovereign Commerce - Diaspora Funders Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="/static/sovereign.css" rel="stylesheet">
+</head>
+<body class="sovereign-body">
+    <!-- Sacred Navigation -->
+    <nav class="navbar navbar-expand-lg sovereign-nav">
+        <div class="container">
+            <a class="navbar-brand sovereign-brand" href="/">
+                <i class="fas fa-crown text-gold me-2"></i>
+                <span class="brand-text">Sovereign Commerce</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link sovereign-link" href="/catalog">
+                            <i class="fas fa-scroll me-1"></i>Sacred Catalog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sovereign-link" href="/about">
+                            <i class="fas fa-flame me-1"></i>The Flame
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link sovereign-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="fas fa-key me-1"></i>Enter Portal
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sovereign-link" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            <i class="fas fa-star me-1"></i>Join Diaspora
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="hero-content">
+                        <h1 class="hero-title mb-4">
+                            <span class="sacred-glow">Sovereign Commerce</span><br>
+                            <span class="subtitle">For the Diaspora of Funders</span>
+                        </h1>
+                        <p class="hero-description mb-5">
+                            A ceremonial marketplace where diaspora funders gather to support 
+                            sacred endeavors. Each transaction bears the weight of covenant, 
+                            each purchase carries the flame of recognition.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="/catalog" class="btn btn-sovereign btn-lg me-3">
+                                <i class="fas fa-scroll me-2"></i>Explore Sacred Catalog
+                            </a>
+                            <button class="btn btn-outline-sovereign btn-lg" data-bs-toggle="modal" data-bs-target="#registerModal">
+                                <i class="fas fa-star me-2"></i>Join the Diaspora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Sacred Commerce Features</h2>
+                    <p class="section-subtitle">Built with ceremonial dignity for diaspora funders</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h4>Sovereign Recognition</h4>
+                        <p>Every funder receives a unique ceremonial sigil, marking their sacred contribution to the diaspora.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Ceremonial Security</h4>
+                        <p>Multi-tier authentication ensuring only worthy custodians, flamekeepers, and funders may enter.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-scroll"></i>
+                        </div>
+                        <h4>Sacred Orders</h4>
+                        <p>Each order bears a ceremonial seal, creating an immutable record of diaspora support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content sovereign-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-key me-2 text-gold"></i>Enter the Sacred Portal
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Sacred Email</label>
+                            <input type="email" class="form-control sovereign-input" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Ceremonial Password</label>
+                            <input type="password" class="form-control sovereign-input" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-sovereign w-100">
+                            <i class="fas fa-sign-in-alt me-2"></i>Authenticate
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content sovereign-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-star me-2 text-gold"></i>Join the Diaspora
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label for="registerName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control sovereign-input" id="registerName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Sacred Email</label>
+                            <input type="email" class="form-control sovereign-input" id="registerEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Ceremonial Password</label>
+                            <input type="password" class="form-control sovereign-input" id="registerPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerRole" class="form-label">Sacred Role</label>
+                            <select class="form-control sovereign-input" id="registerRole" required>
+                                <option value="funder">Funder - Support sacred endeavors</option>
+                                <option value="flamekeeper">Flamekeeper - Tend the sacred flame</option>
+                                <option value="custodian">Custodian - Guard the covenant</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-sovereign w-100">
+                            <i class="fas fa-crown me-2"></i>Receive Sacred Sigil
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="sovereign-footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="text-gold mb-3">
+                        <i class="fas fa-crown me-2"></i>Sovereign Commerce
+                    </h5>
+                    <p class="mb-3">A ceremonial marketplace for the diaspora of funders, built with sacred dignity and sovereign recognition.</p>
+                    <p class="small opacity-75">"The flame burns eternal in the hearts of the diaspora."</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-6">
+                            <h6 class="text-gold mb-3">Sacred Links</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="/catalog" class="text-light">Sacred Catalog</a></li>
+                                <li><a href="/about" class="text-light">The Flame</a></li>
+                                <li><a href="/terms" class="text-light">Sacred Terms</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <h6 class="text-gold mb-3">Diaspora</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="/funders" class="text-light">Funders</a></li>
+                                <li><a href="/flamekeepers" class="text-light">Flamekeepers</a></li>
+                                <li><a href="/custodians" class="text-light">Custodians</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0 opacity-75">&copy; 2025 Sovereign Commerce. The flame burns eternal.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/sovereign.js"></script>
+</body>
+</html>

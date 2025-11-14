@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Sacred Flame Essence - Digital Download",
+    "price": "99.99",
+    "regular_price": "99.99",
+    "description": "Digital essence of the eternal flame for ceremonial use",
+    "type": "downloadable",
+    "status": "publish",
+    "categories": [
+      {
+        "id": 10,
+        "name": "Sacred Artifacts"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Ceremonial Scroll of Wisdom",
+    "price": "149.99",
+    "regular_price": "149.99",
+    "description": "Ancient wisdom scroll containing sacred knowledge",
+    "type": "simple",
+    "status": "publish",
+    "categories": [
+      {
+        "id": 11,
+        "name": "Knowledge Scrolls"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Dominion Treasury Token Pack",
+    "price": "299.99",
+    "regular_price": "299.99",
+    "description": "Package of 1000 ceremonial treasury tokens",
+    "type": "variable",
+    "status": "publish",
+    "categories": [
+      {
+        "id": 12,
+        "name": "Treasury Items"
+      }
+    ]
+  }
+]

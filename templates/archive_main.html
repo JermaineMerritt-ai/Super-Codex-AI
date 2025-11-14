@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e94560;
+            min-height: 100vh;
+            overflow-x: auto;
+        }
+
+        .archive-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .archive-header {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24, #ff9ff3, #54a0ff);
+            border: 3px solid #feca57;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(233, 69, 96, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .archive-header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(255, 255, 255, 0.1) 2px,
+                rgba(255, 255, 255, 0.1) 4px
+            );
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .archive-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .archive-subtitle {
+            font-size: 1.2rem;
+            color: #f8f9fa;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        .control-panel {
+            background: rgba(26, 26, 46, 0.9);
+            border: 2px solid #e94560;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .control-row {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .control-label {
+            font-weight: bold;
+            color: #feca57;
+            font-size: 0.9rem;
+        }
+
+        select, input[type="text"], input[type="file"], button {
+            padding: 8px 12px;
+            border: 2px solid #e94560;
+            border-radius: 5px;
+            background: rgba(22, 33, 62, 0.9);
+            color: #ffffff;
+            font-size: 0.9rem;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: #feca57;
+            box-shadow: 0 0 10px rgba(254, 202, 87, 0.3);
+        }
+
+        button {
+            background: linear-gradient(45deg, #e94560, #ff6b6b);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+        }
+
+        .content-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            background: rgba(26, 26, 46, 0.7);
+            border: 2px solid #e94560;
+            border-radius: 8px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .tab-button.active {
+            background: linear-gradient(45deg, #e94560, #ff6b6b);
+            border-color: #feca57;
+            box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+        }
+
+        .tab-button:hover {
+            border-color: #feca57;
+            box-shadow: 0 2px 10px rgba(254, 202, 87, 0.2);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .content-card {
+            background: rgba(26, 26, 46, 0.9);
+            border: 2px solid #e94560;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .content-card:hover {
+            border-color: #feca57;
+            box-shadow: 0 8px 25px rgba(233, 69, 96, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #feca57;
+            margin-bottom: 5px;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: #a0a0a0;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .card-content {
+            color: #ffffff;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            max-height: 100px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .card-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .card-content::-webkit-scrollbar-track {
+            background: rgba(26, 26, 46, 0.5);
+            border-radius: 3px;
+        }
+
+        .card-content::-webkit-scrollbar-thumb {
+            background: #e94560;
+            border-radius: 3px;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-btn {
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            border: 1px solid #e94560;
+            background: transparent;
+            color: #e94560;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .action-btn:hover {
+            background: #e94560;
+            color: #ffffff;
+        }
+
+        .replay-viewer {
+            background: rgba(26, 26, 46, 0.95);
+            border: 3px solid #feca57;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+            display: none;
+            backdrop-filter: blur(15px);
+        }
+
+        .replay-viewer.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .replay-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e94560;
+        }
+
+        .replay-title {
+            font-size: 1.5rem;
+            color: #feca57;
+            font-weight: bold;
+        }
+
+        .close-replay {
+            background: #ff4757;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .narration-panel {
+            background: rgba(15, 52, 96, 0.8);
+            border: 2px solid #54a0ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .narration-entry {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(26, 26, 46, 0.6);
+            border-radius: 8px;
+            border-left: 4px solid #feca57;
+        }
+
+        .narrator-name {
+            font-weight: bold;
+            color: #54a0ff;
+            margin-bottom: 5px;
+        }
+
+        .narration-text {
+            color: #ffffff;
+            line-height: 1.4;
+        }
+
+        .content-display {
+            background: rgba(22, 33, 62, 0.9);
+            border: 2px solid #e94560;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .content-display h3 {
+            color: #feca57;
+            margin-bottom: 15px;
+        }
+
+        .content-display .content-text {
+            color: #ffffff;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .replay-controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .stats-panel {
+            background: rgba(26, 26, 46, 0.9);
+            border: 2px solid #54a0ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(15, 52, 96, 0.5);
+            border-radius: 8px;
+            border: 1px solid #54a0ff;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #feca57;
+            display: block;
+        }
+
+        .stat-label {
+            color: #a0a0a0;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .upload-panel {
+            background: rgba(26, 26, 46, 0.9);
+            border: 2px solid #ff6b6b;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .upload-panel.active {
+            display: block;
+        }
+
+        .upload-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            align-items: end;
+        }
+
+        textarea {
+            padding: 10px;
+            border: 2px solid #e94560;
+            border-radius: 5px;
+            background: rgba(22, 33, 62, 0.9);
+            color: #ffffff;
+            resize: vertical;
+            min-height: 100px;
+            font-family: inherit;
+        }
+
+        .loading {
+            text-align: center;
+            color: #feca57;
+            padding: 40px;
+        }
+
+        .loading::after {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #feca57;
+            border-top: 3px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            background: rgba(255, 71, 87, 0.2);
+            border: 2px solid #ff4757;
+            color: #ff4757;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .success-message {
+            background: rgba(46, 213, 115, 0.2);
+            border: 2px solid #2ed573;
+            color: #2ed573;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .sigil-seal-info {
+            margin-top: 8px;
+            padding: 6px 10px;
+            background: rgba(233, 69, 96, 0.1);
+            border: 1px solid #e94560;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .sigil-seal-info.error {
+            background: rgba(255, 71, 87, 0.1);
+            border-color: #ff4757;
+            color: #ff4757;
+        }
+
+        .sigil-glyph {
+            font-weight: bold;
+            color: #feca57;
+            font-size: 1.1em;
+        }
+
+        .seal-authority {
+            background: rgba(254, 202, 87, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #feca57;
+        }
+
+        .seal-strength {
+            color: #a0a0a0;
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 768px) {
+            .control-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .content-tabs {
+                flex-wrap: wrap;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .replay-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="archive-container">
+        <!-- Header -->
+        <div class="archive-header">
+            <h1 class="archive-title">🔥 Eternal Replay Archive</h1>
+            <p class="archive-subtitle">Codex Dominion - Where Sacred Memories Live Forever</p>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="stats-panel">
+            <div class="stats-grid" id="statsGrid">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalContent">0</span>
+                    <div class="stat-label">Total Content</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="totalReplays">0</span>
+                    <div class="stat-label">Replays</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="totalDispatches">0</span>
+                    <div class="stat-label">Dispatches</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="avatarStatus">{% if avatar_system_available %}🏛️{% else %}❌{% endif %}</span>
+                    <div class="stat-label">Avatar Council</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="sigilStatus">{% if sigil_system_available %}🔥{% else %}❌{% endif %}</span>
+                    <div class="stat-label">SIGIL Seals</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <div class="control-row">
+                <div class="control-group">
+                    <label class="control-label">Role Filter</label>
+                    <select id="roleFilter">
+                        <option value="">All Roles</option>
+                        <option value="custodian">Custodian</option>
+                        <option value="council_member">Council Member</option>
+                        <option value="flame_keeper">Flame Keeper</option>
+                        <option value="wisdom_bearer">Wisdom Bearer</option>
+                        <option value="guardian">Guardian</option>
+                        <option value="ceremonial_guide">Ceremonial Guide</option>
+                        <option value="herald">Herald</option>
+                        <option value="initiate">Initiate</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label">Time Filter</label>
+                    <select id="timeFilter">
+                        <option value="">All Time</option>
+                        <option value="day">Last Day</option>
+                        <option value="week">Last Week</option>
+                        <option value="month">Last Month</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label">Search Query</label>
+                    <input type="text" id="searchQuery" placeholder="Search content...">
+                </div>
+                
+                <button onclick="searchContent()">🔍 Search Archive</button>
+                <button onclick="toggleUpload()">📝 Upload Content</button>
+                <button onclick="refreshStats()">📊 Refresh Stats</button>
+            </div>
+        </div>
+
+        <!-- Upload Panel -->
+        <div class="upload-panel" id="uploadPanel">
+            <h3 style="color: #feca57; margin-bottom: 15px;">📝 Upload New Content</h3>
+            <div class="upload-form">
+                <div class="control-group">
+                    <label class="control-label">Content Type</label>
+                    <select id="uploadType">
+                        <option value="scrolls">📜 Scroll</option>
+                        <option value="capsules">💊 Capsule</option>
+                        <option value="hymns">🎵 Hymn</option>
+                        <option value="invocations">🔮 Invocation</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label">Title</label>
+                    <input type="text" id="uploadTitle" placeholder="Enter content title...">
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label">Role</label>
+                    <select id="uploadRole">
+                        <option value="initiate">Initiate</option>
+                        <option value="herald">Herald</option>
+                        <option value="ceremonial_guide">Ceremonial Guide</option>
+                        <option value="guardian">Guardian</option>
+                        <option value="wisdom_bearer">Wisdom Bearer</option>
+                        <option value="flame_keeper">Flame Keeper</option>
+                        <option value="council_member">Council Member</option>
+                        <option value="custodian">Custodian</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label">Upload File (Optional)</label>
+                    <input type="file" id="uploadFile" accept=".txt,.md,.json">
+                </div>
+                
+                <div class="control-group" style="grid-column: 1 / -1;">
+                    <label class="control-label">Content</label>
+                    <textarea id="uploadContent" placeholder="Enter or paste your content here..."></textarea>
+                </div>
+                
+                <button onclick="uploadContent()" style="grid-column: 1 / -1;">🔥 Archive Content</button>
+            </div>
+        </div>
+
+        <!-- Content Type Tabs -->
+        <div class="content-tabs">
+            <button class="tab-button active" onclick="switchTab('all')">🌟 All</button>
+            <button class="tab-button" onclick="switchTab('scrolls')">📜 Scrolls</button>
+            <button class="tab-button" onclick="switchTab('capsules')">💊 Capsules</button>
+            <button class="tab-button" onclick="switchTab('hymns')">🎵 Hymns</button>
+            <button class="tab-button" onclick="switchTab('invocations')">🔮 Invocations</button>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="content-grid" id="contentGrid">
+            <div class="loading">Loading eternal archives...</div>
+        </div>
+
+        <!-- Replay Viewer -->
+        <div class="replay-viewer" id="replayViewer">
+            <div class="replay-header">
+                <h2 class="replay-title" id="replayTitle">Replay Session</h2>
+                <button class="close-replay" onclick="closeReplay()">✕ Close</button>
+            </div>
+            
+            <div class="narration-panel" id="narrationPanel">
+                <h3 style="color: #54a0ff; margin-bottom: 15px;">🎭 Avatar Narration</h3>
+                <div id="narrationContent">
+                    <div class="narration-entry">
+                        <div class="narrator-name">System</div>
+                        <div class="narration-text">Initializing replay session...</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-display" id="contentDisplay">
+                <h3>📄 Sacred Content</h3>
+                <div class="content-text" id="replayContentText">Loading...</div>
+            </div>
+            
+            <div class="replay-controls">
+                <button onclick="addNarration('guidance')">🧭 Add Guidance</button>
+                <button onclick="addNarration('blessing')">🕯️ Add Blessing</button>
+                <button onclick="addNarration('ceremony')">⚡ Add Ceremony</button>
+                <button onclick="dispatchAgain()">🔄 Dispatch Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentTab = 'all';
+        let currentContent = [];
+        let currentReplaySession = null;
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            refreshStats();
+            searchContent();
+        });
+
+        // Switch content tabs
+        function switchTab(tab) {
+            currentTab = tab;
+            
+            // Update tab buttons
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter and display content
+            filterAndDisplayContent();
+        }
+
+        // Search content with current filters
+        async function searchContent() {
+            const roleFilter = document.getElementById('roleFilter').value;
+            const timeFilter = document.getElementById('timeFilter').value;
+            const query = document.getElementById('searchQuery').value;
+            
+            const contentGrid = document.getElementById('contentGrid');
+            contentGrid.innerHTML = '<div class="loading">Searching eternal archives...</div>';
+            
+            try {
+                const params = new URLSearchParams();
+                if (currentTab !== 'all') {
+                    params.append('content_types', currentTab);
+                }
+                if (roleFilter) {
+                    params.append('role_filter', roleFilter);
+                }
+                if (timeFilter) {
+                    params.append('time_filter', timeFilter);
+                }
+                if (query) {
+                    params.append('query', query);
+                }
+                
+                const response = await fetch(`/api/content/search?${params}`);
+                const data = await response.json();
+                
+                if (data.success) {
+                    currentContent = data.results;
+                    displayContent(currentContent);
+                } else {
+                    throw new Error(data.error || 'Search failed');
+                }
+            } catch (error) {
+                contentGrid.innerHTML = `<div class="error-message">Error searching content: ${error.message}</div>`;
+            }
+        }
+
+        // Filter and display content based on current tab
+        function filterAndDisplayContent() {
+            let filtered = currentContent;
+            
+            if (currentTab !== 'all') {
+                filtered = currentContent.filter(item => item.content_type === currentTab);
+            }
+            
+            displayContent(filtered);
+        }
+
+        // Display content in grid
+        function displayContent(content) {
+            const contentGrid = document.getElementById('contentGrid');
+            
+            if (!content || content.length === 0) {
+                contentGrid.innerHTML = '<div class="loading">No content found in the eternal archives...</div>';
+                return;
+            }
+            
+            const contentHtml = content.map(item => {
+                const typeEmoji = {
+                    'scrolls': '📜',
+                    'capsules': '💊', 
+                    'hymns': '🎵',
+                    'invocations': '🔮'
+                };
+                
+                const truncatedContent = item.content.length > 200 
+                    ? item.content.substring(0, 200) + '...' 
+                    : item.content;
+                
+                // SIGIL seal display
+                let sigilDisplay = '';
+                if (item.sigil_verification && item.sigil_verification.available) {
+                    const verification = item.sigil_verification;
+                    if (verification.valid) {
+                        sigilDisplay = `
+                            <div class="sigil-seal-info">
+                                <span class="sigil-glyph">${verification.binding_sigil}</span>
+                                <span class="seal-authority">${verification.authority.toUpperCase()}</span>
+                                <span class="seal-strength">Strength: ${verification.binding_strength}</span>
+                            </div>
+                        `;
+                    } else {
+                        sigilDisplay = '<div class="sigil-seal-info error">⚠️ Invalid Seal</div>';
+                    }
+                } else if (item.metadata && item.metadata.sigil_glyph) {
+                    sigilDisplay = `<div class="sigil-seal-info"><span class="sigil-glyph">${item.metadata.sigil_glyph}</span></div>`;
+                }
+                
+                return `
+                    <div class="content-card">
+                        <div class="card-header">
+                            <div>
+                                <div class="card-title">${typeEmoji[item.content_type] || '📄'} ${item.title}</div>
+                                <div class="card-meta">
+                                    <span>Role: ${item.role}</span>
+                                    <span>Binding: ${item.sacred_binding}</span>
+                                    <span>Created: ${new Date(item.created_at).toLocaleString()}</span>
+                                    <span>Replays: ${item.replay_count || 0}</span>
+                                </div>
+                                ${sigilDisplay}
+                            </div>
+                        </div>
+                        <div class="card-content">${truncatedContent}</div>
+                        <div class="card-actions">
+                            <button class="action-btn" onclick="startReplay('${item.content_type}', '${item.id}')">🎭 Replay</button>
+                            <button class="action-btn" onclick="dispatchContent('${item.content_type}', '${item.id}')">🔄 Dispatch</button>
+                            <button class="action-btn" onclick="viewContent('${item.content_type}', '${item.id}')">👁️ View</button>
+                            ${item.sigil_verification && item.sigil_verification.available ? 
+                                `<button class="action-btn" onclick="showSealDetails('${item.content_type}', '${item.id}')">🔥 Seal</button>` : 
+                                ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            contentGrid.innerHTML = contentHtml;
+        }
+
+        // Start replay session
+        async function startReplay(contentType, contentId) {
+            try {
+                const formData = new FormData();
+                formData.append('content_type', contentType);
+                formData.append('content_id', contentId);
+                formData.append('narrator_role', 'herald');
+                
+                const response = await fetch('/api/replay/start', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    currentReplaySession = data.session_id;
+                    showReplay(data);
+                } else {
+                    showMessage(data.error || 'Failed to start replay', 'error');
+                }
+            } catch (error) {
+                showMessage(`Error starting replay: ${error.message}`, 'error');
+            }
+        }
+
+        // Show replay viewer
+        function showReplay(replayData) {
+            const replayViewer = document.getElementById('replayViewer');
+            const replayTitle = document.getElementById('replayTitle');
+            const narrationContent = document.getElementById('narrationContent');
+            const replayContentText = document.getElementById('replayContentText');
+            
+            replayTitle.textContent = `🎭 Replaying: ${replayData.content.title}`;
+            replayContentText.textContent = replayData.content.content;
+            
+            // Display narration
+            const narrationHtml = replayData.narration.map(entry => `
+                <div class="narration-entry">
+                    <div class="narrator-name">${entry.speaker}</div>
+                    <div class="narration-text">${entry.message}</div>
+                </div>
+            `).join('');
+            
+            narrationContent.innerHTML = narrationHtml;
+            
+            replayViewer.classList.add('active');
+            replayViewer.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Close replay viewer
+        function closeReplay() {
+            document.getElementById('replayViewer').classList.remove('active');
+            currentReplaySession = null;
+        }
+
+        // Add narration to current replay
+        async function addNarration(scriptType) {
+            if (!currentReplaySession) {
+                showMessage('No active replay session', 'error');
+                return;
+            }
+            
+            const message = prompt(`Enter ${scriptType} narration:`);
+            if (!message) return;
+            
+            try {
+                const formData = new FormData();
+                formData.append('message', message);
+                formData.append('script_type', scriptType);
+                
+                const response = await fetch(`/api/replay/${currentReplaySession}/narrate`, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // Add narration to display
+                    const narrationContent = document.getElementById('narrationContent');
+                    const newEntry = document.createElement('div');
+                    newEntry.className = 'narration-entry';
+                    newEntry.innerHTML = `
+                        <div class="narrator-name">${data.narration.speaker}</div>
+                        <div class="narration-text">${data.narration.message}</div>
+                    `;
+                    narrationContent.appendChild(newEntry);
+                    narrationContent.scrollTop = narrationContent.scrollHeight;
+                    
+                    showMessage('Narration added successfully', 'success');
+                } else {
+                    showMessage(data.error || 'Failed to add narration', 'error');
+                }
+            } catch (error) {
+                showMessage(`Error adding narration: ${error.message}`, 'error');
+            }
+        }
+
+        // Dispatch content again
+        async function dispatchAgain() {
+            if (!currentReplaySession) {
+                showMessage('No active replay session', 'error');
+                return;
+            }
+            
+            // This would need the current content info - simplified for demo
+            showMessage('Dispatch again functionality would be implemented here', 'success');
+        }
+
+        // Dispatch specific content
+        async function dispatchContent(contentType, contentId) {
+            try {
+                const formData = new FormData();
+                formData.append('content_type', contentType);
+                formData.append('content_id', contentId);
+                formData.append('dispatch_role', 'herald');
+                
+                const response = await fetch('/api/dispatch/again', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showMessage(`Content dispatched successfully. Dispatch ID: ${data.dispatch_id}`, 'success');
+                    refreshStats();
+                } else {
+                    showMessage(data.error || 'Failed to dispatch content', 'error');
+                }
+            } catch (error) {
+                showMessage(`Error dispatching content: ${error.message}`, 'error');
+            }
+        }
+
+        // View content details
+        async function viewContent(contentType, contentId) {
+            try {
+                const response = await fetch(`/api/content/${contentType}/${contentId}`);
+                const data = await response.json();
+                
+                if (data.success) {
+                    alert(`Title: ${data.content.title}\n\nContent: ${data.content.content}\n\nRole: ${data.content.role}\nBinding: ${data.content.sacred_binding}\nCreated: ${new Date(data.content.timestamp).toLocaleString()}`);
+                } else {
+                    showMessage(data.error || 'Failed to load content', 'error');
+                }
+            } catch (error) {
+                showMessage(`Error loading content: ${error.message}`, 'error');
+            }
+        }
+
+        // Toggle upload panel
+        function toggleUpload() {
+            const panel = document.getElementById('uploadPanel');
+            panel.classList.toggle('active');
+        }
+
+        // Upload new content
+        async function uploadContent() {
+            try {
+                const formData = new FormData();
+                formData.append('content_type', document.getElementById('uploadType').value);
+                formData.append('title', document.getElementById('uploadTitle').value);
+                formData.append('content', document.getElementById('uploadContent').value);
+                formData.append('role', document.getElementById('uploadRole').value);
+                
+                const fileInput = document.getElementById('uploadFile');
+                if (fileInput.files[0]) {
+                    formData.append('file', fileInput.files[0]);
+                }
+                
+                const response = await fetch('/api/content/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showMessage(`Content archived successfully! Sacred Binding: ${data.sacred_binding}`, 'success');
+                    
+                    // Clear form
+                    document.getElementById('uploadTitle').value = '';
+                    document.getElementById('uploadContent').value = '';
+                    document.getElementById('uploadFile').value = '';
+                    
+                    // Refresh content
+                    searchContent();
+                    refreshStats();
+                    toggleUpload();
+                } else {
+                    showMessage(data.error || 'Failed to upload content', 'error');
+                }
+            } catch (error) {
+                showMessage(`Error uploading content: ${error.message}`, 'error');
+            }
+        }
+
+        // Refresh statistics
+        async function refreshStats() {
+            try {
+                const response = await fetch('/api/stats');
+                const data = await response.json();
+                
+                if (data.success) {
+                    const stats = data.stats;
+                    document.getElementById('totalContent').textContent = stats.total_content;
+                    document.getElementById('totalReplays').textContent = stats.total_replays;
+                    document.getElementById('totalDispatches').textContent = stats.total_dispatches;
+                }
+            } catch (error) {
+                console.error('Error refreshing stats:', error);
+            }
+        }
+
+        // Show SIGIL seal details
+        async function showSealDetails(contentType, contentId) {
+            try {
+                const response = await fetch(`/api/content/${contentType}/${contentId}`);
+                const data = await response.json();
+                
+                if (data.success && data.content.sigil_verification) {
+                    const verification = data.content.sigil_verification;
+                    if (verification.available && !verification.error) {
+                        const details = `
+🔥 SIGIL SEAL AUTHENTICATION
+
+🆔 Seal ID: ${verification.seal_id}
+🔥 Flame Glyph: ${verification.flame_glyph}
+⚡ Binding Sigil: ${verification.binding_sigil}
+
+✅ Seal Status: ${verification.valid ? 'VALID' : 'INVALID'}
+👑 Authority: ${verification.authority.toUpperCase()}
+💪 Binding Strength: ${verification.binding_strength}
+⚖️ Ceremonial Weight: ${verification.ceremonial_weight}
+
+🏛️ Custodian: ${verification.custodian}
+🔄 Cycle Type: ${verification.cycle_type.toUpperCase()}
+📅 Issued: ${new Date(verification.issued_at).toLocaleString()}
+                        `;
+                        alert(details);
+                    } else {
+                        showMessage(verification.error || 'Seal verification unavailable', 'error');
+                    }
+                } else {
+                    showMessage('No SIGIL seal information available', 'error');
+                }
+            } catch (error) {
+                showMessage(`Error loading seal details: ${error.message}`, 'error');
+            }
+        }
+
+        // Handle file upload change
+        document.getElementById('uploadFile').addEventListener('change', async function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                try {
+                    const text = await file.text();
+                    document.getElementById('uploadContent').value = text;
+                    document.getElementById('uploadTitle').value = file.name.replace(/\.[^/.]+$/, "");
+                } catch (error) {
+                    showMessage('Error reading file: ' + error.message, 'error');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

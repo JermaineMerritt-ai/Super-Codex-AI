@@ -1,0 +1,25 @@
+{
+  "document_id": "DOC-20251113-2621d32e",
+  "filename": "DOC-20251113-2621d32e.txt",
+  "original_name": "test.txt",
+  "file_size": 12,
+  "content_hash": "9d9595c5d94fb65b824f56e9999527dba9542481580d69feb89056aabaa0aa87",
+  "mime_type": "text/plain",
+  "document_type": "archive_document",
+  "priority": "mundane",
+  "status": "received",
+  "upload_timestamp": "2025-11-13T05:41:38.189235+00:00",
+  "sacred_binding": "f2c4965a9c4a6e54b82f6cb659f56a99",
+  "ceremonial_seal": "133D70873A96C6C8",
+  "uploader_id": "anonymous_user",
+  "storage_path": "documents/archive_documents/DOC-20251113-2621d32e.txt",
+  "metadata": {
+    "upload_ip": "unknown",
+    "user_agent": "unknown",
+    "original_timestamp": "2025-11-13T05:41:38.189235+00:00"
+  },
+  "treasury_cost": 0.01,
+  "flame_blessing": "May the preserving flame keep this record for posterity",
+  "archive_location": null,
+  "validation_errors": []
+}

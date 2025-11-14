@@ -1,0 +1,131 @@
+{
+  "replay_id": "RPL-2025-11-13-6a01fc7b",
+  "dispatch_id": "AXF-2025-11-10-0001",
+  "timestamp": "2025-11-14T03:54:04.664661Z",
+  "capsule_version": "1.0",
+  "full_context": {
+    "ledger_version": "1.0",
+    "dispatch_id": "AXF-2025-11-10-0001",
+    "timestamp": "2025-11-10T06:42:00Z",
+    "actor": "Custodian",
+    "realm": "Planetary:Jackson-NC",
+    "capsule": "Sovereign Crown",
+    "intent": "Reasoning.Replay.Audit",
+    "input": {
+      "prompt": "Crown invocation: source\u00e2\u2020\u2019replay"
+    },
+    "output": {
+      "summary": "Crown sealed; replay authorized."
+    },
+    "governance": {
+      "seal": "Eternal",
+      "audit_required": true
+    },
+    "links": {
+      "replay_ref": "replays/AXF-2025-11-10-0001.json",
+      "annal_ref": "annals/2025-11.json"
+    }
+  },
+  "steps": [
+    {
+      "step": "validate_actor",
+      "timestamp": "2025-11-14T03:54:04.664753Z",
+      "status": "completed",
+      "details": "Actor validation against registry for Custodian",
+      "duration_ms": 150
+    },
+    {
+      "step": "verify_capsule",
+      "timestamp": "2025-11-14T03:54:04.814753Z",
+      "status": "completed",
+      "details": "Capsule type and permissions verification for Custodian",
+      "duration_ms": 200
+    },
+    {
+      "step": "load_context",
+      "timestamp": "2025-11-14T03:54:05.014753Z",
+      "status": "completed",
+      "details": "Context and input data loading for Custodian",
+      "duration_ms": 100
+    },
+    {
+      "step": "execute_reasoning",
+      "timestamp": "2025-11-14T03:54:05.114753Z",
+      "status": "completed",
+      "details": "Core reasoning and logic execution for Custodian",
+      "duration_ms": 800
+    },
+    {
+      "step": "create_output",
+      "timestamp": "2025-11-14T03:54:05.914753Z",
+      "status": "completed",
+      "details": "Output generation and formatting for Custodian",
+      "duration_ms": 300
+    },
+    {
+      "step": "seal_governance",
+      "timestamp": "2025-11-14T03:54:06.214753Z",
+      "status": "completed",
+      "details": "Governance seal application for Custodian",
+      "duration_ms": 250
+    },
+    {
+      "step": "update_ledger",
+      "timestamp": "2025-11-14T03:54:06.464753Z",
+      "status": "completed",
+      "details": "Ledger entry creation and storage for Custodian",
+      "duration_ms": 400
+    },
+    {
+      "step": "generate_audit",
+      "timestamp": "2025-11-14T03:54:06.864753Z",
+      "status": "completed",
+      "details": "Audit trail and replay data generation for Custodian",
+      "duration_ms": 200
+    }
+  ],
+  "governance_seal": {
+    "seal_type": "Replay",
+    "seal_id": "RS-b360ae78a406d5ef",
+    "authority": "ceremonial",
+    "classification": "replay_audit",
+    "created_at": "2025-11-14T03:54:04.665597",
+    "sealed_by": "Super-Codex-AI",
+    "integrity_hash": "b360ae78a406d5ef"
+  },
+  "audit_trail": {
+    "audit_version": "1.0",
+    "replay_id": "RPL-2025-11-13-6a01fc7b",
+    "original_dispatch": "AXF-2025-11-10-0001",
+    "integrity_checks": {
+      "input_hash": "a770a4b58ec68a58",
+      "context_verified": true,
+      "governance_validated": true,
+      "seal_authentic": true
+    },
+    "compliance": {
+      "regulation_framework": "Super-Codex-AI Ceremonial Standard v1.0",
+      "audit_requirements": [
+        "actor_validation",
+        "seal_verification",
+        "ledger_integrity"
+      ],
+      "compliance_status": "PASSED"
+    },
+    "lineage": {
+      "parent_ceremony": "AXF-2025-11-10-0001",
+      "replay_chain": [
+        "RPL-2025-11-13-6a01fc7b"
+      ],
+      "ancestral_depth": 1
+    }
+  },
+  "metadata": {
+    "generator": "Super-Codex-AI Replay Engine",
+    "generator_version": "1.0.0",
+    "total_steps": 8,
+    "total_duration_ms": 2400,
+    "replay_type": "ceremonial_audit",
+    "preservation_class": "eternal"
+  }
+}

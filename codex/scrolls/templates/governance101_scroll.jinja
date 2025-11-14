@@ -1,0 +1,384 @@
+{#
+  Governance 101 Scroll Template
+  For educational content about the Super-Codex-AI governance system
+  Ceremonial tone with comprehensive explanations
+#}
+
+# 🏛️ Governance Foundations Scroll
+
+**Governance Inquiry**: {{ query }}
+**Scroll Type**: Governance Education & Framework  
+**Generated**: {{ timestamp }}
+**Authority Level**: {{ authority_level or 'Educational' }}
+**Ceremonial Significance**: {{ ceremonial_level or 'Standard Documentation' }}
+
+---
+
+## 🎯 Governance Framework Response
+
+{{ main_response }}
+
+---
+
+## 🏅 Honor System Foundations
+
+{% if honor_system_data and honor_system_data|length > 0 %}
+{% for section in honor_system_data %}
+### {{ section.get('title', 'Honor System Component') }}
+
+{{ section.get('description', 'Core governance principle') }}
+
+{% if section.get('principles') %}
+**Guiding Principles**:
+{% for principle in section.principles %}
+- {{ principle }}
+{% endfor %}
+{% endif %}
+
+{% if section.get('implementation') %}
+**Implementation Guidelines**:
+{% for guideline in section.implementation %}
+- {{ guideline }}
+{% endfor %}
+{% endif %}
+
+{% if section.get('examples') %}
+**Practical Examples**:
+{% for example in section.examples %}
+- {{ example }}
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+{% else %}
+### Core Honor System Principles
+
+#### Merit-Based Recognition
+- Achievement recognition based on demonstrable contribution and excellence
+- Transparent evaluation criteria and advancement pathways
+- Peer recognition and validation of accomplishments
+
+#### Ceremonial Governance
+- Formal protocols for decision-making and recognition
+- Structured documentation and audit trails for accountability
+- Preservation of institutional knowledge and wisdom
+
+#### Collaborative Excellence
+- Emphasis on collective achievement and shared success
+- Cross-functional cooperation and knowledge sharing
+- Mentorship and development of emerging contributors
+
+#### Ethical Leadership
+- Commitment to integrity, transparency, and responsible stewardship
+- Service-oriented approach to authority and responsibility
+- Continuous improvement and learning orientation
+{% endif %}
+
+---
+
+## 👑 Authority Structure & Roles
+
+{% if authority_structure and authority_structure|length > 0 %}
+{% for role in authority_structure %}
+### {{ role.get('title', 'Governance Role') }}
+
+{% if role.get('level') %}
+**Authority Level**: {{ role.level }}
+{% endif %}
+{% if role.get('realm') %}
+**Realm of Influence**: {{ role.realm }}
+{% endif %}
+
+{{ role.get('description', 'Governance role description') }}
+
+{% if role.get('responsibilities') %}
+**Key Responsibilities**:
+{% for resp in role.responsibilities %}
+- {{ resp }}
+{% endfor %}
+{% endif %}
+
+{% if role.get('qualifications') %}
+**Qualifications and Requirements**:
+{% for qual in role.qualifications %}
+- {{ qual }}
+{% endfor %}
+{% endif %}
+
+{% if role.get('selection_process') %}
+**Selection Process**: {{ role.selection_process }}
+{% endif %}
+
+{% endfor %}
+{% else %}
+### Standard Governance Hierarchy
+
+#### Custodian Level
+- **Scope**: Individual project stewardship and execution
+- **Authority**: Direct implementation and operational decisions
+- **Responsibilities**: Project delivery, quality assurance, documentation
+- **Path to Advancement**: Demonstrated excellence and peer recognition
+
+#### Council Level
+- **Scope**: Strategic oversight and inter-project coordination
+- **Authority**: Resource allocation and policy development
+- **Responsibilities**: Governance framework maintenance, conflict resolution
+- **Selection**: Merit-based advancement from Custodian ranks
+
+#### Sovereign Level
+- **Scope**: System-wide vision and constitutional matters
+- **Authority**: Fundamental framework and charter modifications
+- **Responsibilities**: Constitutional guardianship, succession planning
+- **Selection**: Council consensus and extraordinary contribution recognition
+{% endif %}
+
+---
+
+## 🗺️ Realm Organization
+
+{% if realm_data and realm_data|length > 0 %}
+{% for realm in realm_data %}
+### Realm {{ realm.get('id', 'Unknown') }}: {{ realm.get('name', 'Unnamed Realm') }}
+
+{% if realm.get('status') %}
+**Status**: {{ realm.status }}
+{% endif %}
+{% if realm.get('focus_area') %}
+**Focus Area**: {{ realm.focus_area }}
+{% endif %}
+
+{{ realm.get('description', 'Realm description') }}
+
+{% if realm.get('capsules') %}
+**Available Capsules**:
+{% for capsule in realm.capsules %}
+- **{{ capsule.name }}**: {{ capsule.get('description', 'Ceremonial capsule') }}
+  - Type: {{ capsule.get('type', 'Standard') }}
+  - Access: {{ capsule.get('access_level', 'Standard') }}
+{% endfor %}
+{% endif %}
+
+{% if realm.get('governance_protocols') %}
+**Governance Protocols**:
+{% for protocol in realm.governance_protocols %}
+- {{ protocol }}
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+{% else %}
+### Standard Realm Classifications
+
+#### PL-001: Primary Leadership Realm
+- **Focus**: Core governance and strategic direction
+- **Capsules**: Sovereign Crown, Executive Council, Strategic Vision
+- **Access**: Council level and above
+- **Protocols**: Formal ceremony, consensus decision-making
+
+#### ST-007: Stewardship and Operations
+- **Focus**: System maintenance and operational excellence
+- **Capsules**: Guardian protocols, Maintenance ceremonies, Quality assurance
+- **Access**: Custodian level with specialization
+- **Protocols**: Technical competency validation, peer review
+
+#### ED-003: Education and Development
+- **Focus**: Knowledge transfer and capability building
+- **Capsules**: Training protocols, Mentorship frameworks, Certification
+- **Access**: All levels with educational role
+- **Protocols**: Pedagogical standards, assessment criteria
+{% endif %}
+
+---
+
+## 📜 Ceremonial Protocols
+
+{% if ceremonial_protocols and ceremonial_protocols|length > 0 %}
+{% for protocol in ceremonial_protocols %}
+### {{ protocol.get('name', 'Ceremonial Protocol') }}
+
+**Type**: {{ protocol.get('type', 'Standard Ceremony') }}
+{% if protocol.get('frequency') %}
+**Frequency**: {{ protocol.frequency }}
+{% endif %}
+{% if protocol.get('participants') %}
+**Participants**: {{ protocol.participants|join(', ') }}
+{% endif %}
+
+{{ protocol.get('description', 'Ceremonial protocol description') }}
+
+{% if protocol.get('steps') %}
+**Protocol Steps**:
+{% for step in protocol.steps %}
+{{ loop.index }}. {{ step }}
+{% endfor %}
+{% endif %}
+
+{% if protocol.get('significance') %}
+**Ceremonial Significance**: {{ protocol.significance }}
+{% endif %}
+
+{% endfor %}
+{% else %}
+### Standard Ceremonial Framework
+
+#### Honor Recognition Ceremony
+- **Purpose**: Formal acknowledgment of achievement and contribution
+- **Frequency**: Milestone-based or scheduled recognition periods
+- **Process**: Nomination → Validation → Formal presentation → Documentation
+- **Artifacts**: Honor scrolls, achievement ledger entries, ceremonial tokens
+
+#### Governance Transition Ceremony
+- **Purpose**: Authority transfer and responsibility assumption
+- **Frequency**: As needed for role changes or succession
+- **Process**: Qualification verification → Ceremonial investiture → Authority transfer
+- **Significance**: Continuity of governance and institutional knowledge
+
+#### Constitutional Review Ceremony
+- **Purpose**: Framework evaluation and evolution
+- **Frequency**: Periodic review cycles or triggered by significant changes
+- **Process**: Community consultation → Analysis → Deliberation → Implementation
+- **Authority**: Requires broad consensus and sovereign-level approval
+{% endif %}
+
+---
+
+## 📊 Governance Documentation
+
+{% if sources and sources|length > 0 %}
+**Foundational Documents Reviewed**:
+
+{% for source in sources %}
+### {{ source.metadata.get('file_name', 'Governance Document') }}
+
+**Document Type**: {{ source.metadata.get('document_type', 'Unknown').title() }}
+{% if source.metadata.get('ceremonial_context') %}
+**Ceremonial Context**: {{ source.metadata.ceremonial_context.get('significance', 'Standard') }}
+{% endif %}
+{% if source.metadata.get('file_modified') %}
+**Last Updated**: {{ source.metadata.file_modified[:10] }}
+{% endif %}
+
+**Key Content**:
+```
+{{ source.content[:300] }}{% if source.content|length > 300 %}...{% endif %}
+```
+
+{% if source.metadata.get('governance_level') %}
+**Governance Level**: {{ source.metadata.governance_level }}
+{% endif %}
+
+{% endfor %}
+{% endif %}
+
+**Constitutional Framework Components**:
+- Foundational Charter and Principles
+- Honor System Implementation Guidelines
+- Authority Structure and Role Definitions
+- Ceremonial Protocol Specifications
+- Evolution and Amendment Procedures
+
+---
+
+## 🎓 Learning Pathways
+
+{% if learning_paths and learning_paths|length > 0 %}
+{% for path in learning_paths %}
+### {{ path.get('title', 'Learning Path') }}
+
+**Target Audience**: {{ path.get('audience', 'All participants') }}
+**Duration**: {{ path.get('duration', 'Self-paced') }}
+
+{{ path.get('description', 'Educational pathway description') }}
+
+{% if path.get('modules') %}
+**Learning Modules**:
+{% for module in path.modules %}
+{{ loop.index }}. {{ module }}
+{% endfor %}
+{% endif %}
+
+{% if path.get('outcomes') %}
+**Learning Outcomes**:
+{% for outcome in path.outcomes %}
+- {{ outcome }}
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+{% else %}
+### Governance Competency Development
+
+#### Foundation Level
+1. **Governance Philosophy**: Understanding core principles and values
+2. **Honor System Basics**: Recognition criteria and advancement pathways
+3. **Ceremonial Literacy**: Protocol familiarity and participation guidelines
+4. **Documentation Standards**: Proper record-keeping and audit trails
+
+#### Intermediate Level
+1. **Authority and Responsibility**: Role-specific competencies and expectations
+2. **Decision-Making Frameworks**: Consensus building and conflict resolution
+3. **Ceremonial Leadership**: Protocol facilitation and ceremony management
+4. **Mentorship and Development**: Supporting others in governance competency
+
+#### Advanced Level
+1. **Constitutional Stewardship**: Framework evolution and adaptation
+2. **Strategic Governance**: Long-term planning and institutional development
+3. **Succession Planning**: Leadership development and knowledge transfer
+4. **Innovation in Governance**: Continuous improvement and best practices
+{% endif %}
+
+---
+
+## 🔄 Practical Application
+
+{% if practical_guidance and practical_guidance|length > 0 %}
+{% for guidance in practical_guidance %}
+### {{ guidance.get('scenario', 'Governance Scenario') }}
+
+{{ guidance.get('description', 'Practical application guidance') }}
+
+{% if guidance.get('steps') %}
+**Recommended Approach**:
+{% for step in guidance.steps %}
+{{ loop.index }}. {{ step }}
+{% endfor %}
+{% endif %}
+
+{% if guidance.get('considerations') %}
+**Key Considerations**:
+{% for consideration in guidance.considerations %}
+- {{ consideration }}
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+{% else %}
+### Common Governance Scenarios
+
+#### Joining the Governance System
+1. **Orientation**: Learn foundational principles and expectations
+2. **Mentorship**: Connect with experienced governance participants
+3. **Initial Contribution**: Identify areas for meaningful participation
+4. **Recognition Path**: Understand advancement criteria and processes
+
+#### Proposing System Changes
+1. **Consultation**: Discuss ideas with relevant stakeholders
+2. **Documentation**: Prepare formal proposal with rationale
+3. **Review Process**: Submit through appropriate governance channels
+4. **Implementation**: Support approved changes through execution
+
+#### Conflict Resolution
+1. **Early Intervention**: Address concerns promptly and directly
+2. **Mediation**: Engage neutral parties for facilitated discussion
+3. **Escalation**: Use formal governance channels when necessary
+4. **Resolution**: Implement agreed-upon solutions and follow-up
+{% endif %}
+
+---
+
+**Governance Wisdom Seal**: ⚖️ *Authenticated by Super-Codex-AI Governance Education System*  
+**Education ID**: `{{ education_id if education_id else 'GOV-' + timestamp.replace(':', '').replace('-', '')[:12] }}`
+**Authority Level**: {{ authority_level or 'Educational' }}
+**Processing Time**: {{ processing_time|round(2) if processing_time else 'N/A' }} seconds
+
+*"Through ceremony we preserve wisdom, through honor we guide progress, through governance we secure the future."*

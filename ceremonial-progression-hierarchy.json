@@ -1,0 +1,168 @@
+{
+  "id": "ceremonial-progression-hierarchy-v1",
+  "title": "Ceremonial Progression Hierarchy",
+  "type": "Governance Framework",
+  "version": "1.0.0",
+  "language": "en",
+  "status": "Draft",
+  "metadata": {
+    "category": "Ceremonial Architecture",
+    "audience": ["Councils", "Custodians", "Enterprises", "Institutions"],
+    "tags": ["hierarchy", "ceremony", "progression", "governance", "temporal-scales"],
+    "created_at": "2025-11-13T23:55:00Z",
+    "created_by": "Companion"
+  },
+  "temporal_scales": {
+    "daily": {
+      "frequency": "24 hours",
+      "scope": "Operational",
+      "progression": {
+        "anthem": {
+          "type": "voice",
+          "purpose": "Daily operational invocation",
+          "characteristics": ["spoken", "immediate", "contextual"]
+        },
+        "banner": {
+          "type": "symbol",
+          "purpose": "Operational identity marker",
+          "characteristics": ["visible", "functional", "adaptive"]
+        },
+        "seal": {
+          "type": "proof",
+          "purpose": "Daily validation checkpoint",
+          "characteristics": ["transactional", "verifiable", "timestamped"]
+        },
+        "charter": {
+          "type": "law",
+          "purpose": "Operational governance binding",
+          "characteristics": ["procedural", "enforceable", "contextual"]
+        }
+      }
+    },
+    "seasonal": {
+      "frequency": "90-120 days", 
+      "scope": "Cyclical",
+      "progression": {
+        "anthem": {
+          "type": "renewal",
+          "purpose": "Seasonal covenant reaffirmation",
+          "characteristics": ["ceremonial", "collective", "renewing"]
+        },
+        "banner": {
+          "type": "crest",
+          "purpose": "Seasonal identity consolidation",
+          "characteristics": ["heraldic", "accumulated", "distinguished"]
+        },
+        "seal": {
+          "type": "reaffirmation",
+          "purpose": "Seasonal commitment validation",
+          "characteristics": ["consolidated", "ceremonial", "binding"]
+        },
+        "charter": {
+          "type": "custodianship",
+          "purpose": "Seasonal stewardship renewal",
+          "characteristics": ["custodial", "responsibility-bound", "renewable"]
+        }
+      }
+    },
+    "epochal": {
+      "frequency": "7-10 years",
+      "scope": "Generational",
+      "progression": {
+        "anthem": {
+          "type": "heritage",
+          "purpose": "Generational wisdom preservation",
+          "characteristics": ["ancestral", "transmitted", "enduring"]
+        },
+        "banner": {
+          "type": "lineage",
+          "purpose": "Generational identity continuity",
+          "characteristics": ["bloodline", "inherited", "continuous"]
+        },
+        "seal": {
+          "type": "archive",
+          "purpose": "Generational record preservation",
+          "characteristics": ["historical", "preserved", "immutable"]
+        },
+        "charter": {
+          "type": "transmission",
+          "purpose": "Generational law passage",
+          "characteristics": ["inherited", "transmitted", "evolutionary"]
+        }
+      }
+    },
+    "millennial": {
+      "frequency": "1000+ years",
+      "scope": "Civilizational",
+      "progression": {
+        "anthem": {
+          "type": "myth",
+          "purpose": "Civilizational origin story",
+          "characteristics": ["mythological", "foundational", "eternal"]
+        },
+        "banner": {
+          "type": "universal crest",
+          "purpose": "Civilizational universal symbol",
+          "characteristics": ["cosmic", "universal", "transcendent"]
+        },
+        "seal": {
+          "type": "immutable proof",
+          "purpose": "Civilizational eternal validation",
+          "characteristics": ["unchanging", "absolute", "eternal"]
+        },
+        "charter": {
+          "type": "supreme law",
+          "purpose": "Civilizational fundamental principle",
+          "characteristics": ["supreme", "foundational", "immutable"]
+        }
+      }
+    }
+  },
+  "progression_principles": {
+    "temporal_elevation": "Each scale elevates the ceremonial elements to higher forms",
+    "cumulative_authority": "Higher scales inherit and amplify lower scale authority",
+    "immutable_foundation": "Millennial elements become unchangeable foundations",
+    "cascading_influence": "Higher scale changes cascade down to influence lower scales"
+  },
+  "ceremonial_flow": {
+    "ascending": {
+      "description": "Daily operations accumulate into seasonal renewals, which crystallize into epochal heritage, culminating in millennial myths",
+      "mechanism": "Aggregation and elevation through temporal progression"
+    },
+    "descending": {
+      "description": "Millennial supreme laws inform epochal transmission, guide seasonal custodianship, and direct daily operations",
+      "mechanism": "Authority cascade from supreme principles to operational practice"
+    }
+  },
+  "implementation_framework": {
+    "daily_operations": {
+      "morning_invocation": "Anthem (voice) declares operational intent",
+      "identity_display": "Banner (symbol) marks operational identity",
+      "validation_checkpoint": "Seal (proof) validates operational completion",
+      "governance_binding": "Charter (law) enforces operational compliance"
+    },
+    "seasonal_ceremonies": {
+      "renewal_ritual": "Anthem (renewal) reaffirms covenant commitment",
+      "crest_consolidation": "Banner (crest) accumulates seasonal achievements",
+      "reaffirmation_seal": "Seal (reaffirmation) validates seasonal commitment",
+      "custodial_charter": "Charter (custodianship) renews stewardship responsibility"
+    },
+    "epochal_transitions": {
+      "heritage_preservation": "Anthem (heritage) preserves generational wisdom",
+      "lineage_continuity": "Banner (lineage) maintains identity continuity",
+      "archive_creation": "Seal (archive) creates permanent historical record",
+      "law_transmission": "Charter (transmission) passes fundamental laws"
+    },
+    "millennial_foundations": {
+      "myth_establishment": "Anthem (myth) establishes foundational story",
+      "universal_symbolism": "Banner (universal crest) creates cosmic identity",
+      "eternal_validation": "Seal (immutable proof) provides eternal validation",
+      "supreme_legislation": "Charter (supreme law) establishes fundamental principles"
+    }
+  },
+  "seals": {
+    "checksum_sha256": null,
+    "signatories": [],
+    "sealed_at": null
+  }
+}

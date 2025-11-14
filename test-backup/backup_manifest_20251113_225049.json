@@ -1,0 +1,11 @@
+{
+  "destination_path": "./test-backup",
+  "backup_status": "SUCCESS",
+  "source_path": "./storage/ledger",
+  "integrity_verified": true,
+  "governance_authority": "SUPER_CODEX_AI",
+  "backup_type": "CEREMONIAL_LEDGER",
+  "files_backed_up": 2,
+  "ceremonial_seal": "SS-723345019E",
+  "backup_timestamp": "2025-11-14T03:50:49Z"
+}

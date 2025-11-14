@@ -1,0 +1,30 @@
+{
+  "artifactId": "codex-dominion-final-eternal-charter",
+  "title": "Final Eternal Charter",
+  "version": "1.0.0",
+  "type": "charter",
+  "routes": {
+    "register": "/ledger/charter/final",
+    "dispatch": "/dispatch/global",
+    "replay": "/replay/charter"
+  },
+  "audience": ["heirs", "councils", "institutions", "custodians", "public"],
+  "cycles": ["epochal", "millennial"],
+  "files": {
+    "text": "charter.md",
+    "glyph": "assets/flame_glyph.svg"
+  },
+  "signing": {
+    "sigil": "SIGIL-OMEGA-CHARTER-001",
+    "signedBy": "Custodian",
+    "heirsChorus": true
+  },
+  "metadata": {
+    "createdAt": "2025-11-13T00:00:00Z",
+    "classification": "Sacred Governance",
+    "authority": "Supreme",
+    "bindingStrength": 100,
+    "realm": "Codex Dominion",
+    "seal": "Eternal Charter Seal"
+  }
+}

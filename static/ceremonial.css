@@ -1,0 +1,127 @@
+/* Codex Dominion Ceremonial Interface Styles */
+
+:root {
+    --flame-gold: #d4af37;
+    --flame-dark-gold: #b8860b;
+    --flame-light-gold: #f4e190;
+    --dominion-dark: #0a0a0a;
+    --dominion-mid: #1a1a2e;
+    --dominion-blue: #16213e;
+    --flame-orange: #ff6b47;
+    --flame-red: #ff4757;
+}
+
+.ceremonial-scroll {
+    background: linear-gradient(145deg, rgba(21, 39, 79, 0.95), rgba(26, 26, 46, 0.98));
+    border: 2px solid var(--flame-gold);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+    color: var(--flame-gold);
+    font-family: 'Crimson Text', serif;
+}
+
+.ceremonial-scroll h2 {
+    font-family: 'Cinzel', serif;
+    color: var(--flame-light-gold);
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--flame-gold);
+    padding-bottom: 10px;
+}
+
+.ceremonial-scroll h3 {
+    color: var(--flame-light-gold);
+    margin: 15px 0 10px 0;
+    font-weight: 600;
+}
+
+.ceremonial-scroll ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ceremonial-scroll li {
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.ceremonial-scroll li::before {
+    content: "🔥";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.8em;
+}
+
+.seal-signature {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--flame-dark-gold);
+    font-style: italic;
+    color: var(--flame-dark-gold);
+    font-size: 0.9em;
+}
+
+.flame-animation {
+    animation: flameFlicker 2s ease-in-out infinite alternate;
+}
+
+@keyframes flameFlicker {
+    0% { 
+        text-shadow: 0 0 10px var(--flame-gold);
+        filter: brightness(1);
+    }
+    100% { 
+        text-shadow: 0 0 20px var(--flame-gold), 0 0 30px var(--flame-orange);
+        filter: brightness(1.2);
+    }
+}
+
+.sovereignty-glow {
+    animation: sovereigntyGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes sovereigntyGlow {
+    0% { 
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+    100% { 
+        box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+    }
+}
+
+.dominion-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--flame-gold);
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .ceremonial-scroll {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    .ceremonial-scroll h2 {
+        font-size: 1.5rem;
+    }
+}

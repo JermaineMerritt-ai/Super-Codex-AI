@@ -1,0 +1,9 @@
+<!-- scrolls/templates/resume_scroll.jinja -->
+<h1>Contributor Legacy Resume</h1>
+<p><strong>Name:</strong> {{ name }}</p>
+<p><strong>Roles:</strong> {{ roles | join(", ") }}</p>
+<p><strong>Legacy Highlights:</strong></p>
+<ul>
+  {% for h in highlights %}<li>{{ h }}</li>{% endfor %}
+</ul>
+<p><em>Anchored by AXIOM–RAG–SIGIL–ORACLE–LANTERN–FLAME.</em></p>

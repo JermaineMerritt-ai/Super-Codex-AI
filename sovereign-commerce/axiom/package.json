@@ -1,0 +1,27 @@
+{
+  "name": "@sovereign-commerce/axiom",
+  "version": "1.0.0",
+  "description": "AXIOM Intent Parser for Sovereign Commerce Platform",
+  "main": "axiom.ts",
+  "types": "axiom.ts",
+  "scripts": {
+    "test": "node -r ts-node/register axiom.ts",
+    "build": "tsc axiom.ts",
+    "dev": "ts-node axiom.ts"
+  },
+  "keywords": [
+    "axiom",
+    "intent-parser",
+    "natural-language",
+    "sovereign-commerce",
+    "diaspora-funders"
+  ],
+  "author": "Sovereign Commerce Platform",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.0.0",
+    "@types/node": "^20.0.0"
+  }
+}

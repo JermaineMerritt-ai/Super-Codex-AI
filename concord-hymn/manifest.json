@@ -1,0 +1,33 @@
+{
+  "artifactId": "custodian-heirs-concord-hymn-v1",
+  "title": "Custodian–Heirs Concord Hymn",
+  "version": "1.0.0",
+  "type": "sacred-hymn",
+  "audience": ["heirs", "councils", "institutions", "custodians"],
+  "cycles": ["daily", "seasonal", "epochal", "millennial"],
+  "routes": {
+    "register": "/ledger/continuum/hymn",
+    "dispatch": "/dispatch/global",
+    "replay": "/replay/cycles",
+    "performance": "/hymns/{artifact_id}/perform"
+  },
+  "signing": {
+    "required": true,
+    "authority": "custodian",
+    "seal_type": "sigil",
+    "verification": "sha256"
+  },
+  "files": {
+    "text": "concord_hymn.md",
+    "audio": "assets/concord_theme.mp3",
+    "glyph": "assets/flame_glyph.svg",
+    "background": "assets/chorus_bg.png"
+  },
+  "metadata": {
+    "created": "2025-11-13T00:00:00Z",
+    "ceremony_type": "responsive",
+    "liturgical_format": "call-and-response",
+    "sacred_elements": ["crown", "flame", "charter", "radiance"],
+    "performance_notes": "Sacred harmonics for Custodian-Heirs interaction"
+  }
+}

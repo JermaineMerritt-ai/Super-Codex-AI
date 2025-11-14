@@ -1,0 +1,41 @@
+{
+  "transaction_id": "WC-SYNC-20251113-051528",
+  "operation_type": "inventory_sync",
+  "product_type": "sacred_service",
+  "amount": 0.0,
+  "currency": "USD",
+  "customer_id": "SYSTEM",
+  "sacred_binding_hash": "d96ce09d274d960b",
+  "ceremonial_seal": "WC-dcc219e493e1",
+  "transaction_timestamp": "2025-11-13T05:15:28.880187+00:00",
+  "wc_order_id": null,
+  "treasury_entry_id": null,
+  "metadata": {
+    "inventory_data": {
+      "flame_essence_digital": {
+        "product_id": 1,
+        "name": "Sacred Flame Essence",
+        "quantity_available": 999,
+        "quantity_reserved": 25,
+        "treasury_allocation": 150.0,
+        "last_updated": "2025-11-13T05:15:28.880146+00:00"
+      },
+      "wisdom_scrolls": {
+        "product_id": 2,
+        "name": "Ceremonial Scroll of Wisdom",
+        "quantity_available": 50,
+        "quantity_reserved": 5,
+        "treasury_allocation": 75.0,
+        "last_updated": "2025-11-13T05:15:28.880155+00:00"
+      },
+      "treasury_tokens": {
+        "product_id": 3,
+        "name": "Treasury Token Pack",
+        "quantity_available": 100,
+        "quantity_reserved": 10,
+        "treasury_allocation": 500.0,
+        "last_updated": "2025-11-13T05:15:28.880156+00:00"
+      }
+    }
+  }
+}
